@@ -1,0 +1,4 @@
+{"file":"welcome.png","frames":{
+"welcome_btn":{"x":667,"y":1,"w":173,"h":64,"offX":10,"offY":0,"sourceW":195,"sourceH":64},
+"welcome_bg":{"x":1,"y":1,"w":662,"h":514,"offX":0,"offY":0,"sourceW":662,"sourceH":514},
+"welcom_namebg":{"x":844,"y":1,"w":28,"h":87,"offX":0,"offY":0,"sourceW":28,"sourceH":87}}}

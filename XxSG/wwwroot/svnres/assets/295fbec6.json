@@ -1,0 +1,8 @@
+{"file":"treasureBox.png","frames":{
+"btn_boxfre":{"x":330,"y":146,"w":135,"h":54,"offX":0,"offY":0,"sourceW":135,"sourceH":54},
+"btn_showfabao":{"x":395,"y":275,"w":94,"h":34,"offX":0,"offY":0,"sourceW":94,"sourceH":34},
+"btn_treshop":{"x":330,"y":208,"w":57,"h":67,"offX":0,"offY":0,"sourceW":57,"sourceH":67},
+"shikongxuanwo_rukou_icon2":{"x":2,"y":2,"w":320,"h":325,"offX":1,"offY":2,"sourceW":323,"sourceH":330},
+"trea_img1":{"x":330,"y":317,"w":97,"h":22,"offX":0,"offY":0,"sourceW":97,"sourceH":22},
+"trea_img2":{"x":395,"y":208,"w":64,"h":59,"offX":0,"offY":0,"sourceW":64,"sourceH":59},
+"zx_zuanshi6":{"x":330,"y":2,"w":150,"h":136,"offX":0,"offY":0,"sourceW":150,"sourceH":136}}}

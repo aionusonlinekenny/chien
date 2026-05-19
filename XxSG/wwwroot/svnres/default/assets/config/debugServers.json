@@ -1,0 +1,11 @@
+{
+  "ipIndex": 0,
+  "ips": [
+    {
+      "index": 0,
+      "name": "猫猫测试服",
+      "ip": "ws://127.0.0.1:19101/ws"
+    }
+  ],
+  "showTestBtn": true
+}

@@ -1,0 +1,5 @@
+{"file":"zhenfa.png","frames":{
+"zhenfa_bg":{"x":0,"y":0,"w":572,"h":538,"offX":0,"offY":0,"sourceW":572,"sourceH":538},
+"zhenfa_bgmm":{"x":0,"y":544,"w":540,"h":146,"offX":17,"offY":0,"sourceW":574,"sourceH":146},
+"zhenfa_bgmm2":{"x":546,"y":544,"w":452,"h":34,"offX":0,"offY":0,"sourceW":452,"sourceH":34},
+"zhenfa_cell":{"x":546,"y":584,"w":87,"h":87,"offX":9,"offY":9,"sourceW":103,"sourceH":100}}}

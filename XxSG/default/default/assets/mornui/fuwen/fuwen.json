@@ -1,0 +1,8 @@
+{"file":"fuwen.png","frames":{
+"btn_runechange":{"x":0,"y":173,"w":84,"h":41,"offX":1,"offY":2,"sourceW":85,"sourceH":45},
+"rune_cell1":{"x":127,"y":0,"w":81,"h":95,"offX":0,"offY":2,"sourceW":81,"sourceH":97},
+"rune_cell2":{"x":0,"y":0,"w":121,"h":120,"offX":0,"offY":0,"sourceW":121,"sourceH":120},
+"rune_img1":{"x":182,"y":205,"w":40,"h":36,"offX":25,"offY":13,"sourceW":89,"sourceH":62},
+"rune_img2":{"x":90,"y":205,"w":86,"h":26,"offX":3,"offY":0,"sourceW":93,"sourceH":27},
+"rune_img3":{"x":90,"y":173,"w":88,"h":26,"offX":3,"offY":0,"sourceW":94,"sourceH":26},
+"rune_img4":{"x":0,"y":126,"w":239,"h":41,"offX":0,"offY":0,"sourceW":241,"sourceH":41}}}

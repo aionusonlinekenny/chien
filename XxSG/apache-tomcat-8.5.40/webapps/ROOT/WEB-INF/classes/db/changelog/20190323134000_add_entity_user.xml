@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="20201227112500-1" author="DoKD">
+        <addColumn tableName="account">
+            <column name="last_transfer" type="datetime">
+            </column>
+            <column name="email" type="varchar(200)">
+            </column>
+            <column name="role_id" type="int(11)" defaultValue="1">
+                <constraints nullable="false"/>
+            </column>
+            <column name="point" type="int" defaultValue="0">
+                <constraints nullable="false"/>
+            </column>
+            <column name="total_charge" type="int" defaultValue="0">
+                <constraints nullable="false"/>
+            </column>
+        </addColumn>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,631 @@
+2026-05-06 10:08:02 INFO  Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@2ff5659e: startup date [Wed May 06 10:08:02 EET 2026]; root of context hierarchy
+2026-05-06 10:08:02 INFO  Loading XML bean definitions from class path resource [webgame/beans/server-beans.xml]
+2026-05-06 10:08:02 INFO  Loading XML bean definitions from class path resource [webgame/beans/data-beans.xml]
+2026-05-06 10:08:02 INFO  Loading XML bean definitions from class path resource [webgame/beans/service-beans.xml]
+2026-05-06 10:08:02 INFO  Loading XML bean definitions from class path resource [webgame/beans/redis-beans.xml]
+2026-05-06 10:08:02 INFO  Loading properties file from file [C:\Users\TURKEY\Desktop\Agatests\chien\XxSG\center\target\classes\webgame\props\mysql.properties]
+2026-05-06 10:08:02 INFO  Loading properties file from file [C:\Users\TURKEY\Desktop\Agatests\chien\XxSG\center\target\classes\webgame\props\redis.properties]
+2026-05-06 10:08:02 INFO  Loading properties file from file [C:\Users\TURKEY\Desktop\Agatests\chien\XxSG\center\target\classes\webgame\props\webgame.properties]
+2026-05-06 10:08:04 WARN  Unknown channel option 'SO_KEEPALIVE' for channel '[id: 0x346967b5]'
+2026-05-06 10:08:04 WARN  Unknown channel option 'SO_KEEPALIVE' for channel '[id: 0xada207ea]'
+2026-05-06 10:08:05 ERROR LogicRmiManager::publish rmi service url: {} rmi://localhost:19850/crossRankRMI 
+2026-05-06 10:08:05 INFO  Using default implementation for ThreadExecutor
+2026-05-06 10:08:05 INFO  Job execution threads will use class loader of thread: main
+2026-05-06 10:08:05 INFO  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2026-05-06 10:08:05 INFO  Quartz Scheduler v.2.3.0 created.
+2026-05-06 10:08:05 INFO  RAMJobStore initialized.
+2026-05-06 10:08:05 INFO  Scheduler meta-data: Quartz Scheduler (v2.3.0) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 5 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2026-05-06 10:08:05 INFO  Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2026-05-06 10:08:05 INFO  Quartz scheduler version: 2.3.0
+2026-05-06 10:08:05 ERROR class com.linlongyx.sanguo.webgame.quartz.QuartzManager ==========开启定时任务管理器================= 
+2026-05-06 10:08:05 INFO  Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+2026-05-06 10:08:05 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:08:05 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:08:05 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:08:05 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:08:05 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:08:05 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:08:05 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:08:05 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:08:05 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:08:05 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:08:05 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:08:05 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:08:05 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:08:05 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:08:09 ERROR cross server starting 
+2026-05-06 10:08:09 ERROR no match with id  20260504 in reids create new one 
+2026-05-06 10:08:09 ERROR load cross rank data error: cross rank first open or last save error 
+2026-05-06 10:08:09 ERROR last battle not exist 
+2026-05-06 10:08:09 ERROR load cross race data error: cross race firsttime open or last save error 
+2026-05-06 10:08:09 ERROR no towerMap with key  cross_tower in redis 
+2026-05-06 10:08:09 ERROR no runewarCache with key  runewar_20260504 in redis, may be first load 
+2026-05-06 10:08:09 ERROR readLocalCache over 
+2026-05-06 10:08:09 ERROR cross server started  
+2026-05-06 10:08:32 DEBUG batch acquisition of 1 triggers
+2026-05-06 10:09:00 DEBUG Producing instance of Job 'sanguo-job-group.destiny-retry-reward', class=com.linlongyx.sanguo.webgame.quartz.job.RetryRewardJob
+2026-05-06 10:09:00 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:09:00 DEBUG Calling execute on job sanguo-job-group.destiny-retry-reward
+2026-05-06 10:09:28 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:09:51 DEBUG batch acquisition of 1 triggers
+2026-05-06 10:10:00 DEBUG Producing instance of Job 'sanguo-job-group.destiny-refresh-rank', class=com.linlongyx.sanguo.webgame.quartz.job.RefreshRankJob
+2026-05-06 10:10:00 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:10:00 DEBUG Calling execute on job sanguo-job-group.destiny-refresh-rank
+2026-05-06 10:10:29 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:10:54 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:11:20 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:11:48 DEBUG batch acquisition of 1 triggers
+2026-05-06 10:12:00 DEBUG Producing instance of Job 'sanguo-job-group.destiny-retry-reward', class=com.linlongyx.sanguo.webgame.quartz.job.RetryRewardJob
+2026-05-06 10:12:00 DEBUG Calling execute on job sanguo-job-group.destiny-retry-reward
+2026-05-06 10:12:00 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:12:27 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:12:56 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:13:21 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:13:48 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:14:18 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:14:45 DEBUG batch acquisition of 1 triggers
+2026-05-06 10:15:00 DEBUG Producing instance of Job 'sanguo-job-group.destiny-refresh-rank', class=com.linlongyx.sanguo.webgame.quartz.job.RefreshRankJob
+2026-05-06 10:15:00 DEBUG Calling execute on job sanguo-job-group.destiny-refresh-rank
+2026-05-06 10:15:00 DEBUG batch acquisition of 1 triggers
+2026-05-06 10:15:00 DEBUG Producing instance of Job 'sanguo-job-group.destiny-retry-reward', class=com.linlongyx.sanguo.webgame.quartz.job.RetryRewardJob
+2026-05-06 10:15:00 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:15:00 DEBUG Calling execute on job sanguo-job-group.destiny-retry-reward
+2026-05-06 10:15:25 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:15:49 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:16:18 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:16:46 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:17:13 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:18:51 INFO  Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@2ff5659e: startup date [Wed May 06 10:18:51 EET 2026]; root of context hierarchy
+2026-05-06 10:18:51 INFO  Loading XML bean definitions from class path resource [webgame/beans/server-beans.xml]
+2026-05-06 10:18:51 INFO  Loading XML bean definitions from class path resource [webgame/beans/data-beans.xml]
+2026-05-06 10:18:51 INFO  Loading XML bean definitions from class path resource [webgame/beans/service-beans.xml]
+2026-05-06 10:18:51 INFO  Loading XML bean definitions from class path resource [webgame/beans/redis-beans.xml]
+2026-05-06 10:18:52 INFO  Loading properties file from file [C:\Users\TURKEY\Desktop\Agatests\chien\XxSG\center\target\classes\webgame\props\mysql.properties]
+2026-05-06 10:18:52 INFO  Loading properties file from file [C:\Users\TURKEY\Desktop\Agatests\chien\XxSG\center\target\classes\webgame\props\redis.properties]
+2026-05-06 10:18:52 INFO  Loading properties file from file [C:\Users\TURKEY\Desktop\Agatests\chien\XxSG\center\target\classes\webgame\props\webgame.properties]
+2026-05-06 10:18:54 WARN  Unknown channel option 'SO_KEEPALIVE' for channel '[id: 0x6090a066]'
+2026-05-06 10:18:54 WARN  Unknown channel option 'SO_KEEPALIVE' for channel '[id: 0x4cc08c45]'
+2026-05-06 10:18:54 ERROR LogicRmiManager::publish rmi service url: {} rmi://localhost:19850/crossRankRMI 
+2026-05-06 10:18:54 INFO  Using default implementation for ThreadExecutor
+2026-05-06 10:18:54 INFO  Job execution threads will use class loader of thread: main
+2026-05-06 10:18:54 INFO  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2026-05-06 10:18:54 INFO  Quartz Scheduler v.2.3.0 created.
+2026-05-06 10:18:54 INFO  RAMJobStore initialized.
+2026-05-06 10:18:54 INFO  Scheduler meta-data: Quartz Scheduler (v2.3.0) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 5 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2026-05-06 10:18:54 INFO  Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2026-05-06 10:18:54 INFO  Quartz scheduler version: 2.3.0
+2026-05-06 10:18:54 ERROR class com.linlongyx.sanguo.webgame.quartz.QuartzManager ==========开启定时任务管理器================= 
+2026-05-06 10:18:54 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:18:54 INFO  Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+2026-05-06 10:18:54 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:18:54 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:18:54 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:18:54 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:18:54 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:18:54 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:18:54 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:18:54 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:18:54 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:18:54 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:18:54 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:18:58 ERROR cross server starting 
+2026-05-06 10:18:59 ERROR no match with id  20260504 in reids create new one 
+2026-05-06 10:18:59 ERROR load cross rank data error: cross rank first open or last save error 
+2026-05-06 10:18:59 ERROR last battle not exist 
+2026-05-06 10:18:59 ERROR load cross race data error: cross race firsttime open or last save error 
+2026-05-06 10:18:59 ERROR no towerMap with key  cross_tower in redis 
+2026-05-06 10:18:59 ERROR no runewarCache with key  runewar_20260504 in redis, may be first load 
+2026-05-06 10:18:59 ERROR readLocalCache over 
+2026-05-06 10:18:59 ERROR cross server started  
+2026-05-06 10:19:19 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:19:44 DEBUG batch acquisition of 1 triggers
+2026-05-06 10:20:00 DEBUG Producing instance of Job 'sanguo-job-group.destiny-refresh-rank', class=com.linlongyx.sanguo.webgame.quartz.job.RefreshRankJob
+2026-05-06 10:20:00 DEBUG Calling execute on job sanguo-job-group.destiny-refresh-rank
+2026-05-06 10:20:00 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:20:00 ERROR LogicRmiManager::lookUpLogicRmi:success lookup logic battle rmi serverId=10000,rmiUrl=rmi://localhost:17003/crossRankLogicRMI 
+2026-05-06 10:20:25 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:20:48 DEBUG batch acquisition of 1 triggers
+2026-05-06 10:21:00 DEBUG Producing instance of Job 'sanguo-job-group.destiny-retry-reward', class=com.linlongyx.sanguo.webgame.quartz.job.RetryRewardJob
+2026-05-06 10:21:00 DEBUG Calling execute on job sanguo-job-group.destiny-retry-reward
+2026-05-06 10:21:00 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:21:28 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:21:56 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:22:22 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:22:48 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:23:13 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:23:40 DEBUG batch acquisition of 1 triggers
+2026-05-06 10:24:00 DEBUG Producing instance of Job 'sanguo-job-group.destiny-retry-reward', class=com.linlongyx.sanguo.webgame.quartz.job.RetryRewardJob
+2026-05-06 10:24:00 DEBUG Calling execute on job sanguo-job-group.destiny-retry-reward
+2026-05-06 10:24:00 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:24:24 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:24:48 DEBUG batch acquisition of 1 triggers
+2026-05-06 10:25:00 DEBUG Producing instance of Job 'sanguo-job-group.destiny-refresh-rank', class=com.linlongyx.sanguo.webgame.quartz.job.RefreshRankJob
+2026-05-06 10:25:00 DEBUG Calling execute on job sanguo-job-group.destiny-refresh-rank
+2026-05-06 10:25:00 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:25:27 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:25:57 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:26:24 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:26:52 DEBUG batch acquisition of 1 triggers
+2026-05-06 10:27:00 DEBUG Producing instance of Job 'sanguo-job-group.destiny-retry-reward', class=com.linlongyx.sanguo.webgame.quartz.job.RetryRewardJob
+2026-05-06 10:27:00 DEBUG Calling execute on job sanguo-job-group.destiny-retry-reward
+2026-05-06 10:27:00 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:27:25 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:27:54 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:28:19 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:28:48 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:29:15 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:29:43 DEBUG batch acquisition of 1 triggers
+2026-05-06 10:30:00 DEBUG Producing instance of Job 'sanguo-job-group.destiny-refresh-rank', class=com.linlongyx.sanguo.webgame.quartz.job.RefreshRankJob
+2026-05-06 10:30:00 DEBUG Calling execute on job sanguo-job-group.destiny-refresh-rank
+2026-05-06 10:30:00 DEBUG batch acquisition of 1 triggers
+2026-05-06 10:30:00 DEBUG Producing instance of Job 'sanguo-job-group.destiny-retry-reward', class=com.linlongyx.sanguo.webgame.quartz.job.RetryRewardJob
+2026-05-06 10:30:00 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:30:00 DEBUG Calling execute on job sanguo-job-group.destiny-retry-reward
+2026-05-06 10:30:24 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:30:53 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:31:17 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:31:41 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:32:08 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:32:32 DEBUG batch acquisition of 1 triggers
+2026-05-06 10:33:00 DEBUG Producing instance of Job 'sanguo-job-group.destiny-retry-reward', class=com.linlongyx.sanguo.webgame.quartz.job.RetryRewardJob
+2026-05-06 10:33:00 DEBUG Calling execute on job sanguo-job-group.destiny-retry-reward
+2026-05-06 10:33:00 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:33:26 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:33:55 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:34:19 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:34:43 DEBUG batch acquisition of 1 triggers
+2026-05-06 10:35:00 DEBUG Producing instance of Job 'sanguo-job-group.destiny-refresh-rank', class=com.linlongyx.sanguo.webgame.quartz.job.RefreshRankJob
+2026-05-06 10:35:00 DEBUG Calling execute on job sanguo-job-group.destiny-refresh-rank
+2026-05-06 10:35:00 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:35:26 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:35:53 DEBUG batch acquisition of 1 triggers
+2026-05-06 10:36:00 DEBUG Producing instance of Job 'sanguo-job-group.destiny-retry-reward', class=com.linlongyx.sanguo.webgame.quartz.job.RetryRewardJob
+2026-05-06 10:36:00 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:36:00 DEBUG Calling execute on job sanguo-job-group.destiny-retry-reward
+2026-05-06 10:36:28 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:36:53 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:37:18 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:37:42 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:38:11 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:38:38 DEBUG batch acquisition of 1 triggers
+2026-05-06 10:38:56 INFO  Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@2ff5659e: startup date [Wed May 06 10:38:56 EET 2026]; root of context hierarchy
+2026-05-06 10:38:56 INFO  Loading XML bean definitions from class path resource [webgame/beans/server-beans.xml]
+2026-05-06 10:38:57 INFO  Loading XML bean definitions from class path resource [webgame/beans/data-beans.xml]
+2026-05-06 10:38:57 INFO  Loading XML bean definitions from class path resource [webgame/beans/service-beans.xml]
+2026-05-06 10:38:57 INFO  Loading XML bean definitions from class path resource [webgame/beans/redis-beans.xml]
+2026-05-06 10:38:57 INFO  Loading properties file from file [C:\Users\TURKEY\Desktop\Agatests\chien\XxSG\center\target\classes\webgame\props\mysql.properties]
+2026-05-06 10:38:57 INFO  Loading properties file from file [C:\Users\TURKEY\Desktop\Agatests\chien\XxSG\center\target\classes\webgame\props\redis.properties]
+2026-05-06 10:38:57 INFO  Loading properties file from file [C:\Users\TURKEY\Desktop\Agatests\chien\XxSG\center\target\classes\webgame\props\webgame.properties]
+2026-05-06 10:38:59 WARN  Unknown channel option 'SO_KEEPALIVE' for channel '[id: 0x0479199a]'
+2026-05-06 10:38:59 ERROR TCP Server start error {}, going to shut down
+java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at io.netty.channel.socket.nio.NioServerSocketChannel.doBind(NioServerSocketChannel.java:128)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.bind(AbstractChannel.java:554)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.bind(DefaultChannelPipeline.java:1258)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeBind(AbstractChannelHandlerContext.java:502)
+	at io.netty.channel.AbstractChannelHandlerContext.bind(AbstractChannelHandlerContext.java:487)
+	at io.netty.channel.DefaultChannelPipeline.bind(DefaultChannelPipeline.java:980)
+	at io.netty.channel.AbstractChannel.bind(AbstractChannel.java:250)
+	at io.netty.bootstrap.AbstractBootstrap$2.run(AbstractBootstrap.java:365)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:163)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:403)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:445)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at java.lang.Thread.run(Thread.java:748)
+2026-05-06 10:38:59 DEBUG In stopServer method of class: com.linlongyx.core.framework.server.netty.NettyTCPServer
+2026-05-06 10:38:59 WARN  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'serverManager' defined in class path resource [webgame/beans/server-beans.xml]: Invocation of init method failed; nested exception is java.net.BindException: Address already in use: bind
+2026-05-06 10:38:59 ERROR LookUpService::shutdown 2026-05-06 10:38:59 
+2026-05-06 10:39:00 DEBUG Producing instance of Job 'sanguo-job-group.destiny-retry-reward', class=com.linlongyx.sanguo.webgame.quartz.job.RetryRewardJob
+2026-05-06 10:39:00 DEBUG Calling execute on job sanguo-job-group.destiny-retry-reward
+2026-05-06 10:39:00 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:39:24 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:39:50 DEBUG batch acquisition of 1 triggers
+2026-05-06 10:40:00 DEBUG Producing instance of Job 'sanguo-job-group.destiny-refresh-rank', class=com.linlongyx.sanguo.webgame.quartz.job.RefreshRankJob
+2026-05-06 10:40:00 DEBUG Calling execute on job sanguo-job-group.destiny-refresh-rank
+2026-05-06 10:40:00 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:40:25 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:40:54 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:41:20 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:41:44 DEBUG batch acquisition of 1 triggers
+2026-05-06 10:41:56 ERROR LogicRmiManager::lookUpLogicRmi:success lookup logic battle rmi serverId=10000,rmiUrl=rmi://localhost:17003/crossRankLogicRMI 
+2026-05-06 10:42:00 DEBUG Producing instance of Job 'sanguo-job-group.destiny-retry-reward', class=com.linlongyx.sanguo.webgame.quartz.job.RetryRewardJob
+2026-05-06 10:42:00 DEBUG Calling execute on job sanguo-job-group.destiny-retry-reward
+2026-05-06 10:42:00 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:42:46 INFO  Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@7b1d7fff: startup date [Wed May 06 10:42:46 EET 2026]; root of context hierarchy
+2026-05-06 10:42:46 INFO  Loading XML bean definitions from class path resource [webgame/beans/server-beans.xml]
+2026-05-06 10:42:46 INFO  Loading XML bean definitions from class path resource [webgame/beans/data-beans.xml]
+2026-05-06 10:42:46 INFO  Loading XML bean definitions from class path resource [webgame/beans/service-beans.xml]
+2026-05-06 10:42:46 INFO  Loading XML bean definitions from class path resource [webgame/beans/redis-beans.xml]
+2026-05-06 10:42:47 INFO  Loading properties file from file [C:\Users\TURKEY\Desktop\Agatests\chien\XxSG\center\target\classes\webgame\props\mysql.properties]
+2026-05-06 10:42:47 INFO  Loading properties file from file [C:\Users\TURKEY\Desktop\Agatests\chien\XxSG\center\target\classes\webgame\props\redis.properties]
+2026-05-06 10:42:47 INFO  Loading properties file from file [C:\Users\TURKEY\Desktop\Agatests\chien\XxSG\center\target\classes\webgame\props\webgame.properties]
+2026-05-06 10:42:49 WARN  Unknown channel option 'SO_KEEPALIVE' for channel '[id: 0x33a7d89a]'
+2026-05-06 10:42:49 WARN  Unknown channel option 'SO_KEEPALIVE' for channel '[id: 0x5b950e8e]'
+2026-05-06 10:42:50 ERROR LogicRmiManager::publish rmi service url: {} rmi://localhost:19850/crossRankRMI 
+2026-05-06 10:42:50 INFO  Using default implementation for ThreadExecutor
+2026-05-06 10:42:50 INFO  Job execution threads will use class loader of thread: main
+2026-05-06 10:42:50 INFO  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2026-05-06 10:42:50 INFO  Quartz Scheduler v.2.3.0 created.
+2026-05-06 10:42:50 INFO  RAMJobStore initialized.
+2026-05-06 10:42:50 INFO  Scheduler meta-data: Quartz Scheduler (v2.3.0) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 5 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2026-05-06 10:42:50 INFO  Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2026-05-06 10:42:50 INFO  Quartz scheduler version: 2.3.0
+2026-05-06 10:42:50 ERROR class com.linlongyx.sanguo.webgame.quartz.QuartzManager ==========开启定时任务管理器================= 
+2026-05-06 10:42:50 INFO  Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+2026-05-06 10:42:50 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:42:50 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:42:50 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:42:50 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:42:50 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:42:50 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:42:50 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:42:50 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:42:50 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:42:50 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:42:50 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:42:50 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:42:58 ERROR cross server starting 
+2026-05-06 10:42:58 ERROR no match with id  20260504 in reids create new one 
+2026-05-06 10:42:58 ERROR load cross rank data error: cross rank first open or last save error 
+2026-05-06 10:42:58 ERROR last battle not exist 
+2026-05-06 10:42:58 ERROR load cross race data error: cross race firsttime open or last save error 
+2026-05-06 10:42:58 ERROR no towerMap with key  cross_tower in redis 
+2026-05-06 10:42:58 ERROR no runewarCache with key  runewar_20260504 in redis, may be first load 
+2026-05-06 10:42:58 ERROR readLocalCache over 
+2026-05-06 10:42:58 ERROR cross server started  
+2026-05-06 10:43:18 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:43:47 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:44:13 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:44:37 DEBUG batch acquisition of 1 triggers
+2026-05-06 10:45:00 DEBUG Producing instance of Job 'sanguo-job-group.destiny-refresh-rank', class=com.linlongyx.sanguo.webgame.quartz.job.RefreshRankJob
+2026-05-06 10:45:00 DEBUG batch acquisition of 1 triggers
+2026-05-06 10:45:00 DEBUG Calling execute on job sanguo-job-group.destiny-refresh-rank
+2026-05-06 10:45:00 DEBUG Producing instance of Job 'sanguo-job-group.destiny-retry-reward', class=com.linlongyx.sanguo.webgame.quartz.job.RetryRewardJob
+2026-05-06 10:45:00 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:45:00 DEBUG Calling execute on job sanguo-job-group.destiny-retry-reward
+2026-05-06 10:45:00 ERROR LogicRmiManager::lookUpLogicRmi:success lookup logic battle rmi serverId=10001,rmiUrl=rmi://localhost:17005/crossRankLogicRMI 
+2026-05-06 10:45:00 ERROR LogicRmiManager::lookUpLogicRmi:success lookup logic battle rmi serverId=10000,rmiUrl=rmi://localhost:17003/crossRankLogicRMI 
+2026-05-06 10:45:23 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:45:50 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:46:19 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:46:43 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:47:10 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:47:39 DEBUG batch acquisition of 1 triggers
+2026-05-06 10:48:00 DEBUG Producing instance of Job 'sanguo-job-group.destiny-retry-reward', class=com.linlongyx.sanguo.webgame.quartz.job.RetryRewardJob
+2026-05-06 10:48:00 DEBUG Calling execute on job sanguo-job-group.destiny-retry-reward
+2026-05-06 10:48:00 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:48:24 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:48:51 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:49:20 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:49:49 DEBUG batch acquisition of 1 triggers
+2026-05-06 10:50:00 DEBUG Producing instance of Job 'sanguo-job-group.destiny-refresh-rank', class=com.linlongyx.sanguo.webgame.quartz.job.RefreshRankJob
+2026-05-06 10:50:00 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:50:00 DEBUG Calling execute on job sanguo-job-group.destiny-refresh-rank
+2026-05-06 10:50:29 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:50:55 DEBUG batch acquisition of 1 triggers
+2026-05-06 10:51:00 DEBUG Producing instance of Job 'sanguo-job-group.destiny-retry-reward', class=com.linlongyx.sanguo.webgame.quartz.job.RetryRewardJob
+2026-05-06 10:51:00 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:51:00 DEBUG Calling execute on job sanguo-job-group.destiny-retry-reward
+2026-05-06 10:51:26 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:51:50 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:52:13 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:52:41 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:53:06 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:53:29 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:53:59 DEBUG batch acquisition of 1 triggers
+2026-05-06 10:54:00 DEBUG Producing instance of Job 'sanguo-job-group.destiny-retry-reward', class=com.linlongyx.sanguo.webgame.quartz.job.RetryRewardJob
+2026-05-06 10:54:00 DEBUG Calling execute on job sanguo-job-group.destiny-retry-reward
+2026-05-06 10:54:00 DEBUG batch acquisition of 0 triggers
+2026-05-06 10:54:29 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:19:17 INFO  Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@7b1d7fff: startup date [Wed May 06 11:19:17 EET 2026]; root of context hierarchy
+2026-05-06 11:19:17 INFO  Loading XML bean definitions from class path resource [webgame/beans/server-beans.xml]
+2026-05-06 11:19:17 INFO  Loading XML bean definitions from class path resource [webgame/beans/data-beans.xml]
+2026-05-06 11:19:17 INFO  Loading XML bean definitions from class path resource [webgame/beans/service-beans.xml]
+2026-05-06 11:19:17 INFO  Loading XML bean definitions from class path resource [webgame/beans/redis-beans.xml]
+2026-05-06 11:19:18 INFO  Loading properties file from file [C:\Users\TURKEY\Desktop\Agatests\chien\XxSG\center\target\classes\webgame\props\mysql.properties]
+2026-05-06 11:19:18 INFO  Loading properties file from file [C:\Users\TURKEY\Desktop\Agatests\chien\XxSG\center\target\classes\webgame\props\redis.properties]
+2026-05-06 11:19:18 INFO  Loading properties file from file [C:\Users\TURKEY\Desktop\Agatests\chien\XxSG\center\target\classes\webgame\props\webgame.properties]
+2026-05-06 11:19:20 WARN  Unknown channel option 'SO_KEEPALIVE' for channel '[id: 0xf3e27570]'
+2026-05-06 11:19:20 WARN  Unknown channel option 'SO_KEEPALIVE' for channel '[id: 0xc763a552]'
+2026-05-06 11:19:21 ERROR LogicRmiManager::publish rmi service url: {} rmi://localhost:19850/crossRankRMI 
+2026-05-06 11:19:21 INFO  Using default implementation for ThreadExecutor
+2026-05-06 11:19:21 INFO  Job execution threads will use class loader of thread: main
+2026-05-06 11:19:21 INFO  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2026-05-06 11:19:21 INFO  Quartz Scheduler v.2.3.0 created.
+2026-05-06 11:19:21 INFO  RAMJobStore initialized.
+2026-05-06 11:19:21 INFO  Scheduler meta-data: Quartz Scheduler (v2.3.0) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 5 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2026-05-06 11:19:21 INFO  Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2026-05-06 11:19:21 INFO  Quartz scheduler version: 2.3.0
+2026-05-06 11:19:21 ERROR class com.linlongyx.sanguo.webgame.quartz.QuartzManager ==========开启定时任务管理器================= 
+2026-05-06 11:19:21 INFO  Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+2026-05-06 11:19:21 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:19:21 ERROR LogicRmiManager::lookUpLogicRmi:success lookup logic battle rmi serverId=10000,rmiUrl=rmi://localhost:17003/crossRankLogicRMI 
+2026-05-06 11:19:21 ERROR LogicRmiManager::lookUpLogicRmi:success lookup logic battle rmi serverId=10001,rmiUrl=rmi://localhost:17005/crossRankLogicRMI 
+2026-05-06 11:19:21 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:19:21 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:19:21 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:19:21 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:19:29 ERROR cross server starting 
+2026-05-06 11:19:30 ERROR load cross rank data error: cross rank first open or last save error 
+2026-05-06 11:19:30 ERROR last battle not exist 
+2026-05-06 11:19:30 ERROR load cross race data error: cross race firsttime open or last save error 
+2026-05-06 11:19:30 ERROR no towerMap with key  cross_tower in redis 
+2026-05-06 11:19:30 ERROR no runewarCache with key  runewar_20260504 in redis, may be first load 
+2026-05-06 11:19:30 ERROR readLocalCache over 
+2026-05-06 11:19:30 ERROR cross server started  
+2026-05-06 11:19:48 DEBUG batch acquisition of 1 triggers
+2026-05-06 11:20:00 DEBUG Producing instance of Job 'sanguo-job-group.destiny-refresh-rank', class=com.linlongyx.sanguo.webgame.quartz.job.RefreshRankJob
+2026-05-06 11:20:00 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:20:00 DEBUG Calling execute on job sanguo-job-group.destiny-refresh-rank
+2026-05-06 11:20:29 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:20:57 DEBUG batch acquisition of 1 triggers
+2026-05-06 11:21:00 DEBUG Producing instance of Job 'sanguo-job-group.destiny-retry-reward', class=com.linlongyx.sanguo.webgame.quartz.job.RetryRewardJob
+2026-05-06 11:21:00 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:21:00 DEBUG Calling execute on job sanguo-job-group.destiny-retry-reward
+2026-05-06 11:21:28 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:21:56 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:22:26 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:22:51 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:23:15 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:23:42 DEBUG batch acquisition of 1 triggers
+2026-05-06 11:24:00 DEBUG Producing instance of Job 'sanguo-job-group.destiny-retry-reward', class=com.linlongyx.sanguo.webgame.quartz.job.RetryRewardJob
+2026-05-06 11:24:00 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:24:00 DEBUG Calling execute on job sanguo-job-group.destiny-retry-reward
+2026-05-06 11:24:29 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:24:59 DEBUG batch acquisition of 1 triggers
+2026-05-06 11:25:00 DEBUG Producing instance of Job 'sanguo-job-group.destiny-refresh-rank', class=com.linlongyx.sanguo.webgame.quartz.job.RefreshRankJob
+2026-05-06 11:25:00 DEBUG Calling execute on job sanguo-job-group.destiny-refresh-rank
+2026-05-06 11:25:00 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:25:26 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:25:55 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:26:24 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:26:49 DEBUG batch acquisition of 1 triggers
+2026-05-06 11:27:00 DEBUG Producing instance of Job 'sanguo-job-group.destiny-retry-reward', class=com.linlongyx.sanguo.webgame.quartz.job.RetryRewardJob
+2026-05-06 11:27:00 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:27:00 DEBUG Calling execute on job sanguo-job-group.destiny-retry-reward
+2026-05-06 11:27:28 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:27:58 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:28:23 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:28:52 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:29:16 INFO  Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@7b1d7fff: startup date [Wed May 06 11:29:16 EET 2026]; root of context hierarchy
+2026-05-06 11:29:17 INFO  Loading XML bean definitions from class path resource [webgame/beans/server-beans.xml]
+2026-05-06 11:29:17 INFO  Loading XML bean definitions from class path resource [webgame/beans/data-beans.xml]
+2026-05-06 11:29:17 INFO  Loading XML bean definitions from class path resource [webgame/beans/service-beans.xml]
+2026-05-06 11:29:17 INFO  Loading XML bean definitions from class path resource [webgame/beans/redis-beans.xml]
+2026-05-06 11:29:18 INFO  Loading properties file from file [C:\Users\TURKEY\Desktop\Agatests\chien\XxSG\center\target\classes\webgame\props\mysql.properties]
+2026-05-06 11:29:18 INFO  Loading properties file from file [C:\Users\TURKEY\Desktop\Agatests\chien\XxSG\center\target\classes\webgame\props\redis.properties]
+2026-05-06 11:29:18 INFO  Loading properties file from file [C:\Users\TURKEY\Desktop\Agatests\chien\XxSG\center\target\classes\webgame\props\webgame.properties]
+2026-05-06 11:29:22 WARN  Unknown channel option 'SO_KEEPALIVE' for channel '[id: 0xfb329129]'
+2026-05-06 11:29:22 WARN  Unknown channel option 'SO_KEEPALIVE' for channel '[id: 0x6af4fa33]'
+2026-05-06 11:29:22 ERROR LogicRmiManager::publish rmi service url: {} rmi://localhost:19850/crossRankRMI 
+2026-05-06 11:29:22 INFO  Using default implementation for ThreadExecutor
+2026-05-06 11:29:22 INFO  Job execution threads will use class loader of thread: main
+2026-05-06 11:29:22 INFO  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2026-05-06 11:29:22 INFO  Quartz Scheduler v.2.3.0 created.
+2026-05-06 11:29:22 INFO  RAMJobStore initialized.
+2026-05-06 11:29:22 INFO  Scheduler meta-data: Quartz Scheduler (v2.3.0) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 5 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2026-05-06 11:29:22 INFO  Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2026-05-06 11:29:22 INFO  Quartz scheduler version: 2.3.0
+2026-05-06 11:29:22 ERROR class com.linlongyx.sanguo.webgame.quartz.QuartzManager ==========开启定时任务管理器================= 
+2026-05-06 11:29:22 INFO  Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+2026-05-06 11:29:22 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:29:22 ERROR LogicRmiManager::lookUpLogicRmi:success lookup logic battle rmi serverId=10001,rmiUrl=rmi://localhost:17005/crossRankLogicRMI 
+2026-05-06 11:29:22 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:29:22 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:29:22 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:29:22 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:29:22 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:29:28 ERROR cross server starting 
+2026-05-06 11:29:28 ERROR load cross rank data error: cross rank first open or last save error 
+2026-05-06 11:29:28 ERROR last battle not exist 
+2026-05-06 11:29:28 ERROR load cross race data error: cross race firsttime open or last save error 
+2026-05-06 11:29:28 ERROR no towerMap with key  cross_tower in redis 
+2026-05-06 11:29:28 ERROR no runewarCache with key  runewar_20260504 in redis, may be first load 
+2026-05-06 11:29:28 ERROR readLocalCache over 
+2026-05-06 11:29:28 ERROR cross server started  
+2026-05-06 11:29:48 DEBUG batch acquisition of 1 triggers
+2026-05-06 11:30:00 DEBUG Producing instance of Job 'sanguo-job-group.destiny-refresh-rank', class=com.linlongyx.sanguo.webgame.quartz.job.RefreshRankJob
+2026-05-06 11:30:00 DEBUG batch acquisition of 1 triggers
+2026-05-06 11:30:00 DEBUG Calling execute on job sanguo-job-group.destiny-refresh-rank
+2026-05-06 11:30:00 DEBUG Producing instance of Job 'sanguo-job-group.destiny-retry-reward', class=com.linlongyx.sanguo.webgame.quartz.job.RetryRewardJob
+2026-05-06 11:30:00 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:30:00 DEBUG Calling execute on job sanguo-job-group.destiny-retry-reward
+2026-05-06 11:30:00 ERROR LogicRmiManager::lookUpLogicRmi:success lookup logic battle rmi serverId=10000,rmiUrl=rmi://localhost:17003/crossRankLogicRMI 
+2026-05-06 11:30:27 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:30:52 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:31:21 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:31:46 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:32:13 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:32:38 DEBUG batch acquisition of 1 triggers
+2026-05-06 11:33:00 DEBUG Producing instance of Job 'sanguo-job-group.destiny-retry-reward', class=com.linlongyx.sanguo.webgame.quartz.job.RetryRewardJob
+2026-05-06 11:33:00 DEBUG Calling execute on job sanguo-job-group.destiny-retry-reward
+2026-05-06 11:33:00 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:33:28 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:33:54 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:34:23 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:34:52 DEBUG batch acquisition of 1 triggers
+2026-05-06 11:35:00 DEBUG Producing instance of Job 'sanguo-job-group.destiny-refresh-rank', class=com.linlongyx.sanguo.webgame.quartz.job.RefreshRankJob
+2026-05-06 11:35:00 DEBUG Calling execute on job sanguo-job-group.destiny-refresh-rank
+2026-05-06 11:35:00 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:35:24 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:35:50 DEBUG batch acquisition of 1 triggers
+2026-05-06 11:36:00 DEBUG Producing instance of Job 'sanguo-job-group.destiny-retry-reward', class=com.linlongyx.sanguo.webgame.quartz.job.RetryRewardJob
+2026-05-06 11:36:00 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:36:00 DEBUG Calling execute on job sanguo-job-group.destiny-retry-reward
+2026-05-06 11:36:23 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:36:48 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:37:12 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:37:37 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:38:02 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:38:28 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:38:52 DEBUG batch acquisition of 1 triggers
+2026-05-06 11:39:00 DEBUG Producing instance of Job 'sanguo-job-group.destiny-retry-reward', class=com.linlongyx.sanguo.webgame.quartz.job.RetryRewardJob
+2026-05-06 11:39:00 DEBUG Calling execute on job sanguo-job-group.destiny-retry-reward
+2026-05-06 11:39:00 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:39:24 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:39:51 DEBUG batch acquisition of 1 triggers
+2026-05-06 11:40:00 DEBUG Producing instance of Job 'sanguo-job-group.destiny-refresh-rank', class=com.linlongyx.sanguo.webgame.quartz.job.RefreshRankJob
+2026-05-06 11:40:00 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:40:00 DEBUG Calling execute on job sanguo-job-group.destiny-refresh-rank
+2026-05-06 11:40:29 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:40:55 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:41:23 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:41:50 DEBUG batch acquisition of 1 triggers
+2026-05-06 11:42:00 DEBUG Producing instance of Job 'sanguo-job-group.destiny-retry-reward', class=com.linlongyx.sanguo.webgame.quartz.job.RetryRewardJob
+2026-05-06 11:42:00 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:42:00 DEBUG Calling execute on job sanguo-job-group.destiny-retry-reward
+2026-05-06 11:42:27 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:42:56 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:43:24 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:43:51 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:44:19 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:44:43 DEBUG batch acquisition of 1 triggers
+2026-05-06 11:45:00 DEBUG Producing instance of Job 'sanguo-job-group.destiny-refresh-rank', class=com.linlongyx.sanguo.webgame.quartz.job.RefreshRankJob
+2026-05-06 11:45:00 DEBUG Calling execute on job sanguo-job-group.destiny-refresh-rank
+2026-05-06 11:45:00 DEBUG batch acquisition of 1 triggers
+2026-05-06 11:45:00 DEBUG Producing instance of Job 'sanguo-job-group.destiny-retry-reward', class=com.linlongyx.sanguo.webgame.quartz.job.RetryRewardJob
+2026-05-06 11:45:00 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:45:00 DEBUG Calling execute on job sanguo-job-group.destiny-retry-reward
+2026-05-06 11:45:24 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:45:52 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:46:16 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:46:39 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:47:06 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:47:30 DEBUG batch acquisition of 1 triggers
+2026-05-06 11:48:00 DEBUG Producing instance of Job 'sanguo-job-group.destiny-retry-reward', class=com.linlongyx.sanguo.webgame.quartz.job.RetryRewardJob
+2026-05-06 11:48:00 DEBUG Calling execute on job sanguo-job-group.destiny-retry-reward
+2026-05-06 11:48:00 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:53:58 INFO  Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@7b1d7fff: startup date [Wed May 06 11:53:58 EET 2026]; root of context hierarchy
+2026-05-06 11:53:58 INFO  Loading XML bean definitions from class path resource [webgame/beans/server-beans.xml]
+2026-05-06 11:53:59 INFO  Loading XML bean definitions from class path resource [webgame/beans/data-beans.xml]
+2026-05-06 11:53:59 INFO  Loading XML bean definitions from class path resource [webgame/beans/service-beans.xml]
+2026-05-06 11:53:59 INFO  Loading XML bean definitions from class path resource [webgame/beans/redis-beans.xml]
+2026-05-06 11:53:59 INFO  Loading properties file from file [C:\Users\TURKEY\Desktop\Agatests\chien\XxSG\center\target\classes\webgame\props\mysql.properties]
+2026-05-06 11:53:59 INFO  Loading properties file from file [C:\Users\TURKEY\Desktop\Agatests\chien\XxSG\center\target\classes\webgame\props\redis.properties]
+2026-05-06 11:53:59 INFO  Loading properties file from file [C:\Users\TURKEY\Desktop\Agatests\chien\XxSG\center\target\classes\webgame\props\webgame.properties]
+2026-05-06 11:54:01 WARN  Unknown channel option 'SO_KEEPALIVE' for channel '[id: 0x5cbf1cb5]'
+2026-05-06 11:54:01 WARN  Unknown channel option 'SO_KEEPALIVE' for channel '[id: 0xcc2f8804]'
+2026-05-06 11:54:02 ERROR LogicRmiManager::publish rmi service url: {} rmi://localhost:19850/crossRankRMI 
+2026-05-06 11:54:02 INFO  Using default implementation for ThreadExecutor
+2026-05-06 11:54:02 INFO  Job execution threads will use class loader of thread: main
+2026-05-06 11:54:02 INFO  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2026-05-06 11:54:02 INFO  Quartz Scheduler v.2.3.0 created.
+2026-05-06 11:54:02 INFO  RAMJobStore initialized.
+2026-05-06 11:54:02 INFO  Scheduler meta-data: Quartz Scheduler (v2.3.0) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 5 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2026-05-06 11:54:02 INFO  Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2026-05-06 11:54:02 INFO  Quartz scheduler version: 2.3.0
+2026-05-06 11:54:02 ERROR class com.linlongyx.sanguo.webgame.quartz.QuartzManager ==========开启定时任务管理器================= 
+2026-05-06 11:54:02 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:54:02 INFO  Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+2026-05-06 11:54:02 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:54:02 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:54:02 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:54:02 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:54:02 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:54:02 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:54:02 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:54:02 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:54:02 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:54:02 ERROR LogicRmiManager::lookUpLogicRmi:success lookup logic battle rmi serverId=10001,rmiUrl=rmi://localhost:17005/crossRankLogicRMI 
+2026-05-06 11:54:02 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:54:02 ERROR LogicRmiManager::lookUpLogicRmi:success lookup logic battle rmi serverId=10000,rmiUrl=rmi://localhost:17003/crossRankLogicRMI 
+2026-05-06 11:54:02 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:54:08 ERROR cross server starting 
+2026-05-06 11:54:09 ERROR load cross rank data error: cross rank first open or last save error 
+2026-05-06 11:54:09 ERROR last battle not exist 
+2026-05-06 11:54:09 ERROR load cross race data error: cross race firsttime open or last save error 
+2026-05-06 11:54:09 ERROR no towerMap with key  cross_tower in redis 
+2026-05-06 11:54:12 ERROR no runewarCache with key  runewar_20260504 in redis, may be first load 
+2026-05-06 11:54:12 ERROR readLocalCache over 
+2026-05-06 11:54:12 ERROR cross server started  
+2026-05-06 11:54:29 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:54:56 DEBUG batch acquisition of 1 triggers
+2026-05-06 11:55:00 DEBUG Producing instance of Job 'sanguo-job-group.destiny-refresh-rank', class=com.linlongyx.sanguo.webgame.quartz.job.RefreshRankJob
+2026-05-06 11:55:00 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:55:00 DEBUG Calling execute on job sanguo-job-group.destiny-refresh-rank
+2026-05-06 11:55:24 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:55:54 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:56:22 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:56:51 DEBUG batch acquisition of 1 triggers
+2026-05-06 11:57:00 DEBUG Producing instance of Job 'sanguo-job-group.destiny-retry-reward', class=com.linlongyx.sanguo.webgame.quartz.job.RetryRewardJob
+2026-05-06 11:57:00 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:57:00 DEBUG Calling execute on job sanguo-job-group.destiny-retry-reward
+2026-05-06 11:57:27 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:57:55 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:58:23 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:58:46 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:59:12 DEBUG batch acquisition of 0 triggers
+2026-05-06 11:59:42 DEBUG batch acquisition of 1 triggers
+2026-05-06 12:00:00 DEBUG Producing instance of Job 'sanguo-job-group.destiny-refresh-rank', class=com.linlongyx.sanguo.webgame.quartz.job.RefreshRankJob
+2026-05-06 12:00:00 DEBUG Calling execute on job sanguo-job-group.destiny-refresh-rank
+2026-05-06 12:00:00 DEBUG batch acquisition of 1 triggers
+2026-05-06 12:00:00 DEBUG Producing instance of Job 'sanguo-job-group.destiny-retry-reward', class=com.linlongyx.sanguo.webgame.quartz.job.RetryRewardJob
+2026-05-06 12:00:00 DEBUG Calling execute on job sanguo-job-group.destiny-retry-reward
+2026-05-06 12:00:00 DEBUG batch acquisition of 0 triggers
+2026-05-06 12:00:26 DEBUG batch acquisition of 0 triggers
+2026-05-06 12:00:52 DEBUG batch acquisition of 0 triggers
+2026-05-06 12:01:19 DEBUG batch acquisition of 0 triggers
+2026-05-06 12:01:48 DEBUG batch acquisition of 0 triggers
+2026-05-06 12:02:16 DEBUG batch acquisition of 0 triggers
+2026-05-06 12:02:45 DEBUG batch acquisition of 1 triggers
+2026-05-06 12:03:00 DEBUG Producing instance of Job 'sanguo-job-group.destiny-retry-reward', class=com.linlongyx.sanguo.webgame.quartz.job.RetryRewardJob
+2026-05-06 12:03:00 DEBUG batch acquisition of 0 triggers
+2026-05-06 12:03:00 DEBUG Calling execute on job sanguo-job-group.destiny-retry-reward
+2026-05-06 12:03:27 DEBUG batch acquisition of 0 triggers
+2026-05-06 12:03:53 DEBUG batch acquisition of 0 triggers
+2026-05-06 12:04:20 DEBUG batch acquisition of 0 triggers
+2026-05-06 12:04:49 DEBUG batch acquisition of 1 triggers
+2026-05-06 12:05:00 DEBUG Producing instance of Job 'sanguo-job-group.destiny-refresh-rank', class=com.linlongyx.sanguo.webgame.quartz.job.RefreshRankJob
+2026-05-06 12:05:00 DEBUG Calling execute on job sanguo-job-group.destiny-refresh-rank
+2026-05-06 12:05:00 DEBUG batch acquisition of 0 triggers
+2026-05-06 12:05:27 DEBUG batch acquisition of 0 triggers
+2026-05-06 12:05:54 DEBUG batch acquisition of 1 triggers
+2026-05-06 12:06:00 DEBUG Producing instance of Job 'sanguo-job-group.destiny-retry-reward', class=com.linlongyx.sanguo.webgame.quartz.job.RetryRewardJob
+2026-05-06 12:06:00 DEBUG batch acquisition of 0 triggers
+2026-05-06 12:06:00 DEBUG Calling execute on job sanguo-job-group.destiny-retry-reward

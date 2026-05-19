@@ -1,0 +1,51 @@
+{
+  "debug": true,
+  "showLog": 3,
+  "isPlatform": false,
+  "roleScale": 1,
+  "cfgVersion": "04151017",
+  "verJson": "201904151017",
+  "version": "201904151017",
+  "res": "",
+  "serverId": 0,
+  "myserver": "http://127.0.0.1:81/server/myServer",
+  "servers": "http://127.0.0.1:81/server/servers",
+  "payServer": "http://127.0.0.1:81",
+  "pointServer": "http://127.0.0.1:81/dot/",
+  "placardURL": "http://127.0.0.1:81/dot/channelNotice.do",
+  "questionURL": "http://127.0.0.1:81/dot/question.do",
+  "rechargeURL": "http://127.0.0.1:82/",
+  "channelBG": {},
+  "weixin_1.1390": {
+    "cfgVersion": "04150137",
+    "verJson": "201904151012",
+    "version": "201904151012",
+    "verify": true,
+    "serverId": 10000,
+    "res": "svnres/assets/"
+  },
+  "bdmini_1.1390": {
+    "cfgVersion": "04150137",
+    "verJson": "201904151012",
+    "version": "201904151012",
+    "verify": true,
+    "serverId": 10000,
+    "res": "svnres/assets/"
+  },
+  "weixin_ttsg_1.1390": {
+    "cfgVersion": "04150137",
+    "verJson": "201904151012",
+    "version": "201904151012",
+    "verify": true,
+    "serverId": 10000,
+    "res": "svnres/assets/"
+  },
+  "cjsgj_1.1390": {
+    "cfgVersion": "04150137",
+    "verJson": "201904151012",
+    "version": "201904151012",
+    "verify": true,
+    "serverId": 10000,
+    "res": "svnres/assets/"
+  }
+}

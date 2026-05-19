@@ -1,0 +1,12904 @@
+{
+  "1001": {
+    "id": 1001,
+    "type": 1,
+    "chargeId": 1,
+    "number": 1,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 10
+      },
+      {
+        "id": 2,
+        "type": 1,
+        "num": 3000
+      }
+    ],
+    "cost": []
+  },
+  "1002": {
+    "id": 1002,
+    "type": 1,
+    "chargeId": 2,
+    "number": 2,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 10
+      },
+      {
+        "id": 2,
+        "type": 1,
+        "num": 6000
+      }
+    ],
+    "cost": []
+  },
+  "1003": {
+    "id": 1003,
+    "type": 1,
+    "chargeId": 3,
+    "number": 2,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 15
+      },
+      {
+        "id": 2,
+        "type": 1,
+        "num": 12000
+      }
+    ],
+    "cost": []
+  },
+  "1004": {
+    "id": 1004,
+    "type": 1,
+    "chargeId": 4,
+    "number": 2,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 60
+      },
+      {
+        "id": 2,
+        "type": 1,
+        "num": 30000
+      }
+    ],
+    "cost": []
+  },
+  "1005": {
+    "id": 1005,
+    "type": 1,
+    "chargeId": 5,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 110
+      },
+      {
+        "id": 2,
+        "type": 1,
+        "num": 50000
+      }
+    ],
+    "cost": []
+  },
+  "1006": {
+    "id": 1006,
+    "type": 1,
+    "chargeId": 1,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 250
+      },
+      {
+        "id": 2,
+        "type": 1,
+        "num": 100000
+      }
+    ],
+    "cost": []
+  },
+  "1007": {
+    "id": 1007,
+    "type": 1,
+    "chargeId": 2,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 450
+      },
+      {
+        "id": 2,
+        "type": 1,
+        "num": 200000
+      }
+    ],
+    "cost": []
+  },
+  "1008": {
+    "id": 1008,
+    "type": 1,
+    "chargeId": 3,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 1500
+      },
+      {
+        "id": 2,
+        "type": 1,
+        "num": 500000
+      }
+    ],
+    "cost": []
+  },
+  "1009": {
+    "id": 1009,
+    "type": 1,
+    "chargeId": 4,
+    "number": 5,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 3000
+      },
+      {
+        "id": 2,
+        "type": 1,
+        "num": 1000000
+      }
+    ],
+    "cost": []
+  },
+  "2001": {
+    "id": 2001,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1000,
+    "reward": [
+      {
+        "id": 30020001,
+        "type": 2,
+        "num": 200
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 1
+      }
+    ]
+  },
+  "2002": {
+    "id": 2002,
+    "type": 2,
+    "chargeId": 0,
+    "number": 100,
+    "reward": [
+      {
+        "id": 221201,
+        "type": 2,
+        "num": 20
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 10
+      }
+    ]
+  },
+  "2003": {
+    "id": 2003,
+    "type": 2,
+    "chargeId": 0,
+    "number": 20,
+    "reward": [
+      {
+        "id": 30000030,
+        "type": 2,
+        "num": 100
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 50
+      }
+    ]
+  },
+  "2004": {
+    "id": 2004,
+    "type": 2,
+    "chargeId": 0,
+    "number": 10,
+    "reward": [
+      {
+        "id": 30000029,
+        "type": 2,
+        "num": 100
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 250
+      }
+    ]
+  },
+  "2005": {
+    "id": 2005,
+    "type": 2,
+    "chargeId": 0,
+    "number": 5,
+    "reward": [
+      {
+        "id": 221801,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 1000
+      }
+    ]
+  },
+  "2006": {
+    "id": 2006,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 221802,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 10000
+      }
+    ]
+  },
+  "3001": {
+    "id": 3001,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1000,
+    "reward": [
+      {
+        "id": 15,
+        "type": 1,
+        "num": 2000
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 1
+      }
+    ]
+  },
+  "3002": {
+    "id": 3002,
+    "type": 2,
+    "chargeId": 0,
+    "number": 100,
+    "reward": [
+      {
+        "id": 30011001,
+        "type": 2,
+        "num": 4
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 10
+      }
+    ]
+  },
+  "3003": {
+    "id": 3003,
+    "type": 2,
+    "chargeId": 0,
+    "number": 20,
+    "reward": [
+      {
+        "id": 221301,
+        "type": 2,
+        "num": 20
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 50
+      }
+    ]
+  },
+  "3004": {
+    "id": 3004,
+    "type": 2,
+    "chargeId": 0,
+    "number": 10,
+    "reward": [
+      {
+        "id": 30030001,
+        "type": 2,
+        "num": 10000
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 250
+      }
+    ]
+  },
+  "3005": {
+    "id": 3005,
+    "type": 2,
+    "chargeId": 0,
+    "number": 5,
+    "reward": [
+      {
+        "id": 221811,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 1000
+      }
+    ]
+  },
+  "3006": {
+    "id": 3006,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 221812,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 10000
+      }
+    ]
+  },
+  "4001": {
+    "id": 4001,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 201901,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 6000
+      }
+    ]
+  },
+  "4002": {
+    "id": 4002,
+    "type": 2,
+    "chargeId": 0,
+    "number": 210,
+    "reward": [
+      {
+        "id": 211901,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 35
+      }
+    ]
+  },
+  "4003": {
+    "id": 4003,
+    "type": 2,
+    "chargeId": 0,
+    "number": 30,
+    "reward": [
+      {
+        "id": 211901,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 300
+      }
+    ]
+  },
+  "4004": {
+    "id": 4004,
+    "type": 2,
+    "chargeId": 0,
+    "number": 50,
+    "reward": [
+      {
+        "id": 30000304,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "4005": {
+    "id": 4005,
+    "type": 2,
+    "chargeId": 0,
+    "number": 180,
+    "reward": [
+      {
+        "id": 211802,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 6
+      }
+    ]
+  },
+  "4006": {
+    "id": 4006,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800301,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "4007": {
+    "id": 4007,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800302,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "4008": {
+    "id": 4008,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800303,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "4009": {
+    "id": 4009,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800304,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "4010": {
+    "id": 4010,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800305,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "4011": {
+    "id": 4011,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800306,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "4012": {
+    "id": 4012,
+    "type": 2,
+    "chargeId": 0,
+    "number": 15,
+    "reward": [
+      {
+        "id": 702002,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "4013": {
+    "id": 4013,
+    "type": 2,
+    "chargeId": 0,
+    "number": 15,
+    "reward": [
+      {
+        "id": 702003,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "4014": {
+    "id": 4014,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 211801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "4015": {
+    "id": 4015,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 212801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "4016": {
+    "id": 4016,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 213801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "4017": {
+    "id": 4017,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 214801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "4018": {
+    "id": 4018,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 303001,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "4019": {
+    "id": 4019,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 303002,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "5001": {
+    "id": 5001,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1000,
+    "reward": [
+      {
+        "id": 30001003,
+        "type": 2,
+        "num": 2
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 1
+      }
+    ]
+  },
+  "5002": {
+    "id": 5002,
+    "type": 2,
+    "chargeId": 0,
+    "number": 100,
+    "reward": [
+      {
+        "id": 30001005,
+        "type": 2,
+        "num": 200
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 10
+      }
+    ]
+  },
+  "5003": {
+    "id": 5003,
+    "type": 2,
+    "chargeId": 0,
+    "number": 20,
+    "reward": [
+      {
+        "id": 30012004,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 50
+      }
+    ]
+  },
+  "5004": {
+    "id": 5004,
+    "type": 2,
+    "chargeId": 0,
+    "number": 10,
+    "reward": [
+      {
+        "id": 30013004,
+        "type": 2,
+        "num": 50
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 250
+      }
+    ]
+  },
+  "5005": {
+    "id": 5005,
+    "type": 2,
+    "chargeId": 0,
+    "number": 5,
+    "reward": [
+      {
+        "id": 221831,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 1000
+      }
+    ]
+  },
+  "5006": {
+    "id": 5006,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 221832,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 10000
+      }
+    ]
+  },
+  "6001": {
+    "id": 6001,
+    "type": 1,
+    "chargeId": 1,
+    "number": 1,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 10
+      },
+      {
+        "id": 2,
+        "type": 1,
+        "num": 3000
+      }
+    ],
+    "cost": []
+  },
+  "6002": {
+    "id": 6002,
+    "type": 1,
+    "chargeId": 2,
+    "number": 2,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 10
+      },
+      {
+        "id": 2,
+        "type": 1,
+        "num": 6000
+      }
+    ],
+    "cost": []
+  },
+  "6003": {
+    "id": 6003,
+    "type": 1,
+    "chargeId": 3,
+    "number": 2,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 15
+      },
+      {
+        "id": 2,
+        "type": 1,
+        "num": 12000
+      }
+    ],
+    "cost": []
+  },
+  "6004": {
+    "id": 6004,
+    "type": 1,
+    "chargeId": 4,
+    "number": 2,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 60
+      },
+      {
+        "id": 2,
+        "type": 1,
+        "num": 30000
+      }
+    ],
+    "cost": []
+  },
+  "6005": {
+    "id": 6005,
+    "type": 1,
+    "chargeId": 5,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 110
+      },
+      {
+        "id": 2,
+        "type": 1,
+        "num": 50000
+      }
+    ],
+    "cost": []
+  },
+  "6006": {
+    "id": 6006,
+    "type": 1,
+    "chargeId": 1,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 250
+      },
+      {
+        "id": 2,
+        "type": 1,
+        "num": 100000
+      }
+    ],
+    "cost": []
+  },
+  "6007": {
+    "id": 6007,
+    "type": 1,
+    "chargeId": 2,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 450
+      },
+      {
+        "id": 2,
+        "type": 1,
+        "num": 200000
+      }
+    ],
+    "cost": []
+  },
+  "6008": {
+    "id": 6008,
+    "type": 1,
+    "chargeId": 3,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 1500
+      },
+      {
+        "id": 2,
+        "type": 1,
+        "num": 500000
+      }
+    ],
+    "cost": []
+  },
+  "6009": {
+    "id": 6009,
+    "type": 1,
+    "chargeId": 4,
+    "number": 5,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 3000
+      },
+      {
+        "id": 2,
+        "type": 1,
+        "num": 1000000
+      }
+    ],
+    "cost": []
+  },
+  "7001": {
+    "id": 7001,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 201902,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 5000
+      }
+    ]
+  },
+  "7002": {
+    "id": 7002,
+    "type": 2,
+    "chargeId": 0,
+    "number": 210,
+    "reward": [
+      {
+        "id": 211902,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "7003": {
+    "id": 7003,
+    "type": 2,
+    "chargeId": 0,
+    "number": 30,
+    "reward": [
+      {
+        "id": 211902,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 280
+      }
+    ]
+  },
+  "7004": {
+    "id": 7004,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 202901,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 5000
+      }
+    ]
+  },
+  "7005": {
+    "id": 7005,
+    "type": 2,
+    "chargeId": 0,
+    "number": 210,
+    "reward": [
+      {
+        "id": 212901,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "7006": {
+    "id": 7006,
+    "type": 2,
+    "chargeId": 0,
+    "number": 30,
+    "reward": [
+      {
+        "id": 212901,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 280
+      }
+    ]
+  },
+  "7007": {
+    "id": 7007,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 202902,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 5000
+      }
+    ]
+  },
+  "7008": {
+    "id": 7008,
+    "type": 2,
+    "chargeId": 0,
+    "number": 210,
+    "reward": [
+      {
+        "id": 212902,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "7009": {
+    "id": 7009,
+    "type": 2,
+    "chargeId": 0,
+    "number": 30,
+    "reward": [
+      {
+        "id": 212902,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 280
+      }
+    ]
+  },
+  "7010": {
+    "id": 7010,
+    "type": 2,
+    "chargeId": 0,
+    "number": 50,
+    "reward": [
+      {
+        "id": 30000304,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "7011": {
+    "id": 7011,
+    "type": 2,
+    "chargeId": 0,
+    "number": 180,
+    "reward": [
+      {
+        "id": 211802,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 6
+      }
+    ]
+  },
+  "7012": {
+    "id": 7012,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800101,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "7013": {
+    "id": 7013,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800102,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "7014": {
+    "id": 7014,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800103,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "7015": {
+    "id": 7015,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800104,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "7016": {
+    "id": 7016,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800105,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "7017": {
+    "id": 7017,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800106,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "7018": {
+    "id": 7018,
+    "type": 2,
+    "chargeId": 0,
+    "number": 15,
+    "reward": [
+      {
+        "id": 702002,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "7019": {
+    "id": 7019,
+    "type": 2,
+    "chargeId": 0,
+    "number": 15,
+    "reward": [
+      {
+        "id": 702003,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "7020": {
+    "id": 7020,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 211801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "7021": {
+    "id": 7021,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 212801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "7022": {
+    "id": 7022,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 213801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "7023": {
+    "id": 7023,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 214801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "7024": {
+    "id": 7024,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 303001,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "7025": {
+    "id": 7025,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 303002,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "8001": {
+    "id": 8001,
+    "type": 1,
+    "chargeId": 1,
+    "number": 1,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 15
+      }
+    ],
+    "cost": []
+  },
+  "8002": {
+    "id": 8002,
+    "type": 1,
+    "chargeId": 2,
+    "number": 2,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 15
+      }
+    ],
+    "cost": []
+  },
+  "8003": {
+    "id": 8003,
+    "type": 1,
+    "chargeId": 3,
+    "number": 2,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 22
+      }
+    ],
+    "cost": []
+  },
+  "8004": {
+    "id": 8004,
+    "type": 1,
+    "chargeId": 4,
+    "number": 2,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 90
+      }
+    ],
+    "cost": []
+  },
+  "8005": {
+    "id": 8005,
+    "type": 1,
+    "chargeId": 5,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 165
+      }
+    ],
+    "cost": []
+  },
+  "8006": {
+    "id": 8006,
+    "type": 1,
+    "chargeId": 1,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 375
+      }
+    ],
+    "cost": []
+  },
+  "8007": {
+    "id": 8007,
+    "type": 1,
+    "chargeId": 2,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 675
+      }
+    ],
+    "cost": []
+  },
+  "8008": {
+    "id": 8008,
+    "type": 1,
+    "chargeId": 3,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 2250
+      }
+    ],
+    "cost": []
+  },
+  "8009": {
+    "id": 8009,
+    "type": 1,
+    "chargeId": 4,
+    "number": 5,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 4500
+      }
+    ],
+    "cost": []
+  },
+  "9001": {
+    "id": 9001,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 203901,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 5000
+      }
+    ]
+  },
+  "9002": {
+    "id": 9002,
+    "type": 2,
+    "chargeId": 0,
+    "number": 210,
+    "reward": [
+      {
+        "id": 213901,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "9003": {
+    "id": 9003,
+    "type": 2,
+    "chargeId": 0,
+    "number": 30,
+    "reward": [
+      {
+        "id": 213901,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 280
+      }
+    ]
+  },
+  "9004": {
+    "id": 9004,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 203902,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 5000
+      }
+    ]
+  },
+  "9005": {
+    "id": 9005,
+    "type": 2,
+    "chargeId": 0,
+    "number": 210,
+    "reward": [
+      {
+        "id": 213902,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "9006": {
+    "id": 9006,
+    "type": 2,
+    "chargeId": 0,
+    "number": 30,
+    "reward": [
+      {
+        "id": 213902,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 280
+      }
+    ]
+  },
+  "9007": {
+    "id": 9007,
+    "type": 2,
+    "chargeId": 0,
+    "number": 50,
+    "reward": [
+      {
+        "id": 30000304,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "9008": {
+    "id": 9008,
+    "type": 2,
+    "chargeId": 0,
+    "number": 180,
+    "reward": [
+      {
+        "id": 213802,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 6
+      }
+    ]
+  },
+  "9009": {
+    "id": 9009,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800201,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "9010": {
+    "id": 9010,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800202,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "9011": {
+    "id": 9011,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800203,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "9012": {
+    "id": 9012,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800204,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "9013": {
+    "id": 9013,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800205,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "9014": {
+    "id": 9014,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800206,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "9015": {
+    "id": 9015,
+    "type": 2,
+    "chargeId": 0,
+    "number": 15,
+    "reward": [
+      {
+        "id": 702002,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "9016": {
+    "id": 9016,
+    "type": 2,
+    "chargeId": 0,
+    "number": 15,
+    "reward": [
+      {
+        "id": 702003,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "9017": {
+    "id": 9017,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 211801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "9018": {
+    "id": 9018,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 212801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "9019": {
+    "id": 9019,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 213801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "9020": {
+    "id": 9020,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 214801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "9021": {
+    "id": 9021,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 303001,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "9022": {
+    "id": 9022,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 303002,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "10001": {
+    "id": 10001,
+    "type": 1,
+    "chargeId": 1,
+    "number": 1,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 15
+      }
+    ],
+    "cost": []
+  },
+  "10002": {
+    "id": 10002,
+    "type": 1,
+    "chargeId": 2,
+    "number": 2,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 15
+      }
+    ],
+    "cost": []
+  },
+  "10003": {
+    "id": 10003,
+    "type": 1,
+    "chargeId": 3,
+    "number": 2,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 22
+      }
+    ],
+    "cost": []
+  },
+  "10004": {
+    "id": 10004,
+    "type": 1,
+    "chargeId": 4,
+    "number": 2,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 90
+      }
+    ],
+    "cost": []
+  },
+  "10005": {
+    "id": 10005,
+    "type": 1,
+    "chargeId": 5,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 165
+      }
+    ],
+    "cost": []
+  },
+  "10006": {
+    "id": 10006,
+    "type": 1,
+    "chargeId": 1,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 375
+      }
+    ],
+    "cost": []
+  },
+  "10007": {
+    "id": 10007,
+    "type": 1,
+    "chargeId": 2,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 675
+      }
+    ],
+    "cost": []
+  },
+  "10008": {
+    "id": 10008,
+    "type": 1,
+    "chargeId": 3,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 2250
+      }
+    ],
+    "cost": []
+  },
+  "10009": {
+    "id": 10009,
+    "type": 1,
+    "chargeId": 4,
+    "number": 5,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 4500
+      }
+    ],
+    "cost": []
+  },
+  "11001": {
+    "id": 11001,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 204901,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 5000
+      }
+    ]
+  },
+  "11002": {
+    "id": 11002,
+    "type": 2,
+    "chargeId": 0,
+    "number": 210,
+    "reward": [
+      {
+        "id": 214901,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "11003": {
+    "id": 11003,
+    "type": 2,
+    "chargeId": 0,
+    "number": 30,
+    "reward": [
+      {
+        "id": 214901,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 280
+      }
+    ]
+  },
+  "11004": {
+    "id": 11004,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 204902,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 5000
+      }
+    ]
+  },
+  "11005": {
+    "id": 11005,
+    "type": 2,
+    "chargeId": 0,
+    "number": 210,
+    "reward": [
+      {
+        "id": 214902,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "11006": {
+    "id": 11006,
+    "type": 2,
+    "chargeId": 0,
+    "number": 30,
+    "reward": [
+      {
+        "id": 214902,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 280
+      }
+    ]
+  },
+  "11007": {
+    "id": 11007,
+    "type": 2,
+    "chargeId": 0,
+    "number": 50,
+    "reward": [
+      {
+        "id": 30000304,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "11008": {
+    "id": 11008,
+    "type": 2,
+    "chargeId": 0,
+    "number": 180,
+    "reward": [
+      {
+        "id": 214802,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 6
+      }
+    ]
+  },
+  "11009": {
+    "id": 11009,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800201,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "11010": {
+    "id": 11010,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800202,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "11011": {
+    "id": 11011,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800203,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "11012": {
+    "id": 11012,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800204,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "11013": {
+    "id": 11013,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800205,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "11014": {
+    "id": 11014,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800206,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "11015": {
+    "id": 11015,
+    "type": 2,
+    "chargeId": 0,
+    "number": 15,
+    "reward": [
+      {
+        "id": 702002,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "11016": {
+    "id": 11016,
+    "type": 2,
+    "chargeId": 0,
+    "number": 15,
+    "reward": [
+      {
+        "id": 702003,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "11017": {
+    "id": 11017,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 211801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "11018": {
+    "id": 11018,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 212801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "11019": {
+    "id": 11019,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 213801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "11020": {
+    "id": 11020,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 214801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "11021": {
+    "id": 11021,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 803001,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "11022": {
+    "id": 11022,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 803002,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "12001": {
+    "id": 12001,
+    "type": 1,
+    "chargeId": 1,
+    "number": 1,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 15
+      }
+    ],
+    "cost": []
+  },
+  "12002": {
+    "id": 12002,
+    "type": 1,
+    "chargeId": 2,
+    "number": 2,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 15
+      }
+    ],
+    "cost": []
+  },
+  "12003": {
+    "id": 12003,
+    "type": 1,
+    "chargeId": 3,
+    "number": 2,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 22
+      }
+    ],
+    "cost": []
+  },
+  "12004": {
+    "id": 12004,
+    "type": 1,
+    "chargeId": 4,
+    "number": 2,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 90
+      }
+    ],
+    "cost": []
+  },
+  "12005": {
+    "id": 12005,
+    "type": 1,
+    "chargeId": 5,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 165
+      }
+    ],
+    "cost": []
+  },
+  "12006": {
+    "id": 12006,
+    "type": 1,
+    "chargeId": 1,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 375
+      }
+    ],
+    "cost": []
+  },
+  "12007": {
+    "id": 12007,
+    "type": 1,
+    "chargeId": 2,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 675
+      }
+    ],
+    "cost": []
+  },
+  "12008": {
+    "id": 12008,
+    "type": 1,
+    "chargeId": 3,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 2250
+      }
+    ],
+    "cost": []
+  },
+  "12009": {
+    "id": 12009,
+    "type": 1,
+    "chargeId": 4,
+    "number": 5,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 4500
+      }
+    ],
+    "cost": []
+  },
+  "13001": {
+    "id": 13001,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 204901,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 5000
+      }
+    ]
+  },
+  "13002": {
+    "id": 13002,
+    "type": 2,
+    "chargeId": 0,
+    "number": 210,
+    "reward": [
+      {
+        "id": 214901,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "13003": {
+    "id": 13003,
+    "type": 2,
+    "chargeId": 0,
+    "number": 30,
+    "reward": [
+      {
+        "id": 214901,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 280
+      }
+    ]
+  },
+  "13004": {
+    "id": 13004,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 204902,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 5000
+      }
+    ]
+  },
+  "13005": {
+    "id": 13005,
+    "type": 2,
+    "chargeId": 0,
+    "number": 210,
+    "reward": [
+      {
+        "id": 214902,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "13006": {
+    "id": 13006,
+    "type": 2,
+    "chargeId": 0,
+    "number": 30,
+    "reward": [
+      {
+        "id": 214902,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 280
+      }
+    ]
+  },
+  "13007": {
+    "id": 13007,
+    "type": 2,
+    "chargeId": 0,
+    "number": 50,
+    "reward": [
+      {
+        "id": 30000304,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "13008": {
+    "id": 13008,
+    "type": 2,
+    "chargeId": 0,
+    "number": 180,
+    "reward": [
+      {
+        "id": 214802,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 6
+      }
+    ]
+  },
+  "13009": {
+    "id": 13009,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800201,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "13010": {
+    "id": 13010,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800202,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "13011": {
+    "id": 13011,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800203,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "13012": {
+    "id": 13012,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800204,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "13013": {
+    "id": 13013,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800205,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "13014": {
+    "id": 13014,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800206,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "13015": {
+    "id": 13015,
+    "type": 2,
+    "chargeId": 0,
+    "number": 15,
+    "reward": [
+      {
+        "id": 702002,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "13016": {
+    "id": 13016,
+    "type": 2,
+    "chargeId": 0,
+    "number": 15,
+    "reward": [
+      {
+        "id": 702003,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "13017": {
+    "id": 13017,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 211801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "13018": {
+    "id": 13018,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 212801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "13019": {
+    "id": 13019,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 213801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "13020": {
+    "id": 13020,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 214801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "13021": {
+    "id": 13021,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 803001,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "13022": {
+    "id": 13022,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 803002,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "14001": {
+    "id": 14001,
+    "type": 1,
+    "chargeId": 1,
+    "number": 1,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 15
+      }
+    ],
+    "cost": []
+  },
+  "14002": {
+    "id": 14002,
+    "type": 1,
+    "chargeId": 2,
+    "number": 2,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 15
+      }
+    ],
+    "cost": []
+  },
+  "14003": {
+    "id": 14003,
+    "type": 1,
+    "chargeId": 3,
+    "number": 2,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 22
+      }
+    ],
+    "cost": []
+  },
+  "14004": {
+    "id": 14004,
+    "type": 1,
+    "chargeId": 4,
+    "number": 2,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 90
+      }
+    ],
+    "cost": []
+  },
+  "14005": {
+    "id": 14005,
+    "type": 1,
+    "chargeId": 5,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 165
+      }
+    ],
+    "cost": []
+  },
+  "14006": {
+    "id": 14006,
+    "type": 1,
+    "chargeId": 1,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 375
+      }
+    ],
+    "cost": []
+  },
+  "14007": {
+    "id": 14007,
+    "type": 1,
+    "chargeId": 2,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 675
+      }
+    ],
+    "cost": []
+  },
+  "14008": {
+    "id": 14008,
+    "type": 1,
+    "chargeId": 3,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 2250
+      }
+    ],
+    "cost": []
+  },
+  "14009": {
+    "id": 14009,
+    "type": 1,
+    "chargeId": 4,
+    "number": 5,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 4500
+      }
+    ],
+    "cost": []
+  },
+  "15001": {
+    "id": 15001,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 204901,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 5000
+      }
+    ]
+  },
+  "15002": {
+    "id": 15002,
+    "type": 2,
+    "chargeId": 0,
+    "number": 210,
+    "reward": [
+      {
+        "id": 214901,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "15003": {
+    "id": 15003,
+    "type": 2,
+    "chargeId": 0,
+    "number": 30,
+    "reward": [
+      {
+        "id": 214901,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 280
+      }
+    ]
+  },
+  "15004": {
+    "id": 15004,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 204902,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 5000
+      }
+    ]
+  },
+  "15005": {
+    "id": 15005,
+    "type": 2,
+    "chargeId": 0,
+    "number": 210,
+    "reward": [
+      {
+        "id": 214902,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "15006": {
+    "id": 15006,
+    "type": 2,
+    "chargeId": 0,
+    "number": 30,
+    "reward": [
+      {
+        "id": 214902,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 280
+      }
+    ]
+  },
+  "15007": {
+    "id": 15007,
+    "type": 2,
+    "chargeId": 0,
+    "number": 50,
+    "reward": [
+      {
+        "id": 30000304,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "15008": {
+    "id": 15008,
+    "type": 2,
+    "chargeId": 0,
+    "number": 180,
+    "reward": [
+      {
+        "id": 214802,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 6
+      }
+    ]
+  },
+  "15009": {
+    "id": 15009,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800201,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "15010": {
+    "id": 15010,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800202,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "15011": {
+    "id": 15011,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800203,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "15012": {
+    "id": 15012,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800204,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "15013": {
+    "id": 15013,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800205,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "15014": {
+    "id": 15014,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800206,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "15015": {
+    "id": 15015,
+    "type": 2,
+    "chargeId": 0,
+    "number": 15,
+    "reward": [
+      {
+        "id": 702002,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "15016": {
+    "id": 15016,
+    "type": 2,
+    "chargeId": 0,
+    "number": 15,
+    "reward": [
+      {
+        "id": 702003,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "15017": {
+    "id": 15017,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 211801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "15018": {
+    "id": 15018,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 212801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "15019": {
+    "id": 15019,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 213801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "15020": {
+    "id": 15020,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 214801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "15021": {
+    "id": 15021,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 803001,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "15022": {
+    "id": 15022,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 803002,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "16001": {
+    "id": 16001,
+    "type": 1,
+    "chargeId": 1,
+    "number": 1,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 15
+      }
+    ],
+    "cost": []
+  },
+  "16002": {
+    "id": 16002,
+    "type": 1,
+    "chargeId": 2,
+    "number": 2,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 15
+      }
+    ],
+    "cost": []
+  },
+  "16003": {
+    "id": 16003,
+    "type": 1,
+    "chargeId": 3,
+    "number": 2,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 22
+      }
+    ],
+    "cost": []
+  },
+  "16004": {
+    "id": 16004,
+    "type": 1,
+    "chargeId": 4,
+    "number": 2,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 90
+      }
+    ],
+    "cost": []
+  },
+  "16005": {
+    "id": 16005,
+    "type": 1,
+    "chargeId": 5,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 165
+      }
+    ],
+    "cost": []
+  },
+  "16006": {
+    "id": 16006,
+    "type": 1,
+    "chargeId": 1,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 375
+      }
+    ],
+    "cost": []
+  },
+  "16007": {
+    "id": 16007,
+    "type": 1,
+    "chargeId": 2,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 675
+      }
+    ],
+    "cost": []
+  },
+  "16008": {
+    "id": 16008,
+    "type": 1,
+    "chargeId": 3,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 2250
+      }
+    ],
+    "cost": []
+  },
+  "16009": {
+    "id": 16009,
+    "type": 1,
+    "chargeId": 4,
+    "number": 5,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 4500
+      }
+    ],
+    "cost": []
+  },
+  "17001": {
+    "id": 17001,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 204901,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 5000
+      }
+    ]
+  },
+  "17002": {
+    "id": 17002,
+    "type": 2,
+    "chargeId": 0,
+    "number": 210,
+    "reward": [
+      {
+        "id": 214901,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "17003": {
+    "id": 17003,
+    "type": 2,
+    "chargeId": 0,
+    "number": 30,
+    "reward": [
+      {
+        "id": 214901,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 280
+      }
+    ]
+  },
+  "17004": {
+    "id": 17004,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 204902,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 5000
+      }
+    ]
+  },
+  "17005": {
+    "id": 17005,
+    "type": 2,
+    "chargeId": 0,
+    "number": 210,
+    "reward": [
+      {
+        "id": 214902,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "17006": {
+    "id": 17006,
+    "type": 2,
+    "chargeId": 0,
+    "number": 30,
+    "reward": [
+      {
+        "id": 214902,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 280
+      }
+    ]
+  },
+  "17007": {
+    "id": 17007,
+    "type": 2,
+    "chargeId": 0,
+    "number": 50,
+    "reward": [
+      {
+        "id": 30000304,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "17008": {
+    "id": 17008,
+    "type": 2,
+    "chargeId": 0,
+    "number": 180,
+    "reward": [
+      {
+        "id": 214802,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 6
+      }
+    ]
+  },
+  "17009": {
+    "id": 17009,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800201,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "17010": {
+    "id": 17010,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800202,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "17011": {
+    "id": 17011,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800203,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "17012": {
+    "id": 17012,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800204,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "17013": {
+    "id": 17013,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800205,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "17014": {
+    "id": 17014,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800206,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "17015": {
+    "id": 17015,
+    "type": 2,
+    "chargeId": 0,
+    "number": 15,
+    "reward": [
+      {
+        "id": 702002,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "17016": {
+    "id": 17016,
+    "type": 2,
+    "chargeId": 0,
+    "number": 15,
+    "reward": [
+      {
+        "id": 702003,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "17017": {
+    "id": 17017,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 211801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "17018": {
+    "id": 17018,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 212801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "17019": {
+    "id": 17019,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 213801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "17020": {
+    "id": 17020,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 214801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "17021": {
+    "id": 17021,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 803001,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "17022": {
+    "id": 17022,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 803002,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "18001": {
+    "id": 18001,
+    "type": 1,
+    "chargeId": 1,
+    "number": 1,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 15
+      }
+    ],
+    "cost": []
+  },
+  "18002": {
+    "id": 18002,
+    "type": 1,
+    "chargeId": 2,
+    "number": 2,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 15
+      }
+    ],
+    "cost": []
+  },
+  "18003": {
+    "id": 18003,
+    "type": 1,
+    "chargeId": 3,
+    "number": 2,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 22
+      }
+    ],
+    "cost": []
+  },
+  "18004": {
+    "id": 18004,
+    "type": 1,
+    "chargeId": 4,
+    "number": 2,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 90
+      }
+    ],
+    "cost": []
+  },
+  "18005": {
+    "id": 18005,
+    "type": 1,
+    "chargeId": 5,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 165
+      }
+    ],
+    "cost": []
+  },
+  "18006": {
+    "id": 18006,
+    "type": 1,
+    "chargeId": 1,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 375
+      }
+    ],
+    "cost": []
+  },
+  "18007": {
+    "id": 18007,
+    "type": 1,
+    "chargeId": 2,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 675
+      }
+    ],
+    "cost": []
+  },
+  "18008": {
+    "id": 18008,
+    "type": 1,
+    "chargeId": 3,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 2250
+      }
+    ],
+    "cost": []
+  },
+  "18009": {
+    "id": 18009,
+    "type": 1,
+    "chargeId": 4,
+    "number": 5,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 4500
+      }
+    ],
+    "cost": []
+  },
+  "19001": {
+    "id": 19001,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 204901,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 5000
+      }
+    ]
+  },
+  "19002": {
+    "id": 19002,
+    "type": 2,
+    "chargeId": 0,
+    "number": 210,
+    "reward": [
+      {
+        "id": 214901,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "19003": {
+    "id": 19003,
+    "type": 2,
+    "chargeId": 0,
+    "number": 30,
+    "reward": [
+      {
+        "id": 214901,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 280
+      }
+    ]
+  },
+  "19004": {
+    "id": 19004,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 204902,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 5000
+      }
+    ]
+  },
+  "19005": {
+    "id": 19005,
+    "type": 2,
+    "chargeId": 0,
+    "number": 210,
+    "reward": [
+      {
+        "id": 214902,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "19006": {
+    "id": 19006,
+    "type": 2,
+    "chargeId": 0,
+    "number": 30,
+    "reward": [
+      {
+        "id": 214902,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 280
+      }
+    ]
+  },
+  "19007": {
+    "id": 19007,
+    "type": 2,
+    "chargeId": 0,
+    "number": 50,
+    "reward": [
+      {
+        "id": 30000304,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "19008": {
+    "id": 19008,
+    "type": 2,
+    "chargeId": 0,
+    "number": 180,
+    "reward": [
+      {
+        "id": 214802,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 6
+      }
+    ]
+  },
+  "19009": {
+    "id": 19009,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800201,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "19010": {
+    "id": 19010,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800202,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "19011": {
+    "id": 19011,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800203,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "19012": {
+    "id": 19012,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800204,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "19013": {
+    "id": 19013,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800205,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "19014": {
+    "id": 19014,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800206,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "19015": {
+    "id": 19015,
+    "type": 2,
+    "chargeId": 0,
+    "number": 15,
+    "reward": [
+      {
+        "id": 702002,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "19016": {
+    "id": 19016,
+    "type": 2,
+    "chargeId": 0,
+    "number": 15,
+    "reward": [
+      {
+        "id": 702003,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "19017": {
+    "id": 19017,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 211801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "19018": {
+    "id": 19018,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 212801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "19019": {
+    "id": 19019,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 213801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "19020": {
+    "id": 19020,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 214801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "19021": {
+    "id": 19021,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 803001,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "19022": {
+    "id": 19022,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 803002,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "20001": {
+    "id": 20001,
+    "type": 1,
+    "chargeId": 1,
+    "number": 1,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 15
+      }
+    ],
+    "cost": []
+  },
+  "20002": {
+    "id": 20002,
+    "type": 1,
+    "chargeId": 2,
+    "number": 2,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 15
+      }
+    ],
+    "cost": []
+  },
+  "20003": {
+    "id": 20003,
+    "type": 1,
+    "chargeId": 3,
+    "number": 2,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 22
+      }
+    ],
+    "cost": []
+  },
+  "20004": {
+    "id": 20004,
+    "type": 1,
+    "chargeId": 4,
+    "number": 2,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 90
+      }
+    ],
+    "cost": []
+  },
+  "20005": {
+    "id": 20005,
+    "type": 1,
+    "chargeId": 5,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 165
+      }
+    ],
+    "cost": []
+  },
+  "20006": {
+    "id": 20006,
+    "type": 1,
+    "chargeId": 1,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 375
+      }
+    ],
+    "cost": []
+  },
+  "20007": {
+    "id": 20007,
+    "type": 1,
+    "chargeId": 2,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 675
+      }
+    ],
+    "cost": []
+  },
+  "20008": {
+    "id": 20008,
+    "type": 1,
+    "chargeId": 3,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 2250
+      }
+    ],
+    "cost": []
+  },
+  "20009": {
+    "id": 20009,
+    "type": 1,
+    "chargeId": 4,
+    "number": 5,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 4500
+      }
+    ],
+    "cost": []
+  },
+  "21001": {
+    "id": 21001,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 204901,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 5000
+      }
+    ]
+  },
+  "21002": {
+    "id": 21002,
+    "type": 2,
+    "chargeId": 0,
+    "number": 210,
+    "reward": [
+      {
+        "id": 214901,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "21003": {
+    "id": 21003,
+    "type": 2,
+    "chargeId": 0,
+    "number": 30,
+    "reward": [
+      {
+        "id": 214901,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 280
+      }
+    ]
+  },
+  "21004": {
+    "id": 21004,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 204902,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 5000
+      }
+    ]
+  },
+  "21005": {
+    "id": 21005,
+    "type": 2,
+    "chargeId": 0,
+    "number": 210,
+    "reward": [
+      {
+        "id": 214902,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "21006": {
+    "id": 21006,
+    "type": 2,
+    "chargeId": 0,
+    "number": 30,
+    "reward": [
+      {
+        "id": 214902,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 280
+      }
+    ]
+  },
+  "21007": {
+    "id": 21007,
+    "type": 2,
+    "chargeId": 0,
+    "number": 50,
+    "reward": [
+      {
+        "id": 30000304,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "21008": {
+    "id": 21008,
+    "type": 2,
+    "chargeId": 0,
+    "number": 180,
+    "reward": [
+      {
+        "id": 214802,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 6
+      }
+    ]
+  },
+  "21009": {
+    "id": 21009,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800201,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "21010": {
+    "id": 21010,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800202,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "21011": {
+    "id": 21011,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800203,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "21012": {
+    "id": 21012,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800204,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "21013": {
+    "id": 21013,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800205,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "21014": {
+    "id": 21014,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800206,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "21015": {
+    "id": 21015,
+    "type": 2,
+    "chargeId": 0,
+    "number": 15,
+    "reward": [
+      {
+        "id": 702002,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "21016": {
+    "id": 21016,
+    "type": 2,
+    "chargeId": 0,
+    "number": 15,
+    "reward": [
+      {
+        "id": 702003,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "21017": {
+    "id": 21017,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 211801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "21018": {
+    "id": 21018,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 212801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "21019": {
+    "id": 21019,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 213801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "21020": {
+    "id": 21020,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 214801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "21021": {
+    "id": 21021,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 803001,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "21022": {
+    "id": 21022,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 803002,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "22001": {
+    "id": 22001,
+    "type": 1,
+    "chargeId": 1,
+    "number": 1,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 15
+      }
+    ],
+    "cost": []
+  },
+  "22002": {
+    "id": 22002,
+    "type": 1,
+    "chargeId": 2,
+    "number": 2,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 15
+      }
+    ],
+    "cost": []
+  },
+  "22003": {
+    "id": 22003,
+    "type": 1,
+    "chargeId": 3,
+    "number": 2,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 22
+      }
+    ],
+    "cost": []
+  },
+  "22004": {
+    "id": 22004,
+    "type": 1,
+    "chargeId": 4,
+    "number": 2,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 90
+      }
+    ],
+    "cost": []
+  },
+  "22005": {
+    "id": 22005,
+    "type": 1,
+    "chargeId": 5,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 165
+      }
+    ],
+    "cost": []
+  },
+  "22006": {
+    "id": 22006,
+    "type": 1,
+    "chargeId": 1,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 375
+      }
+    ],
+    "cost": []
+  },
+  "22007": {
+    "id": 22007,
+    "type": 1,
+    "chargeId": 2,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 675
+      }
+    ],
+    "cost": []
+  },
+  "22008": {
+    "id": 22008,
+    "type": 1,
+    "chargeId": 3,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 2250
+      }
+    ],
+    "cost": []
+  },
+  "22009": {
+    "id": 22009,
+    "type": 1,
+    "chargeId": 4,
+    "number": 5,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 4500
+      }
+    ],
+    "cost": []
+  },
+  "23001": {
+    "id": 23001,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 204901,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 5000
+      }
+    ]
+  },
+  "23002": {
+    "id": 23002,
+    "type": 2,
+    "chargeId": 0,
+    "number": 210,
+    "reward": [
+      {
+        "id": 214901,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "23003": {
+    "id": 23003,
+    "type": 2,
+    "chargeId": 0,
+    "number": 30,
+    "reward": [
+      {
+        "id": 214901,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 280
+      }
+    ]
+  },
+  "23004": {
+    "id": 23004,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 204902,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 5000
+      }
+    ]
+  },
+  "23005": {
+    "id": 23005,
+    "type": 2,
+    "chargeId": 0,
+    "number": 210,
+    "reward": [
+      {
+        "id": 214902,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "23006": {
+    "id": 23006,
+    "type": 2,
+    "chargeId": 0,
+    "number": 30,
+    "reward": [
+      {
+        "id": 214902,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 280
+      }
+    ]
+  },
+  "23007": {
+    "id": 23007,
+    "type": 2,
+    "chargeId": 0,
+    "number": 50,
+    "reward": [
+      {
+        "id": 30000304,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "23008": {
+    "id": 23008,
+    "type": 2,
+    "chargeId": 0,
+    "number": 180,
+    "reward": [
+      {
+        "id": 214802,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 6
+      }
+    ]
+  },
+  "23009": {
+    "id": 23009,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800201,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "23010": {
+    "id": 23010,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800202,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "23011": {
+    "id": 23011,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800203,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "23012": {
+    "id": 23012,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800204,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "23013": {
+    "id": 23013,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800205,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "23014": {
+    "id": 23014,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800206,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "23015": {
+    "id": 23015,
+    "type": 2,
+    "chargeId": 0,
+    "number": 15,
+    "reward": [
+      {
+        "id": 702002,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "23016": {
+    "id": 23016,
+    "type": 2,
+    "chargeId": 0,
+    "number": 15,
+    "reward": [
+      {
+        "id": 702003,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "23017": {
+    "id": 23017,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 211801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "23018": {
+    "id": 23018,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 212801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "23019": {
+    "id": 23019,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 213801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "23020": {
+    "id": 23020,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 214801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "23021": {
+    "id": 23021,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 803001,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "23022": {
+    "id": 23022,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 803002,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "116001": {
+    "id": 116001,
+    "type": 1,
+    "chargeId": 1,
+    "number": 1,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 15
+      }
+    ],
+    "cost": []
+  },
+  "116002": {
+    "id": 116002,
+    "type": 1,
+    "chargeId": 2,
+    "number": 2,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 15
+      }
+    ],
+    "cost": []
+  },
+  "116003": {
+    "id": 116003,
+    "type": 1,
+    "chargeId": 3,
+    "number": 2,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 22
+      }
+    ],
+    "cost": []
+  },
+  "116004": {
+    "id": 116004,
+    "type": 1,
+    "chargeId": 4,
+    "number": 2,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 90
+      }
+    ],
+    "cost": []
+  },
+  "116005": {
+    "id": 116005,
+    "type": 1,
+    "chargeId": 5,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 165
+      }
+    ],
+    "cost": []
+  },
+  "116006": {
+    "id": 116006,
+    "type": 1,
+    "chargeId": 1,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 375
+      }
+    ],
+    "cost": []
+  },
+  "116007": {
+    "id": 116007,
+    "type": 1,
+    "chargeId": 2,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 675
+      }
+    ],
+    "cost": []
+  },
+  "116008": {
+    "id": 116008,
+    "type": 1,
+    "chargeId": 3,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 2250
+      }
+    ],
+    "cost": []
+  },
+  "116009": {
+    "id": 116009,
+    "type": 1,
+    "chargeId": 4,
+    "number": 5,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 4500
+      }
+    ],
+    "cost": []
+  },
+  "117001": {
+    "id": 117001,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 204901,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 5000
+      }
+    ]
+  },
+  "117002": {
+    "id": 117002,
+    "type": 2,
+    "chargeId": 0,
+    "number": 210,
+    "reward": [
+      {
+        "id": 214901,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "117003": {
+    "id": 117003,
+    "type": 2,
+    "chargeId": 0,
+    "number": 30,
+    "reward": [
+      {
+        "id": 214901,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 280
+      }
+    ]
+  },
+  "117004": {
+    "id": 117004,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 204902,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 5000
+      }
+    ]
+  },
+  "117005": {
+    "id": 117005,
+    "type": 2,
+    "chargeId": 0,
+    "number": 210,
+    "reward": [
+      {
+        "id": 214902,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "117006": {
+    "id": 117006,
+    "type": 2,
+    "chargeId": 0,
+    "number": 30,
+    "reward": [
+      {
+        "id": 214902,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 280
+      }
+    ]
+  },
+  "117007": {
+    "id": 117007,
+    "type": 2,
+    "chargeId": 0,
+    "number": 50,
+    "reward": [
+      {
+        "id": 30000304,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "117008": {
+    "id": 117008,
+    "type": 2,
+    "chargeId": 0,
+    "number": 180,
+    "reward": [
+      {
+        "id": 214802,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 6
+      }
+    ]
+  },
+  "117009": {
+    "id": 117009,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800201,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "117010": {
+    "id": 117010,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800202,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "117011": {
+    "id": 117011,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800203,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "117012": {
+    "id": 117012,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800204,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "117013": {
+    "id": 117013,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800205,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "117014": {
+    "id": 117014,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800206,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "117015": {
+    "id": 117015,
+    "type": 2,
+    "chargeId": 0,
+    "number": 15,
+    "reward": [
+      {
+        "id": 702002,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "117016": {
+    "id": 117016,
+    "type": 2,
+    "chargeId": 0,
+    "number": 15,
+    "reward": [
+      {
+        "id": 702003,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "117017": {
+    "id": 117017,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 211801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "117018": {
+    "id": 117018,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 212801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "117019": {
+    "id": 117019,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 213801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "117020": {
+    "id": 117020,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 214801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "117021": {
+    "id": 117021,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 803001,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "117022": {
+    "id": 117022,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 803002,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "118001": {
+    "id": 118001,
+    "type": 1,
+    "chargeId": 1,
+    "number": 1,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 15
+      }
+    ],
+    "cost": []
+  },
+  "118002": {
+    "id": 118002,
+    "type": 1,
+    "chargeId": 2,
+    "number": 2,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 15
+      }
+    ],
+    "cost": []
+  },
+  "118003": {
+    "id": 118003,
+    "type": 1,
+    "chargeId": 3,
+    "number": 2,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 22
+      }
+    ],
+    "cost": []
+  },
+  "118004": {
+    "id": 118004,
+    "type": 1,
+    "chargeId": 4,
+    "number": 2,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 90
+      }
+    ],
+    "cost": []
+  },
+  "118005": {
+    "id": 118005,
+    "type": 1,
+    "chargeId": 5,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 165
+      }
+    ],
+    "cost": []
+  },
+  "118006": {
+    "id": 118006,
+    "type": 1,
+    "chargeId": 1,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 375
+      }
+    ],
+    "cost": []
+  },
+  "118007": {
+    "id": 118007,
+    "type": 1,
+    "chargeId": 2,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 675
+      }
+    ],
+    "cost": []
+  },
+  "118008": {
+    "id": 118008,
+    "type": 1,
+    "chargeId": 3,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 2250
+      }
+    ],
+    "cost": []
+  },
+  "118009": {
+    "id": 118009,
+    "type": 1,
+    "chargeId": 4,
+    "number": 5,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 4500
+      }
+    ],
+    "cost": []
+  },
+  "119001": {
+    "id": 119001,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 204901,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 5000
+      }
+    ]
+  },
+  "119002": {
+    "id": 119002,
+    "type": 2,
+    "chargeId": 0,
+    "number": 210,
+    "reward": [
+      {
+        "id": 214901,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "119003": {
+    "id": 119003,
+    "type": 2,
+    "chargeId": 0,
+    "number": 30,
+    "reward": [
+      {
+        "id": 214901,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 280
+      }
+    ]
+  },
+  "119004": {
+    "id": 119004,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 204902,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 5000
+      }
+    ]
+  },
+  "119005": {
+    "id": 119005,
+    "type": 2,
+    "chargeId": 0,
+    "number": 210,
+    "reward": [
+      {
+        "id": 214902,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "119006": {
+    "id": 119006,
+    "type": 2,
+    "chargeId": 0,
+    "number": 30,
+    "reward": [
+      {
+        "id": 214902,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 280
+      }
+    ]
+  },
+  "119007": {
+    "id": 119007,
+    "type": 2,
+    "chargeId": 0,
+    "number": 50,
+    "reward": [
+      {
+        "id": 30000304,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "119008": {
+    "id": 119008,
+    "type": 2,
+    "chargeId": 0,
+    "number": 180,
+    "reward": [
+      {
+        "id": 214802,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 6
+      }
+    ]
+  },
+  "119009": {
+    "id": 119009,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800201,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "119010": {
+    "id": 119010,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800202,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "119011": {
+    "id": 119011,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800203,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "119012": {
+    "id": 119012,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800204,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "119013": {
+    "id": 119013,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800205,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "119014": {
+    "id": 119014,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800206,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "119015": {
+    "id": 119015,
+    "type": 2,
+    "chargeId": 0,
+    "number": 15,
+    "reward": [
+      {
+        "id": 702002,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "119016": {
+    "id": 119016,
+    "type": 2,
+    "chargeId": 0,
+    "number": 15,
+    "reward": [
+      {
+        "id": 702003,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "119017": {
+    "id": 119017,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 211801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "119018": {
+    "id": 119018,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 212801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "119019": {
+    "id": 119019,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 213801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "119020": {
+    "id": 119020,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 214801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "119021": {
+    "id": 119021,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 803001,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "119022": {
+    "id": 119022,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 803002,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "120001": {
+    "id": 120001,
+    "type": 1,
+    "chargeId": 1,
+    "number": 1,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 15
+      }
+    ],
+    "cost": []
+  },
+  "120002": {
+    "id": 120002,
+    "type": 1,
+    "chargeId": 2,
+    "number": 2,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 15
+      }
+    ],
+    "cost": []
+  },
+  "120003": {
+    "id": 120003,
+    "type": 1,
+    "chargeId": 3,
+    "number": 2,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 22
+      }
+    ],
+    "cost": []
+  },
+  "120004": {
+    "id": 120004,
+    "type": 1,
+    "chargeId": 4,
+    "number": 2,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 90
+      }
+    ],
+    "cost": []
+  },
+  "120005": {
+    "id": 120005,
+    "type": 1,
+    "chargeId": 5,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 165
+      }
+    ],
+    "cost": []
+  },
+  "120006": {
+    "id": 120006,
+    "type": 1,
+    "chargeId": 1,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 375
+      }
+    ],
+    "cost": []
+  },
+  "120007": {
+    "id": 120007,
+    "type": 1,
+    "chargeId": 2,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 675
+      }
+    ],
+    "cost": []
+  },
+  "120008": {
+    "id": 120008,
+    "type": 1,
+    "chargeId": 3,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 2250
+      }
+    ],
+    "cost": []
+  },
+  "120009": {
+    "id": 120009,
+    "type": 1,
+    "chargeId": 4,
+    "number": 5,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 4500
+      }
+    ],
+    "cost": []
+  },
+  "121001": {
+    "id": 121001,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 204901,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 5000
+      }
+    ]
+  },
+  "121002": {
+    "id": 121002,
+    "type": 2,
+    "chargeId": 0,
+    "number": 210,
+    "reward": [
+      {
+        "id": 214901,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "121003": {
+    "id": 121003,
+    "type": 2,
+    "chargeId": 0,
+    "number": 30,
+    "reward": [
+      {
+        "id": 214901,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 280
+      }
+    ]
+  },
+  "121004": {
+    "id": 121004,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 204902,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 5000
+      }
+    ]
+  },
+  "121005": {
+    "id": 121005,
+    "type": 2,
+    "chargeId": 0,
+    "number": 210,
+    "reward": [
+      {
+        "id": 214902,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "121006": {
+    "id": 121006,
+    "type": 2,
+    "chargeId": 0,
+    "number": 30,
+    "reward": [
+      {
+        "id": 214902,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 280
+      }
+    ]
+  },
+  "121007": {
+    "id": 121007,
+    "type": 2,
+    "chargeId": 0,
+    "number": 50,
+    "reward": [
+      {
+        "id": 30000304,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "121008": {
+    "id": 121008,
+    "type": 2,
+    "chargeId": 0,
+    "number": 180,
+    "reward": [
+      {
+        "id": 214802,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 6
+      }
+    ]
+  },
+  "121009": {
+    "id": 121009,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800201,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "121010": {
+    "id": 121010,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800202,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "121011": {
+    "id": 121011,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800203,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "121012": {
+    "id": 121012,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800204,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "121013": {
+    "id": 121013,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800205,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "121014": {
+    "id": 121014,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800206,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "121015": {
+    "id": 121015,
+    "type": 2,
+    "chargeId": 0,
+    "number": 15,
+    "reward": [
+      {
+        "id": 702002,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "121016": {
+    "id": 121016,
+    "type": 2,
+    "chargeId": 0,
+    "number": 15,
+    "reward": [
+      {
+        "id": 702003,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "121017": {
+    "id": 121017,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 211801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "121018": {
+    "id": 121018,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 212801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "121019": {
+    "id": 121019,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 213801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "121020": {
+    "id": 121020,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 214801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "121021": {
+    "id": 121021,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 803001,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "121022": {
+    "id": 121022,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 803002,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "122001": {
+    "id": 122001,
+    "type": 1,
+    "chargeId": 1,
+    "number": 1,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 15
+      }
+    ],
+    "cost": []
+  },
+  "122002": {
+    "id": 122002,
+    "type": 1,
+    "chargeId": 2,
+    "number": 2,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 15
+      }
+    ],
+    "cost": []
+  },
+  "122003": {
+    "id": 122003,
+    "type": 1,
+    "chargeId": 3,
+    "number": 2,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 22
+      }
+    ],
+    "cost": []
+  },
+  "122004": {
+    "id": 122004,
+    "type": 1,
+    "chargeId": 4,
+    "number": 2,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 90
+      }
+    ],
+    "cost": []
+  },
+  "122005": {
+    "id": 122005,
+    "type": 1,
+    "chargeId": 5,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 165
+      }
+    ],
+    "cost": []
+  },
+  "122006": {
+    "id": 122006,
+    "type": 1,
+    "chargeId": 1,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 375
+      }
+    ],
+    "cost": []
+  },
+  "122007": {
+    "id": 122007,
+    "type": 1,
+    "chargeId": 2,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 675
+      }
+    ],
+    "cost": []
+  },
+  "122008": {
+    "id": 122008,
+    "type": 1,
+    "chargeId": 3,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 2250
+      }
+    ],
+    "cost": []
+  },
+  "122009": {
+    "id": 122009,
+    "type": 1,
+    "chargeId": 4,
+    "number": 5,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 4500
+      }
+    ],
+    "cost": []
+  },
+  "123001": {
+    "id": 123001,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 204901,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 5000
+      }
+    ]
+  },
+  "123002": {
+    "id": 123002,
+    "type": 2,
+    "chargeId": 0,
+    "number": 210,
+    "reward": [
+      {
+        "id": 214901,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "123003": {
+    "id": 123003,
+    "type": 2,
+    "chargeId": 0,
+    "number": 30,
+    "reward": [
+      {
+        "id": 214901,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 280
+      }
+    ]
+  },
+  "123004": {
+    "id": 123004,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 204902,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 5000
+      }
+    ]
+  },
+  "123005": {
+    "id": 123005,
+    "type": 2,
+    "chargeId": 0,
+    "number": 210,
+    "reward": [
+      {
+        "id": 214902,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "123006": {
+    "id": 123006,
+    "type": 2,
+    "chargeId": 0,
+    "number": 30,
+    "reward": [
+      {
+        "id": 214902,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 280
+      }
+    ]
+  },
+  "123007": {
+    "id": 123007,
+    "type": 2,
+    "chargeId": 0,
+    "number": 50,
+    "reward": [
+      {
+        "id": 30000304,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "123008": {
+    "id": 123008,
+    "type": 2,
+    "chargeId": 0,
+    "number": 180,
+    "reward": [
+      {
+        "id": 214802,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 6
+      }
+    ]
+  },
+  "123009": {
+    "id": 123009,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800201,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "123010": {
+    "id": 123010,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800202,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "123011": {
+    "id": 123011,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800203,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "123012": {
+    "id": 123012,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800204,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "123013": {
+    "id": 123013,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800205,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "123014": {
+    "id": 123014,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800206,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "123015": {
+    "id": 123015,
+    "type": 2,
+    "chargeId": 0,
+    "number": 15,
+    "reward": [
+      {
+        "id": 702002,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "123016": {
+    "id": 123016,
+    "type": 2,
+    "chargeId": 0,
+    "number": 15,
+    "reward": [
+      {
+        "id": 702003,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "123017": {
+    "id": 123017,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 211801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "123018": {
+    "id": 123018,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 212801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "123019": {
+    "id": 123019,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 213801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "123020": {
+    "id": 123020,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 214801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "123021": {
+    "id": 123021,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 803001,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "123022": {
+    "id": 123022,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 803002,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "124001": {
+    "id": 124001,
+    "type": 1,
+    "chargeId": 1,
+    "number": 1,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 15
+      }
+    ],
+    "cost": []
+  },
+  "124002": {
+    "id": 124002,
+    "type": 1,
+    "chargeId": 2,
+    "number": 2,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 15
+      }
+    ],
+    "cost": []
+  },
+  "124003": {
+    "id": 124003,
+    "type": 1,
+    "chargeId": 3,
+    "number": 2,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 22
+      }
+    ],
+    "cost": []
+  },
+  "124004": {
+    "id": 124004,
+    "type": 1,
+    "chargeId": 4,
+    "number": 2,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 90
+      }
+    ],
+    "cost": []
+  },
+  "124005": {
+    "id": 124005,
+    "type": 1,
+    "chargeId": 5,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 165
+      }
+    ],
+    "cost": []
+  },
+  "124006": {
+    "id": 124006,
+    "type": 1,
+    "chargeId": 1,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 375
+      }
+    ],
+    "cost": []
+  },
+  "124007": {
+    "id": 124007,
+    "type": 1,
+    "chargeId": 2,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 675
+      }
+    ],
+    "cost": []
+  },
+  "124008": {
+    "id": 124008,
+    "type": 1,
+    "chargeId": 3,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 2250
+      }
+    ],
+    "cost": []
+  },
+  "124009": {
+    "id": 124009,
+    "type": 1,
+    "chargeId": 4,
+    "number": 5,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 4500
+      }
+    ],
+    "cost": []
+  },
+  "125001": {
+    "id": 125001,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 204901,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 5000
+      }
+    ]
+  },
+  "125002": {
+    "id": 125002,
+    "type": 2,
+    "chargeId": 0,
+    "number": 210,
+    "reward": [
+      {
+        "id": 214901,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "125003": {
+    "id": 125003,
+    "type": 2,
+    "chargeId": 0,
+    "number": 30,
+    "reward": [
+      {
+        "id": 214901,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 280
+      }
+    ]
+  },
+  "125004": {
+    "id": 125004,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 204902,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 5000
+      }
+    ]
+  },
+  "125005": {
+    "id": 125005,
+    "type": 2,
+    "chargeId": 0,
+    "number": 210,
+    "reward": [
+      {
+        "id": 214902,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "125006": {
+    "id": 125006,
+    "type": 2,
+    "chargeId": 0,
+    "number": 30,
+    "reward": [
+      {
+        "id": 214902,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 280
+      }
+    ]
+  },
+  "125007": {
+    "id": 125007,
+    "type": 2,
+    "chargeId": 0,
+    "number": 50,
+    "reward": [
+      {
+        "id": 30000304,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "125008": {
+    "id": 125008,
+    "type": 2,
+    "chargeId": 0,
+    "number": 180,
+    "reward": [
+      {
+        "id": 214802,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 6
+      }
+    ]
+  },
+  "125009": {
+    "id": 125009,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800201,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "125010": {
+    "id": 125010,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800202,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "125011": {
+    "id": 125011,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800203,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "125012": {
+    "id": 125012,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800204,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "125013": {
+    "id": 125013,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800205,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "125014": {
+    "id": 125014,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800206,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "125015": {
+    "id": 125015,
+    "type": 2,
+    "chargeId": 0,
+    "number": 15,
+    "reward": [
+      {
+        "id": 702002,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "125016": {
+    "id": 125016,
+    "type": 2,
+    "chargeId": 0,
+    "number": 15,
+    "reward": [
+      {
+        "id": 702003,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "125017": {
+    "id": 125017,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 211801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "125018": {
+    "id": 125018,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 212801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "125019": {
+    "id": 125019,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 213801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "125020": {
+    "id": 125020,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 214801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "125021": {
+    "id": 125021,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 803001,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "125022": {
+    "id": 125022,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 803002,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "126001": {
+    "id": 126001,
+    "type": 1,
+    "chargeId": 1,
+    "number": 1,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 15
+      }
+    ],
+    "cost": []
+  },
+  "126002": {
+    "id": 126002,
+    "type": 1,
+    "chargeId": 2,
+    "number": 2,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 15
+      }
+    ],
+    "cost": []
+  },
+  "126003": {
+    "id": 126003,
+    "type": 1,
+    "chargeId": 3,
+    "number": 2,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 22
+      }
+    ],
+    "cost": []
+  },
+  "126004": {
+    "id": 126004,
+    "type": 1,
+    "chargeId": 4,
+    "number": 2,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 90
+      }
+    ],
+    "cost": []
+  },
+  "126005": {
+    "id": 126005,
+    "type": 1,
+    "chargeId": 5,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 165
+      }
+    ],
+    "cost": []
+  },
+  "126006": {
+    "id": 126006,
+    "type": 1,
+    "chargeId": 1,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 375
+      }
+    ],
+    "cost": []
+  },
+  "126007": {
+    "id": 126007,
+    "type": 1,
+    "chargeId": 2,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 675
+      }
+    ],
+    "cost": []
+  },
+  "126008": {
+    "id": 126008,
+    "type": 1,
+    "chargeId": 3,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 2250
+      }
+    ],
+    "cost": []
+  },
+  "126009": {
+    "id": 126009,
+    "type": 1,
+    "chargeId": 4,
+    "number": 5,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 4500
+      }
+    ],
+    "cost": []
+  },
+  "127001": {
+    "id": 127001,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 204901,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 5000
+      }
+    ]
+  },
+  "127002": {
+    "id": 127002,
+    "type": 2,
+    "chargeId": 0,
+    "number": 210,
+    "reward": [
+      {
+        "id": 214901,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "127003": {
+    "id": 127003,
+    "type": 2,
+    "chargeId": 0,
+    "number": 30,
+    "reward": [
+      {
+        "id": 214901,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 280
+      }
+    ]
+  },
+  "127004": {
+    "id": 127004,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 204902,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 5000
+      }
+    ]
+  },
+  "127005": {
+    "id": 127005,
+    "type": 2,
+    "chargeId": 0,
+    "number": 210,
+    "reward": [
+      {
+        "id": 214902,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "127006": {
+    "id": 127006,
+    "type": 2,
+    "chargeId": 0,
+    "number": 30,
+    "reward": [
+      {
+        "id": 214902,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 280
+      }
+    ]
+  },
+  "127007": {
+    "id": 127007,
+    "type": 2,
+    "chargeId": 0,
+    "number": 50,
+    "reward": [
+      {
+        "id": 30000304,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "127008": {
+    "id": 127008,
+    "type": 2,
+    "chargeId": 0,
+    "number": 180,
+    "reward": [
+      {
+        "id": 214802,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 6
+      }
+    ]
+  },
+  "127009": {
+    "id": 127009,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800201,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "127010": {
+    "id": 127010,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800202,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "127011": {
+    "id": 127011,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800203,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "127012": {
+    "id": 127012,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800204,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "127013": {
+    "id": 127013,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800205,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "127014": {
+    "id": 127014,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800206,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "127015": {
+    "id": 127015,
+    "type": 2,
+    "chargeId": 0,
+    "number": 15,
+    "reward": [
+      {
+        "id": 702002,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "127016": {
+    "id": 127016,
+    "type": 2,
+    "chargeId": 0,
+    "number": 15,
+    "reward": [
+      {
+        "id": 702003,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "127017": {
+    "id": 127017,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 211801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "127018": {
+    "id": 127018,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 212801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "127019": {
+    "id": 127019,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 213801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "127020": {
+    "id": 127020,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 214801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "127021": {
+    "id": 127021,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 803001,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "127022": {
+    "id": 127022,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 803002,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "128001": {
+    "id": 128001,
+    "type": 1,
+    "chargeId": 1,
+    "number": 1,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 15
+      }
+    ],
+    "cost": []
+  },
+  "128002": {
+    "id": 128002,
+    "type": 1,
+    "chargeId": 2,
+    "number": 2,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 15
+      }
+    ],
+    "cost": []
+  },
+  "128003": {
+    "id": 128003,
+    "type": 1,
+    "chargeId": 3,
+    "number": 2,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 22
+      }
+    ],
+    "cost": []
+  },
+  "128004": {
+    "id": 128004,
+    "type": 1,
+    "chargeId": 4,
+    "number": 2,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 90
+      }
+    ],
+    "cost": []
+  },
+  "128005": {
+    "id": 128005,
+    "type": 1,
+    "chargeId": 5,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 165
+      }
+    ],
+    "cost": []
+  },
+  "128006": {
+    "id": 128006,
+    "type": 1,
+    "chargeId": 1,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 375
+      }
+    ],
+    "cost": []
+  },
+  "128007": {
+    "id": 128007,
+    "type": 1,
+    "chargeId": 2,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 675
+      }
+    ],
+    "cost": []
+  },
+  "128008": {
+    "id": 128008,
+    "type": 1,
+    "chargeId": 3,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 2250
+      }
+    ],
+    "cost": []
+  },
+  "128009": {
+    "id": 128009,
+    "type": 1,
+    "chargeId": 4,
+    "number": 5,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 4500
+      }
+    ],
+    "cost": []
+  },
+  "129001": {
+    "id": 129001,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 204901,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 5000
+      }
+    ]
+  },
+  "129002": {
+    "id": 129002,
+    "type": 2,
+    "chargeId": 0,
+    "number": 210,
+    "reward": [
+      {
+        "id": 214901,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "129003": {
+    "id": 129003,
+    "type": 2,
+    "chargeId": 0,
+    "number": 30,
+    "reward": [
+      {
+        "id": 214901,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 280
+      }
+    ]
+  },
+  "129004": {
+    "id": 129004,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 204902,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 5000
+      }
+    ]
+  },
+  "129005": {
+    "id": 129005,
+    "type": 2,
+    "chargeId": 0,
+    "number": 210,
+    "reward": [
+      {
+        "id": 214902,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "129006": {
+    "id": 129006,
+    "type": 2,
+    "chargeId": 0,
+    "number": 30,
+    "reward": [
+      {
+        "id": 214902,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 280
+      }
+    ]
+  },
+  "129007": {
+    "id": 129007,
+    "type": 2,
+    "chargeId": 0,
+    "number": 50,
+    "reward": [
+      {
+        "id": 30000304,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "129008": {
+    "id": 129008,
+    "type": 2,
+    "chargeId": 0,
+    "number": 180,
+    "reward": [
+      {
+        "id": 214802,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 6
+      }
+    ]
+  },
+  "129009": {
+    "id": 129009,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800201,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "129010": {
+    "id": 129010,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800202,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "129011": {
+    "id": 129011,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800203,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "129012": {
+    "id": 129012,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800204,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "129013": {
+    "id": 129013,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800205,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "129014": {
+    "id": 129014,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800206,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "129015": {
+    "id": 129015,
+    "type": 2,
+    "chargeId": 0,
+    "number": 15,
+    "reward": [
+      {
+        "id": 702002,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "129016": {
+    "id": 129016,
+    "type": 2,
+    "chargeId": 0,
+    "number": 15,
+    "reward": [
+      {
+        "id": 702003,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "129017": {
+    "id": 129017,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 211801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "129018": {
+    "id": 129018,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 212801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "129019": {
+    "id": 129019,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 213801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "129020": {
+    "id": 129020,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 214801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "129021": {
+    "id": 129021,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 803001,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "129022": {
+    "id": 129022,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 803002,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "130001": {
+    "id": 130001,
+    "type": 1,
+    "chargeId": 1,
+    "number": 1,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 15
+      }
+    ],
+    "cost": []
+  },
+  "130002": {
+    "id": 130002,
+    "type": 1,
+    "chargeId": 2,
+    "number": 2,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 15
+      }
+    ],
+    "cost": []
+  },
+  "130003": {
+    "id": 130003,
+    "type": 1,
+    "chargeId": 3,
+    "number": 2,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 22
+      }
+    ],
+    "cost": []
+  },
+  "130004": {
+    "id": 130004,
+    "type": 1,
+    "chargeId": 4,
+    "number": 2,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 90
+      }
+    ],
+    "cost": []
+  },
+  "130005": {
+    "id": 130005,
+    "type": 1,
+    "chargeId": 5,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 165
+      }
+    ],
+    "cost": []
+  },
+  "130006": {
+    "id": 130006,
+    "type": 1,
+    "chargeId": 1,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 375
+      }
+    ],
+    "cost": []
+  },
+  "130007": {
+    "id": 130007,
+    "type": 1,
+    "chargeId": 2,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 675
+      }
+    ],
+    "cost": []
+  },
+  "130008": {
+    "id": 130008,
+    "type": 1,
+    "chargeId": 3,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 2250
+      }
+    ],
+    "cost": []
+  },
+  "130009": {
+    "id": 130009,
+    "type": 1,
+    "chargeId": 4,
+    "number": 5,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 4500
+      }
+    ],
+    "cost": []
+  },
+  "131001": {
+    "id": 131001,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 204901,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 5000
+      }
+    ]
+  },
+  "131002": {
+    "id": 131002,
+    "type": 2,
+    "chargeId": 0,
+    "number": 210,
+    "reward": [
+      {
+        "id": 214901,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "131003": {
+    "id": 131003,
+    "type": 2,
+    "chargeId": 0,
+    "number": 30,
+    "reward": [
+      {
+        "id": 214901,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 280
+      }
+    ]
+  },
+  "131004": {
+    "id": 131004,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 204902,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 5000
+      }
+    ]
+  },
+  "131005": {
+    "id": 131005,
+    "type": 2,
+    "chargeId": 0,
+    "number": 210,
+    "reward": [
+      {
+        "id": 214902,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "131006": {
+    "id": 131006,
+    "type": 2,
+    "chargeId": 0,
+    "number": 30,
+    "reward": [
+      {
+        "id": 214902,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 280
+      }
+    ]
+  },
+  "131007": {
+    "id": 131007,
+    "type": 2,
+    "chargeId": 0,
+    "number": 50,
+    "reward": [
+      {
+        "id": 30000304,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "131008": {
+    "id": 131008,
+    "type": 2,
+    "chargeId": 0,
+    "number": 180,
+    "reward": [
+      {
+        "id": 214802,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 6
+      }
+    ]
+  },
+  "131009": {
+    "id": 131009,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800201,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "131010": {
+    "id": 131010,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800202,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "131011": {
+    "id": 131011,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800203,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "131012": {
+    "id": 131012,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800204,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "131013": {
+    "id": 131013,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800205,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "131014": {
+    "id": 131014,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800206,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "131015": {
+    "id": 131015,
+    "type": 2,
+    "chargeId": 0,
+    "number": 15,
+    "reward": [
+      {
+        "id": 702002,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "131016": {
+    "id": 131016,
+    "type": 2,
+    "chargeId": 0,
+    "number": 15,
+    "reward": [
+      {
+        "id": 702003,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "131017": {
+    "id": 131017,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 211801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "131018": {
+    "id": 131018,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 212801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "131019": {
+    "id": 131019,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 213801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "131020": {
+    "id": 131020,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 214801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "131021": {
+    "id": 131021,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 803001,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "131022": {
+    "id": 131022,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 803002,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "132001": {
+    "id": 132001,
+    "type": 1,
+    "chargeId": 1,
+    "number": 1,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 15
+      }
+    ],
+    "cost": []
+  },
+  "132002": {
+    "id": 132002,
+    "type": 1,
+    "chargeId": 2,
+    "number": 2,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 15
+      }
+    ],
+    "cost": []
+  },
+  "132003": {
+    "id": 132003,
+    "type": 1,
+    "chargeId": 3,
+    "number": 2,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 22
+      }
+    ],
+    "cost": []
+  },
+  "132004": {
+    "id": 132004,
+    "type": 1,
+    "chargeId": 4,
+    "number": 2,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 90
+      }
+    ],
+    "cost": []
+  },
+  "132005": {
+    "id": 132005,
+    "type": 1,
+    "chargeId": 5,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 165
+      }
+    ],
+    "cost": []
+  },
+  "132006": {
+    "id": 132006,
+    "type": 1,
+    "chargeId": 1,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 375
+      }
+    ],
+    "cost": []
+  },
+  "132007": {
+    "id": 132007,
+    "type": 1,
+    "chargeId": 2,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 675
+      }
+    ],
+    "cost": []
+  },
+  "132008": {
+    "id": 132008,
+    "type": 1,
+    "chargeId": 3,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 2250
+      }
+    ],
+    "cost": []
+  },
+  "132009": {
+    "id": 132009,
+    "type": 1,
+    "chargeId": 4,
+    "number": 5,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 4500
+      }
+    ],
+    "cost": []
+  },
+  "133001": {
+    "id": 133001,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 204901,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 5000
+      }
+    ]
+  },
+  "133002": {
+    "id": 133002,
+    "type": 2,
+    "chargeId": 0,
+    "number": 210,
+    "reward": [
+      {
+        "id": 214901,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "133003": {
+    "id": 133003,
+    "type": 2,
+    "chargeId": 0,
+    "number": 30,
+    "reward": [
+      {
+        "id": 214901,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 280
+      }
+    ]
+  },
+  "133004": {
+    "id": 133004,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 204902,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 5000
+      }
+    ]
+  },
+  "133005": {
+    "id": 133005,
+    "type": 2,
+    "chargeId": 0,
+    "number": 210,
+    "reward": [
+      {
+        "id": 214902,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "133006": {
+    "id": 133006,
+    "type": 2,
+    "chargeId": 0,
+    "number": 30,
+    "reward": [
+      {
+        "id": 214902,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 280
+      }
+    ]
+  },
+  "133007": {
+    "id": 133007,
+    "type": 2,
+    "chargeId": 0,
+    "number": 50,
+    "reward": [
+      {
+        "id": 30000304,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "133008": {
+    "id": 133008,
+    "type": 2,
+    "chargeId": 0,
+    "number": 180,
+    "reward": [
+      {
+        "id": 214802,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 6
+      }
+    ]
+  },
+  "133009": {
+    "id": 133009,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800201,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "133010": {
+    "id": 133010,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800202,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "133011": {
+    "id": 133011,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800203,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "133012": {
+    "id": 133012,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800204,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "133013": {
+    "id": 133013,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800205,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "133014": {
+    "id": 133014,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800206,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "133015": {
+    "id": 133015,
+    "type": 2,
+    "chargeId": 0,
+    "number": 15,
+    "reward": [
+      {
+        "id": 702002,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "133016": {
+    "id": 133016,
+    "type": 2,
+    "chargeId": 0,
+    "number": 15,
+    "reward": [
+      {
+        "id": 702003,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "133017": {
+    "id": 133017,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 211801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "133018": {
+    "id": 133018,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 212801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "133019": {
+    "id": 133019,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 213801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "133020": {
+    "id": 133020,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 214801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "133021": {
+    "id": 133021,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 803001,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "133022": {
+    "id": 133022,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 803002,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "134001": {
+    "id": 134001,
+    "type": 1,
+    "chargeId": 1,
+    "number": 1,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 15
+      }
+    ],
+    "cost": []
+  },
+  "134002": {
+    "id": 134002,
+    "type": 1,
+    "chargeId": 2,
+    "number": 2,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 15
+      }
+    ],
+    "cost": []
+  },
+  "134003": {
+    "id": 134003,
+    "type": 1,
+    "chargeId": 3,
+    "number": 2,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 22
+      }
+    ],
+    "cost": []
+  },
+  "134004": {
+    "id": 134004,
+    "type": 1,
+    "chargeId": 4,
+    "number": 2,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 90
+      }
+    ],
+    "cost": []
+  },
+  "134005": {
+    "id": 134005,
+    "type": 1,
+    "chargeId": 5,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 165
+      }
+    ],
+    "cost": []
+  },
+  "134006": {
+    "id": 134006,
+    "type": 1,
+    "chargeId": 1,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 375
+      }
+    ],
+    "cost": []
+  },
+  "134007": {
+    "id": 134007,
+    "type": 1,
+    "chargeId": 2,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 675
+      }
+    ],
+    "cost": []
+  },
+  "134008": {
+    "id": 134008,
+    "type": 1,
+    "chargeId": 3,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 2250
+      }
+    ],
+    "cost": []
+  },
+  "134009": {
+    "id": 134009,
+    "type": 1,
+    "chargeId": 4,
+    "number": 5,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 4500
+      }
+    ],
+    "cost": []
+  },
+  "135001": {
+    "id": 135001,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 204901,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 5000
+      }
+    ]
+  },
+  "135002": {
+    "id": 135002,
+    "type": 2,
+    "chargeId": 0,
+    "number": 210,
+    "reward": [
+      {
+        "id": 214901,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "135003": {
+    "id": 135003,
+    "type": 2,
+    "chargeId": 0,
+    "number": 30,
+    "reward": [
+      {
+        "id": 214901,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 280
+      }
+    ]
+  },
+  "135004": {
+    "id": 135004,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 204902,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 5000
+      }
+    ]
+  },
+  "135005": {
+    "id": 135005,
+    "type": 2,
+    "chargeId": 0,
+    "number": 210,
+    "reward": [
+      {
+        "id": 214902,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "135006": {
+    "id": 135006,
+    "type": 2,
+    "chargeId": 0,
+    "number": 30,
+    "reward": [
+      {
+        "id": 214902,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 280
+      }
+    ]
+  },
+  "135007": {
+    "id": 135007,
+    "type": 2,
+    "chargeId": 0,
+    "number": 50,
+    "reward": [
+      {
+        "id": 30000304,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "135008": {
+    "id": 135008,
+    "type": 2,
+    "chargeId": 0,
+    "number": 180,
+    "reward": [
+      {
+        "id": 214802,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 6
+      }
+    ]
+  },
+  "135009": {
+    "id": 135009,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800201,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "135010": {
+    "id": 135010,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800202,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "135011": {
+    "id": 135011,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800203,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "135012": {
+    "id": 135012,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800204,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "135013": {
+    "id": 135013,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800205,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "135014": {
+    "id": 135014,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800206,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "135015": {
+    "id": 135015,
+    "type": 2,
+    "chargeId": 0,
+    "number": 15,
+    "reward": [
+      {
+        "id": 702002,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "135016": {
+    "id": 135016,
+    "type": 2,
+    "chargeId": 0,
+    "number": 15,
+    "reward": [
+      {
+        "id": 702003,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "135017": {
+    "id": 135017,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 211801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "135018": {
+    "id": 135018,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 212801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "135019": {
+    "id": 135019,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 213801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "135020": {
+    "id": 135020,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 214801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "135021": {
+    "id": 135021,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 803001,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "135022": {
+    "id": 135022,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 803002,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "136001": {
+    "id": 136001,
+    "type": 1,
+    "chargeId": 1,
+    "number": 1,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 15
+      }
+    ],
+    "cost": []
+  },
+  "136002": {
+    "id": 136002,
+    "type": 1,
+    "chargeId": 2,
+    "number": 2,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 15
+      }
+    ],
+    "cost": []
+  },
+  "136003": {
+    "id": 136003,
+    "type": 1,
+    "chargeId": 3,
+    "number": 2,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 22
+      }
+    ],
+    "cost": []
+  },
+  "136004": {
+    "id": 136004,
+    "type": 1,
+    "chargeId": 4,
+    "number": 2,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 90
+      }
+    ],
+    "cost": []
+  },
+  "136005": {
+    "id": 136005,
+    "type": 1,
+    "chargeId": 5,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 165
+      }
+    ],
+    "cost": []
+  },
+  "136006": {
+    "id": 136006,
+    "type": 1,
+    "chargeId": 1,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 375
+      }
+    ],
+    "cost": []
+  },
+  "136007": {
+    "id": 136007,
+    "type": 1,
+    "chargeId": 2,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 675
+      }
+    ],
+    "cost": []
+  },
+  "136008": {
+    "id": 136008,
+    "type": 1,
+    "chargeId": 3,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 2250
+      }
+    ],
+    "cost": []
+  },
+  "136009": {
+    "id": 136009,
+    "type": 1,
+    "chargeId": 4,
+    "number": 5,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 4500
+      }
+    ],
+    "cost": []
+  },
+  "137001": {
+    "id": 137001,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 204901,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 5000
+      }
+    ]
+  },
+  "137002": {
+    "id": 137002,
+    "type": 2,
+    "chargeId": 0,
+    "number": 210,
+    "reward": [
+      {
+        "id": 214901,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "137003": {
+    "id": 137003,
+    "type": 2,
+    "chargeId": 0,
+    "number": 30,
+    "reward": [
+      {
+        "id": 214901,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 280
+      }
+    ]
+  },
+  "137004": {
+    "id": 137004,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 204902,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 5000
+      }
+    ]
+  },
+  "137005": {
+    "id": 137005,
+    "type": 2,
+    "chargeId": 0,
+    "number": 210,
+    "reward": [
+      {
+        "id": 214902,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "137006": {
+    "id": 137006,
+    "type": 2,
+    "chargeId": 0,
+    "number": 30,
+    "reward": [
+      {
+        "id": 214902,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 280
+      }
+    ]
+  },
+  "137007": {
+    "id": 137007,
+    "type": 2,
+    "chargeId": 0,
+    "number": 50,
+    "reward": [
+      {
+        "id": 30000304,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "137008": {
+    "id": 137008,
+    "type": 2,
+    "chargeId": 0,
+    "number": 180,
+    "reward": [
+      {
+        "id": 214802,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 6
+      }
+    ]
+  },
+  "137009": {
+    "id": 137009,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800201,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "137010": {
+    "id": 137010,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800202,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "137011": {
+    "id": 137011,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800203,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "137012": {
+    "id": 137012,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800204,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "137013": {
+    "id": 137013,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800205,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "137014": {
+    "id": 137014,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800206,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "137015": {
+    "id": 137015,
+    "type": 2,
+    "chargeId": 0,
+    "number": 15,
+    "reward": [
+      {
+        "id": 702002,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "137016": {
+    "id": 137016,
+    "type": 2,
+    "chargeId": 0,
+    "number": 15,
+    "reward": [
+      {
+        "id": 702003,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "137017": {
+    "id": 137017,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 211801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "137018": {
+    "id": 137018,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 212801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "137019": {
+    "id": 137019,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 213801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "137020": {
+    "id": 137020,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 214801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "137021": {
+    "id": 137021,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 803001,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "137022": {
+    "id": 137022,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 803002,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "138001": {
+    "id": 138001,
+    "type": 1,
+    "chargeId": 1,
+    "number": 1,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 15
+      }
+    ],
+    "cost": []
+  },
+  "138002": {
+    "id": 138002,
+    "type": 1,
+    "chargeId": 2,
+    "number": 2,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 15
+      }
+    ],
+    "cost": []
+  },
+  "138003": {
+    "id": 138003,
+    "type": 1,
+    "chargeId": 3,
+    "number": 2,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 22
+      }
+    ],
+    "cost": []
+  },
+  "138004": {
+    "id": 138004,
+    "type": 1,
+    "chargeId": 4,
+    "number": 2,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 90
+      }
+    ],
+    "cost": []
+  },
+  "138005": {
+    "id": 138005,
+    "type": 1,
+    "chargeId": 5,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 165
+      }
+    ],
+    "cost": []
+  },
+  "138006": {
+    "id": 138006,
+    "type": 1,
+    "chargeId": 1,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 375
+      }
+    ],
+    "cost": []
+  },
+  "138007": {
+    "id": 138007,
+    "type": 1,
+    "chargeId": 2,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 675
+      }
+    ],
+    "cost": []
+  },
+  "138008": {
+    "id": 138008,
+    "type": 1,
+    "chargeId": 3,
+    "number": 3,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 2250
+      }
+    ],
+    "cost": []
+  },
+  "138009": {
+    "id": 138009,
+    "type": 1,
+    "chargeId": 4,
+    "number": 5,
+    "reward": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 4500
+      }
+    ],
+    "cost": []
+  },
+  "139001": {
+    "id": 139001,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 204901,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 5000
+      }
+    ]
+  },
+  "139002": {
+    "id": 139002,
+    "type": 2,
+    "chargeId": 0,
+    "number": 210,
+    "reward": [
+      {
+        "id": 214901,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "139003": {
+    "id": 139003,
+    "type": 2,
+    "chargeId": 0,
+    "number": 30,
+    "reward": [
+      {
+        "id": 214901,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 280
+      }
+    ]
+  },
+  "139004": {
+    "id": 139004,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 204902,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 5000
+      }
+    ]
+  },
+  "139005": {
+    "id": 139005,
+    "type": 2,
+    "chargeId": 0,
+    "number": 210,
+    "reward": [
+      {
+        "id": 214902,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "139006": {
+    "id": 139006,
+    "type": 2,
+    "chargeId": 0,
+    "number": 30,
+    "reward": [
+      {
+        "id": 214902,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 280
+      }
+    ]
+  },
+  "139007": {
+    "id": 139007,
+    "type": 2,
+    "chargeId": 0,
+    "number": 50,
+    "reward": [
+      {
+        "id": 30000304,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "139008": {
+    "id": 139008,
+    "type": 2,
+    "chargeId": 0,
+    "number": 180,
+    "reward": [
+      {
+        "id": 214802,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 6
+      }
+    ]
+  },
+  "139009": {
+    "id": 139009,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800201,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "139010": {
+    "id": 139010,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800202,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "139011": {
+    "id": 139011,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800203,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "139012": {
+    "id": 139012,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800204,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "139013": {
+    "id": 139013,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800205,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "139014": {
+    "id": 139014,
+    "type": 2,
+    "chargeId": 0,
+    "number": 1,
+    "reward": [
+      {
+        "id": 40800206,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 800
+      }
+    ]
+  },
+  "139015": {
+    "id": 139015,
+    "type": 2,
+    "chargeId": 0,
+    "number": 15,
+    "reward": [
+      {
+        "id": 702002,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "139016": {
+    "id": 139016,
+    "type": 2,
+    "chargeId": 0,
+    "number": 15,
+    "reward": [
+      {
+        "id": 702003,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "139017": {
+    "id": 139017,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 211801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "139018": {
+    "id": 139018,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 212801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "139019": {
+    "id": 139019,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 213801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "139020": {
+    "id": 139020,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 214801,
+        "type": 2,
+        "num": 10
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "139021": {
+    "id": 139021,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 803001,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  },
+  "139022": {
+    "id": 139022,
+    "type": 2,
+    "chargeId": 0,
+    "number": 18,
+    "reward": [
+      {
+        "id": 803002,
+        "type": 2,
+        "num": 1
+      }
+    ],
+    "cost": [
+      {
+        "id": 30000035,
+        "type": 2,
+        "num": 30
+      }
+    ]
+  }
+}

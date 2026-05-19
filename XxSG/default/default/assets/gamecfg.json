@@ -1,0 +1,51 @@
+{
+    "debug": true,
+    "showLog": 3,
+    "isPlatform": false,
+    "roleScale": 1,
+    "cfgVersion": "04151017",
+    "verJson": "201904151017",
+    "version": "201904151017",
+    "res": "",
+    "serverId": 0,
+    "myserver": "http://localhost",
+    "servers": "http://localhost",
+    "payServer": "http://localhost",
+    "pointServer": "http://localhost",
+    "placardURL": "http://localhost",
+    "questionURL": "http://localhost",
+    "rechargeURL": "http://localhost",
+    "channelBG": {},
+    "weixin_1.1390": {
+        "cfgVersion": "04150137",
+        "verJson": "201904151012",
+        "version": "201904151012",
+        "verify": true,
+        "serverId": 10000,
+        "res": "http://localhost"
+    },
+    "bdmini_1.1390": {
+        "cfgVersion": "04150137",
+        "verJson": "201904151012",
+        "version": "201904151012",
+        "verify": true,
+        "serverId": 10000,
+        "res": "http://localhost"
+    },
+    "weixin_ttsg_1.1390": {
+        "cfgVersion": "04150137",
+        "verJson": "201904151012",
+        "version": "201904151012",
+        "verify": true,
+        "serverId": 10000,
+        "res": "http://localhost"
+    },
+    "cjsgj_1.1390": {
+        "cfgVersion": "04150137",
+        "verJson": "201904151012",
+        "version": "201904151012",
+        "verify": true,
+        "serverId": 10000,
+        "res": "http://localhost"
+    }
+}

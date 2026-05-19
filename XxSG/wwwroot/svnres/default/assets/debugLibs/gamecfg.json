@@ -1,0 +1,115 @@
+{
+  "11503": {
+    "myserver": "http://127.0.0.1:81/server/myServer",
+    "servers": "http://127.0.0.1:81/server/servers",
+    "payServer": "http://127.0.0.1:81"
+  },
+  "11504": {
+    "myserver": "http://127.0.0.1:81/server/myServer",
+    "servers": "http://127.0.0.1:81/server/servers",
+    "payServer": "http://127.0.0.1:81"
+  },
+  "debug": true,
+  "showLog": 3,
+  "isPlatform": false,
+  "mockPlatform": "",
+  "roleScale": 1,
+  "isVersion": true,
+  "cfgVersion": "201803081035",
+  "version": "201803081035",
+  "isOldPlacard": false,
+  "placard": "20171120",
+  "myserver": "http://127.0.0.1:81/server/myServer",
+  "servers": "http://127.0.0.1:81/server/servers",
+  "payServer": "http://127.0.0.1:81",
+  "res": "",
+  "assets": "",
+  "pointServer": "http://127.0.0.1:81/dot/",
+  "placardURL": "http://127.0.0.1:81/dot/channelNotice.do",
+  "serverPoint": "register_page.do",
+  "loginPoint": "before_server_login.do",
+  "createPoint": "after_server_login.do",
+  "apk_ios": {
+    "pointServer": "http://127.0.0.1:81/dot/",
+    "myserver": "http://127.0.0.1:81/server/myServer",
+    "servers": "http://127.0.0.1:81/server/servers",
+    "payServer": "http://127.0.0.1:81",
+    "res": "svnres/assets/"
+  },
+  "huawei": {
+    "pointServer": "http://127.0.0.1:81/dot/",
+    "myserver": "http://127.0.0.1:81/server/myServer",
+    "servers": "http://127.0.0.1:81/server/servers",
+    "payServer": "http://127.0.0.1:81",
+    "res": "svnres/assets/"
+  },
+  "ysdk": {
+    "pointServer": "http://127.0.0.1:81/dot/",
+    "myserver": "http://127.0.0.1:81/server/myServer",
+    "servers": "http://127.0.0.1:81/server/servers",
+    "payServer": "http://127.0.0.1:81",
+    "res": "svnres/assets/"
+  },
+  "wanba": {
+    "pointServer": "http://127.0.0.1:81/dot/",
+    "myserver": "http://127.0.0.1:81/server/myServer",
+    "servers": "http://127.0.0.1:81/server/servers",
+    "payServer": "http://127.0.0.1:81",
+    "res": "svnres/assets/"
+  },
+  "yybao": {
+    "pointServer": "http://127.0.0.1:81/dot/",
+    "myserver": "http://127.0.0.1:81/server/myServer",
+    "servers": "http://127.0.0.1:81/server/servers",
+    "payServer": "http://127.0.0.1:81"
+  },
+  "qqbrowser": {
+    "pointServer": "http://127.0.0.1:81/dot/",
+    "myserver": "http://127.0.0.1:81/server/myServer",
+    "servers": "http://127.0.0.1:81/server/servers",
+    "payServer": "http://127.0.0.1:81"
+  },
+  "apk_chanyou": {
+    "myserver": "http://127.0.0.1:81/server/myServer",
+    "servers": "http://127.0.0.1:81/server/servers",
+    "payServer": "http://127.0.0.1:81",
+    "res": "svnres/assets/"
+  },
+  "apk_tvhb": {
+    "pointServer": "http://127.0.0.1:81/dot/",
+    "myserver": "http://127.0.0.1:81/server/myServer",
+    "servers": "http://127.0.0.1:81/server/servers",
+    "payServer": "http://127.0.0.1:81",
+    "res": ""
+  },
+  "apk_tvhb2": {
+    "myserver": "http://127.0.0.1:81/server/myServer",
+    "servers": "http://127.0.0.1:81/server/servers",
+    "payServer": "http://127.0.0.1:81",
+    "res": "svnres/assets/"
+  },
+  "apk_yysdk": {
+    "pointServer": "http://127.0.0.1:81/dot/",
+    "myserver": "http://127.0.0.1:81/server/myServer",
+    "servers": "http://127.0.0.1:81/server/servers",
+    "payServer": "http://127.0.0.1:81",
+    "res": ""
+  },
+  "douqu": {
+    "myserver": "http://127.0.0.1:81/server/myServer",
+    "servers": "http://127.0.0.1:81/server/servers",
+    "payServer": "http://127.0.0.1:81"
+  },
+  "douqu2": {
+    "myserver": "http://127.0.0.1:81/server/myServer",
+    "servers": "http://127.0.0.1:81/server/servers",
+    "payServer": "http://127.0.0.1:81"
+  },
+  "apk_base": {
+    "pointServer": "http://127.0.0.1:81/dot/",
+    "myserver": "http://127.0.0.1:81/server/myServer",
+    "servers": "http://127.0.0.1:81/server/servers",
+    "payServer": "http://127.0.0.1:81",
+    "res": ""
+  }
+}

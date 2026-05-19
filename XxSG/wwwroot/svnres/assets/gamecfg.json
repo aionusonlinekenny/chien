@@ -1,0 +1,19 @@
+{
+    "debug": false,
+    "showLog": 3,
+    "isPlatform": true,
+    "roleScale": 1,
+    "cfgVersion": "08240409",
+    "verJson": "202007220412",
+    "version": "202007220412",
+    "res": "http://localhost",
+    "serverId": 0,
+    "myserver": "http://localhost",
+    "servers": "http://localhost",
+    "payServer": "",
+    "pointServer": "",
+    "placardURL": "",
+    "questionURL": "",
+    "rechargeURL": "",
+    "channelBG": {}
+}

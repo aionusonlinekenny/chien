@@ -1,0 +1,28 @@
+{
+  "debug": true,
+  "showLog": -1,
+  "isPlatform": true,
+  "mockPlatform": "",
+  "roleScale": 1,
+  "isVersion": true,
+  "cfgVersion": "2017091901",
+  "version": "2017091901",
+  "isOldPlacard": false,
+  "placard": "2017091101",
+  "placardURL": "http://127.0.0.1:81/dot/channelNotice.do",
+  "rechargeURL": "http://127.0.0.1:82/",
+  "myserver": "http://127.0.0.1:81/server/myServer",
+  "servers": "http://127.0.0.1:81/server/servers",
+  "payServer": "http://127.0.0.1:81",
+  "res": "",
+  "assets": "",
+  "pointServer": "http://127.0.0.1:81/dot/",
+  "serverPoint": "register_page.do",
+  "loginPoint": "before_server_login.do",
+  "createPoint": "after_server_login.do",
+  "ysdk": {
+    "myserver": "http://127.0.0.1:81/server/myServer",
+    "servers": "http://127.0.0.1:81/server/servers",
+    "payServer": "http://127.0.0.1:81"
+  }
+}

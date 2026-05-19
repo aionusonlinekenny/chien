@@ -1,0 +1,22 @@
+{
+	"B101":{"action":"0,1,3","offsetX":0,"offsetY":5},
+	"B102":{"action":"0,1,3,4","offsetX":0,"offsetY":5},
+	"B103":{"action":"1,3,4","offsetX":0,"offsetY":5},
+	"B104":{"action":"1,2,3,4","offsetX":0,"offsetY":5},
+	"B105":{"action":"0,1,2,4","offsetX":0,"offsetY":-3},
+	"B106":{"action":"0,1,3,4","offsetX":0,"offsetY":5},
+	"B107":{"action":"0,1,2,3,4","offsetX":0,"offsetY":5},
+	"B108":{"action":"1,3","offsetX":0,"offsetY":5},
+	"B109":{"action":"1,3","offsetX":0,"offsetY":5},
+	"B110":{"action":"0,1,2,3,4","offsetX":0,"offsetY":5},
+	"B111":{"action":"2,3,4","offsetX":0,"offsetY":5},
+	"B112":{"action":"0,1,3,4","offsetX":0,"offsetY":5},
+	"B113":{"action":"3,4","offsetX":0,"offsetY":5},
+	"B114":{"action":"3,4","offsetX":0,"offsetY":5},
+	"B115":{"action":"0","offsetX":0,"offsetY":5},
+	"B116":{"action":"3","offsetX":0,"offsetY":5},
+	"B117":{"action":"0","offsetX":0,"offsetY":5},
+	"B118":{"action":"1,3","offsetX":0,"offsetY":5},
+	"B119":{"action":"1,3","offsetX":0,"offsetY":5},
+	"B120":{"action":"1,3","offsetX":0,"offsetY":5}
+}

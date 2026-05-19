@@ -1,0 +1,5 @@
+{"file":"fenjie.png","frames":{
+"btn_fenjie":{"x":0,"y":101,"w":58,"h":70,"offX":7,"offY":6,"sourceW":72,"sourceH":77},
+"checkbox_fenjie":{"x":180,"y":0,"w":55,"h":105,"offX":0,"offY":3,"sourceW":55,"sourceH":108},
+"fenjie_img1":{"x":64,"y":111,"w":110,"h":21,"offX":0,"offY":0,"sourceW":112,"sourceH":21},
+"fenjie_img2":{"x":0,"y":0,"w":174,"h":95,"offX":1,"offY":1,"sourceW":176,"sourceH":97}}}

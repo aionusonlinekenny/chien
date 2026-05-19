@@ -1,0 +1,6 @@
+{"file":"treasureBox.png","frames":{
+"btn_boxfre":{"x":0,"y":0,"w":135,"h":54,"offX":0,"offY":0,"sourceW":135,"sourceH":54},
+"btn_showfabao":{"x":141,"y":0,"w":94,"h":34,"offX":0,"offY":0,"sourceW":94,"sourceH":34},
+"btn_treshop":{"x":0,"y":60,"w":81,"h":70,"offX":1,"offY":1,"sourceW":84,"sourceH":71},
+"trea_img1":{"x":87,"y":125,"w":97,"h":22,"offX":0,"offY":0,"sourceW":97,"sourceH":22},
+"trea_img2":{"x":87,"y":60,"w":64,"h":59,"offX":1,"offY":0,"sourceW":65,"sourceH":59}}}

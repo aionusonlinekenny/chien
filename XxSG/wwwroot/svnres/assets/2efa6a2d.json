@@ -1,0 +1,22 @@
+{"mc":{
+	"UI025":{
+		"frameRate":24,
+		"labels":[
+			{"name":"UI025","frame":1,"end":1}
+			
+			],
+		"events":[
+			
+			],
+		"frames":[
+			
+			{
+			"res":"Untitled-1",
+			"x":-20,
+			"y":-10
+			}
+			]
+}},
+	"res":{
+		"Untitled-1":{"x":1,"y":1,"w":44,"h":18}
+	}}

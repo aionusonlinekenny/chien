@@ -1,0 +1,17 @@
+{"file":"luckWheel.png","frames":{
+"btn_luck":{"x":785,"y":41,"w":49,"h":49,"offX":0,"offY":0,"sourceW":49,"sourceH":49},
+"btn_luck10":{"x":578,"y":51,"w":61,"h":61,"offX":0,"offY":2,"sourceW":62,"sourceH":63},
+"luck_30":{"x":715,"y":64,"w":64,"h":58,"offX":1,"offY":0,"sourceW":65,"sourceH":59},
+"luck_40":{"x":715,"y":128,"w":64,"h":58,"offX":1,"offY":0,"sourceW":65,"sourceH":59},
+"luck_50":{"x":645,"y":51,"w":64,"h":58,"offX":1,"offY":0,"sourceW":65,"sourceH":59},
+"luck_60":{"x":645,"y":115,"w":64,"h":58,"offX":1,"offY":0,"sourceW":65,"sourceH":59},
+"luck_70":{"x":715,"y":0,"w":64,"h":58,"offX":1,"offY":0,"sourceW":65,"sourceH":59},
+"luck_img1":{"x":840,"y":66,"w":32,"h":21,"offX":0,"offY":0,"sourceW":32,"sourceH":21},
+"luck_img2":{"x":0,"y":0,"w":572,"h":95,"offX":0,"offY":0,"sourceW":572,"sourceH":95},
+"luck_img3":{"x":578,"y":0,"w":96,"h":45,"offX":0,"offY":0,"sourceW":96,"sourceH":45},
+"luck_img4":{"x":940,"y":34,"w":74,"h":20,"offX":0,"offY":0,"sourceW":74,"sourceH":20},
+"luck_img5":{"x":868,"y":34,"w":66,"h":26,"offX":0,"offY":0,"sourceW":66,"sourceH":26},
+"luck_img6":{"x":785,"y":0,"w":77,"h":35,"offX":0,"offY":0,"sourceW":77,"sourceH":35},
+"luck_img7":{"x":785,"y":96,"w":94,"h":24,"offX":0,"offY":0,"sourceW":94,"sourceH":24},
+"luck_img8":{"x":868,"y":0,"w":73,"h":28,"offX":0,"offY":0,"sourceW":73,"sourceH":28},
+"luck_img9":{"x":947,"y":0,"w":45,"h":16,"offX":0,"offY":0,"sourceW":45,"sourceH":16}}}

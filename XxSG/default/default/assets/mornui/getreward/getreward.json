@@ -1,0 +1,5 @@
+{"file":"getreward.png","frames":{
+"getrewardBg":{"x":0,"y":0,"w":672,"h":436,"offX":0,"offY":9,"sourceW":672,"sourceH":445},
+"getrewardTitle":{"x":678,"y":78,"w":125,"h":39,"offX":11,"offY":0,"sourceW":146,"sourceH":39},
+"getrewardTitle2":{"x":678,"y":33,"w":129,"h":39,"offX":10,"offY":0,"sourceW":146,"sourceH":39},
+"getrewardtxt":{"x":678,"y":0,"w":186,"h":27,"offX":6,"offY":1,"sourceW":203,"sourceH":28}}}

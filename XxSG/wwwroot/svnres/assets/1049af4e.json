@@ -1,0 +1,11 @@
+{"file":"chat.png","frames":{
+"chat_img_gm":{"x":2,"y":2,"w":101,"h":101,"offX":0,"offY":0,"sourceW":101,"sourceH":101},
+"chat_img1":{"x":974,"y":2,"w":33,"h":33,"offX":0,"offY":0,"sourceW":33,"sourceH":33},
+"chat_speak_bg":{"x":823,"y":2,"w":83,"h":39,"offX":0,"offY":0,"sourceW":83,"sourceH":39},
+"chat_sys":{"x":447,"y":12,"w":57,"h":25,"offX":0,"offY":0,"sourceW":57,"sourceH":25},
+"chat_vip":{"x":512,"y":12,"w":27,"h":15,"offX":0,"offY":0,"sourceW":27,"sourceH":15},
+"chat_vip_num":{"x":319,"y":12,"w":120,"h":15,"offX":0,"offY":0,"sourceW":120,"sourceH":15},
+"btn_chat":{"x":259,"y":12,"w":52,"h":53,"offX":0,"offY":0,"sourceW":52,"sourceH":53},
+"btn_face":{"x":914,"y":2,"w":52,"h":53,"offX":0,"offY":0,"sourceW":52,"sourceH":53},
+"chat_fast":{"x":111,"y":2,"w":140,"h":67,"offX":0,"offY":0,"sourceW":140,"sourceH":67},
+"chat_fastline":{"x":259,"y":2,"w":556,"h":2,"offX":0,"offY":0,"sourceW":556,"sourceH":2}}}

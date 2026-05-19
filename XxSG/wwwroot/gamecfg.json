@@ -1,0 +1,45 @@
+{
+  "debug": false,
+  "showLog": 3,
+  "isPlatform": false,
+  "roleScale": 1,
+  "cfgVersion": "202306051530",
+  "verJson": "202306051530",
+  "version": "202306051530",
+  "res": "svnres/assets/",
+  "serverId": 0,
+  "myserver": "http://127.0.0.1:81/server/myServer",
+  "servers": "http://127.0.0.1:81/server/servers",
+  "payServer": "http://127.0.0.1:81",
+  "pointServer": "http://127.0.0.1:81/dot/",
+  "placardURL": "http://127.0.0.1:81/dot/channelNotice.do",
+  "rechargeURL": "http://127.0.0.1:82/",
+  "questionURL": "http://127.0.0.1:81/dot/question.do",
+  "channelBG": {
+    "topgame360": "iOS_xh_101159_html.jpg"
+  },
+  "topgame360_0.2702": {
+    "cfgVersion": 202304101139,
+    "verJson": "202306051530",
+    "version": "202306051530",
+    "verify": true,
+    "serverId": 0,
+    "res": "svnres/assets/"
+  },
+  "topgame360_1.2702": {
+    "cfgVersion": 202304101138,
+    "verJson": "202306051530",
+    "version": "202306051530",
+    "verify": true,
+    "serverId": 0,
+    "res": "svnres/assets/"
+  },
+  "topgame360_2.2702": {
+    "cfgVersion": 202304101138,
+    "verJson": "202306051530",
+    "version": "202306051530",
+    "verify": true,
+    "serverId": 0,
+    "res": "svnres/assets/"
+  }
+}

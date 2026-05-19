@@ -1,0 +1,115 @@
+{
+	"debug": true,
+	"showLog": 3,
+	"isPlatform": false,
+	"mockPlatform": "",
+	"roleScale": 1,
+	"isVersion": true,
+	"cfgVersion": "201803081035",
+	"version": "201803081035",
+	"isOldPlacard": false,
+	"placard": "20171120",
+	"myserver": "http://localhost",
+	"servers": "http://localhost",
+	"payServer": "http://localhost",
+	"res": "",
+	"assets": "",
+	"pointServer": "http://localhost",
+	"placardURL": "channelNotice.do",
+	"serverPoint": "register_page.do",
+	"loginPoint": "before_server_login.do",
+	"createPoint": "after_server_login.do",
+	"apk_ios": {
+		"pointServer": "http://localhost",
+		"myserver": "http://localhost",
+		"servers": "http://localhost",
+		"payServer": "http://localhost",
+		"res": "http://localhost"
+	},
+	"huawei": {
+		"pointServer": "http://localhost",
+		"myserver": "http://localhost",
+		"servers": "http://localhost",
+		"payServer": "http://localhost",
+		"res": "http://localhost"
+	},
+	"ysdk": {
+		"pointServer": "http://localhost",
+		"myserver": "http://localhost",
+		"servers": "http://localhost",
+		"payServer": "http://localhost",
+		"res": "http://localhost"
+	},
+	"wanba": {
+		"pointServer": "http://localhost",
+		"myserver": "http://localhost",
+		"servers": "http://localhost",
+		"payServer": "http://localhost",
+		"res": "http://localhost"
+	},
+	"yybao": {
+		"pointServer": "http://localhost",
+		"myserver": "http://localhost",
+		"servers": "http://localhost",
+		"payServer": "http://localhost"
+	},
+	"qqbrowser": {
+		"pointServer": "http://localhost",
+		"myserver": "http://localhost",
+		"servers": "http://localhost",
+		"payServer": "http://localhost"
+	},
+	"apk_chanyou": {
+		"myserver": "http://localhost",
+		"servers": "http://localhost",
+		"payServer": "http://localhost",
+		"res": "http://localhost"
+	},
+	"apk_tvhb": {
+		"pointServer": "http://localhost",
+		"myserver": "http://localhost",
+		"servers": "http://localhost",
+		"payServer": "http://localhost",
+		"res": ""
+	},
+	"apk_tvhb2": {
+		"myserver": "http://localhost",
+		"servers": "http://localhost",
+		"payServer": "http://localhost",
+		"res": "http://localhost"
+	},
+	"apk_yysdk": {
+		"pointServer": "http://localhost",
+		"myserver": "http://localhost",
+		"servers": "http://localhost",
+		"payServer": "http://localhost",
+		"res": ""
+	},
+	"douqu": {
+		"myserver": "http://localhost",
+		"servers": "http://localhost",
+		"payServer": "http://localhost"
+	},
+	"douqu2": {
+		"myserver": "http://localhost",
+		"servers": "http://localhost",
+		"payServer": "http://localhost"
+	},
+	"11503": {
+		"myserver": "http://localhost",
+		"servers": "http://localhost",
+		"payServer": "http://localhost"
+	},
+	"11504": {
+		"myserver": "http://localhost",
+		"servers": "http://localhost",
+		"payServer": "http://localhost"
+	},
+	"apk_base": {
+		"pointServer": "http://localhost",
+		"myserver": "http://localhost",
+		"servers": "http://localhost",
+		"payServer": "",
+		"res": ""
+	}
+}

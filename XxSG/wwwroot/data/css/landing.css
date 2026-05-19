@@ -1,0 +1,897 @@
+body {
+		font-family: 'Roboto', sans-serif !important;
+		padding-right: 0 !important;
+}
+body,html {
+	width:100%;
+	height:100%;
+	font-size: 1rem !important;
+}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+}
+.header {
+	background-image: url(../img/header.webp);
+	height:73px;
+}
+.landing ::-webkit-scrollbar {
+	width: 3px;
+	border-radius: 3px;
+	background: #bdbe7000;
+}
+.landing ::-webkit-scrollbar-thumb {
+	-webkit-box-shadow: inset 0 0 6px rgb(0 0 0 / 30%);
+	background-color: rgb(239 150 91);
+	border-radius: 6px;
+}
+.header {
+	background-size: 100% 100% !important;
+}
+.header .menu {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	text-align: center;
+}
+.header .menu .menu-item {
+	background-image: url(../../404/index.html);
+	width: 115px;
+	height: 37px;
+	display: inline-block;
+	margin: 0 15px;
+	cursor: pointer;
+}
+.header .menu .fanpage {
+	background-position: 0 -37px;
+}
+.header .menu .groups {
+	background-position: 0 -74px;
+}
+.copyright {
+	width: 100%;
+	padding: 40px 15px 30px;
+	text-align: center;
+	color: #fff;
+	background: #111;
+	position: relative;
+	z-index: 10;
+	font-family: "Tahoma";
+}
+.copyright a {
+	color:#fff;
+}
+.logo-white-1 {
+	display: block;
+	text-indent: -999em;
+	background: url(../img/mzp/logo-w-dark.png) 0 0 no-repeat;
+	width: 150px;
+	height: 60px;
+	left: 0;
+	background-size: 100% 100%;
+	top: -10px;
+	position: absolute;
+}
+.copyright .copyright-content {
+	color: #fff;
+	font-size: 13px;
+	text-align: center;
+	position: relative;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+.copyright .health-alert {
+	position: absolute;
+	right: 0;
+	top: -10px;
+}
+.big-health-alert img{
+	width:160px;
+	position: absolute;
+	top:0;
+    z-index: 999;
+	left:0;
+}
+.content-1, .content-2, .content-3 {
+	width: 100%;
+}
+.content-1 .servers-wrap {
+    width: 332px;
+    float: left;
+    position: relative;
+    z-index: 3;
+}
+.content-1 .servers-wrap .servers {
+    position: relative;
+    z-index: 1;
+    width: 380px;
+    height: 368px;
+    margin-left: -4px;
+    margin-top: -50px;
+    background: url(../img/server-list-bg.png);
+}
+.role-nav li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: unset !important;
+}
+.role-nav .cur p {
+    display: none;
+}
+.role-nav li p {
+    padding-top: 20px;
+    width: 100px;
+    margin-left: -20px;
+    color: #2d2d2d !important;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 16px;
+}
+.section {
+    overflow: hidden;
+    position: relative;
+    margin: auto;
+}
+.content-1 .account {
+    float: left;
+    overflow: hidden;
+    background: url(../img/card-bg.jpg);
+    position: relative;
+    margin-left: -25px;
+    z-index: 2;
+}
+.content-1 .servers-wrap .try-btn {
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+    display: inline-block;
+    background: url(../img/try-game.png) no-repeat left top;
+}
+.content-1 .servers-wrap .try-btn:hover {
+    background: url(../img/try-game-h.png) no-repeat left top;
+}
+.role-detail .r-desc {
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    color: #d9c4a7;
+}
+.role-detail .r-per {
+    position: absolute;
+}
+.role-con .role-tab {
+    position: absolute;
+}
+.role-detail .r-per img {
+    position: absolute;
+}
+.section3 .role-nav {
+    z-index: 2;
+}
+.section3 .role-nav li {
+    display: inline;
+    float: left;
+    height: 61px;
+    margin-right: 35px;
+    margin-bottom: 28px;
+    color: #d8c374;
+    font-size: 30px;
+    line-height: 112px;
+    text-align: center;
+    position: relative;
+}
+.head-news-box .tab p {
+    display: block;
+    width: 100%;
+    color: #b3b3b3;
+    text-align: center;
+    font-size: 18px;
+    margin: unset;
+}
+.head-news-box .tab {
+    width: 104px;
+    position: relative;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.head-news-box .current {
+    border-bottom: 3px solid #df9413;
+}
+.head-news-box .current p {
+    color: #d8c374;
+}
+.head-news-box {
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+.game-news {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.header .menu .menu-item {
+    text-decoration: unset;
+    color: #f8ce7e;
+    text-transform: uppercase;
+}
+.header .menu .menu-item:hover,.header .menu .menu-item:focus {
+    color:#ff9739;
+}
+@media screen and (min-width: 1024px) {
+    .header .menu {
+        justify-content: space-between;
+    }
+    .menu {
+        width: 1200px;
+        margin: auto;
+    }
+    .gift-box {
+        width: 210px;
+    }
+    .head-news-box { 
+        height: 42px;
+    }
+    .guide-news-box {
+        width: 610px;
+        margin-left: 10px;
+        padding: 0px 20px 20px 20px;
+    }
+    .content-1 .section {
+        overflow: unset;
+    }
+    .section2 {
+        margin-top: 10px;
+        position: relative;
+        padding-top: 16px;
+        background: url(../img/gnp-bg.jpg) no-repeat -2px top;
+    }
+    .section1 .slider .welcome {
+        width: 610px;
+        height: 394px;
+    }
+    .content-1 .slider {
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        top: 2px;
+        float: left;
+        margin-left: -25px;
+        display: inline-block;
+    }
+    .section3 .role-nav li {
+        width: 75px;
+    }
+    .role-nav li:not(:last-child):before {
+        content: "•••";
+        transform: rotate(90deg);
+        top: 80%;
+        position: absolute;
+        color: #2f2f2f;
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 80%;
+        height: 100%;
+    }
+    .section3 .role-nav {
+        width: 75px;
+        height: 239px;
+        top: 155px;
+        left: 30px;
+    }
+    .role-detail .r-per img {
+        right: 0;
+        top: -45px;
+    }
+    .role-con .role-tab {
+        width: 404px;
+        height: 411px;
+        left: 50%;
+        top: 30px;
+    }
+    .role-detail .r-per {
+        right: 0;
+        width: 380px;
+        height: 473px;
+    }
+    .role-detail .r-desc {
+        width: 546px;
+    }
+    .section3 .role-con {
+        height: 100%;
+        position: relative;
+        top: 50px;
+    }
+    .section3 {
+        margin-top: 40px;
+    }
+    .section3 .role-con {
+        width: 1100px;
+        float: right;
+    }
+    .section3 .role-nav {
+        z-index: 2;
+        width: 75px;
+        height: 239px;
+        position: absolute;
+        top: 155px;
+        left: 30px;
+    }
+    .section3 {
+        height: 574px;
+        margin-top: 40px;
+    }
+    .big-health-alert img {
+        top: 120px;
+    }
+    .content-1 .servers-wrap .try-btn {
+        margin-top: -150px;
+        margin-left: -27px;
+        width: 425px;
+        height: 239px;
+    }
+    .section1 {
+        padding-top: 615px;
+        height: 410px;
+    }
+    .content-1 .account { 
+        width: 23.5%;
+        max-width: 272px;
+        height: 398px;
+    }
+    .content-1 .slider {
+        width: 50.8%;
+        height: 394px;
+    }
+    .section {
+        width: 1200px;
+    }
+	.content-1 {
+		background: url(../img/myll_bg.jpg) center top no-repeat #0a0708 !important;
+		height: 950px;
+	}
+	.content-2 {
+		background: url(../img/cover.jpg) left bottom no-repeat !important;
+		height: 470px;
+	}
+	.content-3 {
+		background: #eaeaea url(../img/role-bg.jpg) center no-repeat !important;
+		height: 570px;
+	}
+	.content-4 {
+		background: #eaeaea url(../img/bottom.jpg) center no-repeat !important;
+		height: 610px;
+	}
+    .section2 {
+        
+    }
+    .section2 .guide-news-box {
+        height: 304px;
+    }
+    .menu .logo img {
+        width: 100%;
+        height: auto;
+        margin-top: -15px;
+    }
+}
+@media screen and (max-width: 1024px) {
+
+    .section3 .role-nav li {
+        width: 61px;
+    }
+    .role-nav .cur:before {
+        content: ' ';
+        background-image: url(../img/arrow.png);
+        background-repeat: no-repeat;
+        transform: rotate(-90deg);
+        position: absolute;
+        color: #2f2f2f;
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 15px;
+        height: 15px;
+        top: -20px;
+        left: 40%;
+    }
+    .section3 {
+        height: 450px;
+    }
+    .section3 .role-nav {
+        height: 75px;
+        width: 100%;
+        margin: unset;
+        padding: unset;
+        bottom: 0;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .role-detail .r-per {
+        left: 0;
+        right: 0;
+        width: 100%;
+    }
+    .role-detail .r-desc img { 
+        height: 400px;
+        max-width: 368px;
+    }
+    .role-detail .r-desc {
+        width: 100%;
+        text-align: center;
+    }
+    .role-con .role-tab {
+        width: 100%;
+        height: 400px;
+        top: 30px;
+    }
+}
+@media screen and (max-width: 1024px) and (min-width: 640px) {
+    .menu .logo img {
+        width: 100%;
+        height: auto;
+        margin-top: -15px;
+    }
+    .gift-box {
+        width: 25%;
+        height: 100%;
+    }
+    .guide-news-box {
+        width: 75%;
+        margin-left: 13px;
+        height: 100%;
+        padding: 0px 12px 20px 12px;
+    }
+    .section2 {
+        height: 304px;
+        max-width: 841px;
+        width: 100%;
+        position: relative;
+        padding-top: 16px;
+        margin: auto;
+        background-image: url(../img/gnp-bg-mb.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    .role-detail .r-per img {
+        right: -200px;
+        top: 33px;
+        opacity: 0.7;
+        z-index: 0;
+        height: 450px;
+    }
+    .section3 .role-con {
+        height: 400px;
+        position: relative;
+    }
+    .big-health-alert img {
+        top: 120px;
+    }
+    .content-1 .servers-wrap .try-btn {
+        width: 425px;
+        height: 239px;
+        top: 240px;    
+    }
+    .content-1 .servers-wrap .try-btn:hover {
+        background-size: cover; 
+    }
+    .section1 {
+        width: 100%;
+        height: 100vh;
+    }
+    .content-1 .servers-wrap {
+        width: 100%;
+        text-align: center;
+        height: 100%;
+    }
+    .content-1 .servers-wrap .try-btn {
+        
+    }
+    .section1 .account, .section1 .slider, .section1 .servers {
+        display: none;
+    }
+    .section {
+        width: 100%;
+    }
+    .content-1 .account { 
+        width: 272px;
+        height: 398px;
+    }
+    .content-1 .slider {
+        width: 610px;
+        height: 394px;
+    }
+    .content-1 .slider {
+        
+    }
+    .content-1 {
+        background-image: url(../img/myll_bg.jpg) !important;
+        height: 700px;
+        background-color: #0a0708;
+        background-size: 180% 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .content-2 {
+        background: url(../img/cover.jpg) left top no-repeat !important;
+        height: 340px;
+        margin-top: -90px;
+    }
+	.content-3 {
+        background: #eaeaea url(../img/role-bg.jpg) center no-repeat !important;
+        height: 450px;
+    }
+	.content,.content-2 {
+		-webkit-background-size: 1024px;
+		background-size: 1024px;
+	}
+	.big-health-alert img {
+		max-width: 120px;
+	}
+}
+@media screen and (max-width: 640px) { 
+    .gift-box {
+        display: none;
+    }
+    .guide-news-box {
+        width: 100%;
+        height: 100%;
+        padding: 0px 12px 20px 12px;
+    }
+    .content-1 .slider {
+        min-height: 200px;
+        min-width: 270px;
+        position: absolute;
+        overflow: hidden;
+        z-index: 1;
+        top: 370px;
+        text-align: center;
+        width: 90%;
+        height: 35%;
+        margin: auto;
+        left: 0;
+        right: 0;
+        background: url(../img/img-iframe-mb.webp) 0/100% no-repeat;
+        padding: 14px 20px;
+        background-size: 100% 100% !important;
+    }
+    .section1 .slider .welcome {
+        width: 100%;
+        height: 100%;
+    }
+    .section2 {
+        height: 304px;
+        max-width: 632px;
+        width: 90%;
+        position: relative;
+        padding-top: 14px;
+        margin-top: 100px !important;
+        margin: auto;
+        background-image: url(../img/gnp-bg-mb-sm.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    .role-detail .r-per img {
+        right: -200px;
+        top: 103px;
+        opacity: 0.6;
+        z-index: 0;
+        height: 380px;
+    }
+    .section3 .role-con {
+        height: 400px;
+        position: relative;
+    }
+    .big-health-alert img {
+        top: 85px;
+    }
+    .content-1 {
+        background-image: url(../img/myll_bg.jpg) !important;
+        height: 500px;
+        background-color: #0a0708;
+        background-size: 190% 110%;
+        background-position: top center;
+        background-repeat: no-repeat;
+    }
+    .content-2 {
+        background: url(../img/cover.jpg) left top no-repeat !important;
+        height: 420px;
+    }
+    .content-3 {
+        background: #eaeaea url(../img/role-bg.jpg) center no-repeat !important;
+        height: 450px;
+    }
+    .section1 .account, .section1 .servers-wrap .servers {
+        display: none;
+    }
+    .section1 {
+        width: 100%;
+        height: 600px;
+    }
+    .content-1 .servers-wrap {
+        width: 100%;
+        display: flex;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .content-1 .servers-wrap .try-btn {
+        width: 300px;
+        height: 168px;
+        position: absolute;
+        top: 180px;
+        background-size: cover;
+    }
+    .content-1 .servers-wrap .try-btn:hover {
+        background-size: cover; 
+    }
+    .menu .logo img {
+        margin-top: -6px;
+        width: 80px;
+        height: auto;
+    }
+    .menu .logo {
+        width: 80px !important;
+        margin: unset !important;
+    }
+    .menu .menu-right {
+        width: calc( 100% - 80px );
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+	.header .menu .menu-item {
+		width: 100px;
+		height: 32px;
+        font-size: 15px;
+		background-size:132px;
+		margin:0 2px;
+	}
+	.header .menu .groups {
+		background-position: 0 -64px;
+	}
+	.header .menu .fanpage {
+		background-position: 0 -32px;
+	}
+	.logo .logo-item {
+		height:135px;
+	}
+	.copyright .health-alert, .logo-white-1 {
+		position: static;
+		margin:auto;
+	}
+	.big-health-alert img {
+		max-width: 100px;
+	}
+	.header {
+		height: 50px;
+	}
+}
+table tbody tr td {
+    text-align: center;
+    font-size: 13px;
+    border: none;
+    padding: 0;
+    padding: 10px 21px 10px 21px;
+    color: #888ea8;
+    letter-spacing: normal;
+    white-space: nowrap;
+}
+table {
+    border-spacing: 0 5px;
+    width: 100%;
+    background-color: transparent;
+    margin-top: 0!important;
+    margin-bottom: 0!important;
+    border-collapse: collapse!important;
+    background: transparent;
+}
+table thead {
+    background: #3F8CFF;
+    color: #fff;
+}
+table tbody tr:nth-of-type(odd) {
+    background-color: rgb(236 246 255) !important;
+}
+table > tbody tr {
+    border-radius: 4px;
+    -webkit-transition: all 0.1s ease;
+    transition: all 0.1s ease;
+    border-bottom: 1px solid #c5d9e8;
+}
+.account-form {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 350px;
+    height: 350px;
+    z-index: 11;
+}
+.account-form .head-account {
+    border-radius: 3px 3px 0 0;
+    display: flex;
+    background: url(../img/head-account.png) no-repeat;
+    width: 100%;
+    background-size: 100% 100%;
+}
+.account-form .body-account {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 0 3px 3px;
+    padding: 20px;
+    height: 100%;
+    background: url(../img/body-account.png) bottom right/cover no-repeat;
+}
+.account-form .head-account .head-account-tab:not(:last-child) {
+    text-align: left;
+    padding-left: 25%;
+}
+.account-form .head-account .head-account-tab.active, .account-form .head-account .head-account-tab:hover {
+    color: #f5b699;
+}
+.account-form .head-account .head-account-tab {
+	overflow: hidden;
+    width: 50%;
+    padding: 10px;
+    color: #794928;
+    white-space: nowrap;
+    font-size: 1rem;
+    cursor: pointer;
+    pointer-events: auto !important;
+    font-family: UTM-Flavour;
+}
+.account-form .body-account .body-account-content {
+    margin: auto;
+    width: fit-content;
+}
+.form-btn-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90px;
+}
+.form-group {
+    margin-bottom: 1rem;
+}
+.block_ui_main {
+	position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    opacity: .5;
+}
+.body-account-content .form-group input {
+    box-shadow: inset 1px -1px 12px 1px #2a2718;
+    height: 30px;
+    font-size: 16px;
+    width: 100%;
+    padding: 0 15px;
+    border-radius: 5px;
+    outline: none;
+    font-weight: 500;
+    border: unset;
+}
+.body-account-content .form-group:hover input,.body-account-content .form-group:active input, .body-account-content .form-group input:focus {
+    box-shadow: inset 1px -1px 12px 1px #2a2718;
+    height: 30px;
+    font-size: 16px;
+    width: 100%;
+    border: unset;
+    padding: 0 15px;
+    outline: none;
+    border-radius: 5px;
+    font-weight: 500;
+}
+.btn-login-form {
+    background: url(../img/login.png) bottom right/contain no-repeat;
+    height: 90px;
+    width: 190px;
+    margin-top: -25px;
+    cursor: pointer;
+}
+.btn-register-form {
+    cursor: pointer;
+    height: 90px;
+    width: 190px;
+    margin-top: -25px;
+    background: url(../img/register.png) bottom right/contain no-repeat;
+}
+.btn-register-form:active, .btn-login-form:active, .btn-register-form:focus, .btn-login-form:focus {
+    height: 85px;
+    width: 180px;
+    margin-top: -25px;
+    transition: transform .2s;
+}
+
+.section3 .role-nav li:hover, .section3 .role-nav li.cur {
+    background-image: url(../img/role-tab-h.png);
+    background-repeat: no-repeat;
+}
+.section3 .role-nav .warrior {
+    background-position: 0 0;
+}
+li {
+    vertical-align: bottom;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.section3 .role-nav .magic {
+    background-position: 0 -89px;
+}
+.section3 .role-nav .daosh {
+    background-position: 0 -178px;
+}
+.section3 .role-nav li:last-child {
+    margin-right: 0;
+    margin-left: -2px;
+}
+.section3 .role-nav li:hover i,.section3 .role-nav li.cur i {
+    display:none
+}
+.section3 .curElem {
+    display: block;
+}
+.section3 .role-detail {
+    position: relative;
+    display: none;
+}
+.nav-top a,.nav-top a:hover,.nav-top a:focus {
+    font-family: Tahoma,Arial,Helvetica,sans-serif!important;
+    font-size: 14px;
+    color: #575757;
+    text-decoration: unset;
+}
+.nav-top .nav-content {
+    padding: 0px 10px;
+    height: 30px;
+    background: #fff;
+    border-bottom: 1px solid #e5e5e5;
+    z-index: 100;
+}
+.nav-top .nav-content {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1024px;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+}
+.nav-top .nav-content .nav-right {
+    display:flex;
+}
+.nav-top .nav-content .nav-right .nav-item:not(:last-child) {
+    margin-right:10px;
+    border-right:1px solid #00000054;
+    padding-right:10px;
+}
+.nav-left .logo img{
+    height:100%;
+}
+.nav-right {
+    padding: 5px 0px;
+    user-select:none;
+}
+.nav-right img,.nav-right .nav-item,.nav-right {
+    height:100%;
+}

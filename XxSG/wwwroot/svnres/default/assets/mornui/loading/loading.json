@@ -1,0 +1,4 @@
+{"file":"loading.png","frames":{
+"loadingbg":{"x":546,"y":0,"w":31,"h":31,"offX":0,"offY":0,"sourceW":31,"sourceH":31},
+"loading_bar":{"x":0,"y":0,"w":540,"h":28,"offX":0,"offY":0,"sourceW":540,"sourceH":28},
+"loading_barbg":{"x":0,"y":34,"w":540,"h":28,"offX":0,"offY":0,"sourceW":540,"sourceH":28}}}

@@ -1,0 +1,13 @@
+{"file":"chouka.png", "frames":{ 
+ "chouka_di_cai":{"x":242,"y":0,"w":212,"h":338,"offX":0,"offY":0,"sourceW":212,"sourceH":338}, 
+ "chouka_di_cheng":{"x":0,"y":369,"w":211,"h":338,"offX":1,"offY":0,"sourceW":212,"sourceH":338}, 
+ "chouka_di_hong":{"x":211,"y":369,"w":212,"h":338,"offX":0,"offY":0,"sourceW":212,"sourceH":338}, 
+ "chouka_di_jin":{"x":454,"y":0,"w":212,"h":338,"offX":0,"offY":0,"sourceW":212,"sourceH":338}, 
+ "chouka_di_xinxi":{"x":666,"y":332,"w":77,"h":208,"offX":0,"offY":0,"sourceW":77,"sourceH":208}, 
+ "chouka_di_zi":{"x":454,"y":338,"w":212,"h":338,"offX":0,"offY":0,"sourceW":212,"sourceH":338}, 
+ "chouka_di1":{"x":743,"y":332,"w":100,"h":100,"offX":0,"offY":0,"sourceW":100,"sourceH":100}, 
+ "chouka_di2":{"x":0,"y":707,"w":288,"h":48,"offX":1,"offY":0,"sourceW":289,"sourceH":48}, 
+ "chouka_ka":{"x":666,"y":0,"w":205,"h":332,"offX":0,"offY":0,"sourceW":206,"sourceH":332}, 
+ "chouka_ka_bai":{"x":0,"y":0,"w":242,"h":369,"offX":1,"offY":0,"sourceW":243,"sourceH":369}, 
+ "chouka_suipian":{"x":743,"y":432,"w":98,"h":98,"offX":0,"offY":0,"sourceW":98,"sourceH":98}
+ }}

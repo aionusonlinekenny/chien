@@ -1,0 +1,5 @@
+{"file":"answer.png","frames":{
+"answer_img1":{"x":86,"y":0,"w":73,"h":71,"offX":3,"offY":3,"sourceW":79,"sourceH":76},
+"answer_img2":{"x":0,"y":0,"w":80,"h":76,"offX":0,"offY":0,"sourceW":80,"sourceH":76},
+"answer_ture":{"x":165,"y":0,"w":64,"h":54,"offX":0,"offY":1,"sourceW":64,"sourceH":55},
+"answer_wrong":{"x":165,"y":60,"w":53,"h":49,"offX":1,"offY":0,"sourceW":55,"sourceH":49}}}

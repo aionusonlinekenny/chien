@@ -1,0 +1,9 @@
+{"file":"rank.png","frames":{
+"btn_mirro":{"x":125,"y":79,"w":39,"h":39,"offX":0,"offY":0,"sourceW":39,"sourceH":39},
+"btn_mopai":{"x":355,"y":0,"w":104,"h":46,"offX":0,"offY":0,"sourceW":104,"sourceH":46},
+"numberline_rank":{"x":0,"y":50,"w":180,"h":23,"offX":0,"offY":0,"sourceW":180,"sourceH":24},
+"numberline_shuzi":{"x":0,"y":0,"w":349,"h":44,"offX":0,"offY":0,"sourceW":350,"sourceH":44},
+"rank_img1":{"x":63,"y":79,"w":56,"h":46,"offX":0,"offY":1,"sourceW":57,"sourceH":47},
+"rank_img2":{"x":0,"y":79,"w":57,"h":48,"offX":0,"offY":0,"sourceW":57,"sourceH":48},
+"rank_img3":{"x":186,"y":50,"w":58,"h":48,"offX":0,"offY":0,"sourceW":58,"sourceH":48},
+"rank_vip":{"x":250,"y":50,"w":40,"h":23,"offX":0,"offY":0,"sourceW":40,"sourceH":23}}}

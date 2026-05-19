@@ -1,0 +1,9 @@
+{"file":"battleFail.png","frames":{
+"btn_bttlefail1":{"x":421,"y":2,"w":79,"h":91,"offX":12,"offY":2,"sourceW":101,"sourceH":93},
+"btn_bttlefail2":{"x":356,"y":206,"w":70,"h":93,"offX":13,"offY":0,"sourceW":101,"sourceH":93},
+"btn_bttlefail3":{"x":269,"y":206,"w":79,"h":84,"offX":11,"offY":8,"sourceW":101,"sourceH":93},
+"battlefail_1":{"x":2,"y":2,"w":411,"h":152,"offX":9,"offY":0,"sourceW":440,"sourceH":152},
+"battlefail_2":{"x":269,"y":162,"w":229,"h":36,"offX":25,"offY":12,"sourceW":282,"sourceH":51},
+"battlefail_3":{"x":2,"y":221,"w":126,"h":31,"offX":5,"offY":2,"sourceW":139,"sourceH":33},
+"battlefail_4":{"x":2,"y":162,"w":259,"h":51,"offX":0,"offY":0,"sourceW":259,"sourceH":51},
+"battlefail_5":{"x":136,"y":221,"w":110,"h":25,"offX":1,"offY":0,"sourceW":111,"sourceH":25}}}

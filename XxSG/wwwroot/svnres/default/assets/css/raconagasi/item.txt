@@ -1,0 +1,961 @@
+1; kim tệ;1
+2; nguyên bảo;1
+3; buộc định nguyên bảo · tạm không cần;1
+4; diễn viên kinh nghiệm;1
+5; thi đấu thể thao điểm;1
+6; hữu tình điểm;1
+7; uy danh;1
+8; tinh thạch;1
+9; cá nhân cống hiến;1
+10; đem hồn;1
+11;VIP giá trị;1
+12; chiêu hiền tệ;1
+13; cạnh đoán tệ;1
+14; xin giúp đỡ tệ;1
+15; hồn tinh;1
+16; sung giá trị ngạch độ;1
+17; huyết tinh;1
+18; bí tinh;1
+10000000; thí nghiệm: đạo cụ nhâm tuyển;2
+10000001;VIP chuyên chúc BOSS* tân chanh trang;2
+10000002;VIP chuyên chúc BOSS* tân chanh trang;2
+10000003;VIP chuyên chúc BOSS* tân chanh trang;2
+10000004; thí nghiệm: rơi xuống đạo cụ bao 1;2
+10000005; thí nghiệm: rơi xuống đạo cụ bao 2;2
+10000006; thí nghiệm: rơi xuống đạo cụ bao 1;2
+10000007; thí nghiệm: rơi xuống đạo cụ bao 2;2
+10102004;100 nguyên bảo;2
+10102005;600 nguyên bảo;2
+10102006;1200 nguyên bảo;2
+10102007;3000 nguyên bảo;2
+10102008;6800 nguyên bảo;2
+10102009;19800 nguyên bảo;2
+10102010;32800 nguyên bảo;2
+10102011;64800 nguyên bảo;2
+10102012; nguyệt tạp;2
+10102013; chung thân tạp;2
+10102014; mỗi ngày đặc biệt huệ 1;2
+10102015; mỗi ngày đặc biệt huệ 2;2
+10102016; mỗi ngày đặc biệt huệ 3;2
+10102017; một nguyên thẳng cấu;2
+10102018; tam nguyên thẳng cấu;2
+10102019; tám nguyên thẳng cấu;2
+10102020; chu tạp;2
+10102021; mỗi ngày đặc biệt huệ 4;2
+10102022; mỗi ngày đặc biệt huệ 5;2
+10102023;9800 nguyên bảo;2
+1701; thiên kim chân cơ;4
+1702; độc sĩ cổ hủ;4
+2506; Triệu Vân;4
+2601; Chư Cát Lượng;4
+2602; Quan Vũ;4
+2603; Lưu Bị;4
+2701; thiên vàng óng ánh nguyệt anh;4
+2702; thường thắng Triệu Vân;4
+2801; võ thánh Quan Vũ;4
+3701; thiên kim tôn thượng hương;4
+3702; đại đế tôn quyền;4
+4603; điêu thiền;4
+4701; thiên kim thái văn cơ;4
+4702; yêu hoặc vu cát;4
+4801; quỷ thần Lữ Bố;4
+201301; họ Tư Mã chiêu kích hoạt tạp;2
+201302; chung hội kích hoạt tạp;2
+201303; hứa du kích hoạt tạp;2
+201401; tuân du kích hoạt tạp;2
+201402; từ hoảng kích hoạt tạp;2
+201403; vu cấm kích hoạt tạp;2
+201404; bàng đức kích hoạt tạp;2
+201405; chân cơ kích hoạt tạp;2
+201501; cổ hủ kích hoạt tạp;2
+201502; họ Tư Mã ý kích hoạt tạp;2
+201503; họ Hạ Hầu đôn kích hoạt tạp;2
+201504; họ Hạ Hầu uyên kích hoạt tạp;2
+201505; trương cáp kích hoạt tạp;2
+201506; trương liêu kích hoạt tạp;2
+201601; quách gia kích hoạt tạp;2
+201602; Tào Tháo kích hoạt tạp;2
+201603; tào nhân kích hoạt tạp;2
+201604; tuân úc kích hoạt tạp;2
+201701; thiên kim chân cơ kích hoạt tạp;2
+201702; độc sĩ cổ hủ kích hoạt tạp;2
+201801; ngụy võ Tào Tháo kích hoạt tạp;2
+202301; trương tinh màu kích hoạt tạp;2
+202302; liêu hóa kích hoạt tạp;2
+202303; quan bình kích hoạt tạp;2
+202401; hoàng nguyệt anh kích hoạt tạp;2
+202402; pháp chính kích hoạt tạp;2
+202403; quan hưng kích hoạt tạp;2
+202404; trương bao kích hoạt tạp;2
+202405; mã lương kích hoạt tạp;2
+202501; ngụy duyên kích hoạt tạp;2
+202502; mã siêu kích hoạt tạp;2
+202503; bàng thống kích hoạt tạp;2
+202504; từ thứ kích hoạt tạp;2
+202505; hoàng trung kích hoạt tạp;2
+202506; Triệu Vân kích hoạt tạp;2
+202601; Chư Cát Lượng kích hoạt tạp;2
+202602; Quan Vũ kích hoạt tạp;2
+202603; Lưu Bị kích hoạt tạp;2
+202604; Trương Phi kích hoạt tạp;2
+202701; thiên vàng óng ánh nguyệt anh kích hoạt tạp;2
+202702; thường thắng Triệu Vân kích hoạt tạp;2
+202801; võ thánh Quan Vũ kích hoạt tạp;2
+203301; chu hoàn kích hoạt tạp;2
+203302; lăng thống kích hoạt tạp;2
+203303; họ Gia Cát cẩn kích hoạt tạp;2
+203401; tôn thượng hương kích hoạt tạp;2
+203402; bước luyện sư kích hoạt tạp;2
+203403; Hoàng Cái kích hoạt tạp;2
+203404; từ thịnh kích hoạt tạp;2
+203405; chu thái kích hoạt tạp;2
+203501; lỗ túc kích hoạt tạp;2
+203502; tôn quyền kích hoạt tạp;2
+203503; cam trữ kích hoạt tạp;2
+203504; tôn kiên kích hoạt tạp;2
+203505; rất sử từ kích hoạt tạp;2
+203506; tôn sách kích hoạt tạp;2
+203601; tiểu kiều kích hoạt tạp;2
+203602; chu du kích hoạt tạp;2
+203603; lục tốn kích hoạt tạp;2
+203604; lữ mông kích hoạt tạp;2
+203701; thiên kim tôn thượng hương kích hoạt tạp;2
+203702; đại đế tôn quyền kích hoạt tạp;2
+203801; cố khúc chu du kích hoạt tạp;2
+204301; mã đằng kích hoạt tạp;2
+204302; trương lương kích hoạt tạp;2
+204303; viên thuật kích hoạt tạp;2
+204401; cao thuận kích hoạt tạp;2
+204402; trần cung kích hoạt tạp;2
+204403; nhan lương kích hoạt tạp;2
+204404; hề văn kích hoạt tạp;2
+204405; thái văn cơ kích hoạt tạp;2
+204501; vu cát kích hoạt tạp;2
+204502; trương sừng kích hoạt tạp;2
+204503; hoa hùng kích hoạt tạp;2
+204504; đổng trác kích hoạt tạp;2
+204505; lô thực kích hoạt tạp;2
+204506; họ Công Tôn toản kích hoạt tạp;2
+204601; hoa đà kích hoạt tạp;2
+204602; tả từ kích hoạt tạp;2
+204603; điêu thiền kích hoạt tạp;2
+204604; Lữ Bố kích hoạt tạp;2
+204701; thiên kim thái văn cơ kích hoạt tạp;2
+204702; yêu hoặc vu cát kích hoạt tạp;2
+204801; quỷ thần Lữ Bố kích hoạt tạp;2
+211301; họ Tư Mã chiêu mảnh nhỏ;2
+211302; chung hội mảnh nhỏ;2
+211303; hứa du mảnh nhỏ;2
+211401; tuân du mảnh nhỏ;2
+211402; từ hoảng mảnh nhỏ;2
+211403; vu cấm mảnh nhỏ;2
+211404; bàng đức mảnh nhỏ;2
+211405; chân cơ mảnh nhỏ;2
+211501; cổ hủ mảnh nhỏ;2
+211502; họ Tư Mã ý mảnh nhỏ;2
+211503; họ Hạ Hầu đôn mảnh nhỏ;2
+211504; họ Hạ Hầu uyên mảnh nhỏ;2
+211505; trương cáp mảnh nhỏ;2
+211506; trương liêu mảnh nhỏ;2
+211601; quách gia mảnh nhỏ;2
+211602; Tào Tháo mảnh nhỏ;2
+211603; tào nhân mảnh nhỏ;2
+211604; tuân úc mảnh nhỏ;2
+211701; thiên kim chân cơ mảnh nhỏ;2
+211702; độc sĩ cổ hủ mảnh nhỏ;2
+211801; ngụy võ Tào Tháo mảnh nhỏ;2
+212301; trương tinh màu mảnh nhỏ;2
+212302; liêu hóa mảnh nhỏ;2
+212303; quan bình mảnh nhỏ;2
+212401; hoàng nguyệt anh mảnh nhỏ;2
+212402; pháp chính mảnh nhỏ;2
+212403; quan hưng mảnh nhỏ;2
+212404; trương bao mảnh nhỏ;2
+212405; mã lương mảnh nhỏ;2
+212501; ngụy duyên mảnh nhỏ;2
+212502; mã siêu mảnh nhỏ;2
+212503; bàng thống mảnh nhỏ;2
+212504; từ thứ mảnh nhỏ;2
+212505; hoàng trung mảnh nhỏ;2
+212506; Triệu Vân mảnh nhỏ;2
+212601; Chư Cát Lượng mảnh nhỏ;2
+212602; Quan Vũ mảnh nhỏ;2
+212603; Lưu Bị mảnh nhỏ;2
+212604; Trương Phi mảnh nhỏ;2
+212701; thiên vàng óng ánh nguyệt anh mảnh nhỏ;2
+212702; thường thắng Triệu Vân mảnh nhỏ;2
+212801; võ thánh Quan Vũ mảnh nhỏ;2
+213301; chu hoàn mảnh nhỏ;2
+213302; lăng thống mảnh nhỏ;2
+213303; họ Gia Cát cẩn mảnh nhỏ;2
+213401; tôn thượng hương mảnh nhỏ;2
+213402; bước luyện sư mảnh nhỏ;2
+213403; Hoàng Cái mảnh nhỏ;2
+213404; từ thịnh mảnh nhỏ;2
+213405; chu thái mảnh nhỏ;2
+213501; lỗ túc mảnh nhỏ;2
+213502; tôn quyền mảnh nhỏ;2
+213503; cam trữ mảnh nhỏ;2
+213504; tôn kiên mảnh nhỏ;2
+213505; rất sử từ mảnh nhỏ;2
+213506; tôn sách mảnh nhỏ;2
+213601; tiểu kiều mảnh nhỏ;2
+213602; chu du mảnh nhỏ;2
+213603; lục tốn mảnh nhỏ;2
+213604; lữ mông mảnh nhỏ;2
+213701; thiên kim tôn thượng hương mảnh nhỏ;2
+213702; đại đế tôn quyền mảnh nhỏ;2
+213801; cố khúc chu du mảnh nhỏ;2
+214301; mã đằng mảnh nhỏ;2
+214302; trương lương mảnh nhỏ;2
+214303; viên thuật mảnh nhỏ;2
+214401; cao thuận mảnh nhỏ;2
+214402; trần cung mảnh nhỏ;2
+214403; nhan lương mảnh nhỏ;2
+214404; hề văn mảnh nhỏ;2
+214405; thái văn cơ mảnh nhỏ;2
+214501; vu cát mảnh nhỏ;2
+214502; trương sừng mảnh nhỏ;2
+214503; hoa hùng mảnh nhỏ;2
+214504; đổng trác mảnh nhỏ;2
+214505; lô thực mảnh nhỏ;2
+214506; họ Công Tôn toản mảnh nhỏ;2
+214601; hoa đà mảnh nhỏ;2
+214602; tả từ mảnh nhỏ;2
+214603; điêu thiền mảnh nhỏ;2
+214604; Lữ Bố mảnh nhỏ;2
+214701; thiên kim thái văn cơ mảnh nhỏ;2
+214702; yêu hoặc vu cát mảnh nhỏ;2
+214801; quỷ thần Lữ Bố mảnh nhỏ;2
+220001; danh tướng nhâm tuyển;2
+220002; hồng đem bốn tuyển một;2
+220003; kim đem mảnh nhỏ lễ hạp;2
+220101; ngụy võ danh tướng;2
+220102; Thục Hán danh tướng;2
+220103; đông ngô danh tướng;2
+220104; quần hùng danh tướng;2
+220105; che dấu danh tướng;2
+220201; chanh đem bốn tuyển một;2
+220202; tử tinh sáo trang;2
+220203; tử tinh bảo khí;2
+220204; huyễn thiên sáo trang;2
+220205; huyễn Thiên Bảo khí;2
+220206; Thái Ất sáo trang;2
+220207; Thái Ất bảo khí;2
+220208; thần hoàng sáo trang;2
+220209; thần hoàng bảo khí;2
+220301; thiên kim thần tướng nhâm tuyển;2
+220302; thiên kim thần tướng bao;2
+220303; chân cơ trong bảo khố tương;2
+220304; hoàng nguyệt anh trong bảo khố tương;2
+220305; tôn thượng hương trong bảo khố tương;2
+220306; thái văn cơ trong bảo khố tương;2
+220351; phượng hoàng chanh tin tưởng tuyển bao;2
+220401; bảy ngày trong bảo khố tương;2
+220402; bảy ngày mảnh nhỏ trong bảo khố tương;2
+220403; sáng mờ sáo trang;2
+220404; sáng mờ bảo khí;2
+220405; lam hải sáo trang;2
+220406; đoạn sầu sáo trang;2
+220407; màu cam chiến tin tưởng tuyển bao;2
+220408; thiên kim mảnh nhỏ nhâm tuyển;2
+220409; thủ ngày lễ hạp;2
+220410; ngày kế lễ hạp;2
+220411; ba ngày lễ hạp;2
+220412; bốn ngày lễ hạp;2
+220413; năm ngày lễ hạp;2
+220414; sáu ngày lễ hạp;2
+220415; bảy ngày lễ hạp;2
+220416; thần hoàng nhâm tuyển bao;2
+220501; màu tím tọa kỵ nhâm tuyển bao;2
+220502; màu cam tọa kỵ nhâm tuyển bao;2
+220601; võ tướng vật tư tiếp tế tiếp viện;2
+220602; hồng đem tùy cơ lễ bao;2
+220603; chiến sủng vật tư tiếp tế tiếp viện;2
+220701; long tuyền bộ nhâm tuyển;2
+220702; cực viêm bộ nhâm tuyển;2
+220703; long lân bộ nhâm tuyển;2
+220704; Phong Linh bộ nhâm tuyển;2
+220705; tà ma bộ nhâm tuyển;2
+220706; rất sơ bộ nhâm tuyển;2
+220801; màu tím võ học nhâm tuyển bao;2
+220802; màu cam võ học nhâm tuyển bao;2
+220803; màu đỏ võ học nhâm tuyển bao;2
+220901; huyền thiết thiên xu nhâm tuyển bao;2
+220902; thực võ tinh tuyền nhâm tuyển bao;2
+221001; để tạp nhâm tuyển bao;2
+221002; tử tạp nhâm tuyển bao;2
+221003; chanh tạp nhâm tuyển bao;2
+221004; hồng tạp nhâm tuyển bao;2
+221011; ngụy quốc để tạp bao;2
+221014; ngụy quốc tử tạp bao;2
+221015; ngụy quốc chanh tạp bao;2
+221016; ngụy quốc hồng tạp bao;2
+221021; Thục Quốc để tạp bao;2
+221024; Thục Quốc tử tạp bao;2
+221025; Thục Quốc chanh tạp bao;2
+221026; Thục Quốc hồng tạp bao;2
+221031; ngô quốc để tạp bao;2
+221034; ngô quốc tử tạp bao;2
+221035; ngô quốc chanh tạp bao;2
+221036; ngô quốc hồng tạp bao;2
+221041; quần hùng để tạp bao;2
+221044; quần hùng tử tạp bao;2
+221045; quần hùng chanh tạp bao;2
+221046; quần hùng hồng tạp bao;2
+221101; màu cam trận pháp nhâm tuyển bao;2
+221102; màu đỏ trận pháp nhâm tuyển bao;2
+221103; thiên kim trận pháp nhâm tuyển bao;2
+221201; tinh phách nhâm tuyển hạp;2
+221301; màu đan nhâm tuyển bao;2
+221401; long lân sáo trang;2
+221501; thiên kim hào kiệt bao;2
+221502; độc sĩ cổ hủ trong bảo khố tương;2
+221503; thường thắng Triệu Vân trong bảo khố tương;2
+221504; đại đế tôn quyền trong bảo khố tương;2
+221505; yêu hoặc vu cát trong bảo khố tương;2
+221601; thiên kim anh linh bao;2
+221602; ngu cơ trong bảo khố tương;2
+221603; Hạng Võ trong bảo khố tương;2
+221701; thần tướng hào kiệt bao;2
+221702; anh linh thần tướng bao;2
+221801; anh linh lễ hạp;2
+221802; anh linh trong bảo khố tương;2
+221811; pháp bảo lễ hạp;2
+221812; pháp bảo trong bảo khố tương;2
+221821; tinh luyện lễ hạp;2
+221822; tinh luyện trong bảo khố tương;2
+221831; kinh nghiệm lễ hạp;2
+221832; kinh nghiệm trong bảo khố tương;2
+221901; thiên kim tùy cơ lễ bao;2
+221911; thần tướng tùy cơ lễ bao;2
+221912; hào kiệt tùy cơ lễ bao;2
+222001; màu đỏ ký hiệu lễ hạp;2
+222002; thiên kim ký hiệu lễ hạp;2
+301001; chín mầu lộc mảnh nhỏ;2
+301002; cửu vĩ hồ mảnh nhỏ;2
+302001; con ác thú mảnh nhỏ;2
+302002; cùng kì mảnh nhỏ;2
+302003; bạch trạch mảnh nhỏ;2
+302004; kỳ lân mảnh nhỏ;2
+303001; phượng hoàng mảnh nhỏ;2
+303002; khung võ thần long mảnh nhỏ;2
+303003; bạch hổ mảnh nhỏ;2
+303004; huyền vũ mảnh nhỏ;2
+304001; câu mũi nhọn mảnh nhỏ;2
+304002; nhục thu mảnh nhỏ;2
+311001; ngân cừu a-ga mảnh nhỏ;2
+311002; xích quang hồ mảnh nhỏ;2
+311003; âm u hổ mảnh nhỏ;2
+312001; tiên hạc mảnh nhỏ;2
+312002; sấm đánh bò tót  mảnh nhỏ;2
+312003; lửa cháy chiến mã mảnh nhỏ;2
+313001; nuốt thiên mảnh nhỏ;2
+313002; côn mảnh nhỏ;2
+314001; chu tước mảnh nhỏ;2
+321001; mau kiếm thức mảnh nhỏ;2
+321002; tám xà thoát phá phiến;2
+322001; yển nguyệt trảm mảnh nhỏ;2
+322002; bàn xà bảy tham mảnh nhỏ;2
+323001; quỷ thần phách mảnh nhỏ;2
+323002; giơ lên trời bắn ngày mảnh nhỏ;2
+323003; lực phá ngàn quân mảnh nhỏ;2
+323004; kinh huyền mảnh nhỏ;2
+324001; bức tranh kích vô song mảnh nhỏ;2
+324002; ngân thương hướng trận mảnh nhỏ;2
+325001; dài lâm lửa giận mảnh nhỏ;2
+331001; huyền thiết mảnh nhỏ;2
+331002; thiên xu mảnh nhỏ;2
+332001; thực võ mảnh nhỏ;2
+332002; tinh tuyền mảnh nhỏ;2
+332003; khai dương mảnh nhỏ;2
+332004; thiên quyền mảnh nhỏ;2
+333001; ma nham mảnh nhỏ;2
+333002; ngự long mảnh nhỏ;2
+334001; kiếm trủng mảnh nhỏ;2
+401001; sát thần trang phục mốt mảnh nhỏ;2
+401002; phi đem trang phục mốt mảnh nhỏ;2
+401003; ngày sinh Khổng Tử trang phục mốt mảnh nhỏ;2
+501001; mới ra đời kích hoạt tạp;2
+501002; bước vào võ đạo kích hoạt tạp;2
+501003; võ đạo tông sư kích hoạt tạp;2
+501004; võ đạo chí tôn kích hoạt tạp;2
+501005; phượng múa chín ngày kích hoạt tạp;2
+501006; phi long tại thiên kích hoạt tạp;2
+501007; xuất thần nhập hóa kích hoạt tạp;2
+501008; kinh thế hãi tục kích hoạt tạp;2
+501009; chí tôn thiên hạ kích hoạt tạp;2
+501010; thiên hạ vô địch kích hoạt tạp;2
+501011; vang dội cổ kim kích hoạt tạp;2
+501012; võ thánh kích hoạt tạp;2
+501013; vương giả chi thế kích hoạt tạp;2
+501014; hoàng giả oai kích hoạt tạp;2
+501015; quý khí bức người kích hoạt tạp;2
+501016; tài vận sườn lậu kích hoạt tạp;2
+501017; danh môn vọng tộc kích hoạt tạp;2
+501018; hào không người tính kích hoạt tạp;2
+501019; chiến thần buông xuống kích hoạt tạp;2
+501020; ứng với thiên vâng mệnh kích hoạt tạp;2
+501021; thiên mệnh sở về kích hoạt tạp;2
+501022; thiên mệnh người ấy kích hoạt tạp;2
+501023; bách chiến bách thắng kích hoạt tạp;2
+501024; quá quan trảm tướng kích hoạt tạp;2
+501025; khu sói nuốt hổ kích hoạt tạp;2
+501026; quần hùng tranh giành kích hoạt tạp;2
+501027; đào viên kết nghĩa kích hoạt tạp;2
+501028; dũng mãnh thiện chiến kích hoạt tạp;2
+501029; Thục Hán chòm sao Thương Long kích hoạt tạp;2
+501030; vô song thượng tướng kích hoạt tạp;2
+600101; màu trắng màu đan;2
+600102; màu xanh biếc màu đan;2
+600103; màu lam màu đan;2
+600104; màu tím màu đan;2
+600105; màu cam màu đan;2
+600106; màu đỏ màu đan;2
+600107; màu vàng màu đan;2
+600108; ám kim màu đan;2
+601301; họ Tư Mã chiêu để tạp;2
+601302; chung hội để tạp;2
+601303; hứa du để tạp;2
+601401; tuân du để tạp;2
+601402; từ hoảng để tạp;2
+601403; vu cấm để tạp;2
+601404; bàng đức để tạp;2
+601405; chân cơ để tạp;2
+601501; cổ hủ để tạp;2
+601502; họ Tư Mã ý để tạp;2
+601503; họ Hạ Hầu đôn để tạp;2
+601504; họ Hạ Hầu đáy vực tạp;2
+601505; trương cáp để tạp;2
+601506; trương liêu để tạp;2
+601601; quách gia để tạp;2
+601602; Tào Tháo để tạp;2
+601603; tào nhân để tạp;2
+601604; tuân úc để tạp;2
+601701; thiên kim chân cơ để tạp;2
+601702; độc sĩ cổ hủ để tạp;2
+601801; ngụy võ Tào Tháo để tạp;2
+602301; trương tinh màu để tạp;2
+602302; liêu hóa để tạp;2
+602303; quan bình để tạp;2
+602401; hoàng nguyệt anh để tạp;2
+602402; pháp chính để tạp;2
+602403; quan hưng để tạp;2
+602404; trương bao để tạp;2
+602405; mã lương để tạp;2
+602501; ngụy duyên để tạp;2
+602502; mã siêu để tạp;2
+602503; bàng thống để tạp;2
+602504; từ thứ để tạp;2
+602505; hoàng trung để tạp;2
+602506; Triệu Vân để tạp;2
+602601; Chư Cát Lượng để tạp;2
+602602; Quan Vũ để tạp;2
+602603; Lưu Bị để tạp;2
+602604; Trương Phi để tạp;2
+602701; thiên vàng óng ánh nguyệt anh để tạp;2
+602702; thường thắng Triệu Vân để tạp;2
+602801; võ thánh Quan Vũ để tạp;2
+603301; chu hoàn để tạp;2
+603302; lăng thống để tạp;2
+603303; họ Gia Cát cẩn để tạp;2
+603401; tôn thượng hương để tạp;2
+603402; bước luyện sư để tạp;2
+603403; Hoàng Cái để tạp;2
+603404; từ thịnh để tạp;2
+603405; chu thái để tạp;2
+603501; lỗ túc để tạp;2
+603502; tôn quyền để tạp;2
+603503; cam trữ để tạp;2
+603504; tôn kiên để tạp;2
+603505; rất sử từ để tạp;2
+603506; tôn sách để tạp;2
+603601; tiểu kiều để tạp;2
+603602; chu du để tạp;2
+603603; lục tốn để tạp;2
+603604; lữ mông để tạp;2
+603701; thiên kim tôn thượng hương để tạp;2
+603702; đại đế tôn quyền để tạp;2
+603801; cố khúc chu du để tạp;2
+604301; mã đằng để tạp;2
+604302; trương lương để tạp;2
+604303; viên thuật để tạp;2
+604401; cao thuận để tạp;2
+604402; trần cung để tạp;2
+604403; nhan lương để tạp;2
+604404; hề văn để tạp;2
+604405; thái văn cơ để tạp;2
+604501; vu cát để tạp;2
+604502; trương sừng để tạp;2
+604503; hoa hùng để tạp;2
+604504; đổng trác để tạp;2
+604505; lô thực để tạp;2
+604506; họ Công Tôn toản để tạp;2
+604601; hoa đà để tạp;2
+604602; tả từ để tạp;2
+604603; điêu thiền để tạp;2
+604604; Lữ Bố để tạp;2
+604701; thiên kim thái văn cơ để tạp;2
+604702; yêu hoặc vu cát để tạp;2
+604801; quỷ thần Lữ Bố để tạp;2
+605301; cửu vĩ hồ để tạp;2
+605302; chín mầu lộc để tạp;2
+605303; con ác thú để tạp;2
+605401; cùng kì để tạp;2
+605402; bạch trạch để tạp;2
+605403; kỳ lân để tạp;2
+605404; phượng hoàng để tạp;2
+605405; khung võ thần long để tạp;2
+605501; bạch hổ để tạp;2
+605502; huyền vũ để tạp;2
+605601; câu mũi nhọn để tạp;2
+605602; nhục thu để tạp;2
+606301; ngân cừu a-ga để tạp;2
+606302; xích quang hồ để tạp;2
+606303; âm u hổ để tạp;2
+606401; tiên hạc để tạp;2
+606402; sấm đánh bò tót  để tạp;2
+606403; lửa cháy chiến mã để tạp;2
+606404; nuốt thiên để tạp;2
+606405; côn để tạp;2
+606501; chu tước để tạp;2
+701001; huyền binh trận tàn cuốn;2
+701002; sao Bắc Đẩu trận tàn cuốn;2
+701003; địa sát trận tàn cuốn;2
+702001; tà phong trận tàn cuốn;2
+702002; tùng vân trận tàn cuốn;2
+702003; khốn long trận tàn cuốn;2
+703001; diệt yêu trận tàn cuốn;2
+703002; vân điểu trận tàn cuốn;2
+703003; linh xà trận tàn cuốn;2
+801001; phiền khoái mảnh nhỏ;2
+801002; phạm tăng mảnh nhỏ;2
+802001; hoắc đi bệnh mảnh nhỏ;2
+802002; vệ thanh mảnh nhỏ;2
+802003; lưu triệt mảnh nhỏ;2
+802004; lữ trĩ mảnh nhỏ;2
+803001; ngu cơ mảnh nhỏ;2
+803002; Hạng Võ mảnh nhỏ;2
+901001; quỷ thần kiếm;2
+902001; thanh long hồ;2
+902002; phượng loan song thánh đăng;2
+903001; huyễn cánh tuyền băng trận;2
+903002; Xích Diễm ỷ thiên kiếm;2
+12100001; thủy kính · sinh mệnh;7
+12100002; thủy kính · công kích;7
+12100003; thủy kính · vật phòng;7
+12100004; thủy kính · pháp phòng;7
+12100101; nam hoa · trúng mục tiêu;7
+12100102; nam hoa · bạo đánh;7
+12100201; ô sừng · né tránh;7
+12100202; ô sừng · kháng bạo;7
+12100401; tử hư · mệnh hồn;7
+12100402; tử hư · phá quân;7
+12100403; tử hư · cất giấu;7
+12100404; tử hư · huyễn thuẫn;7
+12100501; thái bình · vô song;7
+12100502; thái bình · số mệnh;7
+12200001; thủy kính · sinh mệnh;7
+12200002; thủy kính · công kích;7
+12200003; thủy kính · vật phòng;7
+12200004; thủy kính · pháp phòng;7
+12200101; nam hoa · trúng mục tiêu;7
+12200102; nam hoa · bạo đánh;7
+12200201; ô sừng · né tránh;7
+12200202; ô sừng · kháng bạo;7
+12200401; tử hư · mệnh hồn;7
+12200402; tử hư · phá quân;7
+12200403; tử hư · cất giấu;7
+12200404; tử hư · huyễn thuẫn;7
+12200501; thái bình · vô song;7
+12200502; thái bình · số mệnh;7
+12300001; thủy kính · sinh mệnh;7
+12300002; thủy kính · công kích;7
+12300003; thủy kính · vật phòng;7
+12300004; thủy kính · pháp phòng;7
+12300101; nam hoa · trúng mục tiêu;7
+12300102; nam hoa · bạo đánh;7
+12300201; ô sừng · né tránh;7
+12300202; ô sừng · kháng bạo;7
+12300401; tử hư · mệnh hồn;7
+12300402; tử hư · phá quân;7
+12300403; tử hư · cất giấu;7
+12300404; tử hư · huyễn thuẫn;7
+12300501; thái bình · vô song;7
+12300502; thái bình · số mệnh;7
+12400001; thủy kính · sinh mệnh;7
+12400002; thủy kính · công kích;7
+12400003; thủy kính · vật phòng;7
+12400004; thủy kính · pháp phòng;7
+12400101; nam hoa · trúng mục tiêu;7
+12400102; nam hoa · bạo đánh;7
+12400201; ô sừng · né tránh;7
+12400202; ô sừng · kháng bạo;7
+12400401; tử hư · mệnh hồn;7
+12400402; tử hư · phá quân;7
+12400403; tử hư · cất giấu;7
+12400404; tử hư · huyễn thuẫn;7
+12400501; thái bình · vô song;7
+12400502; thái bình · số mệnh;7
+12500001; thủy kính · sinh mệnh;7
+12500002; thủy kính · công kích;7
+12500003; thủy kính · vật phòng;7
+12500004; thủy kính · pháp phòng;7
+12500101; nam hoa · trúng mục tiêu;7
+12500102; nam hoa · bạo đánh;7
+12500201; ô sừng · né tránh;7
+12500202; ô sừng · kháng bạo;7
+12500401; tử hư · mệnh hồn;7
+12500402; tử hư · phá quân;7
+12500403; tử hư · cất giấu;7
+12500404; tử hư · huyễn thuẫn;7
+12500501; thái bình · vô song;7
+12500502; thái bình · số mệnh;7
+30000001; chiêu mộ lệnh;2
+30000002; rất nhanh tác chiến khoán;2
+30000003; đem tinh thạch;2
+30000011; bạc trắng sống lại lệnh;2
+30000012; hoàng kim sống lại lệnh;2
+30000013; mười ngay cả chiêu mộ khoán;2
+30000014; nguyên bảo chiêu mộ khoán;2
+30000015; thăng tinh thạch;2
+30000018; tam quốc viễn chinh trọng trí cuốn;2
+30000019; cải danh tạp;2
+30000020; thiên mệnh thạch;2
+30000021;BOSS mệnh hồn;2
+30000022; cao cấp BOSS mệnh hồn;2
+30000023; quân nhu lệnh;2
+30000024; tầm bảo đồ;2
+30000025; công kích tinh phách;2
+30000026; sinh mệnh tinh phách;2
+30000027; vật phòng tinh phách;2
+30000028; pháp phòng tinh phách;2
+30000029; đem linh tinh phách;2
+30000030; anh linh tinh thạch;2
+30000031; quân đoàn cải danh tạp;2
+30000032; kim trư tệ;2
+30000033; ngân trư tệ;2
+30000034; bảo khố cái chìa khóa;2
+30000035; phiếu hối đoái;2
+30000036; thần luyện thạch;2
+30000037; chòm sao mảnh nhỏ;2
+30000038; thiên tiên mưa móc;2
+30000039; tinh thần lưu quang;2
+30000040; tinh thần chi ân;2
+30000041; tinh thần chi ban thưởng;2
+30000042; tinh thần chi chúc;2
+30000043; tinh thần chi hữu;2
+30000100; sơ cấp kinh nghiệm thư;2
+30000101; trung cấp kinh nghiệm thư;2
+30000102; cao cấp kinh nghiệm thư;2
+30000103; đặc biệt cấp cho kinh nghiệm thư;2
+30000201; trang bị tinh luyện thạch;2
+30000301; đột phá thạch;2
+30000302; đột phá tinh hoa;2
+30000401; sơ cấp chiến sủng lương thực;2
+30000402; trung cấp chiến sủng lương thực;2
+30000403; cao cấp chiến sủng lương thực;2
+30000404; đặc biệt cấp cho chiến sủng lương thực;2
+30000501; hồng trang tinh hoa;2
+30000502; kim trang tinh hoa;2
+30000601; công kích bảo thạch mảnh nhỏ;2
+30000602; vật phòng bảo thạch mảnh nhỏ;2
+30000603; pháp phòng bảo thạch mảnh nhỏ;2
+30000604; sinh mệnh bảo thạch mảnh nhỏ;2
+30000611; sơ cấp bảo thạch lễ hạp;2
+30000612; trung cấp bảo thạch lễ hạp;2
+30000613; cao cấp bảo thạch lễ hạp;2
+30000614; đặc biệt cấp cho bảo thạch lễ hạp;2
+30000701; chú hồn thạch;2
+30000801; bảo vật cường hóa thạch;2
+30000811; bảo vật tinh luyện thạch;2
+30000812; tinh luyện tinh hoa;2
+30000901; hồng đem mảnh nhỏ lễ hạp;2
+30001001; sơ cấp tọa kỵ kinh nghiệm đan;2
+30001002; trung cấp tọa kỵ kinh nghiệm đan;2
+30001003; cao cấp tọa kỵ kinh nghiệm đan;2
+30001004; đặc biệt cấp cho tọa kỵ kinh nghiệm đan;2
+30001005; cấp thấp thăng giai thạch;2
+30001006; trung cấp thăng giai thạch;2
+30001007; cao cấp thăng giai thạch;2
+30001101; màu trắng vạn năng mảnh nhỏ;2
+30001201; màu xanh biếc vạn năng mảnh nhỏ;2
+30001301; màu lam vạn năng mảnh nhỏ;2
+30001401; màu tím vạn năng mảnh nhỏ;2
+30001501; màu cam vạn năng mảnh nhỏ;2
+30001601; màu đỏ vạn năng mảnh nhỏ;2
+30001701; thiên kim vạn năng mảnh nhỏ;2
+30001801; ám kim vạn năng mảnh nhỏ;2
+30010001;1 phút gia tốc tạp;2
+30010002;5 phút gia tốc tạp;2
+30010003;30 phút gia tốc tạp;2
+30010004;2 giờ gia tốc tạp;2
+30010005;6 giờ gia tốc tạp;2
+30010006;12 giờ gia tốc tạp;2
+30010007; nghiên cứu khoa học tệ;2
+30011001; để tạp lễ hạp;2
+30011002; bảy màu hạp;2
+30011003; màu đan hạp;2
+30011004; lễ vật dư hương;2
+30012001; sơ cấp bí tịch;2
+30012002; trung cấp bí tịch;2
+30012003; cao cấp bí tịch;2
+30012004; đặc biệt cấp cho bí tịch;2
+30013001; sơ cấp điểm tướng lệnh;2
+30013002; trung cấp điểm tướng lệnh;2
+30013003; cao cấp điểm tướng lệnh;2
+30013004; đặc biệt cấp cho điểm tướng lệnh;2
+30013011; chinh thuế lệnh;2
+30014001; sơ cấp trận pháp quyển trục;2
+30014002; trung cấp trận pháp quyển trục;2
+30014003; cao cấp trận pháp quyển trục;2
+30014004; đặc biệt cấp cho trận pháp quyển trục;2
+30020001; anh linh ngọc;2
+30030001; pháp bảo tinh hoa;2
+30040001; phù thạch;2
+30040002; sơ cấp ký hiệu bao;2
+30040003; trung cấp ký hiệu bao;2
+30040004; cao cấp ký hiệu bao;2
+30040005; đặc biệt cấp cho ký hiệu bao;2
+40100101; mộc kiếm;5
+40100102; khăn trùm đầu;5
+40100103; bố y;5
+40100104; giầy rơm;5
+40100105; cũ nát đích nhẫn;5
+40100106; cũ nát đích thú ấn;5
+40200101; bình thường đích loan đao;5
+40200102; bình thường đích mũ giáp;5
+40200103; bình thường đích bố y;5
+40200104; bình thường đích giày vải;5
+40200105; bình thường đích nhẫn;5
+40200106; bình thường đích thú ấn;5
+40300101; bích thủy kiếm;5
+40300102; bích thủy quan;5
+40300103; bích thủy y;5
+40300104; bích thủy giày;5
+40300105; bích thủy giới;5
+40300106; cuồng ngưu ấn;5
+40300201; lam hải chiến kích;5
+40300202; lam hải khôi;5
+40300203; lam hải giáp;5
+40300204; lam hải chiến giày;5
+40300205; lam hải giới;5
+40300206; hải mãng ấn;5
+40400101; tử tinh loan đao;5
+40400102; tử tinh đầu mang;5
+40400103; tử tinh y;5
+40400104; tử tinh giày;5
+40400105; tử tinh giới;5
+40400106; thiên mã ấn;5
+40400201; sáng mờ chiến kích;5
+40400202; sáng mờ quan;5
+40400203; sáng mờ khải;5
+40400204; sáng mờ chiến giày;5
+40400205; hồng thạch tử giới;5
+40400206; thụy thú ấn;5
+40400301; đoạn sầu kiếm;5
+40400302; đoạn sầu khôi;5
+40400303; đoạn sầu chiến giáp;5
+40400304; đoạn sầu chiến giày;5
+40400305; tử cực viêm giới;5
+40400306; cuồng thú tử ấn;5
+40500101; trời cao chiến kích;5
+40500102; trời cao quan;5
+40500103; trời cao chiến giáp;5
+40500104; trời cao chiến giày;5
+40500105; trời cao giới;5
+40500106; trời cao ấn;5
+40500201; huyễn thiên đao;5
+40500202; huyễn thiên quan;5
+40500203; huyễn thiên bào;5
+40500204; huyễn thiên giày;5
+40500205; tà thú cốt giới;5
+40500206; huyễn thiên ấn;5
+40600101; viêm ngục kiếm;5
+40600102; viêm ngục quan;5
+40600103; viêm ngục chiến bào;5
+40600104; viêm ngục giày;5
+40600105; huyền băng giới;5
+40600106; xích long ấn;5
+40600201; Thái Ất kiếm;5
+40600202; Thái Ất khôi;5
+40600203; Thái Ất chiến giáp;5
+40600204; Thái Ất chiến giày;5
+40600205; huyết giới;5
+40600206; huyền vũ vết máu;5
+40700101; thần hoàng kiếm;5
+40700102; thần hoàng quan;5
+40700103; thần hoàng chiến bào;5
+40700104; thần hoàng chiến giày;5
+40700105; thần hoàng tinh giới;5
+40700106; thần hoàng ấn;5
+40700201; long tuyền kiếm;5
+40700202; long tuyền khôi;5
+40700203; long tuyền giáp;5
+40700204; long tuyền giày;5
+40700205; long tuyền giới;5
+40700206; long tuyền ấn;5
+40700301; cực viêm thương;5
+40700302; cực viêm khôi;5
+40700303; cực viêm giáp;5
+40700304; cực viêm giày;5
+40700305; cực viêm giới;5
+40700306; cực viêm ấn;5
+40700401; long lân đao;5
+40700402; long lân khôi;5
+40700403; long lân giáp;5
+40700404; long lân giày;5
+40700405; long lân giới;5
+40700406; long lân ấn;5
+40800101; Phong Linh phiến;5
+40800102; Phong Linh mạo;5
+40800103; Phong Linh giáp;5
+40800104; Phong Linh giày;5
+40800105; Phong Linh giới;5
+40800106; Phong Linh ấn;5
+40800201; tà ma đao;5
+40800202; tà ma khôi;5
+40800203; tà ma giáp;5
+40800204; tà ma giày;5
+40800205; tà ma giới;5
+40800206; tà ma ấn;5
+40800301; rất sơ kiếm;5
+40800302; rất ngày đầu mang;5
+40800303; rất sơ y;5
+40800304; rất sơ hài;5
+40800305; rất sơ giới;5
+40800306; rất sơ ấn;5
+40888888; thí nghiệm đạo cụ;5
+40888889;1 vạn 28;5
+40888890;2 vạn 28;5
+40888891;-1 vạn 28;5
+40888892;20 giận;5
+40888893;-9999 điểm 28;5
+40888894;-2 vạn điểm 28;5
+41001500; biển xanh linh;5
+41001601; nói bài;5
+41001602; dẫn hồn đăng;5
+41001603; huyễn ma vũ;5
+41001604; gió mát lệnh;5
+41001701; canh kim châu;5
+41001702; bích hỏa câu;5
+41001801; núi sông xã tắc đồ;5
+41002500; không lão ngọc bội;5
+41002601; đầm rồng ngọc;5
+41002602; cánh mặt;5
+41002603; chiến trận phù;5
+41002604; thiên tà chi loại;5
+41002701; ngọc như ý;5
+41002702; Linh Lung Tháp;5
+41002801; hỗn nguyên châu;5
+41003500; tướng quân lệnh;5
+41003601; oán linh tán;5
+41003602; tây trì kim diệp;5
+41003603; khóa khí thạch;5
+41003604; Hỏa thần chi loại;5
+41003701; bính hỏa châu;5
+41003702; lưỡng nghi bàn;5
+41003801; rượu tiên hồ;5
+41004500; cuồng thú liên;5
+41004601; rượu hồ lô;5
+41004602; tà ma lệnh;5
+41004603; tu di sơn;5
+41004604; trường sinh khóa;5
+41004701; muôn đời ngư;5
+41004702; Ngũ Hành trận bàn;5
+41004801; khổn tiên tác;5
+41005000; huyền quy thuẫn;5
+50000001; tế thiên chi lễ;2
+50000002; tế thiên chi lễ;2
+50000003; tế thiên chi lễ;2
+50000004; tế thiên chi lễ;2
+50000006; thiên quan chúc phúc;2
+50000007; thiên quan chúc phúc;2
+50000008; thiên quan chúc phúc;2
+50010001; quân đoàn lễ hạp;2
+50010002; quân đoàn lễ hạp;2
+50010003; quân đoàn lễ hạp;2
+50010004; quân đoàn lễ hạp;2
+50010005; quân đoàn lễ hạp;2
+50010006; quân đoàn lễ hạp;2
+50010007; quân đoàn lễ hạp;2
+50010008; quân đoàn lễ hạp;2
+50010009; quân đoàn lễ hạp;2
+50010010; quân đoàn lễ hạp;2
+50010011; quân đoàn lễ hạp;2
+50010012; quân đoàn lễ hạp;2
+50010013; quân đoàn lễ hạp;2
+50010014; quân đoàn lễ hạp;2
+50010015; quân đoàn lễ hạp;2
+50010016; quân đoàn lễ hạp;2
+50010017; quân đoàn lễ hạp;2
+50010018; quân đoàn lễ hạp;2
+50010019; quân đoàn lễ hạp;2
+50010020; quân đoàn lễ hạp;2
+60000020;20 cấp tổ đội trong bảo khố tương;2
+60000030;30 cấp tổ đội trong bảo khố tương;2
+60000040;40 cấp tổ đội trong bảo khố tương;2
+60000050;50 cấp tổ đội trong bảo khố tương;2
+60000060;60 cấp tổ đội trong bảo khố tương;2
+60000070;70 cấp tổ đội trong bảo khố tương;2
+60000080;80 cấp tổ đội trong bảo khố tương;2
+60000090;90 cấp tổ đội trong bảo khố tương;2
+60000100;100 cấp tổ đội trong bảo khố tương;2
+60000110;110 cấp tổ đội trong bảo khố tương;2
+60000120;120 cấp tổ đội trong bảo khố tương;2
+60000130;130 cấp tổ đội trong bảo khố tương;2
+60000140;140 cấp tổ đội trong bảo khố tương;2
+60000150;150 cấp tổ đội trong bảo khố tương;2
+60000160;160 cấp tổ đội trong bảo khố tương;2
+60000170;170 cấp tổ đội trong bảo khố tương;2
+60000180;180 cấp tổ đội trong bảo khố tương;2
+60000190;190 cấp tổ đội trong bảo khố tương;2
+60000200;200 cấp tổ đội trong bảo khố tương;2
+70000001; ngày sinh Khổng Tử chuông;2
+70000002; ngày sinh Khổng Tử miệt;2
+70000003; kim đản;2
+70000004; ngân đản;2
+70000005; phúc túi;2
+70000006; thật phúc;2
+70000007; phúc túi;2
+70000008; thật phúc;2
+70000009; lễ mừng thủy tinh;2
+70000010; lễ mừng bảo thạch;2
+70000011;3 nguyệt thủy tinh;2
+70000012;3 nguyệt bảo thạch;2
+70000013;4 nguyệt thủy tinh;2
+70000014;4 nguyệt bảo thạch;2
+201902;Pain baoj the kich hoat;2
+201802;Vũ trang Naruto the kich hoat;2
+201901;Bạo - Jiraiya the kich hoat;2
+202802;Vũ trang Haruno Sakura the kich hoat;2
+202901;Bạo - Senju the kich hoat;2
+202902;Bạo - Kushina the kich hoat;2
+203802;Vũ trang Sasuke the kich hoat;2
+203901;Bạo - Uchiha Itachi the kich hoat;2
+203902;Bạo - Madara Uchiha the kich hoat;2
+204802;Vui vẻ Naruto the kich hoat;2
+204901;Bạo - Zetsu the kich hoat;2
+204902;Bạo - Kaguya the kich hoat;2
+211902;Pain baoj Mảnh vỡ;2
+211802;Vũ trang Naruto Mảnh vỡ;2
+211901;Bạo - Jiraiya Mảnh vỡ;2
+212802;Vũ trang Haruno Sakura Mảnh vỡ;2
+212901;Bạo - Senju Mảnh vỡ;2
+212902;Bạo - Kushina Mảnh vỡ;2
+213802;Vũ trang Sasuke Mảnh vỡ;2
+213901;Bạo - Uchiha Itachi Mảnh vỡ;2
+213902;Bạo - Madara Uchiha Mảnh vỡ;2
+214802;Vui vẻ Naruto Mảnh vỡ;2
+214901;Bạo - Zetsu Mảnh vỡ;2
+214902;Bạo - Kaguya Mảnh vỡ;2
+30000303;Huyễn thải đột phá thạch;2
+30000304;Huyễn thải đột phá tinh hoa;2
+900001;Top1;2
+900002;Top2;2
+900003;Top3;2
+900004;Top4-10;2
+120901;Tb1;2
+120902;Tb2;2
+120903;Tb3;2
+120904;Tb4;2
