@@ -414,21 +414,29 @@ Ngoài ra, các file dùng `@mysql_connect()` trực tiếp (`gmquery.php`) cũn
 - [x] Xác định các lỗ hổng bảo mật
 - [x] Phân tích yêu cầu cài đặt XAMPP
 - [x] Tạo hướng dẫn cài đặt chi tiết
+- [x] **Fix SQL Injection** — `index.php` login/register dùng PDO prepared statements
+- [x] **Fix SQL Injection** — `gmquery.php` tất cả 4 query dùng mysqli prepared statements
+- [x] **Fix Session Fixation** — `game.php` validate user+token qua DB trước khi ghi session
+- [x] **Fix Password in Session** — xóa `$_SESSION['playpasswd']` khỏi `index.php`
+- [x] **Fix Password in Cookie** — xóa `SetCookie('cookie_password')` và autofill password
+- [x] **Fix GM Tool exposure** — thêm IP whitelist trong `gmquery.php`
+- [x] **Fix .user.ini** — xóa hardcode Windows path, thêm hướng dẫn cấu hình
+- [x] **Fix db.class.php** — thêm `safe_query()` method cho PDO, ẩn error message DB
 
 ### Việc cần làm tiếp theo
-- [ ] Sửa `.user.ini` với đường dẫn XAMPP thực
-- [ ] Sửa `start.bat` với đường dẫn mới
-- [ ] Import SQL databases
+- [ ] Sửa `start.bat` với đường dẫn mới (còn hardcode `C:\Users\TURKEY\...`)
+- [ ] Cấu hình `.user.ini` với đường dẫn XAMPP thực tế của server
+- [ ] Import SQL databases vào MySQL
+- [ ] Đổi credentials production: MySQL password, GM code (`raconagasi`), token seed (`qq86284186`)
+- [ ] Thêm IP thực của admin vào whitelist trong `gmquery.php` dòng 5
 - [ ] Test chạy web (PHP)
 - [ ] Test chạy Java game servers
-- [ ] (Tùy chọn) Migrate code khỏi `mysql_*` sang PDO cho PHP 7+
 
 ---
 
 ## 12. GHI CHÚ QUAN TRỌNG
 
-1. **PHP version**: Phải dùng PHP 5.6.x vì code dùng `mysql_*` functions. Nếu muốn PHP 7+ cần sửa code.
+1. **PHP version**: Phải dùng PHP 5.6.x hoặc chỉnh sửa thêm — `gmquery.php` dùng `mysqli`, `db.class.php` dùng PDO, nhưng `db_mysql` class vẫn còn `mysql_*`. Để chạy PHP 7+ cần xóa class `db_mysql`.
 2. **Đổi credentials** trước khi đưa lên production: MySQL password, GM code, token seed.
-3. **Bảo vệ GM tool**: Thêm IP whitelist hoặc HTTP Basic Auth cho `/svnres/` folder.
-4. **Token sinh khi đăng ký** dùng `md5("qq86284186".$md5)` — hardcoded secret, cần đổi.
-5. **Tất cả .bat files** có hardcode path `C:\Users\TURKEY\Desktop\...` — phải sửa trước khi chạy.
+3. **GM Tool IP whitelist** ở `gmquery.php` dòng 5 — thêm IP thực của máy admin.
+4. **Tất cả .bat files** có hardcode path `C:\Users\TURKEY\Desktop\...` — phải sửa trước khi chạy.

@@ -1,10 +1,21 @@
 <?php
 include 'config.php';
+
+// IP whitelist — thêm IP server/admin vào đây
+$allowed_ips = array('127.0.0.1', '::1');
+$client_ip = isset($_SERVER['REMOTE_ADDR']) ? $_SERVER['REMOTE_ADDR'] : '';
+if (!in_array($client_ip, $allowed_ips)) {
+    http_response_code(403);
+    exit('Forbidden');
+}
+
 if ($_POST) {
     $checknum = trim(poststr('checknum'));
     $quid = trim(poststr('qu'));
     $qu = $quarr[$quid];
     $uid = trim(poststr('uid'));
+    // Sanitize uid — player names only allow alphanumeric + underscore + Vietnamese chars
+    $uid = preg_replace('/[\'\"\\\\<>]/', '', $uid);
     $dbip = $qu['host'];
     $dbname = $qu['dbname'];
     $dbuser = $qu['user'];
@@ -34,15 +45,15 @@ if ($_POST) {
                             }
 						break;
 						case 'ban':
-						    $con = @mysql_connect($dbip, $dbuser, $dbpwd) or die(mysql_error());
-                            mysql_query("set names 'utf8'");
-                            mysql_select_db($dbname, $con);
-                            $sql = "SELECT * FROM `tb_player` where  `playerName` = '$uid' limit 1";
-                            $result = mysql_query($sql, $con);
-                            $row = mysql_fetch_array($result);
-                            $playerId = $row['playerId'];
-                            $userId = $row['userId'];
-                            mysql_close($con);
+						    $con = new mysqli($dbip, $dbuser, $dbpwd, $dbname);
+                            $con->set_charset('utf8');
+                            $stmt = $con->prepare("SELECT `playerId`,`userId` FROM `tb_player` WHERE `playerName`=? LIMIT 1");
+                            $stmt->bind_param('s', $uid);
+                            $stmt->execute();
+                            $stmt->bind_result($playerId, $userId);
+                            $stmt->fetch();
+                            $stmt->close();
+                            $con->close();
                             if ($playerId == '') {
                                 exit("〖" . $quname . "〗Không có nhân vật này.");
                             }
@@ -57,15 +68,15 @@ if ($_POST) {
                             }
 						break;
 						case 'unban':
-						    $con = @mysql_connect($dbip, $dbuser, $dbpwd) or die(mysql_error());
-                            mysql_query("set names 'utf8'");
-                            mysql_select_db($dbname, $con);
-                            $sql = "SELECT * FROM `tb_player` where  `playerName` = '$uid' limit 1";
-                            $result = mysql_query($sql, $con);
-                            $row = mysql_fetch_array($result);
-                            $playerId = $row['playerId'];
-                            $userId = $row['userId'];
-                            mysql_close($con);
+						    $con = new mysqli($dbip, $dbuser, $dbpwd, $dbname);
+                            $con->set_charset('utf8');
+                            $stmt = $con->prepare("SELECT `playerId`,`userId` FROM `tb_player` WHERE `playerName`=? LIMIT 1");
+                            $stmt->bind_param('s', $uid);
+                            $stmt->execute();
+                            $stmt->bind_result($playerId, $userId);
+                            $stmt->fetch();
+                            $stmt->close();
+                            $con->close();
                             if ($playerId == '') {
                                 exit("〖" . $quname . "〗Không có nhân vật này.");
                             }
@@ -80,15 +91,15 @@ if ($_POST) {
                             }
 						break;
                         case 'charge':
-                            $con = @mysql_connect($dbip, $dbuser, $dbpwd) or die(mysql_error());
-                            mysql_query("set names 'utf8'");
-                            mysql_select_db($dbname, $con);
-                            $sql = "SELECT * FROM `tb_player` where `playerName` = '$uid' limit 1";
-                            $result = mysql_query($sql, $con);
-                            $row = mysql_fetch_array($result);
-                            $playerId = $row['playerId'];
-                            $userId = $row['userId'];
-                            mysql_close($con);
+                            $con = new mysqli($dbip, $dbuser, $dbpwd, $dbname);
+                            $con->set_charset('utf8');
+                            $stmt = $con->prepare("SELECT `playerId`,`userId` FROM `tb_player` WHERE `playerName`=? LIMIT 1");
+                            $stmt->bind_param('s', $uid);
+                            $stmt->execute();
+                            $stmt->bind_result($playerId, $userId);
+                            $stmt->fetch();
+                            $stmt->close();
+                            $con->close();
                             if ($playerId == '') {
                                 exit("〖" . $quname . "〗Không có nhân vật này.");
                             }
@@ -133,15 +144,15 @@ if ($_POST) {
                             
                         break;
                         case 'mail':
-                            $con = @mysql_connect($dbip, $dbuser, $dbpwd) or die(mysql_error());
-                            mysql_query("set names 'utf8'");
-                            mysql_select_db($dbname, $con);
-                            $sql = "SELECT * FROM `tb_player` where  `playerName` = '$uid' limit 1";
-                            $result = mysql_query($sql, $con);
-                            $row = mysql_fetch_array($result);
-                            $playerId = $row['playerId'];
-                            $userId = $row['userId'];
-                            mysql_close($con);
+                            $con = new mysqli($dbip, $dbuser, $dbpwd, $dbname);
+                            $con->set_charset('utf8');
+                            $stmt = $con->prepare("SELECT `playerId`,`userId` FROM `tb_player` WHERE `playerName`=? LIMIT 1");
+                            $stmt->bind_param('s', $uid);
+                            $stmt->execute();
+                            $stmt->bind_result($playerId, $userId);
+                            $stmt->fetch();
+                            $stmt->close();
+                            $con->close();
                             if ($playerId == '') {
                                 exit("〖" . $quname . "〗Không có nhân vật này.");
                             }

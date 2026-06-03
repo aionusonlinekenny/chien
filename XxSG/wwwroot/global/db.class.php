@@ -82,14 +82,20 @@ class db_pdo {
     function __construct($newdbip, $newdbuser, $newdbpwd, $newdbname, $charset = "utf8") {
         try {
             $this->pdo = new PDO("mysql:host=$newdbip;dbname=$newdbname;charset=$charset", $newdbuser, $newdbpwd);
+            $this->pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
             $this->pdo->exec("SET NAMES $charset");
         }
         catch(PDOException $e) {
-            die($e->getMessage());
+            die("Database connection failed");
         }
     }
-    public function escape_field($field) { //sql转义
-        return str_replace(array("\n", "\r"), array('\\n', '\\r'), $field);
+    public function escape_field($field) {
+        return $this->pdo->quote($field);
+    }
+    public function safe_query($sql, $params = array()) {
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute($params);
+        return $stmt;
     }
     public function fetch_row($res) {
         return $res->fetch(PDO::FETCH_NUM); //把一条记录遍历到索引型数组中

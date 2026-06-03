@@ -19,22 +19,18 @@ switch ($_REQUEST['type']) {
         if (strlen($username) < 6 || strlen($username) > 16 || strlen($password) < 6 || strlen($password) > 16) {
 			exit("<script>alert('System: Account or password length must be between 6-16 characters');history.go(-1)</script>");
         }
-		$sql="select * from `account` where `username`='$username' and `password`='$pwd'";
-		$row=$db->num_rows($db->query($sql));
-		$rows=$db->getrow($sql);
-		if($rows['username']==$username && $rows['password']==$pwd){//
+		$rows = $db->safe_query("SELECT * FROM `account` WHERE `username`=? AND `password`=? LIMIT 1", array($username, $pwd))->fetch(PDO::FETCH_ASSOC);
+		if($rows && $rows['username']==$username && $rows['password']==$pwd){
 			$lasttime = getMillisecond();
 			$userip = getip();
-			$db->query("update `account` set `ming`='$password',`lastlogintime`='$lasttime',`lastloginip`='$userip' where `username`='$username' and  `password`='$pwd'");
+			$db->safe_query("UPDATE `account` SET `lastlogintime`=?, `lastloginip`=? WHERE `username`=? AND `password`=?", array($lasttime, $userip, $username, $pwd));
 			$gg = time();
-			$check = md5($username . $password);
 			$_SESSION['playuser'] = $username;
-            $_SESSION['playpasswd'] = $password;
-            $_SESSION['checkplayer'] = $check;
+            $_SESSION['checkplayer'] = md5($username . $gg);
             $_SESSION['ggplayer'] = $gg;
 			$token=$rows['token'];
-			$_SESSION['token'] =$token;
-			exit("<script>alert('System: Login successful!');window.location.href='./game.php?user=".$username."&sign=".$token."&check=1&loginURL=http://127.0.0.1:81'</script>");
+			$_SESSION['token'] = $token;
+			exit("<script>alert('System: Login successful!');window.location.href='./game.php?user=".htmlspecialchars($username, ENT_QUOTES)."&sign=".$token."&check=1&loginURL=http://127.0.0.1:81'</script>");
 		}else{
 			exit("<script>alert('System: Account or password error');window.location.href='./index.php'</script>");
 		}	
@@ -63,16 +59,14 @@ switch ($_REQUEST['type']) {
 			exit("<script>alert('System: Username already registered!');window.location.href='./index.php'</script>");
 		}else{
 		$token=md5("qq86284186".$md5);
-		$db->query("insert into `account` (`username`,`password`,`ming`,`reg_time`,`lastlogintime`,`lastloginip`,`token`) values('$username','$md5','$password','$regtime','$regtime','$userip','$token')");
+		$db->safe_query("INSERT INTO `account` (`username`,`password`,`reg_time`,`lastlogintime`,`lastloginip`,`token`) VALUES(?,?,?,?,?,?)", array($username, $md5, $regtime, $regtime, $userip, $token));
 		}
 		    $gg = time();
-			$check = md5($username . $password);
 			$_SESSION['playuser'] = $username;
-            $_SESSION['playpasswd'] = $password;
-            $_SESSION['checkplayer'] = $check;
+            $_SESSION['checkplayer'] = md5($username . $gg);
             $_SESSION['ggplayer'] = $gg;
-			$_SESSION['token'] =$token;
-		exit("<script>alert('System: Registration successful!');window.location.href='./game.php?user=".$username."&sign=".$token."&check=1&loginURL=http://127.0.0.1:81'</script>");
+			$_SESSION['token'] = $token;
+		exit("<script>alert('System: Registration successful!');window.location.href='./game.php?user=".htmlspecialchars($username, ENT_QUOTES)."&sign=".$token."&check=1&loginURL=http://127.0.0.1:81'</script>");
 	break;
 	default:
         $return = array('errcode' => 1, 'info' => 'Unknown error');
@@ -472,7 +466,6 @@ switch ($_REQUEST['type']) {
                 var lvPWD = $("#passwd").val();
 
 		        SetCookie('cookie_username', lvUsername);
-		        SetCookie('cookie_password', lvPWD);
 
                 if (lvUsername == "") {
                     $(".tishi").show();
@@ -679,12 +672,11 @@ function SetCookie(name, value) {
     }
 
     var cookie_username = GetCookie('cookie_username');
-    var cookie_password = GetCookie('cookie_password');
     if(cookie_username != ''){
         $("#username").val(cookie_username);
     }
-    if(cookie_password != ''){
-        $("#passwd").val(cookie_password);
+    if(false){
+        // password autofill removed for security
     }
 
 

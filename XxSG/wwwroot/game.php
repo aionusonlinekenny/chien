@@ -1,8 +1,15 @@
 <?php
 include_once './global/db.class.php';
 if (isset($_GET['user']) && isset($_GET['sign'])) {
-    $_SESSION['playuser'] = $_GET['user'];
-    $_SESSION['token'] = $_GET['sign'];
+    $g_user = preg_replace('/[^A-Za-z0-9_]/', '', $_GET['user']);
+    $g_sign = preg_replace('/[^A-Za-z0-9]/', '', $_GET['sign']);
+    if ($g_user !== '' && $g_sign !== '') {
+        $row = $db->safe_query("SELECT `username`,`token` FROM `account` WHERE `username`=? AND `token`=? LIMIT 1", array($g_user, $g_sign))->fetch(PDO::FETCH_ASSOC);
+        if ($row) {
+            $_SESSION['playuser'] = $row['username'];
+            $_SESSION['token'] = $row['token'];
+        }
+    }
 }
 ?>
 <!DOCTYPE HTML>
