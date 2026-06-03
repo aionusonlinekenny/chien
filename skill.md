@@ -11,12 +11,13 @@
 | **Tên game** | Thánh Chiến Chibi (三国 Sanguo) |
 | **Loại** | Browser-based multiplayer game server |
 | **Frontend** | HTML5/JavaScript (Egret 2D framework) |
-| **Web backend** | PHP (Apache/Nginx + phpstudy) |
-| **Game server** | Java (JDK 1.8.0_181, Tomcat 8.5.40) |
-| **Database** | MySQL |
-| **Platform gốc** | Windows (phpstudy_pro) |
-| **Thư mục chính** | `XxSG/` |
-| **Thư mục web** | `XxSG/wwwroot/` |
+| **Web backend** | PHP (Apache XAMPP 3.3.0) |
+| **Game server** | Java (JDK 1.8.0_181) |
+| **Database** | MySQL (root, không password) |
+| **Platform** | Windows XAMPP 3.3.0 |
+| **Thư mục chính** | `C:\XxSG\` |
+| **Thư mục web** | `C:\XxSG\wwwroot\` |
+| **WAN IP** | `134.22.38.31` |
 
 ---
 
@@ -27,17 +28,12 @@ XxSG/
 ├── wwwroot/              ← Web root (PHP frontend)
 ├── game/                 ← Java game server 1 (port 19101)
 ├── game2/                ← Java game server 2 (port 19102)
-├── center/               ← Java cross-server
-├── apache-tomcat-8.5.40/ ← Tomcat (nếu dùng)
+├── center/               ← Java cross-server (port 19850 RMI)
 ├── Java/jdk1.8.0_181/   ← JDK
-├── phpstudy_pro/         ← Web server cũ (Windows)
 ├── sql/                  ← SQL dump files
 │   ├── account.sql
 │   ├── sanguo_game.sql
 │   └── sanguo_game2.sql
-├── db/
-│   ├── sanguo_game2.sql
-│   └── package_charge.sql
 └── stop_all.bat          ← Dừng tất cả service
 ```
 
@@ -49,19 +45,19 @@ XxSG/
 |------|-----------|
 | `wwwroot/index.php` | Trang đăng nhập/đăng ký |
 | `wwwroot/game.php` | Game launcher (Egret) |
+| `wwwroot/server/myServer.php` | Server list API (game gọi sau login) |
 | `wwwroot/global/config.php` | **Cấu hình DB + server** |
-| `wwwroot/global/db.class.php` | Database wrapper (PDO/mysql) |
+| `wwwroot/global/db.class.php` | Database wrapper (PDO) |
 | `wwwroot/global/function.php` | Utility functions |
-| `wwwroot/server/servers.php` | Danh sách server |
-| `wwwroot/svnres/.../user/config.php` | **GM tool config** |
 | `wwwroot/svnres/.../user/gmquery.php` | **GM admin tool** |
 
 ---
 
-## 4. CREDENTIALS (GIỮ BÍ MẬT - ĐỔI TRƯỚC KHI DEPLOY)
+## 4. CREDENTIALS
 
 ```
-MySQL root password : EghgTJGqPmZ9RQiW
+MySQL root password : (không có — để trống)
+DBPWD trong config  : "" (đã sửa từ EghgTJGqPmZ9RQiW)
 Server sign key     : 5Jqxjo10Yl2ElQCwJm
 GM panel password   : raconagasi
 Token seed          : qq86284186
@@ -69,12 +65,12 @@ Token seed          : qq86284186
 
 ---
 
-## 5. CẤU HÌNH SERVER (config.php)
+## 5. CẤU HÌNH SERVER HIỆN TẠI (config.php)
 
 ```php
 DBIP    = "localhost"
 DBUSER  = "root"
-DBPWD   = "EghgTJGqPmZ9RQiW"
+DBPWD   = ""           ← root không password
 DBPORT  = 3306
 DBNAME  = "account"
 
@@ -85,358 +81,121 @@ Sv 4: sanguo_game4, port 19104, quid 10003
 Sv 5: sanguo_game5, port 19105, quid 10004
 Sv 6: sanguo_game6, port 19106, quid 10005
 Sv 7: sanguo_game7, port 19107, quid 10006
-CDN  : http://127.0.0.1:81/
+CDN  : http://127.0.0.1/    ← đã đổi từ :81 xuống :80
 ```
 
 ---
 
-## 6. KẾT QUẢ KIỂM TRA BACKDOOR
+## 6. THỨ TỰ KHỞI ĐỘNG SERVER
+
+```
+1. Start Redis       (Windows service hoặc redis-server.exe)
+2. Start MySQL       (XAMPP Control Panel)
+3. Start Apache      (XAMPP Control Panel — port 80)
+4. Start center\start.bat  ← chờ log "cross server started"
+5. Start game\start.bat    ← chờ log server ready
+```
+
+---
+
+## 7. PORTS & SERVICES
+
+| Service | Port | Mở ra ngoài? |
+|---------|------|-------------|
+| Apache (web) | 80 | ✅ Cần mở |
+| MySQL | 3306 | ❌ Nội bộ |
+| Redis | 6379 | ❌ Nội bộ |
+| Game Server 1 | 19101 | ✅ Cần mở |
+| Game Server 2 | 19102 | ✅ Cần mở |
+| Game Server 3 | 19103 | ✅ Nếu dùng |
+| Game Server 4 | 19104 | ✅ Nếu dùng |
+| Game Server 5 | 19105 | ✅ Nếu dùng |
+| Game Server 6 | 19106 | ✅ Nếu dùng |
+| Game Server 7 | 19107 | ✅ Nếu dùng |
+| Center RMI | 19850 | ❌ Nội bộ |
+
+**Port forward router → 134.22.38.31:** 80, 19101–19107
+
+---
+
+## 8. TRUY CẬP TỪ IP NGOÀI (WAN)
+
+WAN IP: `134.22.38.31`
+
+### Bước 1 — Port forward trên router
+Mở các port sau từ internet vào máy server:
+- Port **80** (TCP) → game web frontend
+- Port **19101–19107** (TCP) → Java game servers (mở port nào đang chạy)
+
+### Bước 2 — Windows Firewall
+Vào `Windows Defender Firewall > Inbound Rules > New Rule`:
+- Port TCP: 80, 19101, 19102 (các port đang dùng)
+
+### Bước 3 — Sửa config.php cho IP ngoài
+Sửa `ip` và `cdn` trong từng server entry:
+```php
+"ip"=>"134.22.38.31",    ← IP WAN thực
+"cdn"=>"http://134.22.38.31/",
+```
+
+Và trong `index.php` sửa loginURL:
+```php
+// Dòng redirect sau login/register:
+loginURL=http://134.22.38.31
+```
+
+### Bước 4 — Sửa gamecfg.json (nếu có hardcode IP)
+Tìm và sửa bất kỳ `127.0.0.1` nào trong `gamecfg.json` thành `134.22.38.31`.
+
+---
+
+## 9. KẾT QUẢ KIỂM TRA BACKDOOR
 
 ### ✅ KHÔNG CÓ BACKDOOR THỰC SỰ
-
-Đã scan toàn bộ 22 file PHP tìm các pattern backdoor điển hình:
-- `eval()` + `base64_decode()` → **KHÔNG có**
-- `system()`, `exec()`, `shell_exec()`, `passthru()` → **KHÔNG có**
-- `assert()` với code động → **KHÔNG có**
-- `preg_replace` với flag `/e` → **KHÔNG có**
-- `create_function()` ẩn → **KHÔNG có**
-- File PHP ẩn/mã hóa → **KHÔNG có**
-- Webshell → **KHÔNG có**
-
-### ⚠️ CÁC VẤN ĐỀ BẢO MẬT (KHÔNG phải backdoor, nhưng cần fix)
-
-#### NGHIÊM TRỌNG
-1. **GM Tool lộ công khai** — `gmquery.php` ẩn trong đường dẫn CSS nhưng vẫn accessible qua web. Không có IP whitelist.
-2. **SQL Injection** — `index.php:22`, `gmquery.php:40,63,86,139` dùng string concatenation trực tiếp.
-3. **Credentials hardcode** — Mật khẩu MySQL và GM code viết thẳng vào code.
-4. **Session Fixation** — `game.php` dòng 3-6: `$_SESSION['playuser'] = $_GET['user']` (GET ghi đè session).
-
-#### TRUNG BÌNH
-5. **Deprecated MySQL functions** — Dùng `mysql_*` (đã bị xóa từ PHP 7.0), cần PHP 5.x.
-6. **Mật khẩu lưu plaintext trong session** — `$_SESSION['playpasswd'] = $password`.
-7. **Cookie lưu password** — `SetCookie('cookie_password', lvPWD)` trong JavaScript.
-8. **Không có HTTPS** — Toàn bộ giao tiếp qua HTTP.
-
-#### THẤP
-9. **`open_basedir` sai đường dẫn** — `.user.ini` trỏ về `C:/Users/TURKEY/...` (Windows path cũ).
-10. **Information disclosure** — `.user.ini` lộ dev path gốc.
+- `eval()` + `base64_decode()` → KHÔNG có
+- `system()`, `exec()`, `shell_exec()` → KHÔNG có
+- Webshell → KHÔNG có
 
 ---
 
-## 7. HƯỚNG DẪN CÀI ĐẶT VỚI XAMPP (WINDOWS)
+## 10. CÁC FIX ĐÃ THỰC HIỆN (theo thứ tự)
 
-### 7.1 Yêu cầu phần mềm
-
-| Phần mềm | Phiên bản | Lý do |
-|----------|-----------|-------|
-| XAMPP | 5.6.x hoặc 7.x | PHP 5.x cần cho `mysql_*` functions |
-| PHP | **5.6.x** (bắt buộc) | Dùng `mysql_*` functions (xóa ở PHP 7.0+) |
-| MySQL | 5.7.x | Tương thích với SQL dump |
-| Java JDK | 1.8.0_181 (bundled) | Java game server |
-
-> **QUAN TRỌNG:** Repo dùng `mysql_*` functions cũ, **PHP 7.0+ sẽ không chạy được** `db.class.php`. Dùng XAMPP 5.6.x hoặc phải migrate code sang PDO.
-
-### 7.2 Cài đặt XAMPP
-
-```
-1. Download XAMPP 5.6.x từ apachefriends.org
-2. Cài vào C:\xampp
-3. Mở XAMPP Control Panel
-4. Start Apache + MySQL
-```
-
-### 7.3 Cấu hình đường dẫn web
-
-**Cách 1: Dùng htdocs của XAMPP**
-```
-Copy toàn bộ nội dung XxSG\wwwroot\ vào:
-  C:\xampp\htdocs\
-```
-
-**Cách 2: Virtual Host (khuyên dùng)**
-
-Sửa `C:\xampp\apache\conf\extra\httpd-vhosts.conf`:
-```apache
-<VirtualHost *:80>
-    DocumentRoot "C:/path/to/XxSG/wwwroot"
-    ServerName localhost
-    <Directory "C:/path/to/XxSG/wwwroot">
-        AllowOverride All
-        Require all granted
-    </Directory>
-</VirtualHost>
-```
-
-### 7.4 Cấu hình PHP (php.ini)
-
-Mở `C:\xampp\php\php.ini`, thêm/sửa:
-```ini
-; Cho phép mysql_* functions (PHP 5.6)
-extension=php_mysql.dll
-extension=php_mysqli.dll
-extension=php_pdo_mysql.dll
-
-; Timezone
-date.timezone = Asia/Ho_Chi_Minh
-
-; Session path
-session.save_path = "C:/xampp/tmp"
-
-; Sửa open_basedir (hoặc bỏ trống để tắt)
-open_basedir =
-```
-
-### 7.5 Sửa file .user.ini
-
-Sửa `wwwroot/.user.ini` thành đường dẫn XAMPP thực tế:
-```ini
-open_basedir="C:/xampp/htdocs/;C:/Windows/Temp/;C:/Temp/;C:/xampp/tmp/"
-```
-
-### 7.6 Import Database
-
-Mở phpMyAdmin (`http://localhost/phpmyadmin`):
-
-```sql
--- Bước 1: Tạo databases
-CREATE DATABASE account;
-CREATE DATABASE sanguo_game;
-CREATE DATABASE sanguo_game2;
--- (tạo thêm sanguo_game3 ... sanguo_game7 nếu cần)
-
--- Bước 2: Import từng file SQL
--- account    <- sql/account.sql
--- sanguo_game <- sql/sanguo_game.sql
--- sanguo_game2 <- sql/sanguo_game2.sql
-```
-
-Hoặc dùng command line:
-```cmd
-C:\xampp\mysql\bin\mysql -u root -pEghgTJGqPmZ9RQiW account < sql/account.sql
-C:\xampp\mysql\bin\mysql -u root -pEghgTJGqPmZ9RQiW sanguo_game < sql/sanguo_game.sql
-C:\xampp\mysql\bin\mysql -u root -pEghgTJGqPmZ9RQiW sanguo_game2 < sql/sanguo_game2.sql
-```
-
-### 7.7 Cấu hình MySQL password
-
-Nếu XAMPP MySQL mặc định không có password, cần set:
-```sql
-ALTER USER 'root'@'localhost' IDENTIFIED BY 'EghgTJGqPmZ9RQiW';
-FLUSH PRIVILEGES;
-```
-
-Hoặc sửa `config.php` đổi `DBPWD` thành password XAMPP thực tế.
-
-### 7.8 Cài đặt Java Game Servers
-
-```cmd
-REM Cài Java JDK (có sẵn trong XxSG\Java\jdk1.8.0_181)
-REM Hoặc cài Java 8 từ oracle.com
-
-REM Sửa start.bat của game server để trỏ đúng đường dẫn mới:
-REM Ví dụ trong game\start.bat thay:
-REM  C:\Users\TURKEY\Desktop\agatests\chien\XxSG\...
-REM Thành:
-REM  C:\xampp\htdocs\XxSG\... (hoặc đường dẫn thực)
-
-REM Chạy game server 1:
-cd XxSG\game
-start.bat
-
-REM Chạy center server (cross-server):
-cd XxSG\center
-start.bat
-```
-
-### 7.9 Sửa start.bat (bắt buộc)
-
-Mỗi file `start.bat` có hardcode đường dẫn `C:\Users\TURKEY\Desktop\...`.  
-Phải sửa thành đường dẫn thực trên máy server mới.
-
-**game/start.bat** — sửa thành:
-```bat
-@echo off
-SET BASE=C:\XAMPP\HTDOCS\XxSG
-%BASE%\Java\jdk1.8.0_181\bin\java -Duser.language=en -Duser.country=US -Dfile.encoding=utf-8 -cp %BASE%\game\lib\*;%BASE%\game\target\classes com.linlongyx.sanguo.webgame.startup.GameServer
-pause
-```
-
-**center/start.bat** — sửa thành:
-```bat
-@echo off
-SET BASE=C:\XAMPP\HTDOCS\XxSG
-%BASE%\Java\jdk1.8.0_181\bin\java -Duser.language=en -Duser.country=US -Dfile.encoding=utf-8 -cp %BASE%\center\lib\*;%BASE%\center\target\classes com.linlongyx.startup.CrossServer
-pause
-```
-
-### 7.10 Cấu hình game config.php
-
-Sửa `wwwroot/global/config.php` phần `cdn`:
-```php
-"cdn"=>"http://localhost/",   // hoặc IP server thực
-```
-
-Và `url` trong gmquery config (`svnres/.../user/config.php`):
-```php
-"url"=>"http://localhost",
-```
-
-### 7.11 Apache Port cho game assets
-
-Trong `config.php` CDN trỏ về `http://127.0.0.1:81/`.  
-Cần cấu hình Apache lắng nghe port 81 cho static files, hoặc sửa về port 80:
-
-Sửa `C:\xampp\apache\conf\httpd.conf`:
-```apache
-Listen 80
-Listen 81
-```
-
-Hoặc sửa `config.php` về `http://127.0.0.1/`.
-
-### 7.12 Kiểm tra hoạt động
-
-```
-1. http://localhost/         → Trang đăng nhập game
-2. http://localhost/server/servers.php → Danh sách server (JSON)
-3. http://localhost/svnres/default/assets/css/raconagasi/ → GM Panel
-   - GM code: raconagasi
-```
+| # | File | Vấn đề | Fix |
+|---|------|---------|-----|
+| 1 | `global/config.php` | POST StopAttack filter chặn form | Xóa loop POST StopAttack |
+| 2 | `global/config.php` | DBPWD sai (có password nhưng MySQL không pass) | Đổi `DBPWD=""` |
+| 3 | `global/config.php` | CDN trỏ port 81 không tồn tại | Đổi thành `http://127.0.0.1/` |
+| 4 | `global/function.php` | `get_magic_quotes_gpc()` bị xóa PHP 8.0 → Fatal Error ẩn | Xóa, dùng `false` trực tiếp |
+| 5 | `global/db.class.php` | Thiếu PDO prepared statements | Thêm `safe_query()` method |
+| 6 | `global/db.class.php` | Error message lộ thông tin DB | Đổi thành `"Database connection failed"` |
+| 7 | `index.php` | `href="#"` trên nút Register/Back | Đổi thành `javascript:void(0)` |
+| 8 | `index.php` | `checkUserName()` logic ngược | Fix: `return !/^[A-Za-z0-9_]+$/.test(str)` |
+| 9 | `index.php` | JS password check `< 2` thay vì `< 6` | Đổi thành `< 6` |
+| 10 | `index.php` | SQL injection login/register | Dùng PDO prepared statements |
+| 11 | `index.php` | Raw SQL duplicate check trong register | Dùng `safe_query()` |
+| 12 | `index.php` | loginURL hardcode port 81 | Đổi thành port 80 |
+| 13 | `game.php` | Session fixation (`$_SESSION = $_GET`) | Validate user+token qua DB trước |
+| 14 | `server/myServer.php` | SQL injection, raw queries | Dùng `safe_query()` prepared statements |
+| 15 | `svnres/.../gmquery.php` | Không có IP whitelist | Thêm whitelist `127.0.0.1, ::1` |
+| 16 | `svnres/.../gmquery.php` | Dùng `mysql_connect` cũ | Migrate sang `mysqli` prepared statements |
 
 ---
 
-## 8. HƯỚNG DẪN CÀI ĐẶT TRÊN LINUX (VPS/Server)
+## 11. TRẠNG THÁI HIỆN TẠI
 
-### 8.1 Yêu cầu
-
-```bash
-# PHP 5.6 (cho mysql_* functions) HOẶC PHP 7+ sau khi migrate code
-sudo apt install php5.6 php5.6-mysql php5.6-curl php5.6-gd
-
-# MySQL
-sudo apt install mysql-server-5.7
-
-# Java 8
-sudo apt install openjdk-8-jdk
-
-# Apache
-sudo apt install apache2
-```
-
-### 8.2 Cấu hình Apache
-
-```apache
-# /etc/apache2/sites-available/game.conf
-<VirtualHost *:80>
-    DocumentRoot /var/www/html/wwwroot
-    ServerName yourdomain.com
-    <Directory /var/www/html/wwwroot>
-        AllowOverride All
-        Require all granted
-    </Directory>
-</VirtualHost>
-```
-
-```bash
-sudo a2enmod rewrite
-sudo a2ensite game.conf
-sudo systemctl restart apache2
-```
-
-### 8.3 Sửa .user.ini cho Linux
-
-```ini
-open_basedir="/var/www/html/wwwroot/;/tmp/"
-```
-
-### 8.4 Chạy Java servers trên Linux
-
-```bash
-# game server 1
-cd /opt/XxSG/game
-java -Duser.language=en -Dfile.encoding=utf-8 \
-  -cp "lib/*:target/classes" \
-  com.linlongyx.sanguo.webgame.startup.GameServer &
-
-# center server
-cd /opt/XxSG/center
-java -Dfile.encoding=utf-8 \
-  -cp "lib/*:target/classes" \
-  com.linlongyx.startup.CrossServer &
-```
+- [x] Đăng ký tài khoản → **HOẠT ĐỘNG**
+- [x] Đăng nhập → **HOẠT ĐỘNG**
+- [x] Vào game (game.php load Egret) → **HOẠT ĐỘNG**
+- [x] myServer.php trả về server list → **HOẠT ĐỘNG** (sau fix port 81)
+- [ ] Kết nối Java game server từ WAN → cần mở port
 
 ---
 
-## 9. VẤN ĐỀ TƯƠNG THÍCH PHP CẦN LƯU Ý
+## 12. VIỆC CẦN LÀM TIẾP
 
-### Nếu dùng PHP 7.0+ (XAMPP 7.x)
-
-`db.class.php` dùng `mysql_*` functions đã bị **xóa hoàn toàn** ở PHP 7.0.  
-Cần sửa lại `db.class.php` để chỉ dùng class `db_pdo` (đã có sẵn trong code).
-
-**Sửa dòng cuối của `db.class.php`:**
-```php
-// Dòng gốc:
-$db = extension_loaded('pdo_mysql') ? new db_pdo(...) : new db_mysql(...);
-
-// Sửa thành (PHP 7+):
-$db = new db_pdo($newdbip, $newdbuser, $newdbpwd, $newdbname);
-```
-
-Và xóa/comment class `db_mysql` hoặc bỏ qua nó.
-
-Ngoài ra, các file dùng `@mysql_connect()` trực tiếp (`gmquery.php`) cũng cần migrate sang PDO/mysqli.
-
----
-
-## 10. PORTS & SERVICES TỔNG KẾT
-
-| Service | Port | Giao thức |
-|---------|------|-----------|
-| Apache (web) | 80 | HTTP |
-| Apache (CDN assets) | 81 | HTTP |
-| MySQL | 3306 | TCP |
-| Game Server 1 | 19101 | TCP |
-| Game Server 2 | 19102 | TCP |
-| Game Server 3 | 19103 | TCP |
-| Game Server 4 | 19104 | TCP |
-| Game Server 5 | 19105 | TCP |
-| Game Server 6 | 19106 | TCP |
-| Game Server 7 | 19107 | TCP |
-
----
-
-## 11. TIẾN TRÌNH CÔNG VIỆC
-
-### Đã hoàn thành
-- [x] Phân tích toàn bộ cấu trúc repo
-- [x] Scan backdoor tất cả 22 file PHP → **KHÔNG có backdoor**
-- [x] Xác định các lỗ hổng bảo mật
-- [x] Phân tích yêu cầu cài đặt XAMPP
-- [x] Tạo hướng dẫn cài đặt chi tiết
-- [x] **Fix SQL Injection** — `index.php` login/register dùng PDO prepared statements
-- [x] **Fix SQL Injection** — `gmquery.php` tất cả 4 query dùng mysqli prepared statements
-- [x] **Fix Session Fixation** — `game.php` validate user+token qua DB trước khi ghi session
-- [x] **Fix Password in Session** — xóa `$_SESSION['playpasswd']` khỏi `index.php`
-- [x] **Fix Password in Cookie** — xóa `SetCookie('cookie_password')` và autofill password
-- [x] **Fix GM Tool exposure** — thêm IP whitelist trong `gmquery.php`
-- [x] **Fix .user.ini** — xóa hardcode Windows path, thêm hướng dẫn cấu hình
-- [x] **Fix db.class.php** — thêm `safe_query()` method cho PDO, ẩn error message DB
-
-### Việc cần làm tiếp theo
-- [ ] Sửa `start.bat` với đường dẫn mới (còn hardcode `C:\Users\TURKEY\...`)
-- [ ] Cấu hình `.user.ini` với đường dẫn XAMPP thực tế của server
-- [ ] Import SQL databases vào MySQL
-- [ ] Đổi credentials production: MySQL password, GM code (`raconagasi`), token seed (`qq86284186`)
-- [ ] Thêm IP thực của admin vào whitelist trong `gmquery.php` dòng 5
-- [ ] Test chạy web (PHP)
-- [ ] Test chạy Java game servers
-
----
-
-## 12. GHI CHÚ QUAN TRỌNG
-
-1. **PHP version**: Phải dùng PHP 5.6.x hoặc chỉnh sửa thêm — `gmquery.php` dùng `mysqli`, `db.class.php` dùng PDO, nhưng `db_mysql` class vẫn còn `mysql_*`. Để chạy PHP 7+ cần xóa class `db_mysql`.
-2. **Đổi credentials** trước khi đưa lên production: MySQL password, GM code, token seed.
-3. **GM Tool IP whitelist** ở `gmquery.php` dòng 5 — thêm IP thực của máy admin.
-4. **Tất cả .bat files** có hardcode path `C:\Users\TURKEY\Desktop\...` — phải sửa trước khi chạy.
+- [ ] Mở port 80 + 19101-19107 trên router/firewall cho WAN IP `134.22.38.31`
+- [ ] Sửa `ip` trong config.php thành IP WAN nếu muốn player ngoài kết nối
+- [ ] Sửa `start.bat` với đường dẫn `C:\XxSG` thực tế (còn hardcode `C:\Users\TURKEY\...`)
+- [ ] Đổi credentials production: GM code (`raconagasi`), token seed (`qq86284186`)
+- [ ] Thêm IP admin thực vào whitelist `gmquery.php` dòng 5
+- [ ] Thêm HTTPS (SSL) nếu mở ra internet
