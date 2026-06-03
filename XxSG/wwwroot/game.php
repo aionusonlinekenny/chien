@@ -33,6 +33,7 @@ if (isset($_GET['user']) && isset($_GET['sign'])) {
     <!-- 360强制全屏 -->
     <meta name="360-fullscreen" content="true" />
     <link rel="stylesheet" type="text/css" href="index.css" />
+<script src="jquery-1.10.1.min.js"></script>
 <script src="layer/layer.js"></script>
 	<style>
 		#openWebBButton {
