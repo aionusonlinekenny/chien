@@ -353,15 +353,10 @@ switch ($_REQUEST['type']) {
             }
 
             /**
-             * Determine numbers and letters
+             * Determine numbers and letters — returns true if INVALID (contains non-alphanumeric)
              */
             function checkUserName(str) {
-                if (/^[A-Za-z0-9]+$/.test(str))
-                {
-                    //alert("Cannot contain Chinese characters!");
-                    return false;
-                }
-                return true;
+                return !/^[A-Za-z0-9_]+$/.test(str);
             }
 
             /**
@@ -413,7 +408,7 @@ switch ($_REQUEST['type']) {
                     $(".tishi span").text("Please enter username!");
 					return;
                 }
-                else if (lvUsername.length < 2)
+                else if (lvUsername.length < 6)
                 {
                     $(".tishi").show();
                     $(".tishi span").text("Username must be at least 6 characters long!");
@@ -490,7 +485,7 @@ switch ($_REQUEST['type']) {
                     $(".tishi").show();
                     $(".tishi span").text("enter password!");
                 }
-                else if (lvPWD.length < 2)
+                else if (lvPWD.length < 6)
                 {
                     $(".tishi").show();
                     $(".tishi span").text("Password length must not be less than 6 characters!");
@@ -541,9 +536,9 @@ switch ($_REQUEST['type']) {
 				
 
 				<p class="button" id="p_reg" style="display: none;">
-                    <a href="#" class="SW"  id="btnback" style="display: inline-block;">Login Again</a>
-                                        <a href="#" class="LG" style="visibility:hidden;">Placeholder</a>
-                                        <a href="#" class="LG" id="btnreg"  >Register</a>
+                    <a href="javascript:void(0);" class="SW"  id="btnback" style="display: inline-block;">Login Again</a>
+                                        <a href="javascript:void(0);" class="LG" style="visibility:hidden;">Placeholder</a>
+                                        <a href="javascript:void(0);" class="LG" id="btnreg">Register</a>
                 </p>
 
             </div>
