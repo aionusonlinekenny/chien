@@ -78,7 +78,7 @@ switch ($_REQUEST['type']) {
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta content="width=device-width, initial-scale=1,maximum-scale=1.0,user-scalable=no" name="viewport"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
         <meta content="yes" name="apple-mobile-web-app-capable" />
 		<meta name="mobile-web-app-capable" content="yes">
 		<meta name="full-screen" content="true" />
@@ -502,7 +502,6 @@ switch ($_REQUEST['type']) {
 
     <body>
         <form id="frmLogin" method="post" action="">
-            <img src="login/img/loginbg.jpg" style="width:100%; z-index:1; height:100%;">
             <input type="text" id="type" name="type" hidden>
             <div class="content_box">
                 <p class="con_tit">Login</p>				

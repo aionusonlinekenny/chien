@@ -1,54 +1,191 @@
 @charset "utf-8";
 
-*{margin:0;padding:0;}
-ol,ul,li,dd,dl,dt{list-style:none;}
-*:focus{outline:0;}
-em,i{ font-style:normal;}
-body{max-width:50; margin:0 auto !important; position:relative;}
-.content_box{background:rgba(245,245,245,0.95); position:absolute; width:84%; top:20%; left:8%; z-index:1000; margin:0 auto;opacity: 0.9;}
-.con_tit{height:48px; line-height:48px; background:rgba(245,245,245,1.0); text-align:center; font-size:15px; color:#333; border-bottom:1px solid #d9d9d9;}
-.content_box ul{padding:2px 18px 0 18px; clear:both;}
-.content_box ul li{clear:both; margin-top:10px; background:#fff; box-shadow:0 0 1px 0 rgba(0,0,0,0.1); position:relative; height:46px;}
-.content_box ul li span{position:absolute; left:0; top:10px;width:40px; height:26px; display:inline-block; border-right:1px solid #e0e0e0;}
-.content_box ul li span.user{background:url(../img/user.png) no-repeat center; background-size:24px auto;}
-.content_box ul li span.password{background:url(../img/ps.png) no-repeat center; background-size:24px auto;}
-.content_box ul li span.yzm{background:url(../img/yzm.png) no-repeat center; background-size:24px auto;}
-.content_box ul li p{position:absolute; left:50px; top:0; right:1px;}
-.content_box ul li p .input_1,.input_2{background:none; border:0; width:100%; color:#8c8c8c; font-size:14px; line-height:16px; padding:15px 0;}
-.content_box ul li p .input_2{width:60%;}
-.content_box ul li .send_yzm{position:absolute; right:0; top:0; height:16px; padding:15px 10px;font-size:14px;background:#00b1fd; color:#fff; display:inline-block; cursor:pointer;}
-.content_box .tishi{clear:both; margin:5px 0 0 18px;}
-.content_box .tishi span{background:url(../img/warn2.png) left no-repeat; background-size:18px auto; padding-left:20px; font-size:13px; color:#ea0303; line-height:18px;}
-.content_box .button{margin:10px 18px 20px 18px; height:42px; clear:both;}
-.content_box .button a{float:left; width:32%; margin-right:2%; color:#fff; height:16px; font-size:14px; text-align:center; border-radius:3px; text-decoration:none; padding:13px 0;}
-.content_box .button a:last-child{margin-right:0;}
-.content_box .button a.SW{background:#00b1fd;}
-.content_box .button a.SW:hover{background:#01a3e8;}
-.content_box .button a.RG{background:#ffc000;}
-.content_box .button a.RG:hover{background:#edb200;}
-.content_box .button a.LG{background:#5ac845;}
-.content_box .button a.LG:hover{background:#42bb2b;}
-.content_box .button a.both{float:right;}
-.content_box .other_Lg{clear:both; position:relative; margin:10px;}
-.content_box .other_Lg .tit{height:30px; line-height:30px; clear:both;}
-.content_box .other_Lg .tit span{float:left;}
-.content_box .other_Lg .tit .left,.right{width:32%; height:1px; background:#d9d9d9; margin-top:14px;}
-.content_box .other_Lg .tit .middle{width:36%; text-align:center; font-size:14px; color:#8c8c8c;}
-.content_box .other_Lg .style{clear:both; margin:10px 0; height:32px;}
-.content_box .other_Lg .style a{float:left; width:33.3%; height:32px; display:inline-block; text-align:center;}
-.content_box .other_Lg .style a.sina{background:url(../img/sina.png) no-repeat center center; background-size:32px auto; }
-.content_box .other_Lg .style a.sina:hover{background:url(../img/sina.png) no-repeat center center; background-size:32px auto; }
-.content_box .other_Lg .style a.QQ{background:url(../img/sina.png) no-repeat center center; background-size:32px auto; }
-.content_box .other_Lg .style a.QQ:hover{background:url(../img/sina.png) no-repeat center center; background-size:32px auto; }
-.content_box .other_Lg .style a.wx{background:url(../img/sina.png) no-repeat center center; background-size:32px auto; }
-.content_box .other_Lg .style a.wx:hover{background:url(../img/sina.png) no-repeat center center; background-size:32px auto; }
-.content_box .text{padding:18px 18px 6px; font-size:14px; line-height:22px; color:#333;}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+ol, ul, li, dd, dl, dt { list-style: none; }
+*:focus { outline: 0; }
+em, i { font-style: normal; }
 
-.opacity_sdk{background:rgba(0,0,0,0.5); position:fixed; left:0; top:0; width:100%; height:100%; z-index:999;}
-@media all and (min-width: 240px) and (max-width: 320px) { 
-.content_box .button a.both{width:34%;}
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
-.content_box .middle_platform{width:100%; float:left;font-size:14px; line-height:40px;}
-.content_box .middle_platform a{color:#666; border-top:1px solid #d9d9d9; text-decoration:none; display:block; text-align:center; }
-.content_box .other_Lg .style_higt{height:50px;}
+body {
+    background: url('../img/loginbg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+}
+
+/* ── Login box ── */
+.content_box {
+    background: rgba(245, 245, 245, 0.95);
+    width: 90%;
+    max-width: 400px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.35);
+    position: relative;
+    z-index: 10;
+}
+
+.con_tit {
+    height: 48px;
+    line-height: 48px;
+    background: rgba(245, 245, 245, 1.0);
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+    border-bottom: 1px solid #d9d9d9;
+    font-weight: bold;
+}
+
+/* ── Input fields ── */
+.content_box ul {
+    padding: 8px 18px 0 18px;
+    clear: both;
+}
+
+.content_box ul li {
+    clear: both;
+    margin-top: 10px;
+    background: #fff;
+    box-shadow: 0 0 1px 0 rgba(0,0,0,0.1);
+    position: relative;
+    height: 46px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.content_box ul li span {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 40px;
+    height: 26px;
+    display: inline-block;
+    border-right: 1px solid #e0e0e0;
+}
+
+.content_box ul li span.user {
+    background: url(../img/user.png) no-repeat center;
+    background-size: 24px auto;
+}
+
+.content_box ul li span.password {
+    background: url(../img/ps.png) no-repeat center;
+    background-size: 24px auto;
+}
+
+.content_box ul li span.yzm {
+    background: url(../img/yzm.png) no-repeat center;
+    background-size: 24px auto;
+}
+
+.content_box ul li p {
+    position: absolute;
+    left: 50px;
+    top: 0;
+    right: 1px;
+}
+
+.content_box ul li p .input_1,
+.input_2 {
+    background: none;
+    border: 0;
+    width: 100%;
+    color: #555;
+    font-size: 14px;
+    line-height: 16px;
+    padding: 15px 8px;
+}
+
+.content_box ul li p .input_2 { width: 60%; }
+
+.content_box ul li .send_yzm {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 16px;
+    padding: 15px 10px;
+    font-size: 14px;
+    background: #00b1fd;
+    color: #fff;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* ── Error message ── */
+.content_box .tishi {
+    clear: both;
+    margin: 6px 18px 0;
+    min-height: 20px;
+}
+
+.content_box .tishi span {
+    background: url(../img/warn2.png) left no-repeat;
+    background-size: 16px auto;
+    padding-left: 20px;
+    font-size: 13px;
+    color: #ea0303;
+    line-height: 20px;
+}
+
+/* ── Buttons ── */
+.content_box .button {
+    margin: 12px 18px 16px;
+    height: 42px;
+    clear: both;
+    display: flex;
+    gap: 6px;
+}
+
+.content_box .button a {
+    flex: 1;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 4px;
+    text-decoration: none;
+    padding: 13px 0;
+    display: block;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.content_box .button a.SW { background: #00b1fd; }
+.content_box .button a.SW:hover { background: #01a3e8; }
+.content_box .button a.RG { background: #ffc000; }
+.content_box .button a.RG:hover { background: #edb200; }
+.content_box .button a.LG { background: #5ac845; }
+.content_box .button a.LG:hover { background: #42bb2b; }
+
+/* ── Other sections ── */
+.opacity_sdk {
+    background: rgba(0,0,0,0.5);
+    position: fixed;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    z-index: 999;
+}
+
+.content_box .other_Lg { clear: both; position: relative; margin: 10px; }
+.content_box .other_Lg .tit { height: 30px; line-height: 30px; clear: both; display: flex; align-items: center; }
+.content_box .other_Lg .tit .left, .content_box .other_Lg .tit .right { flex: 1; height: 1px; background: #d9d9d9; }
+.content_box .other_Lg .tit .middle { padding: 0 10px; font-size: 14px; color: #8c8c8c; white-space: nowrap; }
+.content_box .other_Lg .style { clear: both; margin: 10px 0; height: 32px; display: flex; }
+.content_box .other_Lg .style a { flex: 1; height: 32px; display: inline-block; text-align: center; }
+
+.content_box .text { padding: 18px 18px 6px; font-size: 14px; line-height: 22px; color: #333; }
+.content_box .middle_platform { width: 100%; font-size: 14px; line-height: 40px; }
+.content_box .middle_platform a { color: #666; border-top: 1px solid #d9d9d9; text-decoration: none; display: block; text-align: center; }
+.content_box .other_Lg .style_higt { height: 50px; }
+
+/* ── Small phones ── */
+@media (max-width: 360px) {
+    .content_box { width: 95%; }
+    .content_box .button a { font-size: 13px; }
+}
