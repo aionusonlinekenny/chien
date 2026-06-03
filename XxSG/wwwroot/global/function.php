@@ -2,17 +2,18 @@
 function SafeSql($value) { //过滤sql语句
     return htmlspecialchars(str_replace('\\', '', $value), ENT_QUOTES, "UTF-8", false);
 }
-function SafeRequest($key, $mode, $type = 0) { //过滤post和get传递的参数
-    $magic = get_magic_quotes_gpc();
+function SafeRequest($key, $mode, $type = 0) {
     switch ($mode) {
         case 'post':
-            $value = isset($_POST[$key]) ? $magic ? trim($_POST[$key]) : addslashes(trim($_POST[$key])) : NULL;
+            $value = isset($_POST[$key]) ? trim($_POST[$key]) : NULL;
         break;
         case 'get':
-            $value = isset($_GET[$key]) ? $magic ? trim($_GET[$key]) : addslashes(trim($_GET[$key])) : NULL;
+            $value = isset($_GET[$key]) ? trim($_GET[$key]) : NULL;
         break;
+        default:
+            $value = NULL;
     }
-    return $type ? $value : htmlspecialchars(str_replace('\\' . '\\', '', $value), ENT_QUOTES, "UTF-8", false);
+    return $type ? $value : htmlspecialchars($value ?? '', ENT_QUOTES, "UTF-8", false);
 }
 function getMillisecond() {
     list($t1, $t2) = explode(' ', microtime());
