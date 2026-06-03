@@ -14,7 +14,7 @@ if($_SESSION['token']<>$token){
 	$data=array("code"=>4,"msg"=>"error,校验错误2");
 	exit(json_encode($data,320));
 }
-$row=$db->getrow("select * from `account` where `username`='$username' and `token`='$token'");
+$row=$db->safe_query("SELECT * FROM `account` WHERE `username`=? AND `token`=? LIMIT 1", array($username,$token))->fetch(PDO::FETCH_ASSOC);
 if($row['id']==''){
 	$data=array("code"=>4,"msg"=>"error,请返回首页登陆");
 }else{
@@ -48,13 +48,12 @@ $data=array(
 "userId"=>$userid,
 );	
 $dbname=$qu['dbname'];
-$sql = "SELECT * FROM `$dbname`.`tb_user` WHERE `userName` = '$username'";
-$row=$db->getrow($sql);
+$row2=$db->safe_query("SELECT `userName` FROM `$dbname`.`tb_user` WHERE `userName`=? LIMIT 1", array($username))->fetch(PDO::FETCH_ASSOC);
 $datetime = date('Y-m-d h:i:s');
-if($row['userName']==""){
-	$db->query("INSERT INTO `$dbname`.`tb_user` (`userId`,`userName`,`token`,`channel`,`lastLoginTime`) VALUES ('$userid','$username','$token',1,'$datetime')");
+if(!$row2 || $row2['userName']==""){
+	$db->safe_query("INSERT INTO `$dbname`.`tb_user` (`userId`,`userName`,`token`,`channel`,`lastLoginTime`) VALUES (?,?,?,1,?)", array($userid,$username,$token,$datetime));
 }else{
-	$db->query("UPDATE `$dbname`.`tb_user` SET `lastLoginTime`='$datetime' WHERE `userName`='$username' and `token`='$token'");
+	$db->safe_query("UPDATE `$dbname`.`tb_user` SET `lastLoginTime`=? WHERE `userName`=? AND `token`=?", array($datetime,$username,$token));
 }
 }
 exit(json_encode($data,320));

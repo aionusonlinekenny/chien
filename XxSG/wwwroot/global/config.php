@@ -21,7 +21,7 @@ $quarr=array(
 "port"=>19101,
 "quid"=>10000,
 "key"=>"5Jqxjo10Yl2ElQCwJm",
-"cdn"=>"http://127.0.0.1:81/",
+"cdn"=>"http://127.0.0.1/",
 "hide"=>false,
 "opentime"=>1685577600
 ),
@@ -35,7 +35,7 @@ $quarr=array(
 "port"=>19102,
 "quid"=>10001,
 "key"=>"5Jqxjo10Yl2ElQCwJm",
-"cdn"=>"http://127.0.0.1:81/",
+"cdn"=>"http://127.0.0.1/",
 "hide"=>false,
 "opentime"=>1685577600
 ),
@@ -49,7 +49,7 @@ $quarr=array(
 "port"=>19103,
 "quid"=>10002,
 "key"=>"5Jqxjo10Yl2ElQCwJm",
-"cdn"=>"http://127.0.0.1:81/",
+"cdn"=>"http://127.0.0.1/",
 "hide"=>false,
 "opentime"=>1685577600
 ),
@@ -63,7 +63,7 @@ $quarr=array(
 "port"=>19104,
 "quid"=>10003,
 "key"=>"5Jqxjo10Yl2ElQCwJm",
-"cdn"=>"http://127.0.0.1:81/",
+"cdn"=>"http://127.0.0.1/",
 "hide"=>false,
 "opentime"=>1685577600
 ),
@@ -77,7 +77,7 @@ $quarr=array(
 "port"=>19105,
 "quid"=>10004,
 "key"=>"5Jqxjo10Yl2ElQCwJm",
-"cdn"=>"http://127.0.0.1:81/",
+"cdn"=>"http://127.0.0.1/",
 "hide"=>false,
 "opentime"=>1593160806
 ),
@@ -91,7 +91,7 @@ $quarr=array(
 "port"=>19106,
 "quid"=>10005,
 "key"=>"5Jqxjo10Yl2ElQCwJm",
-"cdn"=>"http://127.0.0.1:81/",
+"cdn"=>"http://127.0.0.1/",
 "hide"=>false,
 "opentime"=>1593160806
 ),
@@ -105,7 +105,7 @@ $quarr=array(
 "port"=>19107,
 "quid"=>10006,
 "key"=>"5Jqxjo10Yl2ElQCwJm",
-"cdn"=>"http://127.0.0.1:81/",
+"cdn"=>"http://127.0.0.1/",
 "hide"=>false,
 "opentime"=>1593160806
 )
