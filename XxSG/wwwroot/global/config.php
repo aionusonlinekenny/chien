@@ -126,9 +126,6 @@ function StopAttack($StrFiltKey,$StrFiltValue,$ArrFiltReq){
 foreach($_GET as $key=>$value){
 	StopAttack($key,$value,$getfilter);
 }
-foreach($_POST as $key=>$value){
-	StopAttack($key,$value,$postfilter);
-}
 foreach($_COOKIE as $key=>$value){
 	StopAttack($key,$value,$cookiefilter);
 }
