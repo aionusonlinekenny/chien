@@ -178,24 +178,53 @@ Tìm và sửa bất kỳ `127.0.0.1` nào trong `gamecfg.json` thành `134.22.3
 | 14 | `server/myServer.php` | SQL injection, raw queries | Dùng `safe_query()` prepared statements |
 | 15 | `svnres/.../gmquery.php` | Không có IP whitelist | Thêm whitelist `127.0.0.1, ::1` |
 | 16 | `svnres/.../gmquery.php` | Dùng `mysql_connect` cũ | Migrate sang `mysqli` prepared statements |
+| 17 | `game/start.bat`, `game2/start.bat`, `center/start.bat` | Hardcode path cũ `C:\Users\TURKEY\...` | Đổi thành `SET BASE=C:\XxSG` |
+| 18 | `global/config.php` | WAN IP chưa cấu hình | Đổi tất cả `ip` và `cdn` thành `134.22.38.31` |
+| 19 | `layer/layer.js` (v3.1.1) | `o.run(e.jQuery)` gọi ngay khi load — Chrome không tìm thấy jQuery → crash `i is not a function` | Thêm guard `if(typeof t!=="function")return` trong `o.run`, và defer init bằng DOMContentLoaded/load event |
+| 20 | `game.php` | **Root cause PC stuck 100%**: không có jQuery trên trang — layer.js chưa được khởi tạo → `layer.open()` không hoạt động khi server gửi errorCode:10061 | Thêm `<script src="jquery-1.10.1.min.js">` trước `<script src="layer/layer.js">` trong game.php |
 
 ---
 
-## 11. TRẠNG THÁI HIỆN TẠI
+## 11. PHÂN TÍCH PC CHROME/FIREFOX STUCK 100%
+
+### Chuỗi nguyên nhân
+1. Java game server gửi `errorCode:10061, responseId:24201` đến client PC
+2. Game client (main.min.js) gọi `layer.open({...})` để hiện hộp thoại lỗi
+3. `layer.js` chưa được khởi tạo vì **không có jQuery** trên `game.php`
+4. `layer.open` là `undefined` hoặc crash → hộp thoại không hiện
+5. Game treo ở 100%, không vào được
+
+### Tại sao iPhone Safari hoạt động?
+- Safari trên iPhone đọc `errorCode:10061` khác (có thể dùng code path mobile)
+- Hoặc retry WebSocket thành công trước khi timeout
+- Server log xác nhận iPhone kết nối và vào game bình thường (user HanDaoBa, userId 266)
+
+### Fix áp dụng
+```html
+<!-- game.php — thêm trước layer.js -->
+<script src="jquery-1.10.1.min.js"></script>
+<script src="layer/layer.js"></script>
+```
+
+---
+
+## 12. TRẠNG THÁI HIỆN TẠI
 
 - [x] Đăng ký tài khoản → **HOẠT ĐỘNG**
 - [x] Đăng nhập → **HOẠT ĐỘNG**
 - [x] Vào game (game.php load Egret) → **HOẠT ĐỘNG**
-- [x] myServer.php trả về server list → **HOẠT ĐỘNG** (sau fix port 81)
-- [ ] Kết nối Java game server từ WAN → cần mở port
+- [x] myServer.php trả về server list → **HOẠT ĐỘNG**
+- [x] WAN IP cấu hình `134.22.38.31` → **HOẠT ĐỘNG**
+- [x] iPhone Safari kết nối từ WAN → **HOẠT ĐỘNG**
+- [x] PC Firefox kết nối từ WAN → **HOẠT ĐỘNG** (sau fix layer.js defer)
+- [x] PC Chrome kết nối từ WAN → **HOẠT ĐỘNG** (sau fix jQuery trong game.php)
+- [x] Start.bat files → **HOẠT ĐỘNG** (path đã sửa `C:\XxSG`)
 
 ---
 
-## 12. VIỆC CẦN LÀM TIẾP
+## 13. VIỆC CẦN LÀM TIẾP
 
-- [ ] Mở port 80 + 19101-19107 trên router/firewall cho WAN IP `134.22.38.31`
-- [ ] Sửa `ip` trong config.php thành IP WAN nếu muốn player ngoài kết nối
-- [ ] Sửa `start.bat` với đường dẫn `C:\XxSG` thực tế (còn hardcode `C:\Users\TURKEY\...`)
 - [ ] Đổi credentials production: GM code (`raconagasi`), token seed (`qq86284186`)
 - [ ] Thêm IP admin thực vào whitelist `gmquery.php` dòng 5
 - [ ] Thêm HTTPS (SSL) nếu mở ra internet
+- [ ] Điều tra tại sao server gửi `errorCode:10061` khi PC client kết nối lần đầu (có thể là bình thường — game retry thành công)
