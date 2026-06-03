@@ -30,7 +30,7 @@ switch ($_REQUEST['type']) {
             $_SESSION['ggplayer'] = $gg;
 			$token=$rows['token'];
 			$_SESSION['token'] = $token;
-			exit("<script>alert('System: Login successful!');window.location.href='./game.php?user=".htmlspecialchars($username, ENT_QUOTES)."&sign=".$token."&check=1&loginURL=http://127.0.0.1'</script>");
+			exit("<script>alert('System: Login successful!');window.location.href='./game.php?user=".htmlspecialchars($username, ENT_QUOTES)."&sign=".$token."&check=1&loginURL=http://134.22.38.31'</script>");
 		}else{
 			exit("<script>alert('System: Account or password error');window.location.href='./index.php'</script>");
 		}	
@@ -65,7 +65,7 @@ switch ($_REQUEST['type']) {
             $_SESSION['checkplayer'] = md5($username . $gg);
             $_SESSION['ggplayer'] = $gg;
 			$_SESSION['token'] = $token;
-		exit("<script>alert('System: Registration successful!');window.location.href='./game.php?user=".htmlspecialchars($username, ENT_QUOTES)."&sign=".$token."&check=1&loginURL=http://127.0.0.1'</script>");
+		exit("<script>alert('System: Registration successful!');window.location.href='./game.php?user=".htmlspecialchars($username, ENT_QUOTES)."&sign=".$token."&check=1&loginURL=http://134.22.38.31'</script>");
 	break;
 	default:
         $return = array('errcode' => 1, 'info' => 'Unknown error');
