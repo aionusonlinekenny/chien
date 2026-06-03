@@ -35,24 +35,6 @@ if (isset($_GET['user']) && isset($_GET['sign'])) {
     <link rel="stylesheet" type="text/css" href="index.css" />
 <script src="jquery-1.10.1.min.js"></script>
 <script src="layer/layer.js"></script>
-	<style>
-		#openWebBButton {
-			position: fixed;
-			top: 20px;
-			left: 20px;
-			padding: 10px;
-			background-color: #f00;
-			color: #fff;
-			border: none;
-			border-radius: 5px;
-			cursor: pointer;
-		}
-	</style>
-	<script>
-		function openWebB() {
-			window.open("http://127.0.0.1:82/", "_blank", "width=600,height=800");
-		}
-	</script>
 </head>
 
 <body>
@@ -78,7 +60,6 @@ if (isset($_GET['user']) && isset($_GET['sign'])) {
 data-content-height="1120" data-show-paint-rect="false" data-multi-fingered="2" data-show-fps="false" data-show-log="false"
 data-show-fps-style="x:0,y:0,size:12,textColor:0xffffff,bgAlpha:0.9">
 </div>
-<button id="openWebBButton" onclick="openWebB()">Tool GM</button>
 <script src="index.js"></script>
 <script>		
     /** 游戏url中附带的参数 **/
