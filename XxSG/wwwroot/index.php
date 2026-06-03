@@ -53,9 +53,8 @@ switch ($_REQUEST['type']) {
 		$md5=md5($password);
 		$userip = getip();
 		$regtime=date('Y-m-d h:i:s',time());
-		$sql="select * from `account` where `username`='$username'";
-		$row=$db->getrow($sql);
-		if($row['username']<>''){
+		$row=$db->safe_query("SELECT `username` FROM `account` WHERE `username`=? LIMIT 1", array($username))->fetch(PDO::FETCH_ASSOC);
+		if($row && $row['username']!=''){
 			exit("<script>alert('System: Username already registered!');window.location.href='./index.php'</script>");
 		}else{
 		$token=md5("qq86284186".$md5);
@@ -431,7 +430,7 @@ switch ($_REQUEST['type']) {
                     $(".tishi span").text("enter password!");
 					return;
                 }
-                else if (lvPWD.length < 2)
+                else if (lvPWD.length < 6)
                 {
                     $(".tishi").show();
                     $(".tishi span").text("Password length must not be less than 6 characters!");

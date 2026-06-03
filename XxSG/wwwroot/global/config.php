@@ -6,7 +6,7 @@ header("Content-type: text/html; charset=utf8");
 
 define("DBIP","localhost");
 define("DBUSER","root");
-define("DBPWD","EghgTJGqPmZ9RQiW");
+define("DBPWD","");
 define("DBPPORT","3306");
 define("DBNAME","account");
 define("WEBNAME","Thánh Chiến Chibi");//站点名称
