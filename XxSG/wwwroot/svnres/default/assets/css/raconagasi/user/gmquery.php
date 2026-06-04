@@ -97,23 +97,21 @@ switch ($type) {
         $subject    = $data[$chargetype]['id'];
 
         $success = 0;
-        $lastRaw = '';
         for ($i = 0; $i < $chargenum; $i++) {
             $orderNum = date('YmdHis') . substr(md5(uniqid(microtime(true) . mt_rand())), 0, 8);
             $time     = time();
             $sign     = md5($playerId . $num . $time . $subject . $signkey);
             $postdata = array("cmd" => 5, "playerId" => $playerId, "num" => $num,
                 "orderNum" => $orderNum, "time" => $time, "sign" => $sign, "subject" => $subject);
-            // Use gmget1 to get raw response for debugging
-            $lastRaw = gmget1($url, $postdata);
-            $decoded = json_decode($lastRaw, true);
+            $raw     = gmget1($url, $postdata);
+            $decoded = json_decode($raw, true);
             if ($decoded !== null && isset($decoded["errorCode"]) && $decoded["errorCode"] == 0) {
                 $success++;
             }
         }
         exit($success > 0
             ? "✅ Nạp «{$chargename}» × {$success}/{$chargenum} lần cho «{$uid}» thành công!"
-            : "❌ Nạp thất bại. Server trả về: [" . htmlspecialchars($lastRaw) . "] | playerId={$playerId} num={$num} subject={$subject}"
+            : "❌ Nạp thất bại (0/{$chargenum}). Kiểm tra server Java có đang chạy không?"
         );
 
     // ── Mail (gửi vật phẩm cho 1 người chơi) ───────────────────
