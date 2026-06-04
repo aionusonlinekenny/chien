@@ -88900,7 +88900,7 @@ function(t) {
 	var e = function(e) {
 		function n() {
 			var t = e.call(this) || this;
-			return t.titleAttr = ["Chiêu Mộ", "Tiệm Đạo Cụ", "Tiệm Thần Bí", "Tiệm Pháp Bảo", "Tiệm Huyết Linh"],
+			return t.titleAttr = ["Chiêu Mộ", "Đạo Cụ", "Tiệm Thần Bí", "Tiệm Pháp Bảo", "Tiệm Huyết Linh"],
 			t.lv = mvc.MvcConst.VIEW_LV_1,
 			t.setUIRes("zhaomu"),
 			t.isCloseScene = !0,
@@ -174627,7 +174627,7 @@ function(t) {
 			o.pointY = -8;
 			var a = new morn.Button;
 			this.tabBtn.ac(a),
-			a.label = "Tiệm Đạo Cụ",
+			a.label = "Đạo Cụ",
 			a.skin = "common_json.btn_8",
 			a.x = 119,
 			a.stateNum = 2,
