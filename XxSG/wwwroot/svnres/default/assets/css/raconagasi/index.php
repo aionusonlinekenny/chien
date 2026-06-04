@@ -144,6 +144,7 @@ body{background:#0d1117;color:#e6edf3;font-family:Arial,sans-serif;min-height:10
         <button class="tab-btn" onclick="showTab('charge',this)">💰 Nạp Tiền</button>
         <button class="tab-btn" onclick="showTab('notice',this)">📢 Thông Báo</button>
         <button class="tab-btn" onclick="showTab('ban',this)">🔨 Ban/Unban</button>
+        <button class="tab-btn" onclick="showTab('danger',this)" style="color:#f85149">⚠ Nguy Hiểm</button>
     </div>
 
     <!-- Tab: Mail -->
@@ -232,6 +233,25 @@ body{background:#0d1117;color:#e6edf3;font-family:Arial,sans-serif;min-height:10
             </div>
         </div>
     </div>
+
+    <!-- Tab: Danger -->
+    <div id="tab-danger" class="tab-panel">
+        <div class="card" style="border-color:#b91c1c">
+            <h3 style="color:#f85149">⚠ Khu vực nguy hiểm — Không thể hoàn tác!</h3>
+            <p style="font-size:13px;color:#768390;margin-bottom:16px">
+                Các thao tác dưới đây sẽ xóa dữ liệu vĩnh viễn. Hãy chắc chắn trước khi thực hiện.
+            </p>
+            <div style="background:#2d1212;border:1px solid #b91c1c;border-radius:6px;padding:14px;margin-bottom:0">
+                <div style="font-size:14px;font-weight:bold;color:#f85149;margin-bottom:8px">🗑 Xóa nhân vật</div>
+                <div style="font-size:13px;color:#e6edf3;margin-bottom:12px">
+                    Xóa toàn bộ dữ liệu nhân vật <strong id="delete-target-name" style="color:#f78166">«chưa chọn»</strong> khỏi database.
+                    Tài khoản đăng nhập vẫn còn, chỉ mất nhân vật trong game.
+                </div>
+                <div id="res-delete" class="result"></div>
+                <button class="btn btn-red btn-full" style="margin-top:10px" onclick="doDeletePlayer()">🗑 Xóa nhân vật vĩnh viễn</button>
+            </div>
+        </div>
+    </div>
 </div>
 
 <script>
@@ -295,6 +315,7 @@ function selectPlayer(idx) {
     document.getElementById('selectedMeta').textContent =
         'Lv.' + p.level + '  ·  Chiến sức: ' + fmtNum(p.fightValue) +
         (p.vip > 0 ? '  ·  VIP' + p.vip : '') + '  ·  Online lần cuối: ' + lastSeen;
+    document.getElementById('delete-target-name').textContent = '«' + p.name + '»';
     renderPlayers(allPlayers.filter(function(x){
         var q = document.getElementById('search').value.toLowerCase();
         return !q || x.name.toLowerCase().includes(q);
@@ -387,6 +408,32 @@ function doBan() {
 function doUnban() {
     if (!checkGM('res-ban') || !checkSelected('res-ban')) return;
     postGM({ type:'unban', uid: selectedPlayer.name }, 'res-ban');
+}
+
+function doDeletePlayer() {
+    if (!checkGM('res-delete') || !checkSelected('res-delete')) return;
+    var name = selectedPlayer.name;
+    var confirm1 = confirm('⚠ Xóa nhân vật «' + name + '»?\nThao tác này KHÔNG THỂ HOÀN TÁC!');
+    if (!confirm1) return;
+    var confirm2 = prompt('Nhập lại tên nhân vật để xác nhận xóa:');
+    if (confirm2 === null) return;
+    if (confirm2.trim() !== name) { showResult('res-delete', '❌ Tên nhân vật không khớp, hủy xóa.', 'err'); return; }
+    postGM({ type:'delete', uid: name }, 'res-delete');
+    // Remove from local list after delete
+    var el = document.querySelector('#res-delete');
+    var origThen = el._observer;
+    var check = setInterval(function(){
+        if (el.classList.contains('ok')) {
+            clearInterval(check);
+            allPlayers = allPlayers.filter(function(p){ return p.name !== name; });
+            selectedPlayer = null;
+            document.getElementById('selectedName').textContent = 'Chưa chọn nhân vật';
+            document.getElementById('selectedName').classList.add('no-selection');
+            document.getElementById('selectedMeta').textContent = '';
+            document.getElementById('delete-target-name').textContent = '«chưa chọn»';
+            renderPlayers(allPlayers);
+        }
+    }, 300);
 }
 
 // ── Utils ────────────────────────────────────────────────

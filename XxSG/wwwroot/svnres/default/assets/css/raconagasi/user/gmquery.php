@@ -179,6 +179,37 @@ switch ($type) {
             ? "✅ Đã gửi [{$itemname} × {$mailnum}] toàn server [{$quname}]!"
             : '❌ Gửi thất bại: ' . $result);
 
+    // ── Delete player ────────────────────────────────────────
+    case 'delete':
+        if ($uid === '') exit('Tên nhân vật không được trống!');
+        $r = getPlayerId($dbip, $dbuser, $dbpwd, $dbname, $uid);
+        if (isset($r['error'])) exit('❌ ' . $r['error']);
+        $playerId = $r['playerId'];
+
+        $con = new mysqli($dbip, $dbuser, $dbpwd, $dbname);
+        if ($con->connect_error) exit('❌ Không kết nối được DB: ' . $con->connect_error);
+        $con->set_charset('utf8');
+
+        $tables = array(
+            'tb_player', 'tb_bag', 'tb_hero', 'tb_skill', 'tb_building',
+            'tb_mission', 'tb_friend', 'tb_mail', 'tb_fight_record',
+            'tb_charge_record', 'tb_login_record'
+        );
+        $deleted = 0;
+        foreach ($tables as $tbl) {
+            $stmt = $con->prepare("DELETE FROM `{$tbl}` WHERE `playerId`=?");
+            if ($stmt) {
+                $stmt->bind_param('s', $playerId);
+                $stmt->execute();
+                if ($tbl === 'tb_player') $deleted = $stmt->affected_rows;
+                $stmt->close();
+            }
+        }
+        $con->close();
+
+        if ($deleted < 1) exit('❌ Không tìm thấy nhân vật trong DB để xóa!');
+        exit("✅ Đã xóa nhân vật «{$uid}» (ID: {$playerId}) khỏi game!");
+
     default:
         exit('Loại yêu cầu không hợp lệ!');
 }
