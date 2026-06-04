@@ -10,7 +10,7 @@
   "serverId": 0,
   "myserver": "http://134.22.38.31/server/myServer",
   "servers": "http://134.22.38.31/server/servers",
-  "payServer": "http://134.22.38.31",
+  "payServer": "http://134.22.38.31/server/charge.php",
   "pointServer": "http://134.22.38.31/dot/",
   "placardURL": "http://134.22.38.31/dot/channelNotice.do",
   "rechargeURL": "http://134.22.38.31/pay/?subject=",

@@ -68,13 +68,49 @@ data-show-fps-style="x:0,y:0,size:12,textColor:0xffffff,bgAlpha:0.9">
 	
     window.showpay = function(url, type){
 		var index = layer.open({
-			title :'支付页面',
-			type: 2, 
+			title :'Thanh Toán',
+			type: 2,
 			maxmin: true,
-			content: url+type
-		});		 
+			shadeClose: false,
+			content: url + (type || '')
+		});
 		layer.full(index);
 	};
+
+    // Custom SDK xử lý phản hồi từ charge.php
+    window.Sdk = {
+        RaStarPay: function(type, info) {
+            if (info && info.payUrl) {
+                // PayPal mode: mở iframe thanh toán
+                window.showpay(info.payUrl, '');
+            }
+        }
+    };
+
+    // Intercept response từ payServer để xử lý free mode
+    (function() {
+        var _origOpen = XMLHttpRequest.prototype.open;
+        var _origSend = XMLHttpRequest.prototype.send;
+        XMLHttpRequest.prototype.open = function(method, url) {
+            this._url = url;
+            return _origOpen.apply(this, arguments);
+        };
+        XMLHttpRequest.prototype.send = function() {
+            if (this._url && this._url.indexOf('/server/charge.php') !== -1) {
+                var xhr = this;
+                xhr.addEventListener('load', function() {
+                    try {
+                        var res = JSON.parse(xhr.response || xhr.responseText);
+                        if (res && res.code === 0) {
+                            // Free mode: KNB đã được cộng, hiển thị thông báo
+                            layer.msg('✅ ' + (res.msg || 'Nhận Kim Cương thành công!'), {icon: 1, time: 4000});
+                        }
+                    } catch(e) {}
+                }, false);
+            }
+            return _origSend.apply(this, arguments);
+        };
+    })();
     var main;
     //解析url中的参数
     var url = location.search; //获取url中"?"符后的字串

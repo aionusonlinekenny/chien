@@ -15,7 +15,22 @@ if (!$username) {
     </div>');
 }
 
-$subject = intval($_GET['subject'] ?? 0);
+// Nhận subject từ ?subject=2 hoặc ?order=ORDERNUM
+$subject = 0;
+$preOrder = null;
+if (!empty($_GET['order'])) {
+    require_once __DIR__ . '/db.php';
+    $preOrder = pay_get_by_order_num($_GET['order']);
+    if ($preOrder) {
+        $subject = intval($preOrder['subject']);
+        // Kiểm tra username khớp
+        if ($username && $preOrder['username'] !== $username) {
+            die('<div style="padding:30px;font-family:Arial;color:#c00;text-align:center">❌ Đơn hàng không thuộc về tài khoản này.</div>');
+        }
+    }
+} else {
+    $subject = intval($_GET['subject'] ?? 0);
+}
 if (!isset($packages[$subject])) {
     die('<div style="padding:30px;font-family:Arial;color:#c00;text-align:center">❌ Gói nạp không hợp lệ.</div>');
 }
