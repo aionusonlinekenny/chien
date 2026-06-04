@@ -176,12 +176,17 @@ Tìm và sửa bất kỳ `127.0.0.1` nào trong `gamecfg.json` thành `134.22.3
 | 12 | `index.php` | loginURL hardcode port 81 | Đổi thành port 80 |
 | 13 | `game.php` | Session fixation (`$_SESSION = $_GET`) | Validate user+token qua DB trước |
 | 14 | `server/myServer.php` | SQL injection, raw queries | Dùng `safe_query()` prepared statements |
-| 15 | `svnres/.../gmquery.php` | Không có IP whitelist | Thêm whitelist `127.0.0.1, ::1` |
+| 15 | `svnres/.../gmquery.php` | IP whitelist chặn mọi request | Xóa whitelist (tool chạy qua web) |
 | 16 | `svnres/.../gmquery.php` | Dùng `mysql_connect` cũ | Migrate sang `mysqli` prepared statements |
 | 17 | `game/start.bat`, `game2/start.bat`, `center/start.bat` | Hardcode path cũ `C:\Users\TURKEY\...` | Đổi thành `SET BASE=C:\XxSG` |
 | 18 | `global/config.php` | WAN IP chưa cấu hình | Đổi tất cả `ip` và `cdn` thành `134.22.38.31` |
 | 19 | `layer/layer.js` (v3.1.1) | `o.run(e.jQuery)` gọi ngay khi load — Chrome không tìm thấy jQuery → crash `i is not a function` | Thêm guard `if(typeof t!=="function")return` trong `o.run`, và defer init bằng DOMContentLoaded/load event |
 | 20 | `game.php` | **Root cause PC stuck 100%**: không có jQuery trên trang — layer.js chưa được khởi tạo → `layer.open()` không hoạt động khi server gửi errorCode:10061 | Thêm `<script src="jquery-1.10.1.min.js">` trước `<script src="layer/layer.js">` trong game.php |
+| 21 | `svnres/.../user/config.php` | `Cannot redeclare poststr()` — config.php bị include nhiều lần | Thêm guard `define('GM_CONFIG_LOADED', true)` ở đầu file |
+| 22 | `svnres/.../index.php` | Player click không chọn được — `JSON.stringify` trong onclick attribute bị vỡ khi tên có ký tự đặc biệt | Dùng `data-idx` attribute + `addEventListener` thay vì inline onclick |
+| 23 | `svnres/.../charge.json` | Nạp tiền thất bại `charge RMB is wrong!` — charge.json có rmb: 600 nhưng Java server cần rmb: 2000000 | Copy charge.json từ `game/target/classes/webgame/data/cn/charge.json` |
+| 24 | `login/css/sdk.css` | Login box quá nhỏ trên mobile/desktop — `form` không có width:100% nên `.content_box` co theo nội dung | Thêm `#frmLogin { width:100%; display:flex; justify-content:center }` |
+| 25 | `svnres/.../index.php` + `user/gmquery.php` | GM Tool thiếu chức năng xóa player | Thêm tab "Nguy Hiểm", xác nhận 2 lần, xóa khỏi tb_player và các bảng liên quan |
 
 ---
 
@@ -222,9 +227,41 @@ Tìm và sửa bất kỳ `127.0.0.1` nào trong `gamecfg.json` thành `134.22.3
 
 ---
 
-## 13. VIỆC CẦN LÀM TIẾP
+## 13. GM TOOL — CHỨC NĂNG & CẤU TRÚC
+
+**URL:** `http://134.22.38.31/svnres/default/assets/css/raconagasi/index.php`  
+**Mã GM:** `raconagasi`
+
+### Files
+| File | Chức năng |
+|------|-----------|
+| `index.php` | Giao diện GM Tool (2 cột: sidebar player + main tabs) |
+| `user/config.php` | Config GM: DB host/user/pwd, server list, helper functions |
+| `user/gmquery.php` | Backend xử lý tất cả action POST |
+| `user/players.php` | API JSON trả về danh sách player từ DB |
+| `charge.json` | Gói nạp (phải khớp với `game/target/classes/webgame/data/cn/charge.json`) |
+
+### Các chức năng
+| Type | Mô tả |
+|------|-------|
+| `notice` | Thông báo toàn server (cmd=12) |
+| `ban` | Cấm nhân vật 30 ngày (cmd=6) |
+| `unban` | Gỡ cấm nhân vật (cmd=6) |
+| `charge` | Nạp tiền/vật phẩm cho player (cmd=5, sign = md5(playerId+num+time+subject+key)) |
+| `mail` | Gửi vật phẩm qua thư cho 1 player (cmd=3) |
+| `allmail` | Gửi vật phẩm cho toàn server (cmd=3) |
+| `delete` | Xóa nhân vật khỏi DB (xóa tb_player + bảng liên quan) |
+
+### Lưu ý charge.json
+Java server validate `num` phải bằng **chính xác** giá trị `rmb` trong config của nó:
+- id=2: "2000 Kim Cương", rmb=2000000
+- id=3: "5000", rmb=5000000
+- id=4: "10000", rmb=10000000
+
+---
+
+## 14. VIỆC CẦN LÀM TIẾP
 
 - [ ] Đổi credentials production: GM code (`raconagasi`), token seed (`qq86284186`)
-- [ ] Thêm IP admin thực vào whitelist `gmquery.php` dòng 5
 - [ ] Thêm HTTPS (SSL) nếu mở ra internet
-- [ ] Điều tra tại sao server gửi `errorCode:10061` khi PC client kết nối lần đầu (có thể là bình thường — game retry thành công)
+- [ ] Điều tra tại sao Chrome/Firefox thỉnh thoảng không vào được game (xem mục 11)
