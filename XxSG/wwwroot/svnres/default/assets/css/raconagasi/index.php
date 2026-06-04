@@ -264,25 +264,30 @@ function loadPlayers() {
 function renderPlayers(list) {
     var html = '';
     list.forEach(function(p) {
+        var idx = allPlayers.indexOf(p);
         var lastSeen = p.lastSeen > 0 ? new Date(p.lastSeen * 1000).toLocaleDateString('vi-VN') : '—';
         var vipBadge = p.vip > 0 ? '<span class="pvip">VIP' + p.vip + '</span> ' : '';
-        html += '<div class="player-item' + (selectedPlayer && selectedPlayer.name === p.name ? ' selected' : '')
-              + '" onclick="selectPlayer(' + JSON.stringify(p).replace(/'/g,"&#39;") + ')">'
+        var sel = selectedPlayer && selectedPlayer.name === p.name ? ' selected' : '';
+        html += '<div class="player-item' + sel + '" data-idx="' + idx + '">'
               + '<div class="pname">' + esc(p.name) + '</div>'
               + '<div class="pmeta">' + vipBadge + 'Lv.' + p.level + ' &nbsp;·&nbsp; CS: ' + fmtNum(p.fightValue) + ' &nbsp;·&nbsp; ' + lastSeen + '</div>'
               + '</div>';
     });
     document.getElementById('playerList').innerHTML = html || '<div class="no-player">Không tìm thấy nhân vật</div>';
     document.getElementById('playerCount').textContent = 'Hiển thị ' + list.length + ' nhân vật';
+    document.querySelectorAll('#playerList .player-item').forEach(function(el) {
+        el.addEventListener('click', function() { selectPlayer(parseInt(this.getAttribute('data-idx'))); });
+    });
 }
-
 function filterPlayers() {
     var q = document.getElementById('search').value.toLowerCase();
     if (!q) { renderPlayers(allPlayers); return; }
     renderPlayers(allPlayers.filter(p => p.name.toLowerCase().includes(q)));
 }
 
-function selectPlayer(p) {
+function selectPlayer(idx) {
+    var p = allPlayers[idx];
+    if (!p) return;
     selectedPlayer = p;
     document.getElementById('selectedName').textContent = p.name;
     document.getElementById('selectedName').classList.remove('no-selection');
@@ -290,7 +295,6 @@ function selectPlayer(p) {
     document.getElementById('selectedMeta').textContent =
         'Lv.' + p.level + '  ·  Chiến sức: ' + fmtNum(p.fightValue) +
         (p.vip > 0 ? '  ·  VIP' + p.vip : '') + '  ·  Online lần cuối: ' + lastSeen;
-    // Re-render to show highlight
     renderPlayers(allPlayers.filter(function(x){
         var q = document.getElementById('search').value.toLowerCase();
         return !q || x.name.toLowerCase().includes(q);
