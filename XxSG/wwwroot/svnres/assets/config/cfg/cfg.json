@@ -266329,7 +266329,7 @@
 		},
 		"30000801": {
 			"id": 30000801,
-			"name": "Bảo vật cường hóa thạch",
+			"name": "Cường hóa thạch",
 			"itemType": 2,
 			"source": ["Phó Bản Ngày", " Đạo Cụ", " Viễn Chinh"],
 			"sourceJump": [1305, 1502, 1801],
