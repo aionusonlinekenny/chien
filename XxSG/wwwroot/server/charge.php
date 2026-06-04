@@ -43,16 +43,25 @@ if (!$user) {
 $signkey = $quarr[$serverID]['key'] ?? '5Jqxjo10Yl2ElQCwJm';
 $gameUrl = 'http://127.0.0.1:' . ($serverID == 10000 ? 19201 : 19202) . '/';
 
+// ── Load packages config (needed for both modes) ─────
+require_once __DIR__ . '/../pay/config.php';
+if (!isset($packages[$subjectId])) {
+    jsonOut(['code' => -1, 'msg' => 'Gói nạp không tồn tại: ' . $subjectId]);
+}
+$pkg = $packages[$subjectId];
+// Java validates that num == chargeBean.rmb exactly
+$rmb = $pkg['rmb'];
+
 // ── FREE MODE — cộng KNB ngay không qua thanh toán ──
 if ($isFree) {
     $orderNum = date('YmdHis') . substr(md5(uniqid(microtime(true) . mt_rand()), false), 0, 8);
     $time     = time();
-    $sign     = md5($playerId . $money . $time . $subjectId . $signkey);
+    $sign     = md5($playerId . $rmb . $time . $subjectId . $signkey);
 
     $params = http_build_query([
         'cmd'      => 5,
         'playerId' => $playerId,
-        'num'      => $money,
+        'num'      => $rmb,
         'orderNum' => $orderNum,
         'time'     => $time,
         'sign'     => $sign,
@@ -75,12 +84,6 @@ if ($isFree) {
 
 // ── PAYPAL MODE — tạo đơn hàng trả về payUrl ────────
 require_once __DIR__ . '/../pay/db.php';
-require_once __DIR__ . '/../pay/config.php';
-
-if (!isset($packages[$subjectId])) {
-    jsonOut(['code' => -1, 'msg' => 'Gói nạp không tồn tại']);
-}
-$pkg = $packages[$subjectId];
 
 $orderNum = date('YmdHis') . substr(md5(uniqid(microtime(true) . mt_rand()), false), 0, 8);
 pay_create_order($orderNum, $openid, $playerId, $serverID, $subjectId,

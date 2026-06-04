@@ -89,22 +89,25 @@ data-show-fps-style="x:0,y:0,size:12,textColor:0xffffff,bgAlpha:0.9">
         }
     };
 
-    // Intercept response từ payServer để xử lý free mode
+    // Intercept XHR: fix payServer URL và xử lý phản hồi
     (function() {
         var _origOpen = XMLHttpRequest.prototype.open;
         var _origSend = XMLHttpRequest.prototype.send;
         XMLHttpRequest.prototype.open = function(method, url) {
+            // Rewrite /server/charge (no ext) → /server/charge.php
+            if (url && url.indexOf('/server/charge') !== -1 && url.indexOf('.php') === -1) {
+                url = url.replace('/server/charge', '/server/charge.php');
+            }
             this._url = url;
             return _origOpen.apply(this, arguments);
         };
         XMLHttpRequest.prototype.send = function() {
-            if (this._url && (this._url.indexOf('/server/charge') !== -1)) {
+            if (this._url && this._url.indexOf('/server/charge') !== -1) {
                 var xhr = this;
                 xhr.addEventListener('load', function() {
                     try {
                         var res = JSON.parse(xhr.response || xhr.responseText);
                         if (res && res.code === 0) {
-                            // Free mode: KNB đã được cộng, hiển thị thông báo
                             layer.msg('✅ ' + (res.msg || 'Nhận Kim Cương thành công!'), {icon: 1, time: 4000});
                         }
                     } catch(e) {}
