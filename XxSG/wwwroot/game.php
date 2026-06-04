@@ -65,6 +65,8 @@ data-show-fps-style="x:0,y:0,size:12,textColor:0xffffff,bgAlpha:0.9">
     /** 游戏url中附带的参数 **/
     var gameURLParams = {};
     window.urlParam = gameURLParams;
+    // Ensure control param is set so payServer resolves correctly
+    gameURLParams['control'] = '/server';
 	
     window.showpay = function(url, type){
 		var index = layer.open({
@@ -96,7 +98,7 @@ data-show-fps-style="x:0,y:0,size:12,textColor:0xffffff,bgAlpha:0.9">
             return _origOpen.apply(this, arguments);
         };
         XMLHttpRequest.prototype.send = function() {
-            if (this._url && this._url.indexOf('/server/charge.php') !== -1) {
+            if (this._url && (this._url.indexOf('/server/charge') !== -1)) {
                 var xhr = this;
                 xhr.addEventListener('load', function() {
                     try {

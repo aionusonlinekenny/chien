@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteRule ^charge$ charge.php [L]
+RewriteRule ^myServer$ myServer.php [L]
+RewriteRule ^servers$ servers.php [L]
