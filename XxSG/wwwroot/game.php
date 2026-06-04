@@ -67,6 +67,8 @@ data-show-fps-style="x:0,y:0,size:12,textColor:0xffffff,bgAlpha:0.9">
     window.urlParam = gameURLParams;
     // Ensure control param is set so payServer resolves correctly
     gameURLParams['control'] = '/server';
+    // channelUID must be truthy for reCharge to be called
+    gameURLParams['channelUID'] = '1';
 	
     window.showpay = function(url, type){
 		var index = layer.open({
