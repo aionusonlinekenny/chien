@@ -90,6 +90,8 @@ data-show-fps-style="x:0,y:0,size:12,textColor:0xffffff,bgAlpha:0.9">
             }
         }
     };
+    // linlongSDK platform stub — game requires this object before calling reCharge
+    window.linlongSDK = { loginData: null };
 
     // Intercept XHR: fix payServer URL và xử lý phản hồi
     (function() {
