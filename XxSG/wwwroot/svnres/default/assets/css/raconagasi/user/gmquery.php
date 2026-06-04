@@ -30,7 +30,7 @@ if ($type === '') {
 
 // ── Pay settings (không cần server) ─────────────────────
 if ($type === 'pay_settings') {
-    $settings_file = __DIR__ . '/../../../../../pay/settings.json';
+    $settings_file = __DIR__ . '/../../../../../../pay/settings.json';
     $current = file_exists($settings_file)
         ? (json_decode(file_get_contents($settings_file), true) ?: [])
         : [];
