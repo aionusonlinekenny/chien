@@ -18,6 +18,13 @@ body {
     align-items: center;
     justify-content: center;
     font-family: Arial, sans-serif;
+    min-height: 100vh;
+}
+
+#frmLogin {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 /* ── Login box ── */
