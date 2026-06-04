@@ -22,6 +22,10 @@ $isFree     = !$payEnabled || $payMethod === 'free';
 
 // ── Nhận params ─────────────────────────────────────
 $openid    = preg_replace('/[^A-Za-z0-9_]/', '', $_GET['openid'] ?? '');
+// Fallback: nếu game gửi openid=0 (chưa init), dùng session username
+if ($openid === '' || $openid === '0') {
+    $openid = $_SESSION['playuser'] ?? '';
+}
 $serverID  = intval($_GET['serverID'] ?? 10000);
 $playerId  = preg_replace('/[^0-9]/', '', $_GET['playerId'] ?? '');
 $money     = intval($_GET['money'] ?? 0);    // rmb value
@@ -29,8 +33,8 @@ $subjectRaw = $_GET['subject'] ?? '';        // "2_2000 Kim Cương"
 $subjectId = intval(explode('_', $subjectRaw)[0]);  // lấy số ID
 
 // ── Kiểm tra session / identity ─────────────────────
-if (!$openid || !$playerId || !$subjectId) {
-    jsonOut(['code' => -1, 'msg' => 'Thiếu thông tin']);
+if ($openid === '' || $playerId === '' || !$subjectId) {
+    jsonOut(['code' => -1, 'msg' => 'Thiếu thông tin: openid=' . $openid . ' playerId=' . $playerId . ' subject=' . $subjectId]);
 }
 
 // Xác minh user có tồn tại trong DB
