@@ -1,6 +1,9 @@
 <?php
+if (defined('GM_CONFIG_LOADED')) return;
+define('GM_CONFIG_LOADED', true);
+
 error_reporting(0);
-session_start();
+if (session_status() === PHP_SESSION_NONE) session_start();
 date_default_timezone_set('Asia/Ho_Chi_Minh');
 $gmcode = 'raconagasi';
 $quarr = array(
