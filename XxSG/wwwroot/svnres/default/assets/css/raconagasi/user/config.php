@@ -1,89 +1,73 @@
 <?php
 error_reporting(0);
 session_start();
-date_default_timezone_set('PRC');
-$gmcode='raconagasi';
-$quarr = array (
- "1" => array (
-  "host"=>"localhost",
-  "dbname"=>"sanguo_game",
-  "user"=>"root",
-  "pwd"=>"EghgTJGqPmZ9RQiW",
-  "name"=>"S1",
-  "key"=>"5Jqxjo10Yl2ElQCwJm",
-  "url"=>"http://localhost",
-  "hidde"=>false,
-  ),
- "2" => array (
-  "host"=>"localhost",
-  "dbname"=>"sanguo_game2",
-  "user"=>"root",
-  "pwd"=>"EghgTJGqPmZ9RQiW",
-  "name"=>"S2",
-  "key"=>"5Jqxjo10Yl2ElQCwJm",
-  "url"=>"http://localhost",
-  "hidde"=>true,
-  )
+date_default_timezone_set('Asia/Ho_Chi_Minh');
+$gmcode = 'raconagasi';
+$quarr = array(
+    "1" => array(
+        "host"   => "localhost",
+        "dbname" => "sanguo_game",
+        "user"   => "root",
+        "pwd"    => "",
+        "name"   => "S1",
+        "key"    => "5Jqxjo10Yl2ElQCwJm",
+        "url"    => "http://127.0.0.1:19201/",
+        "hidde"  => false,
+    ),
+    "2" => array(
+        "host"   => "localhost",
+        "dbname" => "sanguo_game2",
+        "user"   => "root",
+        "pwd"    => "",
+        "name"   => "S2",
+        "key"    => "5Jqxjo10Yl2ElQCwJm",
+        "url"    => "http://127.0.0.1:19202/",
+        "hidde"  => false,
+    ),
 );
-$getfilter="'|(and|or)\\b.+?(>|<|=|in|like)|\\/\\*.+?\\*\\/|<\\s*script\\b|\\bEXEC\\b|UNION.+?SELECT|UPDATE.+?SET|INSERT\\s+INTO.+?VALUES|(SELECT|DELETE).+?FROM|(CREATE|ALTER|DROP|TRUNCATE)\\s+(TABLE|DATABASE)";
-$postfilter="\\b(and|or)\\b.{1,6}?(=|>|<|\\bin\\b|\\blike\\b)|\\/\\*.+?\\*\\/|<\\s*script\\b|\\bEXEC\\b|UNION.+?SELECT|UPDATE.+?SET|INSERT\\s+INTO.+?VALUES|(SELECT|DELETE).+?FROM|(CREATE|ALTER|DROP|TRUNCATE)\\s+(TABLE|DATABASE)";
-$cookiefilter="\\b(and|or)\\b.{1,6}?(=|>|<|\\bin\\b|\\blike\\b)|\\/\\*.+?\\*\\/|<\\s*script\\b|\\bEXEC\\b|UNION.+?SELECT|UPDATE.+?SET|INSERT\\s+INTO.+?VALUES|(SELECT|DELETE).+?FROM|(CREATE|ALTER|DROP|TRUNCATE)\\s+(TABLE|DATABASE)";
-function StopAttack($StrFiltKey,$StrFiltValue,$ArrFiltReq){
-	if(is_array($StrFiltValue)){
-		$StrFiltValue=implode($StrFiltValue);
-	}
-	if (preg_match("/".$ArrFiltReq."/is",$StrFiltValue)==1){
-		print "Illegal Activity!";
-		exit();
-	}
+
+function poststr($str) {
+    if (isset($_POST[$str])) {
+        return $_POST[$str];
+    }
+    die("Tham số không hợp lệ!");
 }
-foreach($_GET as $key=>$value){
-	StopAttack($key,$value,$getfilter);
+
+function gmget($url, $postdata) {
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $url . '?' . http_build_query($postdata));
+    curl_setopt($ch, CURLOPT_HEADER, 0);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+    curl_setopt($ch, CURLOPT_TIMEOUT, 10);
+    $output    = curl_exec($ch);
+    $errorCode = curl_errno($ch);
+    curl_close($ch);
+    if ($errorCode !== 0) {
+        return 'CURL_ERROR:' . $errorCode;
+    }
+    $return = json_decode($output, true);
+    if (isset($return["errorCode"]) && $return["errorCode"] == 0) {
+        return 'OK';
+    }
+    return 'FAIL:' . ($return["errorCode"] ?? $output);
 }
-foreach($_POST as $key=>$value){
-	StopAttack($key,$value,$postfilter);
+
+function gmget1($url, $postdata) {
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $url . '?' . http_build_query($postdata));
+    curl_setopt($ch, CURLOPT_HEADER, 0);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+    curl_setopt($ch, CURLOPT_TIMEOUT, 15);
+    $output    = curl_exec($ch);
+    $errorCode = curl_errno($ch);
+    curl_close($ch);
+    if ($errorCode !== 0) {
+        return 'CURL_ERROR:' . $errorCode;
+    }
+    return trim($output);
 }
-foreach($_COOKIE as $key=>$value){
-	StopAttack($key,$value,$cookiefilter);
-}
-function poststr($str){
- if(isset($_POST[$str])){
-  return $_POST[$str];
- }
-die("The parameters you sent are illegal!");
-}
-function get($url,$postdata){
-		$ch = curl_init(); 
-		curl_setopt($ch, CURLOPT_URL, $url.'?'.http_build_query($postdata)); 
-		curl_setopt($ch, CURLOPT_HEADER, 0); 
-		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
-		curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE); 
-		curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE); 
-		curl_setopt($ch, CURLOPT_TIMEOUT, 10);
-		$output = curl_exec($ch);
-		$errorCode = curl_errno($ch);
-		curl_close($ch);
-		if(0 !== $errorCode){
-			return 'Failure';
-		}
-		$return=json_decode($output,true);
-		if($return["errorCode"]=='0'){
-			return 'Success';
-		}else{
-			return 'Failure:'.$return["errorCode"];
-		}
-	}
-function get1($url,$postdata){
-		$ch = curl_init(); 
-		curl_setopt($ch, CURLOPT_URL, $url.'?'.http_build_query($postdata)); 
-		curl_setopt($ch, CURLOPT_HEADER, 0); 
-		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
-		curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE); 
-		curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE); 
-		curl_setopt($ch, CURLOPT_TIMEOUT, 10);
-		$output = curl_exec($ch);
-		$errorCode = curl_errno($ch);
-		curl_close($ch);
-		return $output;
-	}//更多手游下载 w ww.z gym w.com
 ?>
