@@ -86,7 +86,138 @@ switch ($_REQUEST['type']) {
         <meta content="black" name="apple-mobile-web-app-status-bar-style" />
         <meta content="telephone=no" name="format-detection" />
         <meta http-equiv="Cache-Control" content="max-age=3600" />		
-        <link rel="stylesheet" type="text/css" href="login/css/sdk.css">
+        <style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+ol, ul, li, dd, dl, dt { list-style: none; }
+*:focus { outline: 0; }
+em, i { font-style: normal; }
+html, body { width: 100%; height: 100%; overflow: hidden; }
+body {
+    background: url('login/img/loginbg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+}
+#frmLogin { width: 100%; display: flex; justify-content: center; }
+.content_box {
+    background: rgba(245,245,245,0.95);
+    width: 88%;
+    max-width: 480px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 32px rgba(0,0,0,0.45);
+    position: relative;
+    z-index: 10;
+}
+.con_tit {
+    height: 56px;
+    line-height: 56px;
+    background: rgba(245,245,245,1.0);
+    text-align: center;
+    font-size: 20px;
+    color: #333;
+    border-bottom: 1px solid #d9d9d9;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.content_box ul { padding: 10px 20px 0 20px; clear: both; }
+.content_box ul li {
+    clear: both;
+    margin-top: 12px;
+    background: #fff;
+    box-shadow: 0 0 2px 0 rgba(0,0,0,0.12);
+    position: relative;
+    height: 54px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+.content_box ul li span {
+    position: absolute;
+    left: 0; top: 12px;
+    width: 48px; height: 30px;
+    display: inline-block;
+    border-right: 1px solid #e0e0e0;
+}
+.content_box ul li span.user     { background: url(login/img/user.png)  no-repeat center; background-size: 28px auto; }
+.content_box ul li span.password { background: url(login/img/ps.png)    no-repeat center; background-size: 28px auto; }
+.content_box ul li span.yzm      { background: url(login/img/yzm.png)   no-repeat center; background-size: 28px auto; }
+.content_box ul li p { position: absolute; left: 58px; top: 0; right: 1px; }
+.content_box ul li p .input_1, .input_2 {
+    background: none;
+    border: 0;
+    width: 100%;
+    color: #555;
+    font-size: 16px;
+    line-height: 18px;
+    padding: 18px 10px;
+}
+.content_box ul li p .input_2 { width: 60%; }
+.content_box ul li .send_yzm {
+    position: absolute;
+    right: 0; top: 0;
+    height: 16px;
+    padding: 15px 10px;
+    font-size: 14px;
+    background: #00b1fd;
+    color: #fff;
+    display: inline-block;
+    cursor: pointer;
+}
+.content_box .tishi { clear: both; margin: 8px 20px 0; min-height: 22px; }
+.content_box .tishi span {
+    background: url(login/img/warn2.png) left no-repeat;
+    background-size: 16px auto;
+    padding-left: 20px;
+    font-size: 13px;
+    color: #ea0303;
+    line-height: 20px;
+}
+.content_box .button {
+    margin: 16px 20px 20px;
+    height: 50px;
+    clear: both;
+    display: flex;
+    gap: 10px;
+}
+.content_box .button a {
+    flex: 1;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 6px;
+    text-decoration: none;
+    padding: 15px 0;
+    display: block;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+.content_box .button a.SW { background: #00b1fd; }
+.content_box .button a.SW:hover { background: #01a3e8; }
+.content_box .button a.RG { background: #ffc000; }
+.content_box .button a.RG:hover { background: #edb200; }
+.content_box .button a.LG { background: #5ac845; }
+.content_box .button a.LG:hover { background: #42bb2b; }
+.opacity_sdk { background: rgba(0,0,0,0.5); position: fixed; left:0; top:0; width:100%; height:100%; z-index:999; }
+.content_box .other_Lg { clear: both; position: relative; margin: 10px; }
+.content_box .other_Lg .tit { height: 30px; line-height: 30px; clear: both; display: flex; align-items: center; }
+.content_box .other_Lg .tit .left, .content_box .other_Lg .tit .right { flex: 1; height: 1px; background: #d9d9d9; }
+.content_box .other_Lg .tit .middle { padding: 0 10px; font-size: 14px; color: #8c8c8c; white-space: nowrap; }
+.content_box .other_Lg .style { clear: both; margin: 10px 0; height: 32px; display: flex; }
+.content_box .other_Lg .style a { flex: 1; height: 32px; display: inline-block; text-align: center; }
+.content_box .text { padding: 18px 18px 6px; font-size: 14px; line-height: 22px; color: #333; }
+.content_box .middle_platform { width: 100%; font-size: 14px; line-height: 40px; }
+.content_box .middle_platform a { color: #666; border-top: 1px solid #d9d9d9; text-decoration: none; display: block; text-align: center; }
+.content_box .other_Lg .style_higt { height: 50px; }
+@media (max-width: 360px) {
+    .content_box { width: 94%; }
+    .con_tit { font-size: 18px; }
+    .content_box .button a { font-size: 15px; }
+}
+        </style>
         <title><?php echo WEBNAME;?></title>
         <script type="text/javascript" src="jquery-1.10.1.min.js"></script>
         
