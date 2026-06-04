@@ -1,0 +1,7 @@
+{
+  "enabled": true,
+  "method": "paypal",
+  "paypal_client_id": "",
+  "paypal_client_secret": "",
+  "paypal_sandbox": true
+}

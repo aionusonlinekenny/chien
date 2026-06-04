@@ -1,7 +1,7 @@
 <?php
 // ══════════════════════════════════════════════════════
-//  Bước 2: Xác minh PayPal + cộng KNB cho player
-//  POST: paypalOrderId
+//  Bước 2: Xác minh thanh toán + cộng KNB cho player
+//  POST: paypalOrderId  (hoặc freeOrderId khi free mode)
 // ══════════════════════════════════════════════════════
 require_once __DIR__ . '/config.php';
 require_once __DIR__ . '/paypal.php';
@@ -17,24 +17,60 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 if (session_status() === PHP_SESSION_NONE) session_start();
 $sessionUser = $_SESSION['playuser'] ?? '';
 
+// ── FREE MODE: không cần PayPal, cộng KNB ngay ─────────
+if (PAY_FREE) {
+    $freeOrderId = trim($_POST['freeOrderId'] ?? '');
+    if (!$freeOrderId) {
+        echo json_encode(['error' => 'Thiếu freeOrderId']); exit;
+    }
+
+    $order = pay_get_by_order_num($freeOrderId);
+    if (!$order) {
+        echo json_encode(['error' => 'Không tìm thấy đơn hàng']); exit;
+    }
+    if ($sessionUser && $order['username'] !== $sessionUser) {
+        echo json_encode(['error' => 'Không có quyền xử lý đơn này']); exit;
+    }
+    if ($order['status'] == 1) {
+        echo json_encode(['success' => true, 'knb' => $order['knb'], 'note' => 'already_paid']); exit;
+    }
+
+    $updated = pay_mark_paid_by_order($freeOrderId);
+    if (!$updated) {
+        echo json_encode(['success' => true, 'knb' => $order['knb'], 'note' => 'already_paid']); exit;
+    }
+
+    $result = credit_knb_to_player($order, $gameServers);
+    if (!$result['ok']) {
+        error_log("[PAY FREE] credit_fail orderNum={$freeOrderId} player={$order['playerId']} err={$result['msg']}");
+        echo json_encode([
+            'success' => true,
+            'knb'     => $order['knb'],
+            'note'    => 'paid_but_credit_delayed',
+            'msg'     => 'Kim Cương sẽ được cộng trong vài phút. Nếu chờ quá lâu hãy liên hệ hỗ trợ với mã: ' . $freeOrderId
+        ]); exit;
+    }
+
+    echo json_encode(['success' => true, 'knb' => $order['knb']]);
+    exit;
+}
+
+// ── NORMAL MODE: xác minh PayPal ───────────────────────
 $paypalOrderId = trim($_POST['paypalOrderId'] ?? '');
 if (!$paypalOrderId) {
     echo json_encode(['error' => 'Thiếu paypalOrderId']); exit;
 }
 
 try {
-    // Lấy đơn hàng nội bộ
     $order = pay_get_by_paypal($paypalOrderId);
     if (!$order) {
         throw new Exception('Không tìm thấy đơn hàng');
     }
 
-    // Bảo mật: chỉ cho phép user của session xử lý
     if ($sessionUser && $order['username'] !== $sessionUser) {
         throw new Exception('Không có quyền xử lý đơn này');
     }
 
-    // Nếu đã xử lý rồi thì trả kết quả luôn
     if ($order['status'] == 1) {
         echo json_encode(['success' => true, 'knb' => $order['knb'], 'note' => 'already_paid']); exit;
     }
@@ -60,17 +96,15 @@ try {
         throw new Exception("Số tiền không khớp: capture={$capturedAmount} expected={$pkg['usd']}");
     }
 
-    // 2. Dùng atomic update để chặn double-credit
+    // 2. Atomic update để chặn double-credit
     $updated = pay_mark_paid($paypalOrderId);
     if (!$updated) {
-        // Đã được xử lý bởi request khác rồi
         echo json_encode(['success' => true, 'knb' => $order['knb'], 'note' => 'already_paid']); exit;
     }
 
     // 3. Gọi Java server cmd=5 để cộng KNB
     $result = credit_knb_to_player($order, $gameServers);
     if (!$result['ok']) {
-        // Thanh toán đã thành công nhưng cộng KNB thất bại → log để xử lý thủ công
         error_log("[PAY ERROR] credit_fail paypalOrderId={$paypalOrderId} player={$order['playerId']} err={$result['msg']}");
         echo json_encode([
             'success' => true,
@@ -88,7 +122,7 @@ try {
 
 // ── Gọi Java cmd=5 ────────────────────────────────────
 function credit_knb_to_player($order, $gameServers) {
-    $url      = $gameServers[$order['serverId']] ?? null;
+    $url = $gameServers[$order['serverId']] ?? null;
     if (!$url) return ['ok' => false, 'msg' => 'Server không tìm thấy'];
 
     $playerId = $order['playerId'];
@@ -109,12 +143,9 @@ function credit_knb_to_player($order, $gameServers) {
     ]);
 
     $ch = curl_init($url . '?' . $params);
-    curl_setopt_array($ch, [
-        CURLOPT_RETURNTRANSFER => true,
-        CURLOPT_TIMEOUT        => 15,
-    ]);
-    $raw  = curl_exec($ch);
-    $err  = curl_errno($ch);
+    curl_setopt_array($ch, [CURLOPT_RETURNTRANSFER => true, CURLOPT_TIMEOUT => 15]);
+    $raw = curl_exec($ch);
+    $err = curl_errno($ch);
     curl_close($ch);
 
     if ($err) return ['ok' => false, 'msg' => 'CURL_ERROR:' . $err];

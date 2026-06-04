@@ -144,6 +144,7 @@ body{background:#0d1117;color:#e6edf3;font-family:Arial,sans-serif;min-height:10
         <button class="tab-btn" onclick="showTab('charge',this)">💰 Nạp Tiền</button>
         <button class="tab-btn" onclick="showTab('notice',this)">📢 Thông Báo</button>
         <button class="tab-btn" onclick="showTab('ban',this)">🔨 Ban/Unban</button>
+        <button class="tab-btn" onclick="showTab('paysettings',this)">⚙ Thanh Toán</button>
         <button class="tab-btn" onclick="showTab('danger',this)" style="color:#f85149">⚠ Nguy Hiểm</button>
     </div>
 
@@ -231,6 +232,62 @@ body{background:#0d1117;color:#e6edf3;font-family:Arial,sans-serif;min-height:10
                 <button class="btn btn-red" onclick="doBan()">🔨 Ban 30 ngày</button>
                 <button class="btn btn-green" onclick="doUnban()">✅ Gỡ cấm</button>
             </div>
+        </div>
+    </div>
+
+    <!-- Tab: Pay Settings -->
+    <div id="tab-paysettings" class="tab-panel">
+        <div class="card">
+            <h3>Trạng thái thanh toán</h3>
+            <div style="display:flex;align-items:center;gap:14px;padding:10px 0">
+                <label class="toggle-wrap" style="display:flex;align-items:center;gap:10px;cursor:pointer">
+                    <div style="position:relative;width:50px;height:26px">
+                        <input type="checkbox" id="pay-enabled" style="opacity:0;width:0;height:0;position:absolute">
+                        <span id="toggle-track" onclick="togglePayEnabled()" style="position:absolute;inset:0;border-radius:13px;background:#373e47;cursor:pointer;transition:.2s"></span>
+                        <span id="toggle-thumb" style="position:absolute;left:3px;top:3px;width:20px;height:20px;border-radius:50%;background:#fff;transition:.2s;pointer-events:none"></span>
+                    </div>
+                    <span id="pay-status-label" style="font-size:14px;font-weight:bold;color:#768390">Đang tải...</span>
+                </label>
+            </div>
+            <p style="font-size:12px;color:#768390;margin-top:4px">
+                <b>ON</b> = thanh toán qua cổng đã cấu hình &nbsp;|&nbsp; <b>OFF</b> = free-to-buy (player nhận KNB miễn phí)
+            </p>
+        </div>
+
+        <div class="card" id="pay-method-card">
+            <h3>Phương thức thanh toán</h3>
+            <div class="field">
+                <label>Chọn cổng thanh toán</label>
+                <select id="pay-method" onchange="onMethodChange()">
+                    <option value="paypal">PayPal</option>
+                    <option value="free">Free (không cần cổng)</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="card" id="paypal-cred-card">
+            <h3>Thông tin PayPal</h3>
+            <div class="field">
+                <label>Client ID</label>
+                <input type="text" id="paypal-client-id" placeholder="AXXX...">
+            </div>
+            <div class="field">
+                <label>Client Secret</label>
+                <input type="password" id="paypal-client-secret" placeholder="EXXX...">
+            </div>
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+                <input type="checkbox" id="paypal-sandbox" style="width:auto">
+                <label for="paypal-sandbox" style="font-size:13px;color:#e6edf3;cursor:pointer">Chế độ Sandbox (test)</label>
+            </div>
+            <p style="font-size:11px;color:#768390">
+                Lấy credentials tại <span style="color:#79c0ff">developer.paypal.com</span> → My Apps &amp; Credentials
+            </p>
+        </div>
+
+        <div id="res-paysettings" class="result"></div>
+        <div class="btn-row">
+            <button class="btn btn-blue" onclick="loadPaySettings()">🔄 Tải lại</button>
+            <button class="btn btn-green" onclick="savePaySettings()">💾 Lưu cài đặt</button>
         </div>
     </div>
 
@@ -443,6 +500,79 @@ function fmtNum(n){ return Number(n).toLocaleString('vi-VN'); }
 // Auto-load when GM code filled and Enter pressed
 document.getElementById('checknum').addEventListener('keydown', function(e){
     if (e.key === 'Enter') loadPlayers();
+});
+
+// ── Pay Settings ─────────────────────────────────────────
+var _payEnabled = true;
+
+function loadPaySettings() {
+    var checknum = document.getElementById('checknum').value.trim();
+    if (!checknum) { showResult('res-paysettings', '❌ Vui lòng nhập mã GM trước!', 'err'); return; }
+    fetch('user/gmquery.php', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8'},
+        body: new URLSearchParams({ type:'pay_settings', action:'get', checknum: checknum, qu: document.getElementById('qu').value }).toString()
+    }).then(r => r.json()).then(cfg => {
+        _payEnabled = cfg.enabled !== false;
+        document.getElementById('pay-method').value      = cfg.method || 'paypal';
+        document.getElementById('paypal-client-id').value     = cfg.paypal_client_id || '';
+        document.getElementById('paypal-client-secret').value = cfg.paypal_client_secret || '';
+        document.getElementById('paypal-sandbox').checked     = cfg.paypal_sandbox !== false;
+        setToggle(_payEnabled);
+        onMethodChange();
+    }).catch(e => showResult('res-paysettings', '❌ Lỗi: ' + e, 'err'));
+}
+
+function setToggle(on) {
+    _payEnabled = on;
+    var track = document.getElementById('toggle-track');
+    var thumb = document.getElementById('toggle-thumb');
+    var label = document.getElementById('pay-status-label');
+    if (on) {
+        track.style.background = '#238636';
+        thumb.style.left = '27px';
+        label.style.color = '#3fb950';
+        label.textContent = '✅ BẬT — Thanh toán đang hoạt động';
+    } else {
+        track.style.background = '#373e47';
+        thumb.style.left = '3px';
+        label.style.color = '#f85149';
+        label.textContent = '🎁 TẮT — Chế độ Free-to-Buy';
+    }
+}
+
+function togglePayEnabled() { setToggle(!_payEnabled); }
+
+function onMethodChange() {
+    var method = document.getElementById('pay-method').value;
+    document.getElementById('paypal-cred-card').style.display = method === 'paypal' ? 'block' : 'none';
+}
+
+function savePaySettings() {
+    var checknum = document.getElementById('checknum').value.trim();
+    if (!checknum) { showResult('res-paysettings', '❌ Vui lòng nhập mã GM trước!', 'err'); return; }
+    showResult('res-paysettings', '⏳ Đang lưu...', 'loading');
+    fetch('user/gmquery.php', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8'},
+        body: new URLSearchParams({
+            type:                  'pay_settings',
+            action:                'save',
+            checknum:              checknum,
+            qu:                    document.getElementById('qu').value,
+            enabled:               _payEnabled ? '1' : '0',
+            method:                document.getElementById('pay-method').value,
+            paypal_client_id:      document.getElementById('paypal-client-id').value,
+            paypal_client_secret:  document.getElementById('paypal-client-secret').value,
+            paypal_sandbox:        document.getElementById('paypal-sandbox').checked ? '1' : '0',
+        }).toString()
+    }).then(r => r.text()).then(txt => showResult('res-paysettings', txt))
+      .catch(e => showResult('res-paysettings', '❌ Lỗi kết nối: ' + e, 'err'));
+}
+
+// Load pay settings when tab opened
+document.querySelector('[onclick="showTab(\'paysettings\',this)"]').addEventListener('click', function(){
+    setTimeout(loadPaySettings, 100);
 });
 </script>
 </body>

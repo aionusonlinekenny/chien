@@ -6,7 +6,6 @@
 require_once __DIR__ . '/config.php';
 require_once __DIR__ . '/db.php';
 
-// Kiểm tra session (người chơi phải đã đăng nhập)
 if (session_status() === PHP_SESSION_NONE) session_start();
 $username = $_SESSION['playuser'] ?? '';
 if (!$username) {
@@ -16,14 +15,12 @@ if (!$username) {
     </div>');
 }
 
-// Xác định gói nạp
 $subject = intval($_GET['subject'] ?? 0);
 if (!isset($packages[$subject])) {
     die('<div style="padding:30px;font-family:Arial;color:#c00;text-align:center">❌ Gói nạp không hợp lệ.</div>');
 }
 $pkg = $packages[$subject];
 
-// Lấy thông tin server & player
 $account = pay_get_player($username);
 if (!$account) {
     die('<div style="padding:30px;font-family:Arial;color:#c00;text-align:center">❌ Không tìm thấy tài khoản.</div>');
@@ -33,6 +30,8 @@ $playerId = pay_get_player_id($serverId, $username);
 if (!$playerId) {
     die('<div style="padding:30px;font-family:Arial;color:#c00;text-align:center">❌ Không tìm thấy nhân vật trong game. Hãy vào game một lần trước khi nạp.</div>');
 }
+
+$isFree = PAY_FREE;
 ?>
 <!DOCTYPE html>
 <html lang="vi">
@@ -50,9 +49,13 @@ body{background:linear-gradient(135deg,#1a0533,#2d1b69);min-height:100vh;display
 .pkg-knb{color:#f5c842;font-size:28px;font-weight:bold;margin-bottom:4px}
 .pkg-knb small{font-size:14px;color:#ccc}
 .pkg-price{color:#7affb2;font-size:16px;font-weight:bold}
+.pkg-free{color:#7affb2;font-size:14px;margin-top:4px}
 .player-info{color:rgba(255,255,255,0.55);font-size:12px;margin-bottom:20px}
 .player-info strong{color:rgba(255,255,255,0.8)}
 #paypal-button-container{margin-top:4px}
+.btn-free{width:100%;padding:14px;background:linear-gradient(135deg,#238636,#2ea043);border:none;border-radius:12px;color:#fff;font-size:16px;font-weight:bold;cursor:pointer;letter-spacing:.5px;transition:opacity .2s}
+.btn-free:hover{opacity:.85}
+.btn-free:disabled{opacity:.5;cursor:not-allowed}
 .note{color:rgba(255,255,255,0.35);font-size:11px;margin-top:14px;line-height:1.5}
 #msg{display:none;margin-top:14px;padding:12px;border-radius:8px;font-size:14px;font-weight:bold}
 #msg.ok{background:rgba(0,180,80,0.2);border:1px solid #00b450;color:#7affb2}
@@ -66,7 +69,11 @@ body{background:linear-gradient(135deg,#1a0533,#2d1b69);min-height:100vh;display
     <div class="pkg-box">
         <div class="pkg-name"><?= htmlspecialchars($pkg['name']) ?></div>
         <div class="pkg-knb"><?= number_format($pkg['knb']) ?> <small>KNB</small></div>
+        <?php if ($isFree): ?>
+        <div class="pkg-free">🎁 Miễn phí (Server đang tặng quà)</div>
+        <?php else: ?>
         <div class="pkg-price">$<?= $pkg['usd'] ?> USD</div>
+        <?php endif; ?>
     </div>
 
     <div class="player-info">
@@ -74,28 +81,75 @@ body{background:linear-gradient(135deg,#1a0533,#2d1b69);min-height:100vh;display
         Máy chủ: <strong>S<?= $serverId == 10000 ? '1' : '2' ?></strong>
     </div>
 
+    <?php if ($isFree): ?>
+    <button class="btn-free" id="btn-free" onclick="doFreeBuy()">🎁 Nhận ngay miễn phí</button>
+    <?php else: ?>
     <div id="paypal-button-container"></div>
+    <?php endif; ?>
+
     <div id="msg"></div>
 
     <div class="note">
+        <?php if ($isFree): ?>
+        Server đang trong chế độ tặng quà — nhận Kim Cương hoàn toàn miễn phí!
+        <?php else: ?>
         Sau khi thanh toán thành công, Kim Cương sẽ được cộng vào tài khoản trong vòng 1 phút.<br>
         Hỗ trợ: Thánh Chiến Chibi
+        <?php endif; ?>
     </div>
 </div>
 
+<?php if (!$isFree): ?>
 <script src="https://www.paypal.com/sdk/js?client-id=<?= PAYPAL_CLIENT_ID ?>&currency=USD"></script>
+<?php endif; ?>
+
 <script>
 var subject  = <?= $subject ?>;
 var username = <?= json_encode($username) ?>;
 var serverId = <?= $serverId ?>;
+var isFree   = <?= $isFree ? 'true' : 'false' ?>;
 
 function showMsg(text, type) {
     var el = document.getElementById('msg');
     el.textContent = text;
-    el.className = 'ok' === type ? 'ok' : 'err';
+    el.className = type === 'ok' ? 'ok' : 'err';
     el.style.display = 'block';
 }
 
+<?php if ($isFree): ?>
+function doFreeBuy() {
+    var btn = document.getElementById('btn-free');
+    btn.disabled = true;
+    btn.textContent = '⏳ Đang xử lý...';
+    fetch('create.php', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+        body: 'subject=' + subject + '&username=' + encodeURIComponent(username) + '&serverId=' + serverId
+    })
+    .then(r => r.json())
+    .then(res => {
+        if (res.error) { showMsg('❌ ' + res.error, 'err'); btn.disabled = false; btn.textContent = '🎁 Nhận ngay miễn phí'; return; }
+        return fetch('capture.php', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+            body: 'freeOrderId=' + encodeURIComponent(res.freeOrderId)
+        });
+    })
+    .then(r => r && r.json())
+    .then(res => {
+        if (!res) return;
+        if (res.success) {
+            showMsg('✅ Nhận thành công! ' + res.knb + ' Kim Cương đã được cộng vào tài khoản.', 'ok');
+            btn.style.display = 'none';
+        } else {
+            showMsg('❌ ' + (res.error || 'Có lỗi xảy ra.'), 'err');
+            btn.disabled = false;
+            btn.textContent = '🎁 Nhận ngay miễn phí';
+        }
+    })
+    .catch(e => { showMsg('❌ Lỗi kết nối: ' + e, 'err'); btn.disabled = false; btn.textContent = '🎁 Nhận ngay miễn phí'; });
+}
+<?php else: ?>
 paypal.Buttons({
     style: { layout:'vertical', color:'gold', shape:'pill', label:'pay' },
 
@@ -130,14 +184,10 @@ paypal.Buttons({
         });
     },
 
-    onError: function(err) {
-        showMsg('❌ Lỗi PayPal: ' + err, 'err');
-    },
-
-    onCancel: function() {
-        showMsg('⚠ Bạn đã hủy thanh toán.', 'err');
-    }
+    onError: function(err) { showMsg('❌ Lỗi PayPal: ' + err, 'err'); },
+    onCancel: function()    { showMsg('⚠ Bạn đã hủy thanh toán.', 'err'); }
 }).render('#paypal-button-container');
+<?php endif; ?>
 </script>
 </body>
 </html>

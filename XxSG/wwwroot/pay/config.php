@@ -1,20 +1,32 @@
 <?php
 // ══════════════════════════════════════════════════════
-//  PayPal Payment Config
-//  Đổi CLIENT_ID và CLIENT_SECRET sau khi tạo app PayPal
-//  https://developer.paypal.com/dashboard/applications
+//  PayPal Payment Config — credentials được lưu trong
+//  settings.json và quản lý qua GM Tool
 // ══════════════════════════════════════════════════════
 
-define('PAYPAL_CLIENT_ID',     'YOUR_PAYPAL_CLIENT_ID');
-define('PAYPAL_CLIENT_SECRET', 'YOUR_PAYPAL_CLIENT_SECRET');
-define('PAYPAL_SANDBOX', true);   // true = test, false = thật
+define('SIGN_KEY',  '5Jqxjo10Yl2ElQCwJm'); // secretKey Java server
+define('SITE_URL',  'http://134.22.38.31');
 
-define('PAYPAL_API',  PAYPAL_SANDBOX
+// ── Đọc settings từ file (GM Tool ghi vào) ─────────────
+$_pay_settings_file = __DIR__ . '/settings.json';
+$_pay_settings = file_exists($_pay_settings_file)
+    ? (json_decode(file_get_contents($_pay_settings_file), true) ?: [])
+    : [];
+
+$_pay_enabled = (bool)($_pay_settings['enabled'] ?? true);
+$_pay_method  = $_pay_settings['method'] ?? 'paypal';  // 'paypal' | 'free'
+
+define('PAY_ENABLED',  $_pay_enabled);
+define('PAY_METHOD',   $_pay_method);
+define('PAY_FREE',     !$_pay_enabled || $_pay_method === 'free');
+
+define('PAYPAL_CLIENT_ID',     $_pay_settings['paypal_client_id']     ?? '');
+define('PAYPAL_CLIENT_SECRET', $_pay_settings['paypal_client_secret'] ?? '');
+define('PAYPAL_SANDBOX',       (bool)($_pay_settings['paypal_sandbox'] ?? true));
+
+define('PAYPAL_API', PAYPAL_SANDBOX
     ? 'https://api-m.sandbox.paypal.com'
     : 'https://api-m.paypal.com');
-
-define('SITE_URL',  'http://134.22.38.31'); // URL server của bạn
-define('SIGN_KEY',  '5Jqxjo10Yl2ElQCwJm'); // secretKey Java server
 
 // ── Java game servers ───────────────────────────────
 $gameServers = [

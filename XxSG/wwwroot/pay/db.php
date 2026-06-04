@@ -65,6 +65,20 @@ function pay_mark_failed($paypalOrderId) {
        ->execute([$paypalOrderId]);
 }
 
+function pay_get_by_order_num($orderNum) {
+    $db = pay_get_db();
+    $s  = $db->prepare("SELECT * FROM `pay_orders` WHERE orderNum=? LIMIT 1");
+    $s->execute([$orderNum]);
+    return $s->fetch(PDO::FETCH_ASSOC);
+}
+
+function pay_mark_paid_by_order($orderNum) {
+    $db = pay_get_db();
+    $s  = $db->prepare("UPDATE `pay_orders` SET status=1, paidTime=NOW() WHERE orderNum=? AND status=0");
+    $s->execute([$orderNum]);
+    return $s->rowCount() > 0;
+}
+
 function pay_get_player($username) {
     $db = pay_get_db();
     $row = $db->prepare("SELECT id, lastserver FROM `account` WHERE username=? LIMIT 1");

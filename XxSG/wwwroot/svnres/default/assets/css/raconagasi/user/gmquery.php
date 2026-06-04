@@ -28,6 +28,41 @@ if ($type === '') {
     exit('Loại yêu cầu không tồn tại!');
 }
 
+// ── Pay settings (không cần server) ─────────────────────
+if ($type === 'pay_settings') {
+    $settings_file = __DIR__ . '/../../../../../pay/settings.json';
+    $current = file_exists($settings_file)
+        ? (json_decode(file_get_contents($settings_file), true) ?: [])
+        : [];
+
+    $action = trim($_POST['action'] ?? '');
+
+    if ($action === 'get') {
+        header('Content-Type: application/json; charset=utf-8');
+        echo json_encode($current); exit;
+    }
+
+    if ($action === 'save') {
+        $enabled  = filter_var($_POST['enabled']  ?? true,  FILTER_VALIDATE_BOOLEAN, FILTER_NULL_ON_FAILURE) ?? true;
+        $method   = in_array($_POST['method'] ?? '', ['paypal','free']) ? $_POST['method'] : 'paypal';
+        $clientId = trim($_POST['paypal_client_id']     ?? $current['paypal_client_id']     ?? '');
+        $secret   = trim($_POST['paypal_client_secret'] ?? $current['paypal_client_secret'] ?? '');
+        $sandbox  = filter_var($_POST['paypal_sandbox'] ?? true, FILTER_VALIDATE_BOOLEAN, FILTER_NULL_ON_FAILURE) ?? true;
+
+        $new = [
+            'enabled'              => $enabled,
+            'method'               => $method,
+            'paypal_client_id'     => $clientId,
+            'paypal_client_secret' => $secret,
+            'paypal_sandbox'       => $sandbox,
+        ];
+        file_put_contents($settings_file, json_encode($new, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
+        exit('✅ Đã lưu cài đặt thanh toán!');
+    }
+
+    exit('action không hợp lệ!');
+}
+
 // Helper: get playerId from playerName via DB
 function getPlayerId($dbip, $dbuser, $dbpwd, $dbname, $playerName) {
     $con = new mysqli($dbip, $dbuser, $dbpwd, $dbname);

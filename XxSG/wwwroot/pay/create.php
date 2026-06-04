@@ -1,6 +1,6 @@
 <?php
 // ══════════════════════════════════════════════════════
-//  Bước 1: Tạo PayPal order — trả về paypalOrderId
+//  Bước 1: Tạo order — trả về paypalOrderId hoặc orderNum
 //  POST: subject, username, serverId
 // ══════════════════════════════════════════════════════
 require_once __DIR__ . '/config.php';
@@ -20,7 +20,6 @@ $username = trim($_POST['username'] ?? '');
 $subject  = intval($_POST['subject']  ?? 0);
 $serverId = intval($_POST['serverId'] ?? 10000);
 
-// Xác minh session khớp với username (bảo mật)
 $sessionUser = $_SESSION['playuser'] ?? '';
 if (!$sessionUser || $sessionUser !== $username) {
     echo json_encode(['error' => 'Session không hợp lệ']); exit;
@@ -31,17 +30,23 @@ if (!isset($packages[$subject])) {
 }
 $pkg = $packages[$subject];
 
-// Lấy playerId
 $playerId = pay_get_player_id($serverId, $username);
 if (!$playerId) {
     echo json_encode(['error' => 'Không tìm thấy nhân vật']); exit;
 }
 
-// Tạo orderNum nội bộ
 $orderNum = date('YmdHis') . substr(md5(uniqid(microtime(true) . mt_rand()), false), 0, 8);
 
+// ── FREE MODE ───────────────────────────────────────────
+if (PAY_FREE) {
+    pay_create_order($orderNum, $username, $playerId, $serverId, $subject,
+                     $pkg['rmb'], $pkg['knb'], $pkg['usd']);
+    echo json_encode(['freeOrderId' => $orderNum]);
+    exit;
+}
+
+// ── PAYPAL MODE ─────────────────────────────────────────
 try {
-    // Tạo PayPal order
     $res = paypal_create_order(
         $pkg['usd'],
         $pkg['name'] . ' — Thánh Chiến Chibi',
@@ -54,7 +59,6 @@ try {
 
     $paypalOrderId = $res['body']['id'];
 
-    // Lưu vào DB
     pay_create_order($orderNum, $username, $playerId, $serverId, $subject,
                      $pkg['rmb'], $pkg['knb'], $pkg['usd']);
     pay_set_paypal_id($orderNum, $paypalOrderId);
