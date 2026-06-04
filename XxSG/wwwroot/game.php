@@ -82,8 +82,8 @@ data-show-fps-style="x:0,y:0,size:12,textColor:0xffffff,bgAlpha:0.9">
     // Custom SDK xử lý phản hồi từ charge.php
     window.Sdk = {
         RaStarPay: function(type, info) {
+            console.log('[PAY] RaStarPay called type=' + type + ' info=' + JSON.stringify(info));
             if (info && info.payUrl) {
-                // PayPal mode: mở iframe thanh toán
                 window.showpay(info.payUrl, '');
             }
         }
@@ -96,6 +96,7 @@ data-show-fps-style="x:0,y:0,size:12,textColor:0xffffff,bgAlpha:0.9">
         XMLHttpRequest.prototype.open = function(method, url) {
             // Rewrite /server/charge (no ext) → /server/charge.php
             if (url && url.indexOf('/server/charge') !== -1 && url.indexOf('.php') === -1) {
+                console.log('[PAY] Rewriting URL: ' + url + ' → charge.php');
                 url = url.replace('/server/charge', '/server/charge.php');
             }
             this._url = url;
@@ -103,14 +104,17 @@ data-show-fps-style="x:0,y:0,size:12,textColor:0xffffff,bgAlpha:0.9">
         };
         XMLHttpRequest.prototype.send = function() {
             if (this._url && this._url.indexOf('/server/charge') !== -1) {
+                console.log('[PAY] Sending charge request: ' + this._url);
                 var xhr = this;
                 xhr.addEventListener('load', function() {
                     try {
-                        var res = JSON.parse(xhr.response || xhr.responseText);
+                        var raw = xhr.response || xhr.responseText;
+                        console.log('[PAY] charge.php response: ' + raw);
+                        var res = JSON.parse(raw);
                         if (res && res.code === 0) {
                             layer.msg('✅ ' + (res.msg || 'Nhận Kim Cương thành công!'), {icon: 1, time: 4000});
                         }
-                    } catch(e) {}
+                    } catch(e) { console.log('[PAY] parse error: ' + e); }
                 }, false);
             }
             return _origSend.apply(this, arguments);
