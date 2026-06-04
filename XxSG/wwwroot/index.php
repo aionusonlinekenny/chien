@@ -88,7 +88,7 @@ switch ($_REQUEST['type']) {
         <meta http-equiv="Cache-Control" content="max-age=3600" />		
         <link rel="stylesheet" type="text/css" href="login/css/sdk.css">
         <title><?php echo WEBNAME;?></title>
-        <script type="text/javascript" src="login/js/jquery.js"></script>
+        <script type="text/javascript" src="jquery-1.10.1.min.js"></script>
         
 
         <script type="text/javascript">
