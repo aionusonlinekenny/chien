@@ -90,8 +90,11 @@ data-show-fps-style="x:0,y:0,size:12,textColor:0xffffff,bgAlpha:0.9">
             }
         }
     };
-    // linlongSDK platform stub — game requires this object before calling reCharge
-    window.linlongSDK = { loginData: { app_id: '', cch_id: '', access_token: '' } };
+    // linlongSDK platform stub — payFunc handled by XHR interceptor below
+    window.linlongSDK = {
+        loginData: { app_id: '', cch_id: '', access_token: '' },
+        payFunc: function(o) { console.log('[PAY] linlongSDK.payFunc:', JSON.stringify(o)); }
+    };
 
     // Intercept XHR: fix payServer URL và xử lý phản hồi
     (function() {
@@ -115,8 +118,12 @@ data-show-fps-style="x:0,y:0,size:12,textColor:0xffffff,bgAlpha:0.9">
                         var raw = xhr.response || xhr.responseText;
                         console.log('[PAY] charge.php response: ' + raw);
                         var res = JSON.parse(raw);
-                        if (res && res.code === 0) {
-                            layer.msg('✅ ' + (res.msg || 'Nhận Kim Cương thành công!'), {icon: 1, time: 4000});
+                        if (res.code === 0) {
+                            layer.msg('✅ ' + (res.msg || 'Nhận Kim Cương thành công!'), {icon: 1, time: 5000});
+                        } else if (res.code === 1 && res.payUrl) {
+                            window.showpay(res.payUrl, '');
+                        } else if (res.code < 0) {
+                            layer.msg('❌ ' + (res.msg || 'Có lỗi xảy ra'), {icon: 2, time: 4000});
                         }
                     } catch(e) { console.log('[PAY] parse error: ' + e); }
                 }, false);
