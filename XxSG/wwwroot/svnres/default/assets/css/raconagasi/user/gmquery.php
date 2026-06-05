@@ -63,6 +63,120 @@ if ($type === 'pay_settings') {
     exit('action không hợp lệ!');
 }
 
+// ── Config Vật Phẩm (không cần uid/server DB) ────────────────
+if ($type === 'cfg_item' || $type === 'cfg_shop' || $type === 'cfg_charge') {
+    header('Content-Type: application/json; charset=utf-8');
+    $cfgFile = __DIR__ . '/../../../../../../svnres/assets/a2825a98.cfg';
+    $cfgFile = realpath($cfgFile) ?: $cfgFile;
+    if (!file_exists($cfgFile))
+        exit(json_encode(array('code'=>-1,'msg'=>'Không tìm thấy a2825a98.cfg: '.$cfgFile)));
+
+    $jsonRaw = file_get_contents('zip://' . $cfgFile . '#cfg.json');
+    if ($jsonRaw === false)
+        exit(json_encode(array('code'=>-1,'msg'=>'Không đọc được cfg.json từ ZIP')));
+    $cfg = json_decode($jsonRaw, true);
+    if (!$cfg)
+        exit(json_encode(array('code'=>-1,'msg'=>'JSON parse lỗi')));
+
+    $action2 = trim(isset($_POST['action']) ? $_POST['action'] : '');
+    $q       = strtolower(trim(isset($_POST['q']) ? $_POST['q'] : ''));
+    $page    = max(1, intval(isset($_POST['page']) ? $_POST['page'] : 1));
+    $size    = min(100, max(10, intval(isset($_POST['size']) ? $_POST['size'] : 50)));
+
+    if ($action2 === 'list') {
+        if ($type === 'cfg_item') {
+            $rows = array();
+            foreach ($cfg['item'] as $id => $it) {
+                $name = isset($it['name']) ? $it['name'] : '';
+                if ($q && strpos(strtolower($name), $q)===false && strpos($id,$q)===false) continue;
+                $rows[] = array('id'=>intval($id),'name'=>$name,'itemQuality'=>isset($it['itemQuality'])?$it['itemQuality']:10);
+            }
+            usort($rows, function($a,$b){ return $a['id']-$b['id']; });
+            $total = count($rows);
+            exit(json_encode(array('code'=>0,'total'=>$total,'data'=>array_slice($rows,($page-1)*$size,$size)),JSON_UNESCAPED_UNICODE));
+        }
+        if ($type === 'cfg_shop') {
+            $rows = array();
+            foreach ($cfg['shopNormal'] as $id => $s) {
+                $reward = isset($s['reward_cli'][0]) ? $s['reward_cli'][0] : '';
+                preg_match('/,(\d+),(\d+)/', $reward, $m);
+                $itemId   = intval(isset($m[1]) ? $m[1] : 0);
+                $itemName = isset($cfg['item'][$itemId]['name']) ? $cfg['item'][$itemId]['name'] : '';
+                if ($q && strpos(strtolower($itemName),$q)===false && strpos($id,$q)===false) continue;
+                $rows[] = array(
+                    'goodsId'=>intval($id), 'tabName'=>isset($s['name'])?$s['name']:'',
+                    'itemId'=>$itemId, 'itemName'=>$itemName,
+                    'rewardNum'=>intval(isset($m[2])?$m[2]:0),
+                    'costType'=>isset($s['costType'])?$s['costType']:0,
+                    'costNum'=>isset($s['costNum'])?$s['costNum']:0,
+                    'sellTimes'=>isset($s['sellTimes'])?$s['sellTimes']:0,
+                    'limitType'=>isset($s['limitType'])?$s['limitType']:0,
+                );
+            }
+            usort($rows, function($a,$b){ return $a['goodsId']-$b['goodsId']; });
+            $total = count($rows);
+            exit(json_encode(array('code'=>0,'total'=>$total,'data'=>array_slice($rows,($page-1)*$size,$size)),JSON_UNESCAPED_UNICODE));
+        }
+        if ($type === 'cfg_charge') {
+            $rows = array();
+            foreach ($cfg['charge'] as $id => $c) {
+                if (isset($c['type']) && $c['type'] > 0) continue;
+                $rows[] = array('id'=>intval($id),'name'=>isset($c['name'])?$c['name']:'',
+                                'sort'=>isset($c['sort'])?$c['sort']:0,
+                                'rmb'=>isset($c['rmb'])?$c['rmb']:0,
+                                'money'=>isset($c['money'])?$c['money']:0);
+            }
+            usort($rows, function($a,$b){ return $a['sort']-$b['sort']; });
+            exit(json_encode(array('code'=>0,'data'=>$rows),JSON_UNESCAPED_UNICODE));
+        }
+    }
+
+    if ($action2 === 'save') {
+        if ($type === 'cfg_item') {
+            $id   = strval(intval(isset($_POST['id'])?$_POST['id']:0));
+            $name = trim(isset($_POST['name'])?$_POST['name']:'');
+            if (!$id || $name==='') exit(json_encode(array('code'=>-1,'msg'=>'Thiếu dữ liệu')));
+            if (!isset($cfg['item'][$id])) exit(json_encode(array('code'=>-1,'msg'=>'Item không tồn tại')));
+            $cfg['item'][$id]['name'] = $name;
+        } elseif ($type === 'cfg_shop') {
+            $goodsId = strval(intval(isset($_POST['goodsId'])?$_POST['goodsId']:0));
+            if (!$goodsId) exit(json_encode(array('code'=>-1,'msg'=>'Thiếu goodsId')));
+            if (!isset($cfg['shopNormal'][$goodsId])) exit(json_encode(array('code'=>-1,'msg'=>'Không tìm thấy shop')));
+            if (isset($_POST['costNum']))   $cfg['shopNormal'][$goodsId]['costNum']   = intval($_POST['costNum']);
+            if (isset($_POST['sellTimes'])) $cfg['shopNormal'][$goodsId]['sellTimes'] = intval($_POST['sellTimes']);
+        } elseif ($type === 'cfg_charge') {
+            $id = strval(intval(isset($_POST['id'])?$_POST['id']:0));
+            if (!$id) exit(json_encode(array('code'=>-1,'msg'=>'Thiếu id')));
+            if (!isset($cfg['charge'][$id])) exit(json_encode(array('code'=>-1,'msg'=>'Không tìm thấy gói')));
+            if (isset($_POST['name']))  $cfg['charge'][$id]['name']  = trim($_POST['name']);
+            if (isset($_POST['rmb']))   $cfg['charge'][$id]['rmb']   = intval($_POST['rmb']);
+            if (isset($_POST['money'])) $cfg['charge'][$id]['money'] = intval($_POST['money']);
+        }
+        $tmpJson = tempnam(sys_get_temp_dir(), 'gmcfg_') . '.json';
+        file_put_contents($tmpJson, json_encode($cfg, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES));
+        $cfgEsc  = escapeshellarg($cfgFile);
+        $jsonEsc = escapeshellarg($tmpJson);
+        $tmpZip  = escapeshellarg($tmpJson . '.cfg');
+        exec("python3 -c \"import zipfile,os; z=zipfile.ZipFile({$tmpZip},'w',zipfile.ZIP_DEFLATED); z.write({$jsonEsc},'cfg.json'); z.close(); os.rename({$tmpZip},{$cfgEsc})\" 2>&1", $out, $ret);
+        if ($ret !== 0) {
+            $tmpDir = sys_get_temp_dir() . '/gmcfg_' . mt_rand();
+            mkdir($tmpDir, 0755, true);
+            $tmpCfgJson = $tmpDir . '/cfg.json';
+            copy($tmpJson, $tmpCfgJson);
+            $tmpZip2 = $tmpDir . '/new.cfg';
+            exec('cd ' . escapeshellarg($tmpDir) . ' && zip -9 -j ' . escapeshellarg($tmpZip2) . ' ' . escapeshellarg($tmpCfgJson) . ' 2>&1', $out2, $ret2);
+            if ($ret2 === 0) { rename($tmpZip2, $cfgFile); }
+            @unlink($tmpCfgJson); @rmdir($tmpDir);
+            $ret = $ret2; $out = $out2;
+        }
+        @unlink($tmpJson);
+        if ($ret !== 0)
+            exit(json_encode(array('code'=>-1,'msg'=>'Lỗi ghi file: '.implode("\n",$out)),JSON_UNESCAPED_UNICODE));
+        exit(json_encode(array('code'=>0,'msg'=>'Đã lưu thành công'),JSON_UNESCAPED_UNICODE));
+    }
+    exit(json_encode(array('code'=>-1,'msg'=>'action không hợp lệ')));
+}
+
 // Helper: get playerId from playerName via DB
 function getPlayerId($dbip, $dbuser, $dbpwd, $dbname, $playerName) {
     $con = new mysqli($dbip, $dbuser, $dbpwd, $dbname);
@@ -245,122 +359,6 @@ switch ($type) {
         if ($deleted < 1) exit('❌ Không tìm thấy nhân vật trong DB để xóa!');
         exit("✅ Đã xóa nhân vật «{$uid}» (ID: {$playerId}) khỏi game!");
 
-    // ── Config Vật Phẩm ──────────────────────────────────
-    case 'cfg_item':
-    case 'cfg_shop':
-    case 'cfg_charge':
-        header('Content-Type: application/json; charset=utf-8');
-        $cfgFile = __DIR__ . '/../../../../../../svnres/assets/a2825a98.cfg';
-        $cfgFile = realpath($cfgFile) ?: $cfgFile;
-        if (!file_exists($cfgFile))
-            exit(json_encode(array('code'=>-1,'msg'=>'Không tìm thấy a2825a98.cfg: '.$cfgFile)));
-
-        // Đọc ZIP bằng zip:// stream wrapper (không cần ZipArchive extension)
-        $jsonRaw = file_get_contents('zip://' . $cfgFile . '#cfg.json');
-        if ($jsonRaw === false)
-            exit(json_encode(array('code'=>-1,'msg'=>'Không đọc được cfg.json từ ZIP')));
-        $cfg = json_decode($jsonRaw, true);
-        if (!$cfg)
-            exit(json_encode(array('code'=>-1,'msg'=>'JSON parse lỗi')));
-
-        $action2 = trim(isset($_POST['action']) ? $_POST['action'] : '');
-        $q       = strtolower(trim(isset($_POST['q']) ? $_POST['q'] : ''));
-        $page    = max(1, intval(isset($_POST['page']) ? $_POST['page'] : 1));
-        $size    = min(100, max(10, intval(isset($_POST['size']) ? $_POST['size'] : 50)));
-
-        if ($action2 === 'list') {
-            if ($type === 'cfg_item') {
-                $rows = array();
-                foreach ($cfg['item'] as $id => $it) {
-                    $name = isset($it['name']) ? $it['name'] : '';
-                    if ($q && strpos(strtolower($name), $q)===false && strpos($id,$q)===false) continue;
-                    $rows[] = array('id'=>intval($id),'name'=>$name,'itemQuality'=>isset($it['itemQuality'])?$it['itemQuality']:10);
-                }
-                usort($rows, function($a,$b){ return $a['id']-$b['id']; });
-                $total = count($rows);
-                exit(json_encode(array('code'=>0,'total'=>$total,'data'=>array_slice($rows,($page-1)*$size,$size)),JSON_UNESCAPED_UNICODE));
-            }
-            if ($type === 'cfg_shop') {
-                $rows = array();
-                foreach ($cfg['shopNormal'] as $id => $s) {
-                    $reward = isset($s['reward_cli'][0]) ? $s['reward_cli'][0] : '';
-                    preg_match('/,(\d+),(\d+)/', $reward, $m);
-                    $itemId   = intval(isset($m[1]) ? $m[1] : 0);
-                    $itemName = isset($cfg['item'][$itemId]['name']) ? $cfg['item'][$itemId]['name'] : '';
-                    if ($q && strpos(strtolower($itemName),$q)===false && strpos($id,$q)===false) continue;
-                    $rows[] = array(
-                        'goodsId'=>intval($id), 'tabName'=>isset($s['name'])?$s['name']:'',
-                        'itemId'=>$itemId, 'itemName'=>$itemName,
-                        'rewardNum'=>intval(isset($m[2])?$m[2]:0),
-                        'costType'=>isset($s['costType'])?$s['costType']:0,
-                        'costNum'=>isset($s['costNum'])?$s['costNum']:0,
-                        'sellTimes'=>isset($s['sellTimes'])?$s['sellTimes']:0,
-                        'limitType'=>isset($s['limitType'])?$s['limitType']:0,
-                    );
-                }
-                usort($rows, function($a,$b){ return $a['goodsId']-$b['goodsId']; });
-                $total = count($rows);
-                exit(json_encode(array('code'=>0,'total'=>$total,'data'=>array_slice($rows,($page-1)*$size,$size)),JSON_UNESCAPED_UNICODE));
-            }
-            if ($type === 'cfg_charge') {
-                $rows = array();
-                foreach ($cfg['charge'] as $id => $c) {
-                    if (isset($c['type']) && $c['type'] > 0) continue;
-                    $rows[] = array('id'=>intval($id),'name'=>isset($c['name'])?$c['name']:'',
-                                    'sort'=>isset($c['sort'])?$c['sort']:0,
-                                    'rmb'=>isset($c['rmb'])?$c['rmb']:0,
-                                    'money'=>isset($c['money'])?$c['money']:0);
-                }
-                usort($rows, function($a,$b){ return $a['sort']-$b['sort']; });
-                exit(json_encode(array('code'=>0,'data'=>$rows),JSON_UNESCAPED_UNICODE));
-            }
-        }
-
-        if ($action2 === 'save') {
-            if ($type === 'cfg_item') {
-                $id   = strval(intval(isset($_POST['id'])?$_POST['id']:0));
-                $name = trim(isset($_POST['name'])?$_POST['name']:'');
-                if (!$id || $name==='') exit(json_encode(array('code'=>-1,'msg'=>'Thiếu dữ liệu')));
-                if (!isset($cfg['item'][$id])) exit(json_encode(array('code'=>-1,'msg'=>'Item không tồn tại')));
-                $cfg['item'][$id]['name'] = $name;
-            } elseif ($type === 'cfg_shop') {
-                $goodsId = strval(intval(isset($_POST['goodsId'])?$_POST['goodsId']:0));
-                if (!$goodsId) exit(json_encode(array('code'=>-1,'msg'=>'Thiếu goodsId')));
-                if (!isset($cfg['shopNormal'][$goodsId])) exit(json_encode(array('code'=>-1,'msg'=>'Không tìm thấy shop')));
-                if (isset($_POST['costNum']))   $cfg['shopNormal'][$goodsId]['costNum']   = intval($_POST['costNum']);
-                if (isset($_POST['sellTimes'])) $cfg['shopNormal'][$goodsId]['sellTimes'] = intval($_POST['sellTimes']);
-            } elseif ($type === 'cfg_charge') {
-                $id = strval(intval(isset($_POST['id'])?$_POST['id']:0));
-                if (!$id) exit(json_encode(array('code'=>-1,'msg'=>'Thiếu id')));
-                if (!isset($cfg['charge'][$id])) exit(json_encode(array('code'=>-1,'msg'=>'Không tìm thấy gói')));
-                if (isset($_POST['name']))  $cfg['charge'][$id]['name']  = trim($_POST['name']);
-                if (isset($_POST['rmb']))   $cfg['charge'][$id]['rmb']   = intval($_POST['rmb']);
-                if (isset($_POST['money'])) $cfg['charge'][$id]['money'] = intval($_POST['money']);
-            }
-            // Ghi lại file cfg bằng Python (tránh phụ thuộc ZipArchive)
-            $tmpJson = tempnam(sys_get_temp_dir(), 'gmcfg_') . '.json';
-            file_put_contents($tmpJson, json_encode($cfg, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES));
-            $cfgEsc  = escapeshellarg($cfgFile);
-            $jsonEsc = escapeshellarg($tmpJson);
-            exec("python3 -c \"import zipfile,shutil,os; z=zipfile.ZipFile($jsonEsc.replace('.json','_new.cfg'),'w',zipfile.ZIP_DEFLATED); z.write($jsonEsc,'cfg.json'); z.close(); os.rename($jsonEsc.replace('.json','_new.cfg'),$cfgEsc)\" 2>&1", $out, $ret);
-            // Fallback: dùng zip binary
-            if ($ret !== 0) {
-                $tmpDir = sys_get_temp_dir() . '/gmcfg_' . mt_rand();
-                mkdir($tmpDir, 0755, true);
-                $tmpCfgJson = $tmpDir . '/cfg.json';
-                copy($tmpJson, $tmpCfgJson);
-                $tmpZip = $tmpDir . '/new.cfg';
-                exec('cd ' . escapeshellarg($tmpDir) . ' && zip -9 -j ' . escapeshellarg($tmpZip) . ' ' . escapeshellarg($tmpCfgJson) . ' 2>&1', $out2, $ret2);
-                if ($ret2 === 0) { rename($tmpZip, $cfgFile); }
-                @unlink($tmpCfgJson); @rmdir($tmpDir);
-                $ret = $ret2;
-            }
-            @unlink($tmpJson);
-            if ($ret !== 0)
-                exit(json_encode(array('code'=>-1,'msg'=>'Lỗi ghi file: '.implode("\n",$out)),JSON_UNESCAPED_UNICODE));
-            exit(json_encode(array('code'=>0,'msg'=>'Đã lưu thành công'),JSON_UNESCAPED_UNICODE));
-        }
-        exit(json_encode(array('code'=>-1,'msg'=>'action không hợp lệ')));
 
     default:
         exit('Loại yêu cầu không hợp lệ!');
