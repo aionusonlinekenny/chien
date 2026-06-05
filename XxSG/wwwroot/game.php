@@ -69,6 +69,8 @@ data-show-fps-style="x:0,y:0,size:12,textColor:0xffffff,bgAlpha:0.9">
     gameURLParams['control'] = '/server';
     // channelUID must be truthy for reCharge to be called
     gameURLParams['channelUID'] = '1';
+    // loginURL from URL params is split on '=' breaking http:// → always use origin
+    gameURLParams['loginURL'] = window.location.origin;
 	
     window.showpay = function(url, type){
 		var index = layer.open({
