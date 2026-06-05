@@ -7,7 +7,7 @@
   "verJson": "202506050001",
   "version": "202506050001",
   "res": "svnres/assets/",
-  "serverId": 0,
+  "serverId": 10000,
   "myserver": "http://134.22.38.31/server/myServer",
   "servers": "http://134.22.38.31/server/servers",
   "payServer": "http://134.22.38.31/server/charge.php",
