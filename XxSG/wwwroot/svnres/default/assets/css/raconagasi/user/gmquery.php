@@ -105,7 +105,7 @@ if ($type === 'cfg_item' || $type === 'cfg_shop' || $type === 'cfg_charge') {
             foreach ($cfg['item'] as $id => $it) {
                 $name = isset($it['name']) ? $it['name'] : '';
                 if ($q && strpos(strtolower($name), $q)===false && strpos($id,$q)===false) continue;
-                $rows[] = array('id'=>intval($id),'name'=>$name,'itemQuality'=>isset($it['itemQuality'])?$it['itemQuality']:10);
+                $rows[] = array('id'=>intval($id),'name'=>$name,'itemQuality'=>isset($it['itemQuality'])?$it['itemQuality']:10,'icon'=>isset($it['icon'])?$it['icon']:'');
             }
             usort($rows, function($a,$b){ return $a['id']-$b['id']; });
             $total = count($rows);
