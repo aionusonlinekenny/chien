@@ -1,6 +1,11 @@
 <?php
 include 'config.php';
 
+if (empty($_SESSION['gm_authed'])) {
+    header('Content-Type: application/json');
+    exit(json_encode(['code' => 401, 'msg' => 'Chưa đăng nhập GM Tool']));
+}
+
 if (!$_POST) {
     exit('Yêu cầu không hợp lệ!');
 }

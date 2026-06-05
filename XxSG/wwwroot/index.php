@@ -542,13 +542,6 @@ switch ($_REQUEST['type']) {
             </div>
         </form>
 
-    <div style="position:fixed;bottom:10px;right:10px;z-index:999;">
-        <a href="/svnres/default/assets/css/raconagasi/index.php" target="_blank"
-           style="font-size:11px;color:rgba(255,255,255,0.4);text-decoration:none;padding:4px 8px;background:rgba(0,0,0,0.3);border-radius:4px;">
-            GM Tool
-        </a>
-    </div>
-
     </body>
 
 <script type="text/javascript">

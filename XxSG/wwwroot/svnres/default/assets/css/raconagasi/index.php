@@ -1,4 +1,11 @@
-<?php include_once './user/config.php'; ?>
+<?php
+include_once './user/config.php';
+// Auth gate — must come through admin.php login
+if (empty($_SESSION['gm_authed'])) {
+    header('Location: /admin.php');
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -79,10 +86,11 @@ body{background:#0d1117;color:#e6edf3;font-family:Arial,sans-serif;min-height:10
 .result.err{background:#2d1212;border:1px solid #b91c1c;color:#f85149}
 .result.loading{background:#162032;border:1px solid #1f6feb;color:#79c0ff}
 
-/* GM code field at top */
+/* GM session bar at top */
 .gm-code-bar{background:#161b22;border-bottom:1px solid #30363d;padding:10px 16px;display:flex;align-items:center;gap:10px}
-.gm-code-bar label{font-size:12px;color:#768390;white-space:nowrap}
-.gm-code-bar input{flex:1;padding:6px 10px;background:#21262d;border:1px solid #30363d;border-radius:6px;color:#e6edf3;font-size:13px;outline:none}
+.gm-code-bar .gm-badge{flex:1;font-size:12px;color:#3fb950}
+.gm-code-bar a.logout-btn{font-size:12px;color:#f85149;text-decoration:none;padding:4px 10px;border:1px solid #f85149;border-radius:4px;white-space:nowrap}
+.gm-code-bar a.logout-btn:hover{background:#2d1b1b}
 
 /* Scrollbar */
 ::-webkit-scrollbar{width:6px}::-webkit-scrollbar-track{background:#0d1117}::-webkit-scrollbar-thumb{background:#30363d;border-radius:3px}
@@ -101,9 +109,11 @@ body{background:#0d1117;color:#e6edf3;font-family:Arial,sans-serif;min-height:10
 <!-- ══ SIDEBAR ══ -->
 <div class="sidebar">
     <div class="gm-code-bar">
-        <label>Mã GM:</label>
-        <input type="password" id="checknum" placeholder="raconagasi" autocomplete="off">
+        <span class="gm-badge">✅ GM đã đăng nhập</span>
+        <a href="/admin.php?logout=1" class="logout-btn">Đăng xuất</a>
     </div>
+    <!-- Password injected from session — never visible in UI -->
+    <input type="hidden" id="checknum" value="<?= htmlspecialchars($gmcode) ?>">
     <div class="sidebar-header">
         <h2>⚔ Danh sách nhân vật</h2>
         <div class="server-row">
