@@ -100,6 +100,81 @@ charge.php return {"code":1,"orderNo":"...","payUrl":"http://134.22.38.31/pay/?o
 
 ---
 
+---
+
+## Đổi tên vật phẩm trong Cửa Hàng
+
+### Kiến trúc asset (Egret)
+
+Game KHÔNG load `config/cfg.cfg` trực tiếp. Egret dùng hash-based asset manager:
+
+```
+gamecfg.json → cfgVersion = "202506042100"
+  → svnres/assets/verJson.json?v=202506042100   (map logic name → hash)
+  → svnres/assets/a2825a98.cfg?v=202506042100   (file thực sự chứa item data)
+```
+
+File `a2825a98.cfg` là ZIP chứa `cfg.json`. Đây là file DUY NHẤT cần sửa.
+
+### Code path hiển thị tên
+
+```
+RuleShopItem.dataSource → itemInfo.itemCfg.name
+  → ItemInfo.itemCfg getter → JsonTabs.getItem(itemId)
+  → data['item'][id]['name']  (từ cfg.json trong a2825a98.cfg)
+```
+
+### Cách sửa tên item
+
+**Bước 1 — Tìm id item:**
+```python
+python3 << 'EOF'
+import zipfile, json
+with zipfile.ZipFile('XxSG/wwwroot/svnres/assets/a2825a98.cfg', 'r') as z:
+    with z.open('cfg.json') as f:
+        data = json.load(f)
+keyword = 'cường hóa'  # từ khóa tìm kiếm
+for id, item in data['item'].items():
+    if keyword.lower() in item.get('name', '').lower():
+        print(f"id={id}: {item['name']}")
+EOF
+```
+
+**Bước 2 — Sửa tên:**
+```python
+python3 << 'EOF'
+import zipfile, json, os, subprocess
+
+fname = 'XxSG/wwwroot/svnres/assets/a2825a98.cfg'
+tmp = '/tmp/cfg_edit/cfg.json'
+os.makedirs('/tmp/cfg_edit', exist_ok=True)
+
+with zipfile.ZipFile(fname, 'r') as z:
+    with z.open('cfg.json') as f:
+        data = json.load(f)
+
+data['item']['30000801']['name'] = 'Tên mới'  # sửa id + tên
+
+with open(tmp, 'w', encoding='utf-8') as f:
+    json.dump(data, f, ensure_ascii=False, separators=(',', ':'))
+
+os.remove(fname)
+subprocess.run(['zip', '-9', '-j', fname, tmp])
+print("Done:", data['item']['30000801']['name'])
+EOF
+```
+
+**Bước 3 — Deploy:**
+- Commit + push
+- Copy `a2825a98.cfg` lên server (không cần đổi cfgVersion — URL `?v=202506042100` đã đủ để bust cache)
+
+### Lưu ý
+- `config/cfg.cfg` và `config/cfg1.cfg` là file nguồn — game KHÔNG load trực tiếp
+- `verJson.json` là binary (Egret custom format) — KHÔNG sửa tay
+- Nếu bump `cfgVersion` trong `gamecfg.json`, phải copy cả `gamecfg.json` lên server
+
+---
+
 ## Sign Key
 `5Jqxjo10Yl2ElQCwJm` — từ `webgame.properties`, dùng cho `sign = md5(playerId + num + time + subjectId + key)`
 
