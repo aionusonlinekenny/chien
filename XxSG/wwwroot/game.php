@@ -4,10 +4,11 @@ if (isset($_GET['user']) && isset($_GET['sign'])) {
     $g_user = preg_replace('/[^A-Za-z0-9_]/', '', $_GET['user']);
     $g_sign = preg_replace('/[^A-Za-z0-9]/', '', $_GET['sign']);
     if ($g_user !== '' && $g_sign !== '') {
-        $row = $db->safe_query("SELECT `username`,`token` FROM `account` WHERE `username`=? AND `token`=? LIMIT 1", array($g_user, $g_sign))->fetch(PDO::FETCH_ASSOC);
+        $row = $db->safe_query("SELECT `id`,`username`,`token` FROM `account` WHERE `username`=? AND `token`=? LIMIT 1", array($g_user, $g_sign))->fetch(PDO::FETCH_ASSOC);
         if ($row) {
             $_SESSION['playuser'] = $row['username'];
             $_SESSION['token'] = $row['token'];
+            $_SESSION['userid'] = $row['id'];
         }
     }
 }
@@ -74,6 +75,9 @@ data-show-fps-style="x:0,y:0,size:12,textColor:0xffffff,bgAlpha:0.9">
     gameURLParams['ip'] = '<?php echo $quarr[10000]["ip"]; ?>';
     gameURLParams['port'] = '<?php echo $quarr[10000]["port"]; ?>';
     gameURLParams['serverId'] = <?php echo $quarr[10000]["quid"]; ?>;
+<?php if (!empty($_SESSION['userid'])): ?>
+    gameURLParams['gameUID'] = '<?php echo intval($_SESSION['userid']); ?>';
+<?php endif; ?>
 	
     window.showpay = function(url, type){
 		var index = layer.open({
