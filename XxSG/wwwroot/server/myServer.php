@@ -18,9 +18,11 @@ $row=$db->safe_query("SELECT * FROM `account` WHERE `username`=? AND `token`=? L
 if($row['id']==''){
 	$data=array("code"=>4,"msg"=>"error,请返回首页登陆");
 }else{
-if($row['lastserver']!=''){
+if($row['lastserver']!='' && $row['lastserver'] != 0 && isset($quarr[$row['lastserver']])){
 	$serverid=$row['lastserver'];
-}else{
+} elseif(isset($_GET['serverId']) && isset($quarr[$_GET['serverId']])){
+	$serverid=$_GET['serverId'];
+} else {
 	$serverid=10000;
 }
 $time=time();
