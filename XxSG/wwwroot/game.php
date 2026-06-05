@@ -34,6 +34,12 @@ if (isset($_GET['user']) && isset($_GET['sign'])) {
     <!-- 360强制全屏 -->
     <meta name="360-fullscreen" content="true" />
     <link rel="stylesheet" type="text/css" href="index.css" />
+    <!-- PWA -->
+    <link rel="manifest" href="/app.webmanifest" />
+    <link rel="apple-touch-icon" href="/icon192.png" />
+    <meta name="apple-mobile-web-app-title" content="Thánh Chiến" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="theme-color" content="#0a0a1a" />
 <script src="jquery-1.10.1.min.js"></script>
 <script src="layer/layer.js"></script>
 </head>
@@ -224,6 +230,11 @@ data-show-fps-style="x:0,y:0,size:12,textColor:0xffffff,bgAlpha:0.9">
         });
     });
     xhr.send(null);
+</script>
+<script>
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js').catch(function(){});
+}
 </script>
 </body>
 
