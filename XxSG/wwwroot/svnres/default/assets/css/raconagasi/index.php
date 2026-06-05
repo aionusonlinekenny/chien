@@ -645,13 +645,18 @@ function loadCfgData(page) {
             page: cfgPage,
             size: cfgSize
         }).toString()
-    }).then(r=>r.json()).then(function(d){
+    }).then(function(r){ return r.text(); }).then(function(txt){
+        var d;
+        try { d = JSON.parse(txt); } catch(e) {
+            document.getElementById('cfg-result').textContent = '❌ Server trả: ' + txt.substring(0,200);
+            return;
+        }
         if (d.code !== 0) { document.getElementById('cfg-result').textContent = '❌ ' + d.msg; return; }
         document.getElementById('cfg-result').textContent = '';
         document.getElementById('cfg-total').textContent = 'Tổng: ' + (d.total || d.data.length);
         renderCfgTable(d.data);
         if (d.total) renderCfgPager(d.total);
-    }).catch(function(){ document.getElementById('cfg-result').textContent = '❌ Lỗi kết nối'; });
+    }).catch(function(e){ document.getElementById('cfg-result').textContent = '❌ Lỗi kết nối: ' + e; });
 }
 
 var TH_ITEM   = '<tr><th style="text-align:left;padding:6px;border-bottom:1px solid #30363d;color:#768390">ID</th><th style="text-align:left;padding:6px;border-bottom:1px solid #30363d;color:#768390">Tên</th><th style="text-align:left;padding:6px;border-bottom:1px solid #30363d;color:#768390">Chất lượng</th><th style="padding:6px;border-bottom:1px solid #30363d"></th></tr>';
