@@ -665,37 +665,39 @@ var TH_CHARGE = '<tr><th style="text-align:left;padding:6px;border-bottom:1px so
 var COST_TYPES = {1:'Vàng',2:'KNB',3:'Công Huân',5:'Linh Hồn',7:'Vô Song',9:'Quân Đoàn'};
 var LIMIT_TYPES = {0:'∞',1:'Ngày',2:'Tổng',3:'Tuần'};
 
+var _cfgRows = [];
 function renderCfgTable(data) {
+    _cfgRows = data;
     var thead = document.getElementById('cfg-thead');
     var tbody = document.getElementById('cfg-tbody');
     var td = 'style="padding:6px 8px;border-bottom:1px solid #21262d;vertical-align:middle"';
     var html = '';
     if (cfgSection === 'item') {
         thead.innerHTML = TH_ITEM;
-        data.forEach(function(it){
+        data.forEach(function(it, i){
             html += '<tr><td '+td+'>'+it.id+'</td>'
                 +'<td '+td+'>'+esc(it.name)+'</td>'
                 +'<td '+td+'>'+it.itemQuality+'</td>'
-                +'<td '+td+'><button class="btn btn-blue" style="font-size:11px;padding:3px 10px" onclick="openCfgModal('+JSON.stringify(it)+')">Sửa</button></td></tr>';
+                +'<td '+td+'><button class="btn btn-blue" style="font-size:11px;padding:3px 10px" onclick="openCfgModal('+i+')">Sửa</button></td></tr>';
         });
     } else if (cfgSection === 'shop') {
         thead.innerHTML = TH_SHOP;
-        data.forEach(function(s){
+        data.forEach(function(s, i){
             html += '<tr><td '+td+'>'+s.goodsId+'</td>'
                 +'<td '+td+'>'+esc(s.itemName)+' x'+s.rewardNum+'</td>'
                 +'<td '+td+'>'+s.costNum+'</td>'
                 +'<td '+td+'>'+(COST_TYPES[s.costType]||s.costType)+'</td>'
                 +'<td '+td+'>'+(s.sellTimes > 0 ? s.sellTimes+' ('+LIMIT_TYPES[s.limitType||0]+')' : '∞')+'</td>'
-                +'<td '+td+'><button class="btn btn-blue" style="font-size:11px;padding:3px 10px" onclick="openCfgModal('+JSON.stringify(s)+')">Sửa</button></td></tr>';
+                +'<td '+td+'><button class="btn btn-blue" style="font-size:11px;padding:3px 10px" onclick="openCfgModal('+i+')">Sửa</button></td></tr>';
         });
     } else {
         thead.innerHTML = TH_CHARGE;
-        data.forEach(function(c){
+        data.forEach(function(c, i){
             html += '<tr><td '+td+'>'+c.id+'</td>'
                 +'<td '+td+'>'+esc(c.name)+'</td>'
                 +'<td '+td+'>'+(c.rmb/1000).toLocaleString()+' VNĐ</td>'
                 +'<td '+td+'>'+c.money.toLocaleString()+'</td>'
-                +'<td '+td+'><button class="btn btn-blue" style="font-size:11px;padding:3px 10px" onclick="openCfgModal('+JSON.stringify(c)+')">Sửa</button></td></tr>';
+                +'<td '+td+'><button class="btn btn-blue" style="font-size:11px;padding:3px 10px" onclick="openCfgModal('+i+')">Sửa</button></td></tr>';
         });
     }
     tbody.innerHTML = html;
@@ -716,7 +718,8 @@ function renderCfgPager(total) {
     el.innerHTML = html;
 }
 
-function openCfgModal(data) {
+function openCfgModal(idx) {
+    var data = _cfgRows[idx];
     cfgModalData = data;
     var modal = document.getElementById('cfg-modal');
     var title = document.getElementById('cfg-modal-title');
