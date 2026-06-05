@@ -176,13 +176,20 @@ body{background:#0d1117;color:#e6edf3;font-family:Arial,sans-serif;min-height:10
             <div class="row2">
                 <div class="field">
                     <label>Vật phẩm</label>
-                    <select id="mailid">
-                        <?php
-                        $f = @fopen("item.txt","r");
-                        if($f){ while(!feof($f)){ $t=explode(';',fgets($f));
-                            if(trim($t[0])!=='') echo '<option value="'.htmlspecialchars(trim($t[0])).'">'.htmlspecialchars(trim($t[1]??'')).'</option>';
-                        } fclose($f); } ?>
-                    </select>
+                    <div id="item-picker" style="position:relative">
+                        <div id="item-picker-selected" onclick="toggleItemPicker()" style="display:flex;align-items:center;gap:8px;padding:8px 12px;background:#21262d;border:1px solid #30363d;border-radius:6px;cursor:pointer;min-height:38px">
+                            <span id="item-picker-icon" style="width:28px;height:28px;flex-shrink:0"></span>
+                            <span id="item-picker-label" style="flex:1;font-size:13px;color:#e6edf3">-- Chọn vật phẩm --</span>
+                            <span style="color:#768390;font-size:10px">▼</span>
+                        </div>
+                        <input type="hidden" id="mailid" value="">
+                        <div id="item-picker-dropdown" style="display:none;position:absolute;top:100%;left:0;right:0;z-index:999;background:#21262d;border:1px solid #388bfd;border-radius:6px;margin-top:2px;box-shadow:0 4px 16px rgba(0,0,0,.5)">
+                            <div style="padding:6px">
+                                <input id="item-picker-search" type="text" placeholder="Tìm tên hoặc ID..." oninput="filterItemPicker()" style="width:100%;padding:6px 10px;background:#161b22;border:1px solid #30363d;border-radius:4px;color:#e6edf3;font-size:13px;outline:none">
+                            </div>
+                            <div id="item-picker-list" style="max-height:260px;overflow-y:auto"></div>
+                        </div>
+                    </div>
                 </div>
                 <div class="field">
                     <label>Số lượng</label>
@@ -367,6 +374,8 @@ function loadPlayers() {
     var qu       = document.getElementById('qu').value;
     var search   = document.getElementById('search').value.trim();
     if (!checknum) { alert('Vui lòng nhập mã GM trước!'); return; }
+    _allItems = []; // reset picker cache so it reloads with correct server
+    loadItemPicker();
     document.getElementById('playerList').innerHTML = '<div class="no-player">⏳ Đang tải...</div>';
     var url = 'user/players.php?checknum=' + encodeURIComponent(checknum)
             + '&qu=' + encodeURIComponent(qu)
@@ -802,6 +811,81 @@ function saveCfgModal() {
 
 document.getElementById('cfg-search').addEventListener('keypress', function(e){ if(e.key==='Enter') loadCfgData(); });
 document.getElementById('cfg-modal').addEventListener('click', function(e){ if(e.target===this) this.style.display='none'; });
+
+// ── Item Picker (Gửi Vật Phẩm) ───────────────────────────
+var _allItems = [], _pickerOpen = false;
+
+function loadItemPicker() {
+    if (_allItems.length > 0) return; // already loaded
+    var checknum = document.getElementById('checknum').value.trim();
+    if (!checknum) return;
+    // load all items (size=9999 to get everything)
+    fetch('user/gmquery.php', {
+        method: 'POST',
+        headers: {'Content-Type':'application/x-www-form-urlencoded'},
+        body: new URLSearchParams({type:'cfg_item',action:'list',checknum:checknum,qu:document.getElementById('qu').value,q:'',page:1,size:9999}).toString()
+    }).then(function(r){ return r.json(); }).then(function(d){
+        if (d.code === 0) { _allItems = d.data; renderItemPickerList(_allItems); }
+    });
+}
+
+function renderItemPickerList(items) {
+    var html = '';
+    items.forEach(function(it){
+        var icon = it.icon ? '<img src="'+ICON_BASE+it.icon+'.png" style="width:28px;height:28px;object-fit:contain;flex-shrink:0" onerror="this.style.visibility=\'hidden\'">' : '<span style="width:28px;display:inline-block"></span>';
+        html += '<div class="ipick-row" data-id="'+it.id+'" data-name="'+esc(it.name)+'" data-icon="'+(it.icon||'')+'" onclick="selectItemPicker(this)" style="display:flex;align-items:center;gap:8px;padding:6px 10px;cursor:pointer;border-bottom:1px solid #30363d">'
+              + icon
+              + '<span style="font-size:13px;color:#e6edf3">'+esc(it.name)+'</span>'
+              + '<span style="font-size:11px;color:#768390;margin-left:auto">#'+it.id+'</span>'
+              + '</div>';
+    });
+    document.getElementById('item-picker-list').innerHTML = html || '<div style="padding:12px;color:#768390;font-size:13px">Không có kết quả</div>';
+}
+
+function filterItemPicker() {
+    var q = document.getElementById('item-picker-search').value.toLowerCase();
+    if (!q) { renderItemPickerList(_allItems); return; }
+    renderItemPickerList(_allItems.filter(function(it){ return it.name.toLowerCase().indexOf(q) !== -1 || String(it.id).indexOf(q) !== -1; }));
+}
+
+function toggleItemPicker() {
+    var dd = document.getElementById('item-picker-dropdown');
+    _pickerOpen = !_pickerOpen;
+    dd.style.display = _pickerOpen ? 'block' : 'none';
+    if (_pickerOpen) { loadItemPicker(); setTimeout(function(){ document.getElementById('item-picker-search').focus(); }, 50); }
+}
+
+function selectItemPicker(el) {
+    var id = el.getAttribute('data-id');
+    var name = el.getAttribute('data-name');
+    var icon = el.getAttribute('data-icon');
+    document.getElementById('mailid').value = id;
+    document.getElementById('item-picker-label').textContent = name + ' #' + id;
+    var iconEl = document.getElementById('item-picker-icon');
+    if (icon) {
+        iconEl.innerHTML = '<img src="'+ICON_BASE+icon+'.png" style="width:28px;height:28px;object-fit:contain" onerror="this.style.visibility=\'hidden\'">';
+    } else { iconEl.innerHTML = ''; }
+    document.getElementById('item-picker-dropdown').style.display = 'none';
+    _pickerOpen = false;
+}
+
+// Close picker when clicking outside
+document.addEventListener('click', function(e){
+    if (!document.getElementById('item-picker').contains(e.target)) {
+        document.getElementById('item-picker-dropdown').style.display = 'none';
+        _pickerOpen = false;
+    }
+});
+
+// Hover effect for picker rows
+document.getElementById('item-picker-list').addEventListener('mouseover', function(e){
+    var row = e.target.closest('.ipick-row');
+    if (row) row.style.background = '#2d333b';
+});
+document.getElementById('item-picker-list').addEventListener('mouseout', function(e){
+    var row = e.target.closest('.ipick-row');
+    if (row) row.style.background = '';
+});
 </script>
 </body>
 </html>

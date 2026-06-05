@@ -260,8 +260,29 @@ Java server validate `num` phải bằng **chính xác** giá trị `rmb` trong 
 
 ---
 
-## 14. VIỆC CẦN LÀM TIẾP
+## 14. GM TOOL — CÁC UPDATE GẦN ĐÂY
+
+| # | Thay đổi |
+|---|----------|
+| 26 | `admin.php` mới — login GM qua session, mật khẩu không hiển thị trong UI, redirect sang GM Tool sau login |
+| 27 | `index.php` (GM Tool) — xóa nút GM Tool khỏi trang đăng nhập game, thêm auth gate session, logout button |
+| 28 | `gmquery.php` — thêm auth gate (trả 401 nếu chưa login qua admin.php) |
+| 29 | `game.php` — inject WebSocket ip/port/serverId từ PHP `$quarr[10000]` để fix `ws://undefined:undefined/ws` trên PC |
+| 30 | `app.webmanifest`, `sw.js`, `icon192.png`, `icon512.png` — PWA "Add to Home Screen" cho iPhone |
+| 31 | Tab Vật Phẩm — thêm cột icon (img từ `/svnres/default/assets/icon/item/big/{icon}.png`), `gmquery.php` trả thêm field `icon` trong `cfg_item` list |
+
+### Icon vật phẩm
+- Path icon: `/svnres/default/assets/icon/item/big/{icon}.png` (ví dụ `IT1001.png` = Vàng)
+- Field `icon` trong `cfg.json` item object (ví dụ `"icon": "IT1001"`)
+- `gmquery.php` line ~108: phải trả `icon` field trong array response
+
+### GM Tool — đổi mật khẩu
+Sửa `$gmcode` trong: `C:\XxSG\wwwroot\svnres\default\assets\css\raconagasi\user\config.php`
+
+---
+
+## 15. VIỆC CẦN LÀM TIẾP
 
 - [ ] Đổi credentials production: GM code (`raconagasi`), token seed (`qq86284186`)
 - [ ] Thêm HTTPS (SSL) nếu mở ra internet
-- [ ] Điều tra tại sao Chrome/Firefox thỉnh thoảng không vào được game (xem mục 11)
+- [ ] Refresh/reconnect game sau khi mất kết nối — Java server cần config kick duplicate session
