@@ -97,7 +97,7 @@ if ($type === 'cfg_item' || $type === 'cfg_shop' || $type === 'cfg_charge') {
     $action2 = trim(isset($_POST['action']) ? $_POST['action'] : '');
     $q       = strtolower(trim(isset($_POST['q']) ? $_POST['q'] : ''));
     $page    = max(1, intval(isset($_POST['page']) ? $_POST['page'] : 1));
-    $size    = min(100, max(10, intval(isset($_POST['size']) ? $_POST['size'] : 50)));
+    $size    = max(10, intval(isset($_POST['size']) ? $_POST['size'] : 50));
 
     if ($action2 === 'list') {
         if ($type === 'cfg_item') {
