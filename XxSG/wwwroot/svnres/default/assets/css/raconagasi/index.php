@@ -145,6 +145,7 @@ body{background:#0d1117;color:#e6edf3;font-family:Arial,sans-serif;min-height:10
         <button class="tab-btn" onclick="showTab('notice',this)">📢 Thông Báo</button>
         <button class="tab-btn" onclick="showTab('ban',this)">🔨 Ban/Unban</button>
         <button class="tab-btn" onclick="showTab('paysettings',this)">⚙ Thanh Toán</button>
+        <button class="tab-btn" onclick="showTab('cfgitems',this);initCfgTab()">📦 Vật Phẩm</button>
         <button class="tab-btn" onclick="showTab('danger',this)" style="color:#f85149">⚠ Nguy Hiểm</button>
     </div>
 
@@ -289,6 +290,40 @@ body{background:#0d1117;color:#e6edf3;font-family:Arial,sans-serif;min-height:10
             <button class="btn btn-blue" onclick="loadPaySettings()">🔄 Tải lại</button>
             <button class="btn btn-green" onclick="savePaySettings()">💾 Lưu cài đặt</button>
         </div>
+    </div>
+
+    <!-- Tab: Config Vật Phẩm -->
+    <div id="tab-cfgitems" class="tab-panel">
+      <div class="card">
+        <div style="display:flex;gap:8px;align-items:center;margin-bottom:12px;flex-wrap:wrap">
+          <div style="display:flex;gap:6px">
+            <button id="cfg-tab-item"   class="btn btn-blue"  onclick="setCfgSection('item')"   style="font-size:12px;padding:5px 12px">📦 Item</button>
+            <button id="cfg-tab-shop"   class="btn"           onclick="setCfgSection('shop')"   style="font-size:12px;padding:5px 12px;background:#21262d">🏪 Shop</button>
+            <button id="cfg-tab-charge" class="btn"           onclick="setCfgSection('charge')" style="font-size:12px;padding:5px 12px;background:#21262d">💎 Gói Nạp</button>
+          </div>
+          <input id="cfg-search" style="flex:1;min-width:160px;padding:6px 10px;background:#21262d;border:1px solid #30363d;border-radius:6px;color:#e6edf3;font-size:13px;outline:none" placeholder="Tìm tên / ID...">
+          <button class="btn btn-blue" onclick="loadCfgData()" style="font-size:12px;padding:5px 12px">🔍 Tìm</button>
+          <span id="cfg-total" style="color:#768390;font-size:12px"></span>
+        </div>
+        <div id="cfg-result" style="color:#768390;font-size:13px;min-height:40px"></div>
+        <table style="width:100%;border-collapse:collapse;font-size:13px;margin-top:8px">
+          <thead id="cfg-thead"></thead>
+          <tbody id="cfg-tbody"></tbody>
+        </table>
+        <div id="cfg-pager" style="display:flex;gap:4px;flex-wrap:wrap;margin-top:10px"></div>
+      </div>
+      <!-- Modal sửa item/shop/charge -->
+      <div id="cfg-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:9999;align-items:center;justify-content:center">
+        <div style="background:#161b22;border:1px solid #30363d;border-radius:10px;padding:24px;min-width:340px;max-width:480px;width:90%">
+          <h3 id="cfg-modal-title" style="margin-bottom:16px;color:#f78166"></h3>
+          <div id="cfg-modal-body"></div>
+          <div style="display:flex;gap:8px;margin-top:16px;justify-content:flex-end">
+            <button class="btn btn-blue" onclick="saveCfgModal()">💾 Lưu</button>
+            <button class="btn" style="background:#21262d" onclick="document.getElementById('cfg-modal').style.display='none'">Huỷ</button>
+          </div>
+          <div id="cfg-modal-res" style="margin-top:8px;font-size:13px"></div>
+        </div>
+      </div>
     </div>
 
     <!-- Tab: Danger -->
@@ -574,6 +609,175 @@ function savePaySettings() {
 document.querySelector('[onclick="showTab(\'paysettings\',this)"]').addEventListener('click', function(){
     setTimeout(loadPaySettings, 100);
 });
+
+// ── Config Vật Phẩm ──────────────────────────────────────
+var cfgSection = 'item', cfgPage = 1, cfgSize = 50, cfgInited = false;
+var cfgModalData = {};
+
+function initCfgTab() { if (!cfgInited) { cfgInited = true; loadCfgData(); } }
+
+function setCfgSection(s) {
+    cfgSection = s; cfgPage = 1;
+    ['item','shop','charge'].forEach(function(x){
+        var el = document.getElementById('cfg-tab-'+x);
+        if (el) el.style.background = x === s ? '#1f6feb' : '#21262d';
+    });
+    loadCfgData();
+}
+
+function loadCfgData(page) {
+    cfgPage = page || 1;
+    var checknum = document.getElementById('checknum').value.trim();
+    if (!checknum) { document.getElementById('cfg-result').textContent = '❌ Nhập mã GM trước'; return; }
+    var q = document.getElementById('cfg-search').value.trim();
+    document.getElementById('cfg-result').textContent = '⏳ Đang tải...';
+    document.getElementById('cfg-tbody').innerHTML = '';
+
+    fetch('user/gmquery.php', {
+        method: 'POST',
+        headers: {'Content-Type':'application/x-www-form-urlencoded'},
+        body: new URLSearchParams({
+            type: 'cfg_' + cfgSection,
+            action: 'list',
+            checknum: checknum,
+            qu: document.getElementById('qu').value,
+            q: q,
+            page: cfgPage,
+            size: cfgSize
+        }).toString()
+    }).then(r=>r.json()).then(function(d){
+        if (d.code !== 0) { document.getElementById('cfg-result').textContent = '❌ ' + d.msg; return; }
+        document.getElementById('cfg-result').textContent = '';
+        document.getElementById('cfg-total').textContent = 'Tổng: ' + (d.total || d.data.length);
+        renderCfgTable(d.data);
+        if (d.total) renderCfgPager(d.total);
+    }).catch(function(){ document.getElementById('cfg-result').textContent = '❌ Lỗi kết nối'; });
+}
+
+var TH_ITEM   = '<tr><th style="text-align:left;padding:6px;border-bottom:1px solid #30363d;color:#768390">ID</th><th style="text-align:left;padding:6px;border-bottom:1px solid #30363d;color:#768390">Tên</th><th style="text-align:left;padding:6px;border-bottom:1px solid #30363d;color:#768390">Chất lượng</th><th style="padding:6px;border-bottom:1px solid #30363d"></th></tr>';
+var TH_SHOP   = '<tr><th style="text-align:left;padding:6px;border-bottom:1px solid #30363d;color:#768390">GoodsID</th><th style="text-align:left;padding:6px;border-bottom:1px solid #30363d;color:#768390">Vật phẩm</th><th style="text-align:left;padding:6px;border-bottom:1px solid #30363d;color:#768390">Giá</th><th style="text-align:left;padding:6px;border-bottom:1px solid #30363d;color:#768390">Loại tiền</th><th style="text-align:left;padding:6px;border-bottom:1px solid #30363d;color:#768390">Giới hạn</th><th style="padding:6px;border-bottom:1px solid #30363d"></th></tr>';
+var TH_CHARGE = '<tr><th style="text-align:left;padding:6px;border-bottom:1px solid #30363d;color:#768390">ID</th><th style="text-align:left;padding:6px;border-bottom:1px solid #30363d;color:#768390">Tên gói</th><th style="text-align:left;padding:6px;border-bottom:1px solid #30363d;color:#768390">Giá (rmb)</th><th style="text-align:left;padding:6px;border-bottom:1px solid #30363d;color:#768390">KNB</th><th style="padding:6px;border-bottom:1px solid #30363d"></th></tr>';
+var COST_TYPES = {1:'Vàng',2:'KNB',3:'Công Huân',5:'Linh Hồn',7:'Vô Song',9:'Quân Đoàn'};
+var LIMIT_TYPES = {0:'∞',1:'Ngày',2:'Tổng',3:'Tuần'};
+
+function renderCfgTable(data) {
+    var thead = document.getElementById('cfg-thead');
+    var tbody = document.getElementById('cfg-tbody');
+    var td = 'style="padding:6px 8px;border-bottom:1px solid #21262d;vertical-align:middle"';
+    var html = '';
+    if (cfgSection === 'item') {
+        thead.innerHTML = TH_ITEM;
+        data.forEach(function(it){
+            html += '<tr><td '+td+'>'+it.id+'</td>'
+                +'<td '+td+'>'+esc(it.name)+'</td>'
+                +'<td '+td+'>'+it.itemQuality+'</td>'
+                +'<td '+td+'><button class="btn btn-blue" style="font-size:11px;padding:3px 10px" onclick="openCfgModal('+JSON.stringify(it)+')">Sửa</button></td></tr>';
+        });
+    } else if (cfgSection === 'shop') {
+        thead.innerHTML = TH_SHOP;
+        data.forEach(function(s){
+            html += '<tr><td '+td+'>'+s.goodsId+'</td>'
+                +'<td '+td+'>'+esc(s.itemName)+' x'+s.rewardNum+'</td>'
+                +'<td '+td+'>'+s.costNum+'</td>'
+                +'<td '+td+'>'+(COST_TYPES[s.costType]||s.costType)+'</td>'
+                +'<td '+td+'>'+(s.sellTimes > 0 ? s.sellTimes+' ('+LIMIT_TYPES[s.limitType||0]+')' : '∞')+'</td>'
+                +'<td '+td+'><button class="btn btn-blue" style="font-size:11px;padding:3px 10px" onclick="openCfgModal('+JSON.stringify(s)+')">Sửa</button></td></tr>';
+        });
+    } else {
+        thead.innerHTML = TH_CHARGE;
+        data.forEach(function(c){
+            html += '<tr><td '+td+'>'+c.id+'</td>'
+                +'<td '+td+'>'+esc(c.name)+'</td>'
+                +'<td '+td+'>'+(c.rmb/1000).toLocaleString()+' VNĐ</td>'
+                +'<td '+td+'>'+c.money.toLocaleString()+'</td>'
+                +'<td '+td+'><button class="btn btn-blue" style="font-size:11px;padding:3px 10px" onclick="openCfgModal('+JSON.stringify(c)+')">Sửa</button></td></tr>';
+        });
+    }
+    tbody.innerHTML = html;
+}
+
+function renderCfgPager(total) {
+    var pages = Math.ceil(total / cfgSize);
+    var el = document.getElementById('cfg-pager');
+    if (pages <= 1) { el.innerHTML = ''; return; }
+    var html = '';
+    var s = Math.max(1, cfgPage-3), e = Math.min(pages, cfgPage+3);
+    if (s > 1) html += '<button class="btn" style="font-size:11px;padding:3px 8px;background:#21262d" onclick="loadCfgData(1)">«</button>';
+    for (var p = s; p <= e; p++) {
+        var active = p === cfgPage ? 'background:#1f6feb' : 'background:#21262d';
+        html += '<button class="btn" style="font-size:11px;padding:3px 8px;'+active+'" onclick="loadCfgData('+p+')">'+p+'</button>';
+    }
+    if (e < pages) html += '<button class="btn" style="font-size:11px;padding:3px 8px;background:#21262d" onclick="loadCfgData('+pages+')">»</button>';
+    el.innerHTML = html;
+}
+
+function openCfgModal(data) {
+    cfgModalData = data;
+    var modal = document.getElementById('cfg-modal');
+    var title = document.getElementById('cfg-modal-title');
+    var body  = document.getElementById('cfg-modal-body');
+    document.getElementById('cfg-modal-res').textContent = '';
+    var field = function(label, id, val, type) {
+        return '<div style="margin-bottom:12px"><label style="display:block;color:#768390;font-size:12px;margin-bottom:4px">'+label+'</label>'
+             + '<input id="cfm-'+id+'" value="'+esc(String(val))+'" type="'+(type||'text')+'" style="width:100%;padding:7px 10px;background:#21262d;border:1px solid #30363d;border-radius:6px;color:#e6edf3;font-size:13px;outline:none"></div>';
+    };
+    var ro = function(label, val) {
+        return '<div style="margin-bottom:12px"><label style="display:block;color:#768390;font-size:12px;margin-bottom:4px">'+label+'</label>'
+             + '<div style="padding:7px 10px;background:#0d1117;border:1px solid #30363d;border-radius:6px;color:#768390;font-size:13px">'+esc(String(val))+'</div></div>';
+    };
+    if (cfgSection === 'item') {
+        title.textContent = 'Sửa Item #' + data.id;
+        body.innerHTML = ro('ID', data.id) + field('Tên', 'name', data.name);
+    } else if (cfgSection === 'shop') {
+        title.textContent = 'Sửa Shop GoodsID #' + data.goodsId;
+        body.innerHTML = ro('GoodsID', data.goodsId)
+            + ro('Vật phẩm', data.itemName + ' x' + data.rewardNum)
+            + field('Giá (costNum)', 'costNum', data.costNum, 'number')
+            + field('Giới hạn mua (0=∞)', 'sellTimes', data.sellTimes, 'number');
+    } else {
+        title.textContent = 'Sửa Gói Nạp #' + data.id;
+        body.innerHTML = ro('ID', data.id)
+            + field('Tên gói', 'name', data.name)
+            + field('Giá (rmb, đơn vị 1/1000 VNĐ)', 'rmb', data.rmb, 'number')
+            + field('KNB nhận (money)', 'money', data.money, 'number');
+    }
+    modal.style.display = 'flex';
+}
+
+function saveCfgModal() {
+    var checknum = document.getElementById('checknum').value.trim();
+    var payload = { checknum: checknum, qu: document.getElementById('qu').value };
+    if (cfgSection === 'item') {
+        payload.type = 'cfg_item'; payload.action = 'save';
+        payload.id   = cfgModalData.id;
+        payload.name = document.getElementById('cfm-name').value.trim();
+    } else if (cfgSection === 'shop') {
+        payload.type     = 'cfg_shop'; payload.action = 'save';
+        payload.goodsId  = cfgModalData.goodsId;
+        payload.costNum  = document.getElementById('cfm-costNum').value;
+        payload.sellTimes= document.getElementById('cfm-sellTimes').value;
+    } else {
+        payload.type  = 'cfg_charge'; payload.action = 'save';
+        payload.id    = cfgModalData.id;
+        payload.name  = document.getElementById('cfm-name').value.trim();
+        payload.rmb   = document.getElementById('cfm-rmb').value;
+        payload.money = document.getElementById('cfm-money').value;
+    }
+    var res = document.getElementById('cfg-modal-res');
+    res.textContent = '⏳ Đang lưu...';
+    fetch('user/gmquery.php', {
+        method: 'POST',
+        headers: {'Content-Type':'application/x-www-form-urlencoded'},
+        body: new URLSearchParams(payload).toString()
+    }).then(r=>r.json()).then(function(d){
+        res.style.color = d.code === 0 ? '#3fb950' : '#f85149';
+        res.textContent = d.code === 0 ? '✅ ' + d.msg : '❌ ' + d.msg;
+        if (d.code === 0) { loadCfgData(cfgPage); setTimeout(function(){ document.getElementById('cfg-modal').style.display='none'; }, 800); }
+    }).catch(function(){ res.style.color='#f85149'; res.textContent='❌ Lỗi kết nối'; });
+}
+
+document.getElementById('cfg-search').addEventListener('keypress', function(e){ if(e.key==='Enter') loadCfgData(); });
+document.getElementById('cfg-modal').addEventListener('click', function(e){ if(e.target===this) this.style.display='none'; });
 </script>
 </body>
 </html>
