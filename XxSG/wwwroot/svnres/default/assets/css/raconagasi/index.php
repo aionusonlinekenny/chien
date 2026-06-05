@@ -669,7 +669,8 @@ function loadCfgData(page) {
     }).catch(function(e){ document.getElementById('cfg-result').textContent = '❌ Lỗi kết nối: ' + e; });
 }
 
-var TH_ITEM   = '<tr><th style="text-align:left;padding:6px;border-bottom:1px solid #30363d;color:#768390">ID</th><th style="text-align:left;padding:6px;border-bottom:1px solid #30363d;color:#768390">Tên</th><th style="text-align:left;padding:6px;border-bottom:1px solid #30363d;color:#768390">Chất lượng</th><th style="padding:6px;border-bottom:1px solid #30363d"></th></tr>';
+var TH_ITEM   = '<tr><th style="width:44px;border-bottom:1px solid #30363d"></th><th style="text-align:left;padding:6px;border-bottom:1px solid #30363d;color:#768390">ID</th><th style="text-align:left;padding:6px;border-bottom:1px solid #30363d;color:#768390">Tên</th><th style="text-align:left;padding:6px;border-bottom:1px solid #30363d;color:#768390">Chất lượng</th><th style="padding:6px;border-bottom:1px solid #30363d"></th></tr>';
+var ICON_BASE = '/svnres/default/assets/icon/item/big/';
 var TH_SHOP   = '<tr><th style="text-align:left;padding:6px;border-bottom:1px solid #30363d;color:#768390">GoodsID</th><th style="text-align:left;padding:6px;border-bottom:1px solid #30363d;color:#768390">Vật phẩm</th><th style="text-align:left;padding:6px;border-bottom:1px solid #30363d;color:#768390">Giá</th><th style="text-align:left;padding:6px;border-bottom:1px solid #30363d;color:#768390">Loại tiền</th><th style="text-align:left;padding:6px;border-bottom:1px solid #30363d;color:#768390">Giới hạn</th><th style="padding:6px;border-bottom:1px solid #30363d"></th></tr>';
 var TH_CHARGE = '<tr><th style="text-align:left;padding:6px;border-bottom:1px solid #30363d;color:#768390">ID</th><th style="text-align:left;padding:6px;border-bottom:1px solid #30363d;color:#768390">Tên gói</th><th style="text-align:left;padding:6px;border-bottom:1px solid #30363d;color:#768390">Giá (rmb)</th><th style="text-align:left;padding:6px;border-bottom:1px solid #30363d;color:#768390">KNB</th><th style="padding:6px;border-bottom:1px solid #30363d"></th></tr>';
 var COST_TYPES = {1:'Vàng',2:'KNB',3:'Công Huân',5:'Linh Hồn',7:'Vô Song',9:'Quân Đoàn'};
@@ -685,7 +686,12 @@ function renderCfgTable(data) {
     if (cfgSection === 'item') {
         thead.innerHTML = TH_ITEM;
         data.forEach(function(it, i){
-            html += '<tr><td '+td+'>'+it.id+'</td>'
+            var iconHtml = it.icon
+                ? '<img src="'+ICON_BASE+it.icon+'.png" style="width:36px;height:36px;object-fit:contain;display:block;margin:auto" onerror="this.style.display=\'none\'">'
+                : '';
+            html += '<tr>'
+                +'<td style="padding:4px 6px;border-bottom:1px solid #21262d;text-align:center;width:44px">'+iconHtml+'</td>'
+                +'<td '+td+'>'+it.id+'</td>'
                 +'<td '+td+'>'+esc(it.name)+'</td>'
                 +'<td '+td+'>'+it.itemQuality+'</td>'
                 +'<td '+td+'><button class="btn btn-blue" style="font-size:11px;padding:3px 10px" onclick="openCfgModal('+i+')">Sửa</button></td></tr>';
