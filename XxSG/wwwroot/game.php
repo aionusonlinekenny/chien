@@ -75,9 +75,6 @@ data-show-fps-style="x:0,y:0,size:12,textColor:0xffffff,bgAlpha:0.9">
     gameURLParams['ip'] = '<?php echo $quarr[10000]["ip"]; ?>';
     gameURLParams['port'] = '<?php echo $quarr[10000]["port"]; ?>';
     gameURLParams['serverId'] = <?php echo $quarr[10000]["quid"]; ?>;
-<?php if (!empty($_SESSION['userid'])): ?>
-    gameURLParams['gameUID'] = '<?php echo intval($_SESSION['userid']); ?>';
-<?php endif; ?>
 	
     window.showpay = function(url, type){
 		var index = layer.open({
