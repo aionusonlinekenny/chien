@@ -152,24 +152,23 @@ if ($type === 'cfg_item' || $type === 'cfg_shop' || $type === 'cfg_charge') {
             if (isset($_POST['rmb']))   $cfg['charge'][$id]['rmb']   = intval($_POST['rmb']);
             if (isset($_POST['money'])) $cfg['charge'][$id]['money'] = intval($_POST['money']);
         }
-        $tmpJson = tempnam(sys_get_temp_dir(), 'gmcfg_') . '.json';
+        // Ghi JSON ra file tạm rồi dùng Python tạo ZIP
+        $tmpBase = sys_get_temp_dir() . DIRECTORY_SEPARATOR . 'gmcfg_' . mt_rand();
+        $tmpJson = $tmpBase . '.json';
+        $tmpZip  = $tmpBase . '.cfg';
+        $pyScript = $tmpBase . '.py';
         file_put_contents($tmpJson, json_encode($cfg, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES));
-        $cfgEsc  = escapeshellarg($cfgFile);
-        $jsonEsc = escapeshellarg($tmpJson);
-        $tmpZip  = escapeshellarg($tmpJson . '.cfg');
-        exec("python3 -c \"import zipfile,os; z=zipfile.ZipFile({$tmpZip},'w',zipfile.ZIP_DEFLATED); z.write({$jsonEsc},'cfg.json'); z.close(); os.rename({$tmpZip},{$cfgEsc})\" 2>&1", $out, $ret);
-        if ($ret !== 0) {
-            $tmpDir = sys_get_temp_dir() . '/gmcfg_' . mt_rand();
-            mkdir($tmpDir, 0755, true);
-            $tmpCfgJson = $tmpDir . '/cfg.json';
-            copy($tmpJson, $tmpCfgJson);
-            $tmpZip2 = $tmpDir . '/new.cfg';
-            exec('cd ' . escapeshellarg($tmpDir) . ' && zip -9 -j ' . escapeshellarg($tmpZip2) . ' ' . escapeshellarg($tmpCfgJson) . ' 2>&1', $out2, $ret2);
-            if ($ret2 === 0) { rename($tmpZip2, $cfgFile); }
-            @unlink($tmpCfgJson); @rmdir($tmpDir);
-            $ret = $ret2; $out = $out2;
-        }
-        @unlink($tmpJson);
+        // Viết Python script ra file để tránh vấn đề escape trên Windows/Linux
+        $pyCode = "import zipfile, os, shutil\n"
+                . "z = zipfile.ZipFile(" . var_export($tmpZip, true) . ", 'w', zipfile.ZIP_DEFLATED)\n"
+                . "z.write(" . var_export($tmpJson, true) . ", 'cfg.json')\n"
+                . "z.close()\n"
+                . "shutil.move(" . var_export($tmpZip, true) . ", " . var_export($cfgFile, true) . ")\n";
+        file_put_contents($pyScript, $pyCode);
+        // Thử python3 trước, fallback python
+        exec('python3 ' . escapeshellarg($pyScript) . ' 2>&1', $out, $ret);
+        if ($ret !== 0) exec('python ' . escapeshellarg($pyScript) . ' 2>&1', $out, $ret);
+        @unlink($tmpJson); @unlink($pyScript); @unlink($tmpZip);
         if ($ret !== 0)
             exit(json_encode(array('code'=>-1,'msg'=>'Lỗi ghi file: '.implode("\n",$out)),JSON_UNESCAPED_UNICODE));
         exit(json_encode(array('code'=>0,'msg'=>'Đã lưu thành công'),JSON_UNESCAPED_UNICODE));
