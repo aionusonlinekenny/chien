@@ -157,6 +157,7 @@ body{background:#0d1117;color:#e6edf3;font-family:Arial,sans-serif;min-height:10
         <button class="tab-btn" onclick="showTab('paysettings',this)">⚙ Thanh Toán</button>
         <button class="tab-btn" onclick="showTab('cfgitems',this);initCfgTab()">📦 Vật Phẩm</button>
         <button class="tab-btn" onclick="showTab('danger',this)" style="color:#f85149">⚠ Nguy Hiểm</button>
+        <button class="tab-btn" onclick="showTab('uilabels',this);initUiTab()">🎨 Giao Diện</button>
     </div>
 
     <!-- Tab: Mail -->
@@ -341,6 +342,50 @@ body{background:#0d1117;color:#e6edf3;font-family:Arial,sans-serif;min-height:10
           <div id="cfg-modal-res" style="margin-top:8px;font-size:13px"></div>
         </div>
       </div>
+    </div>
+
+    <!-- Tab: UI Labels -->
+    <div id="tab-uilabels" class="tab-panel">
+        <div class="card">
+            <div style="display:flex;gap:8px;align-items:center;margin-bottom:12px;flex-wrap:wrap">
+                <input id="ui-search" style="flex:1;min-width:160px;padding:6px 10px;background:#21262d;border:1px solid #30363d;border-radius:6px;color:#e6edf3;font-size:13px;outline:none" placeholder="Tìm nhãn nút...">
+                <button class="btn btn-blue" onclick="loadUiLabels()" style="font-size:12px;padding:5px 12px">🔍 Tìm</button>
+                <span id="ui-total" style="color:#768390;font-size:12px"></span>
+            </div>
+            <div id="ui-result" style="color:#768390;font-size:13px;min-height:30px"></div>
+            <table style="width:100%;border-collapse:collapse;font-size:13px;margin-top:8px">
+                <thead>
+                    <tr>
+                        <th style="text-align:left;padding:6px;border-bottom:1px solid #30363d;color:#768390;width:90px">Preview</th>
+                        <th style="text-align:left;padding:6px;border-bottom:1px solid #30363d;color:#768390">Label</th>
+                        <th style="text-align:left;padding:6px;border-bottom:1px solid #30363d;color:#768390;width:70px">Số lần</th>
+                        <th style="padding:6px;border-bottom:1px solid #30363d;width:60px"></th>
+                    </tr>
+                </thead>
+                <tbody id="ui-tbody"></tbody>
+            </table>
+            <div id="ui-pager" style="display:flex;gap:4px;flex-wrap:wrap;margin-top:10px"></div>
+        </div>
+
+        <!-- Edit modal -->
+        <div id="ui-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:9999;align-items:center;justify-content:center">
+            <div style="background:#161b22;border:1px solid #30363d;border-radius:10px;padding:24px;min-width:340px;max-width:480px;width:90%">
+                <h3 style="margin-bottom:16px;color:#f78166">✏ Sửa nhãn nút</h3>
+                <div style="margin-bottom:12px">
+                    <label style="display:block;color:#768390;font-size:12px;margin-bottom:4px">Nhãn hiện tại (readonly)</label>
+                    <input id="ui-old-label" readonly style="width:100%;padding:7px 10px;background:#0d1117;border:1px solid #30363d;border-radius:6px;color:#768390;font-size:13px;outline:none">
+                </div>
+                <div style="margin-bottom:12px">
+                    <label style="display:block;color:#768390;font-size:12px;margin-bottom:4px">Nhãn mới</label>
+                    <input id="ui-new-label" style="width:100%;padding:7px 10px;background:#21262d;border:1px solid #30363d;border-radius:6px;color:#e6edf3;font-size:13px;outline:none">
+                </div>
+                <div style="display:flex;gap:8px;margin-top:16px;justify-content:flex-end">
+                    <button class="btn btn-blue" onclick="saveUiLabel()">💾 Lưu</button>
+                    <button class="btn" style="background:#21262d" onclick="document.getElementById('ui-modal').style.display='none'">Huỷ</button>
+                </div>
+                <div id="ui-modal-res" style="margin-top:8px;font-size:13px"></div>
+            </div>
+        </div>
     </div>
 
     <!-- Tab: Danger -->
@@ -886,6 +931,192 @@ document.getElementById('item-picker-list').addEventListener('mouseout', functio
     var row = e.target.closest('.ipick-row');
     if (row) row.style.background = '';
 });
+
+// ── UI Labels (🎨 Giao Diện) ────────────────────────────
+var _uiInited = false, _spriteImg = null, _spriteFrames = null;
+var _uiAllData = [], _uiPage = 1, _uiSize = 50;
+
+function initUiTab() {
+    if (_uiInited) return;
+    _uiInited = true;
+    // Load common spritesheet JSON
+    fetch('/svnres/default/assets/mornui/common/common.json')
+        .then(function(r){ return r.json(); })
+        .then(function(d){ _spriteFrames = d.frames || d; })
+        .catch(function(){});
+    // Load spritesheet image
+    var img = new Image();
+    img.onload = function(){ _spriteImg = img; redrawAllPreviews(); };
+    img.src = '/svnres/default/assets/mornui/common/common.png';
+    loadUiLabels();
+}
+
+function loadUiLabels(page) {
+    _uiPage = page || 1;
+    var checknum = document.getElementById('checknum').value.trim();
+    if (!checknum) { document.getElementById('ui-result').textContent = '❌ Nhập mã GM trước'; return; }
+    var q = document.getElementById('ui-search').value.trim();
+    document.getElementById('ui-result').textContent = '⏳ Đang tải...';
+    document.getElementById('ui-tbody').innerHTML = '';
+
+    fetch('user/gmquery.php', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+        body: new URLSearchParams({
+            type: 'ui_labels',
+            action: 'list',
+            checknum: checknum,
+            qu: document.getElementById('qu').value,
+            q: q
+        }).toString()
+    }).then(function(r){ return r.text(); }).then(function(txt){
+        var d;
+        try { d = JSON.parse(txt); } catch(e) {
+            document.getElementById('ui-result').textContent = '❌ Server trả: ' + txt.substring(0, 200);
+            return;
+        }
+        if (d.code !== 0) { document.getElementById('ui-result').textContent = '❌ ' + d.msg; return; }
+        document.getElementById('ui-result').textContent = '';
+        _uiAllData = d.data;
+        document.getElementById('ui-total').textContent = 'Tổng: ' + _uiAllData.length + ' nhãn';
+        renderUiTable();
+    }).catch(function(e){ document.getElementById('ui-result').textContent = '❌ Lỗi kết nối: ' + e; });
+}
+
+function renderUiTable() {
+    var total = _uiAllData.length;
+    var pages = Math.ceil(total / _uiSize);
+    var start = (_uiPage - 1) * _uiSize;
+    var slice = _uiAllData.slice(start, start + _uiSize);
+    var td = 'style="padding:6px 8px;border-bottom:1px solid #21262d;vertical-align:middle"';
+    var html = '';
+    slice.forEach(function(row, i) {
+        var globalIdx = start + i;
+        html += '<tr>'
+            + '<td style="padding:4px 6px;border-bottom:1px solid #21262d;width:90px">'
+            +   '<canvas id="ui-canvas-' + globalIdx + '" width="80" height="30" style="display:block"></canvas>'
+            + '</td>'
+            + '<td ' + td + '>' + esc(row.label) + '</td>'
+            + '<td ' + td + '>' + row.count + '</td>'
+            + '<td ' + td + '><button class="btn btn-blue" style="font-size:11px;padding:3px 10px" onclick="openUiModal(' + globalIdx + ')">Sửa</button></td>'
+            + '</tr>';
+    });
+    document.getElementById('ui-tbody').innerHTML = html;
+
+    // Draw previews
+    setTimeout(function(){
+        slice.forEach(function(row, i){
+            var globalIdx = start + i;
+            var canvas = document.getElementById('ui-canvas-' + globalIdx);
+            if (canvas) drawBtnPreview(canvas, row.skin);
+        });
+    }, 50);
+
+    renderUiPager(total);
+}
+
+function renderUiPager(total) {
+    var pages = Math.ceil(total / _uiSize);
+    var el = document.getElementById('ui-pager');
+    if (pages <= 1) { el.innerHTML = ''; return; }
+    var html = '';
+    var s = Math.max(1, _uiPage - 3), e = Math.min(pages, _uiPage + 3);
+    if (s > 1) html += '<button class="btn" style="font-size:11px;padding:3px 8px;background:#21262d" onclick="loadUiLabels(1)">«</button>';
+    for (var p = s; p <= e; p++) {
+        var active = p === _uiPage ? 'background:#1f6feb' : 'background:#21262d';
+        html += '<button class="btn" style="font-size:11px;padding:3px 8px;' + active + '" onclick="loadUiLabels(' + p + ')">' + p + '</button>';
+    }
+    if (e < pages) html += '<button class="btn" style="font-size:11px;padding:3px 8px;background:#21262d" onclick="loadUiLabels(' + pages + ')">»</button>';
+    el.innerHTML = html;
+}
+
+function drawBtnPreview(canvas, skinKey) {
+    var ctx = canvas.getContext('2d');
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    if (!skinKey) return;
+    var parts = skinKey.split('.');
+    if (parts[0] !== 'common_json') {
+        // Other namespace — show placeholder
+        ctx.fillStyle = '#30363d';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        ctx.fillStyle = '#768390';
+        ctx.font = '11px Arial';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillText('🔘', canvas.width / 2, canvas.height / 2);
+        return;
+    }
+    if (!_spriteImg || !_spriteFrames) return;
+    var frameKey = parts[1];
+    var frame = _spriteFrames[frameKey];
+    if (!frame) return;
+    var fw = frame.w || frame.width || (frame.frame && frame.frame.w) || 0;
+    var fh = frame.h || frame.height || (frame.frame && frame.frame.h) || 0;
+    var fx = frame.x !== undefined ? frame.x : (frame.frame ? frame.frame.x : 0);
+    var fy = frame.y !== undefined ? frame.y : (frame.frame ? frame.frame.y : 0);
+    if (!fw || !fh) return;
+    var scale = Math.min(canvas.width / fw, canvas.height / fh);
+    var dw = fw * scale, dh = fh * scale;
+    var dx = (canvas.width - dw) / 2, dy = (canvas.height - dh) / 2;
+    ctx.drawImage(_spriteImg, fx, fy, fw, fh, dx, dy, dw, dh);
+}
+
+function redrawAllPreviews() {
+    var start = (_uiPage - 1) * _uiSize;
+    var slice = _uiAllData.slice(start, start + _uiSize);
+    slice.forEach(function(row, i){
+        var globalIdx = start + i;
+        var canvas = document.getElementById('ui-canvas-' + globalIdx);
+        if (canvas) drawBtnPreview(canvas, row.skin);
+    });
+}
+
+function openUiModal(idx) {
+    var row = _uiAllData[idx];
+    if (!row) return;
+    document.getElementById('ui-old-label').value = row.label;
+    document.getElementById('ui-new-label').value = row.label;
+    document.getElementById('ui-modal-res').textContent = '';
+    document.getElementById('ui-modal').style.display = 'flex';
+    setTimeout(function(){ document.getElementById('ui-new-label').focus(); document.getElementById('ui-new-label').select(); }, 50);
+}
+
+function saveUiLabel() {
+    var checknum = document.getElementById('checknum').value.trim();
+    var oldLabel = document.getElementById('ui-old-label').value;
+    var newLabel = document.getElementById('ui-new-label').value.trim();
+    var res = document.getElementById('ui-modal-res');
+    if (!newLabel) { res.style.color = '#f85149'; res.textContent = '❌ Nhãn mới không được trống'; return; }
+    if (newLabel === oldLabel) { res.style.color = '#f85149'; res.textContent = '❌ Nhãn mới phải khác nhãn cũ'; return; }
+    res.style.color = '#79c0ff'; res.textContent = '⏳ Đang lưu...';
+    fetch('user/gmquery.php', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+        body: new URLSearchParams({
+            type: 'ui_labels',
+            action: 'save',
+            checknum: checknum,
+            qu: document.getElementById('qu').value,
+            old_label: oldLabel,
+            new_label: newLabel
+        }).toString()
+    }).then(function(r){ return r.json(); }).then(function(d){
+        if (d.code === 0) {
+            res.style.color = '#3fb950';
+            res.textContent = '✅ ' + d.msg;
+            setTimeout(function(){
+                document.getElementById('ui-modal').style.display = 'none';
+                loadUiLabels(_uiPage);
+            }, 800);
+        } else {
+            res.style.color = '#f85149';
+            res.textContent = '❌ ' + d.msg;
+        }
+    }).catch(function(e){ res.style.color = '#f85149'; res.textContent = '❌ Lỗi kết nối: ' + e; });
+}
+
+document.getElementById('ui-search').addEventListener('keypress', function(e){ if (e.key === 'Enter') loadUiLabels(); });
+document.getElementById('ui-modal').addEventListener('click', function(e){ if (e.target === this) this.style.display = 'none'; });
 </script>
 </body>
 </html>

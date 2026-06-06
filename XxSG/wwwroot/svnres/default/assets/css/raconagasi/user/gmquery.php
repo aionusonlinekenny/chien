@@ -212,6 +212,93 @@ if ($type === 'cfg_item' || $type === 'cfg_shop' || $type === 'cfg_charge') {
     exit(json_encode(array('code'=>-1,'msg'=>'action không hợp lệ')));
 }
 
+// ── UI Labels (main.min.js) ─────────────────────────────
+if ($type === 'ui_labels') {
+    header('Content-Type: application/json; charset=utf-8');
+    $jsFile = __DIR__ . '/../../../../../../js/main.min.js';
+    $jsFile = realpath($jsFile) ?: $jsFile;
+    if (!file_exists($jsFile))
+        exit(json_encode(['code' => -1, 'msg' => 'Không tìm thấy main.min.js: ' . $jsFile]));
+
+    $action3 = trim($_POST['action'] ?? '');
+
+    if ($action3 === 'list') {
+        $content3 = file_get_contents($jsFile);
+        if ($content3 === false)
+            exit(json_encode(['code' => -1, 'msg' => 'Không đọc được main.min.js']));
+
+        $q3 = strtolower(trim($_POST['q'] ?? ''));
+
+        // Find all .label = "..." occurrences with position
+        preg_match_all('/\.label\s*=\s*"([^"]*)"/', $content3, $matches, PREG_OFFSET_CAPTURE);
+
+        $labelsMap = [];
+        foreach ($matches[1] as $idx => $m) {
+            $labelText = $m[0];
+            $offset    = $m[1];
+
+            // Filter by search query
+            if ($q3 !== '' && stripos($labelText, $q3) === false) continue;
+
+            // Find skin: look for .skin = "..." within 400 chars before this offset
+            $contextStart = max(0, $offset - 400);
+            $contextLen   = $offset - $contextStart;
+            $before       = substr($content3, $contextStart, $contextLen);
+            $skin = '';
+            if (preg_match_all('/\.skin\s*=\s*"([^"]*)"/', $before, $sm)) {
+                $skin = end($sm[1]); // last skin found before this label
+            }
+
+            if (!isset($labelsMap[$labelText])) {
+                $labelsMap[$labelText] = ['label' => $labelText, 'skin' => $skin, 'count' => 0];
+            }
+            $labelsMap[$labelText]['count']++;
+            // Keep skin from first occurrence if not set
+            if ($labelsMap[$labelText]['skin'] === '' && $skin !== '') {
+                $labelsMap[$labelText]['skin'] = $skin;
+            }
+        }
+
+        $rows3 = array_values($labelsMap);
+        usort($rows3, function($a, $b) { return strcmp($a['label'], $b['label']); });
+        exit(json_encode(['code' => 0, 'data' => $rows3], JSON_UNESCAPED_UNICODE));
+    }
+
+    if ($action3 === 'save') {
+        $oldLabel = $_POST['old_label'] ?? '';
+        $newLabel = $_POST['new_label'] ?? '';
+        if ($oldLabel === '')
+            exit(json_encode(['code' => -1, 'msg' => 'old_label không được trống']));
+        if ($newLabel === '')
+            exit(json_encode(['code' => -1, 'msg' => 'new_label không được trống']));
+
+        $content3 = file_get_contents($jsFile);
+        if ($content3 === false)
+            exit(json_encode(['code' => -1, 'msg' => 'Không đọc được main.min.js']));
+
+        // Backup (once)
+        $bakFile = $jsFile . '.bak';
+        if (!file_exists($bakFile)) {
+            file_put_contents($bakFile, $content3);
+        }
+
+        $search3  = '.label = "' . $oldLabel . '"';
+        $replace3 = '.label = "' . $newLabel . '"';
+        $count3   = 0;
+        $new3     = str_replace($search3, $replace3, $content3, $count3);
+
+        if ($count3 === 0)
+            exit(json_encode(['code' => -1, 'msg' => 'Không tìm thấy label để thay thế'], JSON_UNESCAPED_UNICODE));
+
+        if (file_put_contents($jsFile, $new3) === false)
+            exit(json_encode(['code' => -1, 'msg' => 'Không ghi được main.min.js']));
+
+        exit(json_encode(['code' => 0, 'msg' => "Đã thay thế {$count3} chỗ", 'count' => $count3], JSON_UNESCAPED_UNICODE));
+    }
+
+    exit(json_encode(['code' => -1, 'msg' => 'action không hợp lệ']));
+}
+
 // Helper: get playerId from playerName via DB
 function getPlayerId($dbip, $dbuser, $dbpwd, $dbname, $playerName) {
     $con = new mysqli($dbip, $dbuser, $dbpwd, $dbname);
